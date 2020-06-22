@@ -1,0 +1,44 @@
+.nav-bar {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 12rem;
+
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+
+	&__list {
+		display: flex;
+		list-style: none;
+		margin-right: 6rem;
+
+		&__item {
+			color: $color-grey-1;
+			font-size: 2.2rem;
+			margin-right: 3rem;
+			font-weight: 400;
+			text-transform: uppercase;
+			position: relative;
+
+			&::before {
+				content: '';
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				transition: all 0.2s;
+			}
+
+			&:hover::before {
+				width: 100%;
+				height: 3px;
+				background-color: $color-primary;
+			}
+
+			&:not(:last-child) {
+				margin-right: 4rem;
+			}
+		}
+	}
+}

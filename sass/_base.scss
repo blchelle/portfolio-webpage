@@ -1,0 +1,32 @@
+$color-primary: #26c485;
+$color-secondary: #3a606e;
+$color-grey-1: #fdfffc;
+$color-grey-2: #72767f;
+$color-grey-3: #393e41;
+
+$font-primary: 'Lato', sans-serif;
+
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+}
+
+html {
+	box-sizing: border-box;
+	font-size: 62.5%; // 1rem = 10px
+}
+
+body {
+	font-family: $font-primary;
+	font-weight: 300;
+	line-height: 1.6;
+}
+
+.container {
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+	grid-template-rows: 100vh 50vh;
+}

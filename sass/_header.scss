@@ -1,0 +1,25 @@
+.header {
+	grid-column: 1 / -1;
+	grid-row: 1 / 2;
+
+	background: linear-gradient(#00000066, #00000066), url('/assets/header.jpg');
+	background-size: cover;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+
+	&__title {
+		color: $color-grey-1;
+	}
+
+	&__name {
+		color: $color-primary;
+	}
+}
