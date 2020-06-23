@@ -2,17 +2,66 @@
 	grid-column: 1 / -1;
 	grid-row: 1 / 2;
 
-	background: linear-gradient(#00000066, #00000066), url('/assets/header.jpg');
+	background: linear-gradient(#00000088, #00000088), url('/assets/header.jpg');
 	background-size: cover;
+	background-position: center;
 
 	display: flex;
 	align-items: center;
 	justify-content: center;
 
+	position: relative;
+
+	&__nav {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 12rem;
+
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+
+		&__list {
+			display: flex;
+			list-style: none;
+			margin-right: 6rem;
+	
+			&__item {
+				color: $color-grey-1;
+				font-size: 2.2rem;
+				margin-right: 3rem;
+				font-weight: 400;
+				text-transform: uppercase;
+				position: relative;
+	
+				&::before {
+					content: '';
+					position: absolute;
+					bottom: 0;
+					left: 0;
+					transition: all 0.2s;
+				}
+	
+				&:hover::before {
+					width: 100%;
+					height: 3px;
+					background-color: $color-primary;
+				}
+	
+				&:not(:last-child) {
+					margin-right: 4rem;
+				}
+			}
+		}
+	}
+
 	&__content {
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
+		align-items: flex-start;
 	}
 
 	&__title {
@@ -21,5 +70,57 @@
 
 	&__name {
 		color: $color-primary;
+
+		&:hover { 
+			animation: color-rotate 2s; 
+			animation-iteration-count: infinite;
+			animation-timing-function: ease-in-out;
+		}
 	}
+
+	&__btn {
+		border: none;
+		outline: none;
+		
+		height: 5rem;
+		width: 20rem;
+		padding: 0 0.5rem;
+		margin-top: 2rem;
+
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		
+		align-self: center;
+		
+		font-size: 2rem;
+		color: $color-grey-1;
+		background-color: $color-primary;
+		border-radius: 2.5rem;
+
+		transition: background-color 0.3s;
+
+		&__text {
+			margin-left: 3.5rem;
+		}
+
+		&__icon {
+			height: 4rem;
+			width: 4rem;
+			transition: transform 0.3s;
+		}
+	}
+
+	&__btn:hover {
+		background-color: $color-primary-dark;
+
+		ion-icon {
+			transform: rotate(90deg);
+		}
+	}
+}
+
+@keyframes color-rotate {
+	from { filter: hue-rotate(0deg); }
+	to { filter: hue-rotate(360deg); }
 }

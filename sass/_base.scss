@@ -1,4 +1,5 @@
 $color-primary: #26c485;
+$color-primary-dark: #21AB74;
 $color-secondary: #3a606e;
 $color-grey-1: #fdfffc;
 $color-grey-2: #72767f;
@@ -17,6 +18,7 @@ $font-primary: 'Lato', sans-serif;
 html {
 	box-sizing: border-box;
 	font-size: 62.5%; // 1rem = 10px
+	scroll-behavior: smooth;
 }
 
 body {
@@ -28,5 +30,6 @@ body {
 .container {
 	display: grid;
 	grid-template-columns: repeat(12, 1fr);
-	grid-template-rows: 100vh 50vh;
+	grid-template-rows: 100vh 4rem 100vh 100vh 100vh 100vh;
+	position: relative;
 }

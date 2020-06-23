@@ -1,43 +1,48 @@
-.nav-bar {
-	position: fixed;
-	top: 0;
+.navbar {
+	position: absolute;
+	top: 100vh;
 	left: 0;
-	width: 100vw;
-	height: 12rem;
+	width: 100%;
+	height: 4rem;
+	z-index: 2;
 
 	display: flex;
 	justify-content: flex-end;
 	align-items: center;
 
+	background-color: $color-primary;
+
+	&.stick {
+		position: fixed;
+		top: 0;
+	}
+
 	&__list {
 		display: flex;
 		list-style: none;
-		margin-right: 6rem;
+		margin-right: 2rem;
+		transition: opacity 0.3s;
+
+		&.hidden {
+			opacity: 0;
+		}
 
 		&__item {
 			color: $color-grey-1;
-			font-size: 2.2rem;
-			margin-right: 3rem;
+			font-size: 1.4rem;
+			padding: 0.5rem;
+			border-radius: 1rem;
 			font-weight: 400;
 			text-transform: uppercase;
 			position: relative;
+			transition: background-color 0.3s;
 
-			&::before {
-				content: '';
-				position: absolute;
-				bottom: 0;
-				left: 0;
-				transition: all 0.2s;
-			}
-
-			&:hover::before {
-				width: 100%;
-				height: 3px;
-				background-color: $color-primary;
+			&:hover {
+				background-color: $color-primary-dark;
 			}
 
 			&:not(:last-child) {
-				margin-right: 4rem;
+				margin-right: 2rem;
 			}
 		}
 	}
