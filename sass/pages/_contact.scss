@@ -1,0 +1,7 @@
+.contact {
+	grid-row: 5 / 6;
+	grid-column: 1 / -1;
+
+	background-color: $color-grey-dark-1;
+	@include section-blueprint;
+}

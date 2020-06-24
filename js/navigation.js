@@ -1,39 +1,82 @@
-function scrollPageTo(selector) {
-	$('html, body').animate({
-		scrollTop: $(selector).offset().top
-	}, 500)
+function scrollPageTo(element) {
+	$('html, body').animate(
+		{
+			scrollTop: element.offset().top - NAVBAR_HEIGHT,
+		},
+		500,
+	);
 }
 
-// Create an click listener for the header button to scroll to the about section 
-const headerBtn =  $('.header__btn');
-const headerNavAboutBtn = $('.header__nav__list__item--about');
-const headerNavSkillsBtn = $('.header__nav__list__item--skills');
-const headerNavProjectsBtn = $('.header__nav__list__item--projects');
-const headerNavContactBtn = $('.header__nav__list__item--contact');
-headerBtn.click(() => scrollPageTo('.about'));
-headerNavAboutBtn.click(() => scrollPageTo('.about'));
-headerNavSkillsBtn.click(() => scrollPageTo('.skills'));
-headerNavProjectsBtn.click(() => scrollPageTo('.projects'));
-headerNavContactBtn.click(() => scrollPageTo('.contact'));
+function selectNavBarItem(element, autoscrollTriggered) {
+	element.addClass('selected');
+	navbarItems.forEach((navItem) => {
+		if (navItem !== element) {
+			navItem.removeClass('selected');
+		}
+	});
+}
+
+function scrollHandler() {
+	console.log('loading');
+	const scrollDistance = window.pageYOffset;
+	if (
+		scrollDistance > 0 &&
+		scrollDistance < about.offset().top - (NAVBAR_HEIGHT + 5)
+	) {
+		selectNavBarItem(navbarHomeBtn);
+	} else if (
+		scrollDistance >= about.offset().top - (NAVBAR_HEIGHT + 5) &&
+		scrollDistance < skills.offset().top - (NAVBAR_HEIGHT + 5)
+	) {
+		selectNavBarItem(navbarAboutBtn);
+	} else if (
+		scrollDistance >= skills.offset().top - (NAVBAR_HEIGHT + 5) &&
+		scrollDistance < projects.offset().top - (NAVBAR_HEIGHT + 5)
+	) {
+		selectNavBarItem(navbarSkillsBtn);
+	} else if (
+		scrollDistance >= projects.offset().top - (NAVBAR_HEIGHT + 5) &&
+		scrollDistance < contact.offset().top - (NAVBAR_HEIGHT + 5)
+	) {
+		selectNavBarItem(navbarProjectsBtn);
+	} else if (scrollDistance >= contact.offset().top - (NAVBAR_HEIGHT + 5)) {
+		selectNavBarItem(navbarContactBtn);
+	}
+}
+
+const NAVBAR_HEIGHT = 80;
+
+$(document).ready(scrollHandler);
+
+// Get all of the sections
+const header = $('.header');
+const about = $('.about');
+const skills = $('.skills');
+const projects = $('.projects');
+const contact = $('.contact');
+
+const learnMoreButton = $('.header__btn');
+learnMoreButton.click(() => scrollPageTo(about));
 
 // Show a navbar once after 1 full screen scroll
 const navbar = $('.navbar');
 const navbarList = $('.navbar__list');
-const navbarAboutBtn = $('.navbar__list__item--about');
-const navbarSkillsBtn = $('.navbar__list__item--skills');
-const navbarProjectsBtn = $('.navbar__list__item--projects');
-const navbarContactBtn = $('.navbar__list__item--contact');
-navbarAboutBtn.click(() => scrollPageTo('.about'));
-navbarSkillsBtn.click(() => scrollPageTo('.skills'));
-navbarProjectsBtn.click(() => scrollPageTo('.projects'));
-navbarContactBtn.click(() => scrollPageTo('.contact'));
+const navbarHomeBtn = $('.navbar__item--home a');
+const navbarAboutBtn = $('.navbar__item--about a');
+const navbarSkillsBtn = $('.navbar__item--skills a');
+const navbarProjectsBtn = $('.navbar__item--projects a');
+const navbarContactBtn = $('.navbar__item--contact a');
+const navbarItems = [
+	navbarHomeBtn,
+	navbarAboutBtn,
+	navbarSkillsBtn,
+	navbarProjectsBtn,
+	navbarContactBtn,
+];
+navbarHomeBtn.click(() => scrollPageTo(header));
+navbarAboutBtn.click(() => scrollPageTo(about));
+navbarSkillsBtn.click(() => scrollPageTo(skills));
+navbarProjectsBtn.click(() => scrollPageTo(projects));
+navbarContactBtn.click(() => scrollPageTo(contact));
 
-window.onscroll = function() {
-	if (window.pageYOffset >= window.innerHeight) {
-		navbar.addClass('stick');
-		navbarList.removeClass('hidden');
-	} else {
-		navbar.removeClass('stick');
-		navbarList.addClass('hidden')
-	}
-}
+window.onscroll = scrollHandler;

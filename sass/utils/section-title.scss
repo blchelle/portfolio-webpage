@@ -1,0 +1,30 @@
+@mixin section-blueprint {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+
+	padding: 4rem;
+
+	border-top: 1rem solid $color-primary;
+
+	&__title {
+		position: relative;
+
+		text-transform: uppercase;
+		color: $color-grey-light-1;
+		margin-bottom: 5rem;
+
+		&::before {
+			content: '';
+			position: absolute;
+			bottom: -2rem;
+			left: 50%;
+			width: 8rem;
+			height: 0.7rem;
+			transform: translateX(-50%);
+
+			background-color: $color-primary;
+		}
+	}
+}

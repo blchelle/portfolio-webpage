@@ -12,51 +12,6 @@
 
 	position: relative;
 
-	&__nav {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 12rem;
-
-		display: flex;
-		justify-content: flex-end;
-		align-items: center;
-
-		&__list {
-			display: flex;
-			list-style: none;
-			margin-right: 6rem;
-	
-			&__item {
-				color: $color-grey-1;
-				font-size: 2.2rem;
-				margin-right: 3rem;
-				font-weight: 400;
-				text-transform: uppercase;
-				position: relative;
-	
-				&::before {
-					content: '';
-					position: absolute;
-					bottom: 0;
-					left: 0;
-					transition: all 0.2s;
-				}
-	
-				&:hover::before {
-					width: 100%;
-					height: 3px;
-					background-color: $color-primary;
-				}
-	
-				&:not(:last-child) {
-					margin-right: 4rem;
-				}
-			}
-		}
-	}
-
 	&__content {
 		display: flex;
 		flex-direction: column;
@@ -65,14 +20,14 @@
 	}
 
 	&__title {
-		color: $color-grey-1;
+		color: $color-grey-light-1;
 	}
 
 	&__name {
 		color: $color-primary;
 
-		&:hover { 
-			animation: color-rotate 2s; 
+		&:hover {
+			animation: color-rotate 2s;
 			animation-iteration-count: infinite;
 			animation-timing-function: ease-in-out;
 		}
@@ -81,7 +36,7 @@
 	&__btn {
 		border: none;
 		outline: none;
-		
+
 		height: 5rem;
 		width: 20rem;
 		padding: 0 0.5rem;
@@ -90,11 +45,11 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		
+
 		align-self: center;
-		
+
 		font-size: 2rem;
-		color: $color-grey-1;
+		color: $color-grey-light-1;
 		background-color: $color-primary;
 		border-radius: 2.5rem;
 
@@ -121,6 +76,10 @@
 }
 
 @keyframes color-rotate {
-	from { filter: hue-rotate(0deg); }
-	to { filter: hue-rotate(360deg); }
+	from {
+		filter: hue-rotate(0deg);
+	}
+	to {
+		filter: hue-rotate(360deg);
+	}
 }

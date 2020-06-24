@@ -1,9 +1,12 @@
-@import 'base';
-@import 'typography';
+@import 'base/base';
+@import 'base/typography';
 
-@import 'navbar';
-@import 'header';
-@import 'about';
-@import 'skills';
-@import 'projects';
-@import 'contact';
+@import 'utils/section-title.scss';
+
+@import 'layout/navbar';
+
+@import 'pages/header';
+@import 'pages/about';
+@import 'pages/skills';
+@import 'pages/projects';
+@import 'pages/contact';
