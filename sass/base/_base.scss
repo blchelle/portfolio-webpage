@@ -22,7 +22,6 @@ $font-primary: 'Lato', sans-serif;
 html {
 	box-sizing: border-box;
 	font-size: 62.5%; // 1rem = 10px
-	scroll-behavior: smooth;
 	scrollbar-color: $color-primary $color-grey-dark-2;
 	scrollbar-width: thin;
 }

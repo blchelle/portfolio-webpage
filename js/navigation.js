@@ -3,7 +3,7 @@ function scrollPageTo(element) {
 		{
 			scrollTop: element.offset().top - NAVBAR_HEIGHT,
 		},
-		500,
+		800,
 	);
 }
 
