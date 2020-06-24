@@ -23,7 +23,7 @@ html {
 	box-sizing: border-box;
 	font-size: 62.5%; // 1rem = 10px
 	scrollbar-color: $color-primary $color-grey-dark-2;
-	scrollbar-width: thin;
+	scrollbar-width: auto;
 }
 
 body {
@@ -31,21 +31,23 @@ body {
 	font-weight: 300;
 	line-height: 1.6;
 	position: relative;
-
 }
 
 @media only screen and (max-width: 1200px) {
-	html { font-size: 50%; }
+	html {
+		font-size: 50%;
+	}
 }
 
 @media only screen and (max-width: 1000px) {
-	html { font-size: 43.75%; }
+	html {
+		font-size: 43.75%;
+	}
 }
 
- /* width */
- ::-webkit-scrollbar {
-	width: 10px;
-	
+/* width */
+::-webkit-scrollbar {
+	width: 15px;
 }
 
 /* Track */
@@ -60,12 +62,5 @@ body {
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: $color-primary-dark;
-} 
-
-
-.container {
-	display: grid;
-	grid-template-columns: repeat(8, 1fr);
-	grid-template-rows: 100vh 100vh min-content 100vh 100vh;
+	background: $color-primary-dark;
 }

@@ -1,7 +1,4 @@
 .header {
-	grid-column: 1 / -1;
-	grid-row: 1 / 2;
-
 	background: linear-gradient(#00000088, #00000088), url('/assets/header.jpg');
 	background-size: cover;
 	background-position: center;
@@ -11,6 +8,7 @@
 	justify-content: center;
 
 	position: relative;
+	height: 100vh;
 
 	&__content {
 		display: flex;

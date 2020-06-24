@@ -8,8 +8,14 @@
 			rel="stylesheet"
 		/>
 		<link rel="stylesheet" href="/css/style.css" />
-		<script type="module" src="https://unpkg.com/ionicons@5.1.0/dist/ionicons/ionicons.esm.js"></script>
-		<script nomodule="" src="https://unpkg.com/ionicons@5.1.0/dist/ionicons/ionicons.js"></script>
+		<script
+			type="module"
+			src="https://unpkg.com/ionicons@5.1.0/dist/ionicons/ionicons.esm.js"
+		></script>
+		<script
+			nomodule=""
+			src="https://unpkg.com/ionicons@5.1.0/dist/ionicons/ionicons.js"
+		></script>
 		<title>Brock Chelle</title>
 	</head>
 	<body>
@@ -54,39 +60,69 @@
 					</h2>
 					<button class="header__btn">
 						<span class="header__btn__text">Learn More</span>
-						<ion-icon
-							class="header__btn__icon"
-							name="arrow-forward-circle"
-						></ion-icon>
+						<ion-icon class="header__btn__icon" name="arrow-forward-circle"></ion-icon>
 					</button>
 				</div>
 			</header>
+
 			<section class="about">
 				<h2 class="about__title">About me</h2>
 			</section>
+
 			<section class="skills">
 				<h2 class="skills__title">Skills</h2>
+				<nav class="skills__nav">
+					<ul class="skills__categories">
+						<li class="skills__category skills__category--web">Web</li>
+						<li class="skills__category skills__category--languages">Languages</li>
+						<li class="skills__category skills__category--databases">Databases</li>
+						<li class="skills__category skills__category--other">Other</li>
+					</ul>
+				</nav>
 				<div class="skills__container">
 					<div class="skills__item">
-						<img src="/assets/react-logo.png" alt="React Logo" />
-						<h3 class="skill__name">React</h3>
-						<p class="skill__description">
-							I've used React & Redux to build out the front ends
-							of the e-commerce site for a fictional clothing
-							company and a working bug/issue tracker for software
-							products
-						</p>
+						<img class="skill__image" src="/assets/react-logo.png" alt="React Logo" />
+						<h3 class="skill__name">ReactJS</h3>
 					</div>
-					<div class="skills__item"></div>
-					<div class="skills__item"></div>
-					<div class="skills__item"></div>
-					<div class="skills__item"></div>
-					<div class="skills__item"></div>
+					<div class="skills__item">
+						<img class="skill__image" src="/assets/node-logo.png" alt="NodeJS Logo" />
+						<h3 class="skill__name">NodeJS</h3>
+					</div>
+					<div class="skills__item">
+						<img
+							class="skill__image"
+							src="/assets/express-logo.png"
+							alt="Express Logo"
+						/>
+						<h3 class="skill__name">Express</h3>
+					</div>
+					<div class="skills__item">
+						<img
+							class="skill__image"
+							src="/assets/front-end-logo.png"
+							alt="Express Logo"
+						/>
+						<h3 class="skill__name">HTML, CSS, JS</h3>
+					</div>
+					<div class="skills__item">
+						<img
+							class="skill__image"
+							src="/assets/mongoose-logo.png"
+							alt="Mongoose Logo"
+						/>
+						<h3 class="skill__name">Mongoose</h3>
+					</div>
+					<div class="skills__item">
+						<img class="skill__image" src="/assets/cpp-logo.png" alt="C++ Logo" />
+						<h3 class="skill__name">C++</h3>
+					</div>
 				</div>
 			</section>
+
 			<section class="projects">
 				<h2 class="projects__title">Projects</h2>
 			</section>
+
 			<section class="contact">
 				<h2 class="contact__title">Contact</h2>
 			</section>
@@ -97,5 +133,6 @@
 			crossorigin="anonymous"
 		></script>
 		<script src="/js/navigation.js"></script>
+		<script src="/js/skills.js"></script>
 	</body>
 </html>

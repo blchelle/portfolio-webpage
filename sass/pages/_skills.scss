@@ -1,47 +1,104 @@
 .skills {
 	background-color: $color-grey-dark-1;
-
-	grid-row: 3 / 4;
-	grid-column: 1 / -1;
 	@include section-blueprint;
+
+	&__nav {
+		align-self: flex-start;
+	}
+
+	&__categories {
+		display: flex;
+		list-style: none;
+		border-bottom: 4px solid $color-grey-dark-3;
+		padding: 1.5rem 0;
+		position: relative;
+
+		&.category-1::after {
+			left: 0;
+		}
+
+		&.category-2::after {
+			left: 25%;
+		}
+
+		&.category-3::after {
+			left: 50%;
+		}
+
+		&.category-4::after {
+			left: 75%;
+		}
+
+		&::after {
+			content: '';
+			position: absolute;
+			height: 4px;
+			width: 25%;
+			bottom: -4px;
+			left: 0;
+			background-color: $color-primary;
+			transition: left 0.3s ease;
+		}
+	}
+
+	&__category {
+		color: $color-grey-light-1;
+		font-size: 1.7rem;
+		font-weight: bold;
+		width: 13rem;
+		text-align: center;
+
+		transition: color 0.2s ease;
+
+		&.selected,
+		&:hover {
+			color: $color-primary;
+		}
+	}
 
 	&__container {
 		display: grid;
-		width: 70%;
-		grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+		grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
 		grid-auto-rows: 1fr;
 		gap: 5rem;
 
-		&::before {
-			content: '';
-			width: 0;
-			padding-bottom: 100%;
-			grid-column: 1 / 1;
-			grid-row: 1 / 1;
-		}
+		width: 100%;
+		padding: 4rem;
+
+		background-color: $color-grey-dark-3;
 	}
 
 	&__item {
 		display: flex;
-		flex-direction: column;
 		align-items: center;
-		justify-content: space-between;
-		padding: 2rem;
+		justify-content: flex-start;
+		padding: 3rem;
+		position: relative;
 
 		color: $color-grey-light-1;
+		background-color: $color-grey-dark-2;
 
-		&:first-child {
-			grid-column: 1 / 1;
-			grid-row: 1 / 1;
+		&:before {
+			content: '';
+			width: 10px;
+			height: 0;
+			position: absolute;
+			top: 0;
+			left: 0;
+			background-color: $color-primary;
+			transition: height 0.2s ease;
 		}
 
-		background-color: $color-grey-dark-2;
+		&:hover:before {
+			height: 100%;
+		}
 	}
 }
 
 .skill {
-	&__description {
-		font-size: 1.4rem;
-		text-align: center;
+	&__image {
+		height: 8rem;
+		width: auto;
+		margin-right: 4rem;
 	}
 }
