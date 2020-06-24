@@ -17,7 +17,6 @@ function selectNavBarItem(element, autoscrollTriggered) {
 }
 
 function scrollHandler() {
-	console.log('loading');
 	const scrollDistance = window.pageYOffset;
 	if (
 		scrollDistance > 0 &&

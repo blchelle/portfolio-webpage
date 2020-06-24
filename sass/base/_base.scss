@@ -23,6 +23,8 @@ html {
 	box-sizing: border-box;
 	font-size: 62.5%; // 1rem = 10px
 	scroll-behavior: smooth;
+	scrollbar-color: $color-primary $color-grey-dark-2;
+	scrollbar-width: thin;
 }
 
 body {
@@ -30,10 +32,41 @@ body {
 	font-weight: 300;
 	line-height: 1.6;
 	position: relative;
+
 }
+
+@media only screen and (max-width: 1200px) {
+	html { font-size: 50%; }
+}
+
+@media only screen and (max-width: 1000px) {
+	html { font-size: 43.75%; }
+}
+
+ /* width */
+ ::-webkit-scrollbar {
+	width: 10px;
+	
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+	background: $color-grey-dark-2;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+	background: $color-primary;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: $color-primary-dark;
+} 
+
 
 .container {
 	display: grid;
-	grid-template-columns: repeat(12, 1fr);
+	grid-template-columns: repeat(8, 1fr);
 	grid-template-rows: 100vh 100vh min-content 100vh 100vh;
 }
