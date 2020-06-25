@@ -1,15 +1,14 @@
 .skills {
-	background-color: $color-grey-dark-1;
+	background-color: $color-grey-dark-2;
 	@include section-blueprint;
-
-	&__nav {
-		align-self: flex-start;
-	}
 
 	&__categories {
 		display: flex;
+		align-self: flex-start;
+
+		width: 50rem;
+
 		list-style: none;
-		border-bottom: 4px solid $color-grey-dark-3;
 		padding: 1.5rem 0;
 		position: relative;
 
@@ -32,7 +31,7 @@
 		&::after {
 			content: '';
 			position: absolute;
-			height: 4px;
+			height: 5px;
 			width: 25%;
 			bottom: -4px;
 			left: 0;
@@ -45,7 +44,7 @@
 		color: $color-grey-light-1;
 		font-size: 1.7rem;
 		font-weight: bold;
-		width: 13rem;
+		width: 25%;
 		text-align: center;
 
 		transition: color 0.2s ease;
@@ -57,15 +56,20 @@
 	}
 
 	&__container {
+		display: flex;
+		width: 100%;
+		overflow-x: hidden;
+		background-color: $color-grey-dark-4;
+	}
+
+	&__page {
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
 		grid-auto-rows: 1fr;
 		gap: 5rem;
-
-		width: 100%;
 		padding: 4rem;
 
-		background-color: $color-grey-dark-3;
+		flex: 0 0 100%;
 	}
 
 	&__item {
@@ -76,7 +80,7 @@
 		position: relative;
 
 		color: $color-grey-light-1;
-		background-color: $color-grey-dark-2;
+		background-color: $color-grey-dark-3;
 
 		&:before {
 			content: '';
@@ -100,5 +104,11 @@
 		height: 8rem;
 		width: auto;
 		margin-right: 4rem;
+	}
+}
+
+@media only screen and (max-width: 700px) {
+	.skills__categories { 
+		width: 100%; 
 	}
 }
