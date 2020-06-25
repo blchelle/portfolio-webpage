@@ -1,3 +1,7 @@
+/**
+ * Scroll the page to a element on the page
+ * @param {JQuery} element An element that exists in the DOM
+ */
 function scrollPageTo(element) {
 	$('html, body').animate(
 		{
@@ -7,7 +11,12 @@ function scrollPageTo(element) {
 	);
 }
 
-function selectNavBarItem(element, autoscrollTriggered) {
+/**
+ * Set the styling on the navbar to select the passed in element
+ * and deselect all other elements in the navbar
+ * @param {JQuery} element The navbar element
+ */
+function selectNavBarItem(element) {
 	element.addClass('selected');
 	navbarItems.forEach((navItem) => {
 		if (navItem !== element) {
@@ -16,12 +25,13 @@ function selectNavBarItem(element, autoscrollTriggered) {
 	});
 }
 
+/**
+ * Listens for page scrolls and selects the navbar item corresponding
+ * with the section of the page that the user is currently scrolled to
+ */
 function scrollHandler() {
 	const scrollDistance = window.pageYOffset;
-	if (
-		scrollDistance > 0 &&
-		scrollDistance < about.offset().top - (NAVBAR_HEIGHT + 5)
-	) {
+	if (scrollDistance >= 0 && scrollDistance < about.offset().top - (NAVBAR_HEIGHT + 5)) {
 		selectNavBarItem(navbarHomeBtn);
 	} else if (
 		scrollDistance >= about.offset().top - (NAVBAR_HEIGHT + 5) &&
@@ -43,11 +53,20 @@ function scrollHandler() {
 	}
 }
 
+function resizeHandler() {
+	if ($(window).width() < 700) {
+		navbar.addClass('navbar--mobile');
+		navbar.removeClass('navbar--large');
+	} else {
+		navbar.removeClass('navbar--mobile');
+		navbar.addClass('navbar--large');
+	}
+}
+
 const NAVBAR_HEIGHT = 80;
 
-$(document).ready(scrollHandler);
-
-// Get all of the sections
+// Query for the navbar and each of the sections
+const navbar = $('.navbar');
 const header = $('.header');
 const about = $('.about');
 const skills = $('.skills');
@@ -57,14 +76,12 @@ const contact = $('.contact');
 const learnMoreButton = $('.header__btn');
 learnMoreButton.click(() => scrollPageTo(about));
 
-// Show a navbar once after 1 full screen scroll
-const navbar = $('.navbar');
-const navbarList = $('.navbar__list');
-const navbarHomeBtn = $('.navbar__item--home a');
-const navbarAboutBtn = $('.navbar__item--about a');
-const navbarSkillsBtn = $('.navbar__item--skills a');
-const navbarProjectsBtn = $('.navbar__item--projects a');
-const navbarContactBtn = $('.navbar__item--contact a');
+// Query for all the navbar buttons
+const navbarHomeBtn = $('.navbar__item--home');
+const navbarAboutBtn = $('.navbar__item--about');
+const navbarSkillsBtn = $('.navbar__item--skills');
+const navbarProjectsBtn = $('.navbar__item--projects');
+const navbarContactBtn = $('.navbar__item--contact');
 const navbarItems = [
 	navbarHomeBtn,
 	navbarAboutBtn,
@@ -72,10 +89,27 @@ const navbarItems = [
 	navbarProjectsBtn,
 	navbarContactBtn,
 ];
+
+// Set up click handlers for each of the navbar buttons
 navbarHomeBtn.click(() => scrollPageTo(header));
 navbarAboutBtn.click(() => scrollPageTo(about));
 navbarSkillsBtn.click(() => scrollPageTo(skills));
 navbarProjectsBtn.click(() => scrollPageTo(projects));
 navbarContactBtn.click(() => scrollPageTo(contact));
 
+function toggleNavigation() {
+	console.log('triggering');
+	navbar.toggleClass('hidden');
+}
+
+// Query for the hamburger menu icon that will be visible on mobile
+const navbarMenuBtn = $('.navbar__icon');
+navbarMenuBtn.click(toggleNavigation);
+
+// Trigger the scroll handler when the window scrolls or on page load
 window.onscroll = scrollHandler;
+$(document).ready(() => {
+	scrollHandler();
+	resizeHandler();
+});
+$(window).resize(resizeHandler);

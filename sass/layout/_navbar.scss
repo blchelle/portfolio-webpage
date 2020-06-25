@@ -1,4 +1,4 @@
-.navbar {
+.navbar--large {
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -12,20 +12,25 @@
 
 	background-color: rgba($color: $color-grey-dark-3, $alpha: 0.9);
 
-	&__list {
+	.navbar__icon {
+		display: none;
+	}
+
+	.navbar__list {
 		margin-right: 3rem;
-
 		display: flex;
-
-		list-style: none;
 		transition: opacity 0.3s;
 	}
 
-	&__item {
+	.navbar__item {
 		font-size: 1.6rem;
 		font-weight: bold;
 		text-transform: uppercase;
 		color: $color-grey-light-1;
+		letter-spacing: 0.15em;
+
+		padding: 15px 10px;
+		position: relative;
 
 		transition: color 0.3s ease-out;
 
@@ -33,37 +38,26 @@
 			margin-right: 3rem;
 		}
 
-		a {
-			color: #fff;
-			text-transform: uppercase;
-			text-decoration: none;
-			letter-spacing: 0.15em;
+		&:after {
+			content: '';
+			position: absolute;
 
-			display: inline-block;
-			padding: 15px 10px;
-			position: relative;
+			bottom: 0;
+			left: 50%;
+			height: 5px;
+			width: 0;
+
+			background-color: $color-primary;
+			transition: width 0.3s ease 0s, left 0.3s ease 0s;
+		}
+
+		&.selected,
+		&:hover {
+			color: $color-primary;
 
 			&:after {
-				background: none repeat scroll 0 0 transparent;
-				bottom: 0;
-				content: '';
-				display: block;
-				height: 5px;
-				left: 50%;
-				position: absolute;
-				background-color: $color-primary;
-				transition: width 0.3s ease 0s, left 0.3s ease 0s;
-				width: 0;
-			}
-
-			&.selected:not(.auto-scrolling),
-			&:hover {
-				color: $color-primary;
-
-				&:after {
-					width: 100%;
-					left: 0;
-				}
+				width: 100%;
+				left: 0;
 			}
 		}
 	}

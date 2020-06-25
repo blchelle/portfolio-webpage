@@ -19,33 +19,14 @@
 		<title>Brock Chelle</title>
 	</head>
 	<body>
-		<nav class="navbar">
-			<ul class="navbar__list hidden">
-				<li class="navbar__item navbar__item--home selected">
-					<a href="#">
-						Home
-					</a>
-				</li>
-				<li class="navbar__item navbar__item--about">
-					<a href="#">
-						About
-					</a>
-				</li>
-				<li class="navbar__item navbar__item--skills">
-					<a href="#">
-						Skills
-					</a>
-				</li>
-				<li class="navbar__item navbar__item--projects">
-					<a href="#">
-						Projects
-					</a>
-				</li>
-				<li class="navbar__item navbar__item--contact">
-					<a href="#">
-						Contact
-					</a>
-				</li>
+		<nav class="navbar navbar--large hidden">
+			<ion-icon class="navbar__icon" name="menu"></ion-icon>
+			<ul class="navbar__list">
+				<li class="navbar__item navbar__item--home"><span>Home</span></li>
+				<li class="navbar__item navbar__item--about"><span>About</span></li>
+				<li class="navbar__item navbar__item--skills"><span>Skills</span></li>
+				<li class="navbar__item navbar__item--projects"><span>Projects</span></li>
+				<li class="navbar__item navbar__item--contact"><span>Contact</span></li>
 			</ul>
 		</nav>
 		<main class="container">
@@ -80,45 +61,61 @@
 				<div class="skills__container">
 					<div class="skills__page skills__page--web">
 						<div class="skills__item">
-							<img class="skill__image" src="/assets/node-logo.png" alt="NodeJS Logo" />
+							<img
+								class="skill__image"
+								src="/assets/node-logo.png"
+								alt="NodeJS Logo"
+							/>
 							<h3 class="skill__name">NodeJS</h3>
 						</div>
 						<div class="skills__item">
 							<img
-							class="skill__image"
-							src="/assets/express-logo.png"
-							alt="Express Logo"
+								class="skill__image"
+								src="/assets/express-logo.png"
+								alt="Express Logo"
 							/>
 							<h3 class="skill__name">Express</h3>
 						</div>
 						<div class="skills__item">
 							<img
-							class="skill__image"
-							src="/assets/mongoose-logo.png"
-							alt="Mongoose Logo"
+								class="skill__image"
+								src="/assets/mongoose-logo.png"
+								alt="Mongoose Logo"
 							/>
 							<h3 class="skill__name">Mongoose</h3>
 						</div>
 						<div class="skills__item">
 							<img
-							class="skill__image"
-							src="/assets/front-end-logo.png"
-							alt="Express Logo"
+								class="skill__image"
+								src="/assets/front-end-logo.png"
+								alt="Express Logo"
 							/>
 							<h3 class="skill__name">HTML, CSS</h3>
 						</div>
 						<div class="skills__item">
-							<img class="skill__image" src="/assets/react-logo.png" alt="React Logo" />
+							<img
+								class="skill__image"
+								src="/assets/react-logo.png"
+								alt="React Logo"
+							/>
 							<h3 class="skill__name">ReactJS</h3>
 						</div>
 						<div class="skills__item">
-							<img class="skill__image" src="/assets/redux-logo.png" alt="Redux Logo" />
+							<img
+								class="skill__image"
+								src="/assets/redux-logo.png"
+								alt="Redux Logo"
+							/>
 							<h3 class="skill__name">Redux</h3>
 						</div>
 					</div>
 					<div class="skills__page skills__page--languages">
 						<div class="skills__item">
-							<img class="skill__image" src="/assets/jsts-logo.png" alt="JS&TS Logo" />
+							<img
+								class="skill__image"
+								src="/assets/jsts-logo.png"
+								alt="JS&TS Logo"
+							/>
 							<h3 class="skill__name">Typescript</h3>
 						</div>
 						<div class="skills__item">
@@ -126,7 +123,11 @@
 							<h3 class="skill__name">C++</h3>
 						</div>
 						<div class="skills__item">
-							<img class="skill__image" src="/assets/python-logo.png" alt="Python Logo" />
+							<img
+								class="skill__image"
+								src="/assets/python-logo.png"
+								alt="Python Logo"
+							/>
 							<h3 class="skill__name">Python</h3>
 						</div>
 						<div class="skills__item">
@@ -134,7 +135,11 @@
 							<h3 class="skill__name">Java</h3>
 						</div>
 						<div class="skills__item">
-							<img class="skill__image" src="/assets/swift-logo.png" alt="Swift Logo" />
+							<img
+								class="skill__image"
+								src="/assets/swift-logo.png"
+								alt="Swift Logo"
+							/>
 							<h3 class="skill__name">Swift</h3>
 						</div>
 						<div class="skills__item">
@@ -144,25 +149,45 @@
 					</div>
 					<div class="skills__page skills__page--databases">
 						<div class="skills__item">
-							<img class="skill__image" src="/assets/mongodb-logo.png" alt="MongoDB Logo" />
+							<img
+								class="skill__image"
+								src="/assets/mongodb-logo.png"
+								alt="MongoDB Logo"
+							/>
 							<h3 class="skill__name">MongoDB</h3>
 						</div>
 						<div class="skills__item">
-							<img class="skill__image" src="/assets/firebase-logo.png" alt="Firebase Logo" />
+							<img
+								class="skill__image"
+								src="/assets/firebase-logo.png"
+								alt="Firebase Logo"
+							/>
 							<h3 class="skill__name">Firebase</h3>
 						</div>
 						<div class="skills__item">
-							<img class="skill__image" src="/assets/mysql-logo.png" alt="MySQL Logo" />
+							<img
+								class="skill__image"
+								src="/assets/mysql-logo.png"
+								alt="MySQL Logo"
+							/>
 							<h3 class="skill__name">MySQL</h3>
 						</div>
 					</div>
 					<div class="skills__page skills__page--other">
 						<div class="skills__item">
-							<img class="skill__image" src="/assets/figma-logo.png" alt="Figma Logo" />
+							<img
+								class="skill__image"
+								src="/assets/figma-logo.png"
+								alt="Figma Logo"
+							/>
 							<h3 class="skill__name">Figma</h3>
 						</div>
 						<div class="skills__item">
-							<img class="skill__image" src="/assets/atlassian-logo.png" alt="Atlassian Logo" />
+							<img
+								class="skill__image"
+								src="/assets/atlassian-logo.png"
+								alt="Atlassian Logo"
+							/>
 							<h3 class="skill__name">Atlassian</h3>
 						</div>
 						<div class="skills__item">

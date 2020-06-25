@@ -8,7 +8,6 @@
 
 		width: 50rem;
 
-		list-style: none;
 		padding: 1.5rem 0;
 		position: relative;
 
@@ -75,9 +74,9 @@
 	&__item {
 		display: flex;
 		align-items: center;
-		justify-content: flex-start;
 		padding: 3rem;
 		position: relative;
+		flex-wrap: wrap;
 
 		color: $color-grey-light-1;
 		background-color: $color-grey-dark-3;
@@ -101,14 +100,14 @@
 
 .skill {
 	&__image {
-		height: 8rem;
+		height: min(50%, 8rem);
 		width: auto;
-		margin-right: 4rem;
+		padding: 0 3rem;
 	}
 }
 
 @media only screen and (max-width: 700px) {
-	.skills__categories { 
-		width: 100%; 
+	.skills__categories {
+		width: 100%;
 	}
 }

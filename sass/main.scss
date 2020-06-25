@@ -1,9 +1,11 @@
 @import 'base/base';
 @import 'base/typography';
+@import 'base/resets';
 
 @import 'utils/section-blueprint.scss';
-
+@import 'utils/functions.scss';
 @import 'layout/navbar';
+@import 'layout/navbar-mobile';
 
 @import 'pages/header';
 @import 'pages/about';
