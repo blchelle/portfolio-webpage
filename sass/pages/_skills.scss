@@ -8,7 +8,7 @@
 
 		width: 50rem;
 
-		padding: 1.5rem 0;
+		padding: 1rem 0;
 		position: relative;
 
 		&.category-1::after {
@@ -41,7 +41,7 @@
 
 	&__category {
 		color: $color-grey-light-1;
-		font-size: 1.7rem;
+		font-size: 1.6rem;
 		font-weight: bold;
 		width: 25%;
 		text-align: center;
@@ -63,27 +63,27 @@
 
 	&__page {
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
+		grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
 		grid-auto-rows: 1fr;
 		gap: 5rem;
-		padding: 4rem;
-
+		padding: 5rem;
 		flex: 0 0 100%;
 	}
 
 	&__item {
 		display: flex;
 		align-items: center;
-		padding: 3rem;
 		position: relative;
-		flex-wrap: wrap;
+
+		height: 14rem;
+		padding: 4rem;
 
 		color: $color-grey-light-1;
 		background-color: $color-grey-dark-3;
 
 		&:before {
 			content: '';
-			width: 10px;
+			width: 0.5rem;
 			height: 0;
 			position: absolute;
 			top: 0;
@@ -100,9 +100,9 @@
 
 .skill {
 	&__image {
-		height: min(50%, 8rem);
+		height: 6rem;
 		width: auto;
-		padding: 0 3rem;
+		margin-right: 3rem;
 	}
 }
 

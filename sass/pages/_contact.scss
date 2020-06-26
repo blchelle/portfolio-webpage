@@ -5,23 +5,102 @@
 	@include section-blueprint;
 
 	&__form {
-		display: flex;
+		display: grid;
+		grid-template-rows: 4rem 4rem min-content;
+		grid-template-columns: 1fr 1fr;
+		grid-gap: 4rem;
+
 		flex-direction: column;
-		width: 100%;
+		width: 80rem;
 
 		label {
 			position: absolute;
+			top: 0rem;
+			left: 1rem;
+
+			font-size: 2rem;
+			color: $color-grey-dark-1;
+			transition: all 0.2s ease;
+
+			&.raised {
+				top: -2.5rem;
+				font-size: 1.6rem;
+				color: $color-primary;
+			}
 		}
 
-		input[type=text],
-		input[type=email] {
-			background-color: transparent;
+		input[type='text'],
+		input[type='email'],
+		input[type='tel'] {
+			border-bottom: 3px solid $color-grey-dark-1;
+			font-size: 2rem;
+			height: 4rem;
+			color: $color-grey-light-2;
+			padding: 0 1rem;
 			width: 100%;
-			border-bottom: 2px solid $color-grey-dark-1;
+		}
+
+		input:focus {
+			border-bottom: 3px solid $color-primary;
+		}
+
+		textarea#message {
+			background-color: $color-grey-light-2;
+			color: $color-grey-dark-3;
+			width: 100%;
+
+			&:focus {
+				border: 3px solid $color-primary;
+			}
+		}
+
+		button[type='submit'] {
+			grid-column: 1 / -1;
+			grid-row: 4 / 5;
+			width: 16rem;
+			height: 5rem;
+			justify-self: center;
+
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			background-color: $color-primary;
+			color: $color-grey-light-1;
+			font-size: 2rem;
+
+			transition: background-color 0.2s;
+			ion-icon {
+				margin-left: 2rem;
+			}
+
+			&:hover {
+				background-color: $color-primary-dark;
+			}
 		}
 	}
 
 	&__container {
 		position: relative;
+
+		&--name {
+			grid-column: 1 / -1;
+			grid-row: 1 / 2;
+		}
+
+		&--email {
+			grid-column: 1 / 2;
+			grid-row: 2 / 3;
+		}
+
+		&--phone {
+			grid-column: 2 / 3;
+			grid-row: 2 / 3;
+		}
+
+		&--message {
+			grid-column: 1 / -1;
+			grid-row: 3 / 4;
+		}
 	}
 }

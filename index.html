@@ -217,14 +217,31 @@
 			<section class="contact">
 				<h2 class="contact__title">Contact</h2>
 				<form name="contact" method="POST" data-netlify="true" class="contact__form">
-					<div class="contact__container--name">
+					<div class="contact__container contact__container--name">
 						<label class="name__label" for="name">Name</label>
-						<input type="text" name="name" id="name">
+						<input type="text" name="name" id="name" />
 					</div>
-					<div class="contact__container--email">
+					<div class="contact__container contact__container--email">
 						<label for="email">Email Address</label>
-						<input type="email" name="email" id="email">
+						<input type="email" name="email" id="email" />
 					</div>
+					<div class="contact__container contact__container--phone">
+						<label for="phone">Phone Number</label>
+						<input
+							type="tel"
+							name="phone"
+							id="phone"
+							pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+						/>
+					</div>
+					<div class="contact__container contact__container--message">
+						<label for="message">Your Message</label>
+						<textarea name="message" id="message" cols="30" rows="10"></textarea>
+					</div>
+					<button type="submit">
+						Send
+						<ion-icon name="send"></ion-icon>
+					</button>
 				</form>
 			</section>
 
@@ -256,5 +273,6 @@
 		></script>
 		<script src="/js/navigation.js"></script>
 		<script src="/js/skills.js"></script>
+		<script src="/js/contact.js"></script>
 	</body>
 </html>
