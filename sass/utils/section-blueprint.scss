@@ -6,7 +6,7 @@
 
 	padding: 4rem 15%;
 
-	border-top: 1rem solid $color-primary;
+	border-top: 0.5rem solid $color-primary;
 
 	&__title {
 		position: relative;
@@ -14,6 +14,8 @@
 		text-transform: uppercase;
 		color: $color-grey-light-1;
 		margin-bottom: 5rem;
+
+		letter-spacing: 0.3rem;
 
 		&::before {
 			content: '';

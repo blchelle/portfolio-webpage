@@ -1,7 +1,27 @@
 .contact {
 	grid-row: 5 / 6;
 	grid-column: 1 / -1;
-
-	background-color: $color-grey-dark-1;
+	background-color: $color-grey-dark-2;
 	@include section-blueprint;
+
+	&__form {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+
+		label {
+			position: absolute;
+		}
+
+		input[type=text],
+		input[type=email] {
+			background-color: transparent;
+			width: 100%;
+			border-bottom: 2px solid $color-grey-dark-1;
+		}
+	}
+
+	&__container {
+		position: relative;
+	}
 }
