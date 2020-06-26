@@ -3,9 +3,18 @@
  * @param {JQuery} element An element that exists in the DOM
  */
 function scrollPageTo(element) {
+	// Determine the scrollbar offset based off of the current mode of the navbar
+	let offset;
+	if (navbar.hasClass('navbar--mobile')) {
+		offset = navbar.height() - $('.navbar__list').height();
+	} else {
+		offset = navbar.height();
+	}
+
+	navbar.addClass('hidden');
 	$('html, body').animate(
 		{
-			scrollTop: element.offset().top - NAVBAR_HEIGHT,
+			scrollTop: element.offset().top - offset,
 		},
 		800,
 	);
@@ -31,24 +40,25 @@ function selectNavBarItem(element) {
  */
 function scrollHandler() {
 	const scrollDistance = window.pageYOffset;
-	if (scrollDistance >= 0 && scrollDistance < about.offset().top - (NAVBAR_HEIGHT + 5)) {
+	const navbarHeight = navbar.height();
+	if (scrollDistance >= 0 && scrollDistance < about.offset().top - (navbarHeight + 5)) {
 		selectNavBarItem(navbarHomeBtn);
 	} else if (
-		scrollDistance >= about.offset().top - (NAVBAR_HEIGHT + 5) &&
-		scrollDistance < skills.offset().top - (NAVBAR_HEIGHT + 5)
+		scrollDistance >= about.offset().top - (navbarHeight + 5) &&
+		scrollDistance < skills.offset().top - (navbarHeight + 5)
 	) {
 		selectNavBarItem(navbarAboutBtn);
 	} else if (
-		scrollDistance >= skills.offset().top - (NAVBAR_HEIGHT + 5) &&
-		scrollDistance < projects.offset().top - (NAVBAR_HEIGHT + 5)
+		scrollDistance >= skills.offset().top - (navbarHeight + 5) &&
+		scrollDistance < projects.offset().top - (navbarHeight + 5)
 	) {
 		selectNavBarItem(navbarSkillsBtn);
 	} else if (
-		scrollDistance >= projects.offset().top - (NAVBAR_HEIGHT + 5) &&
-		scrollDistance < contact.offset().top - (NAVBAR_HEIGHT + 5)
+		scrollDistance >= projects.offset().top - (navbarHeight + 5) &&
+		scrollDistance < contact.offset().top - (navbarHeight + 5)
 	) {
 		selectNavBarItem(navbarProjectsBtn);
-	} else if (scrollDistance >= contact.offset().top - (NAVBAR_HEIGHT + 5)) {
+	} else if (scrollDistance >= contact.offset().top - (navbarHeight + 5)) {
 		selectNavBarItem(navbarContactBtn);
 	}
 }
@@ -62,8 +72,6 @@ function resizeHandler() {
 		navbar.addClass('navbar--large');
 	}
 }
-
-const NAVBAR_HEIGHT = 80;
 
 // Query for the navbar and each of the sections
 const navbar = $('.navbar');
