@@ -1,3 +1,5 @@
+import $ from 'jquery';
+
 /**
  * Scrolls the skillsContainer to a specific page
  * Page 1 - Web Skills

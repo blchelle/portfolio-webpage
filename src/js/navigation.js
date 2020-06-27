@@ -1,3 +1,5 @@
+import $ from 'jquery';
+
 /**
  * Scroll the page to a element on the page
  * @param {JQuery} element An element that exists in the DOM
@@ -16,7 +18,7 @@ function scrollPageTo(element) {
 		{
 			scrollTop: element.offset().top - offset,
 		},
-		800,
+		800
 	);
 }
 

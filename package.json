@@ -2,26 +2,34 @@
 	"name": "brock-chelle",
 	"version": "1.0.0",
 	"description": "Brock Chelle's Portfolio Webpage",
-	"main": "index.js",
+	"private": true,
 	"scripts": {
-		"watch:sass": "node-sass sass/main.scss css/style.css -w",
-		"devserver": "live-server --browser=firefox",
-		"start": "npm-run-all compile:sass --parallel devserver watch:sass",
-		"compile:sass": "node-sass sass/main.scss css/style.css",
-		"prefix:css": "postcss --use autoprefixer -b 'last 10 versions' css/style.comp.css -o css/style.prefix.css",
-		"compress:css": "node-sass css/style.prefix.css css/style.css --output-style compressed",
-		"build:css": "npm-run-all compile:sass prefix:css compress:css"
+		"start": "webpack-dev-server --config webpack.dev.js --open",
+		"clean": "rm -r dist",
+		"build": "webpack --config webpack.prod.js"
 	},
 	"author": "Brock",
 	"license": "ISC",
 	"devDependencies": {
 		"autoprefixer": "^7.1.4",
+		"clean-webpack-plugin": "^3.0.0",
 		"concat": "^1.0.3",
+		"css-loader": "^3.6.0",
+		"file-loader": "^6.0.0",
+		"html-webpack-plugin": "^4.3.0",
 		"node-sass": "^4.5.3",
 		"npm-run-all": "^4.1.1",
-		"postcss-cli": "^4.1.1"
+		"postcss-cli": "^4.1.1",
+		"sass-loader": "^8.0.2",
+		"style-loader": "^1.2.1",
+		"webpack": "^4.43.0",
+		"webpack-cli": "^3.3.12",
+		"webpack-dev-server": "^3.11.0",
+		"webpack-merge": "^4.2.2"
 	},
 	"dependencies": {
-		"@types/jquery": "^3.5.0"
+		"@types/jquery": "^3.5.0",
+		"html-loader": "^1.1.0",
+		"jquery": "^3.5.1"
 	}
 }

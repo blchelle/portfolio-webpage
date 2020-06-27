@@ -1,3 +1,5 @@
+import $ from 'jquery';
+
 /**
  * Check the input element, if the input has 0 characters, lower the placeholder
  * Otherwise, raise the placeholder above the input field

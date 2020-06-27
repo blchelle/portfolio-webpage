@@ -1,5 +1,5 @@
 .header {
-	background: linear-gradient(#00000088, #00000088), url('/assets/header.jpg');
+	background: linear-gradient(#00000088, #00000088), url('../assets/header.jpg'); // Url must be relative to the entry file
 	background-size: cover;
 	background-position: center;
 
