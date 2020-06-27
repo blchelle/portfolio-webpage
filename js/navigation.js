@@ -106,7 +106,6 @@ navbarProjectsBtn.click(() => scrollPageTo(projects));
 navbarContactBtn.click(() => scrollPageTo(contact));
 
 function toggleNavigation() {
-	console.log('triggering');
 	navbar.toggleClass('hidden');
 }
 

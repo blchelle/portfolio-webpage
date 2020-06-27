@@ -7,6 +7,10 @@ input {
 	border-bottom: 3px solid $color-grey-light-2;
 	border: none;
 	outline: none;
+
+	&:invalid {
+		box-shadow: none;
+	}
 }
 
 textarea {
@@ -17,6 +21,10 @@ textarea {
 	overflow: auto;
 	outline: none;
 	resize: none;
+
+	&:invalid {
+		box-shadow: none;
+	}
 }
 
 button {

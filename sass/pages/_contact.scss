@@ -10,8 +10,8 @@
 		grid-template-columns: 1fr 1fr;
 		grid-gap: 4rem;
 
-		flex-direction: column;
-		width: 80rem;
+		margin-top: 2rem;
+		width: 60%;
 
 		label {
 			position: absolute;
@@ -19,38 +19,53 @@
 			left: 1rem;
 
 			font-size: 2rem;
-			color: $color-grey-dark-1;
+			color: $color-grey-light-2;
 			transition: all 0.2s ease;
 
 			&.raised {
 				top: -2.5rem;
 				font-size: 1.6rem;
 				color: $color-primary;
+
+				&.error {
+					color: $color-error;
+				}
 			}
 		}
 
-		input[type='text'],
-		input[type='email'],
-		input[type='tel'] {
-			border-bottom: 3px solid $color-grey-dark-1;
+		input#name,
+		input#email,
+		input#subject {
 			font-size: 2rem;
-			height: 4rem;
 			color: $color-grey-light-2;
-			padding: 0 1rem;
-			width: 100%;
-		}
 
-		input:focus {
-			border-bottom: 3px solid $color-primary;
+			height: 4rem;
+			width: 100%;
+			padding: 0 1rem;
+
+			border-bottom: 3px solid $color-grey-light-2;
+
+			&:focus {
+				border-color: $color-primary;
+			}
+
+			&:invalid.visited {
+				border-color: $color-error;
+			}
 		}
 
 		textarea#message {
-			background-color: $color-grey-light-2;
+			background-color: $color-grey-light-1;
 			color: $color-grey-dark-3;
 			width: 100%;
+			border: 3px solid;
 
 			&:focus {
-				border: 3px solid $color-primary;
+				border-color: $color-primary;
+			}
+
+			&:invalid.visited {
+				border-color: $color-error;
 			}
 		}
 
@@ -93,7 +108,7 @@
 			grid-row: 2 / 3;
 		}
 
-		&--phone {
+		&--subject {
 			grid-column: 2 / 3;
 			grid-row: 2 / 3;
 		}

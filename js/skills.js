@@ -70,6 +70,6 @@ languagesSelector.click(() => categorySelection(1, languagesSelector));
 databasesSelector.click(() => categorySelection(2, databasesSelector));
 otherSelector.click(() => categorySelection(3, otherSelector));
 
-let currentPage = 0;
+let currentPage;
 $(window).resize(() => categorySelection(0, webSelector));
 $(document).ready(() => categorySelection(0, webSelector));
