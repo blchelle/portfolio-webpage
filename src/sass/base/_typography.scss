@@ -1,12 +1,28 @@
 h1 {
-	color: $color-grey-light-1;
 	font-size: 6rem;
+	padding: 0;
+	margin: 0;
+	line-height: 100%;
 }
 
 h2 {
 	font-size: 4rem;
+	padding: 0;
+	margin: 0;
+	line-height: 100%;
 }
 
 h3 {
 	font-size: 3rem;
+	padding: 0;
+	margin: 0;
+	line-height: 100%;
+}
+
+.text--light {
+	color: $color-grey-light-1;
+}
+
+.text--primary {
+	color: $color-primary;
 }

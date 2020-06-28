@@ -1,47 +1,39 @@
 .header {
-	background: linear-gradient(#00000088, #00000088), url('../assets/header.jpg'); // Url must be relative to the entry file
-	background-size: cover;
-	background-position: center;
+	position: relative;
+	height: 100vh;
 
 	display: flex;
 	align-items: center;
 	justify-content: center;
 
-	position: relative;
-	height: 100vh;
+	// Url must be relative to the entry file
+	background: linear-gradient(#00000088, #00000088), url('../assets/header.jpg');
+	background-position: center;
+	background-size: cover;
 
 	&__content {
 		display: flex;
 		flex-direction: column;
-		justify-content: space-between;
 		align-items: flex-start;
-	}
+		justify-content: space-between;
 
-	&__title {
-		color: $color-grey-light-1;
-	}
-
-	&__name {
-		color: $color-primary;
-
-		&:hover {
-			animation: color-rotate 2s;
-			animation-iteration-count: infinite;
-			animation-timing-function: ease-in-out;
+		// Add bottom margin to all but the last child
+		& > *:not(:last-child) {
+			margin-bottom: 2rem;
 		}
 	}
 
+	&__name:hover {
+		animation: color-rotate 2s ease-in-out infinite;
+	}
+
 	&__btn {
-		cursor: pointer;
-		height: 5rem;
-		width: 20rem;
-		padding: 0 0.5rem;
 		margin-top: 2rem;
+		padding: 0 0.5rem;
 
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-
 		align-self: center;
 
 		font-size: 2rem;
