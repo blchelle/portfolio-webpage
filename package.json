@@ -16,6 +16,7 @@
 		"concat": "^1.0.3",
 		"css-loader": "^3.6.0",
 		"file-loader": "^6.0.0",
+		"html-loader": "^1.1.0",
 		"html-webpack-plugin": "^4.3.0",
 		"node-sass": "^4.5.3",
 		"npm-run-all": "^4.1.1",
@@ -28,8 +29,6 @@
 		"webpack-merge": "^4.2.2"
 	},
 	"dependencies": {
-		"@types/jquery": "^3.5.0",
-		"html-loader": "^1.1.0",
 		"jquery": "^3.5.1"
 	}
 }

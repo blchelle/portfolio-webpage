@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
+		<style>
+			html {
+				visibility: hidden;
+				opacity: 0;
+			}
+		</style>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link
@@ -35,9 +41,9 @@
 						Hello, I'm
 						<span class="header__name">Brock Chelle</span>
 					</h1>
-					<h2 class="header__title">
+					<h3 class="header__title">
 						I'm a Software Engineering Student.
-					</h2>
+					</h3>
 					<button class="header__btn">
 						<span class="header__btn__text">Learn More</span>
 						<ion-icon class="header__btn__icon" name="arrow-forward-circle"></ion-icon>
@@ -235,7 +241,7 @@
 
 			<section class="contact">
 				<h2 class="contact__title">Contact</h2>
-				<form action="POST" name="contact" class="contact__form" data-netlify="true">
+				<form action="POST" name="contact" class="contact__form" netlify>
 					<div class="contact__container contact__container--name">
 						<label class="name__label" for="name">Name</label>
 						<input type="text" name="name" id="name" required />
@@ -254,7 +260,7 @@
 							name="message"
 							id="message"
 							cols="30"
-							rows="10"
+							rows="12"
 							required
 						></textarea>
 					</div>

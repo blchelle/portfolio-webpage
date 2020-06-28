@@ -11,7 +11,7 @@
 		grid-gap: 4rem;
 
 		margin-top: 2rem;
-		width: 60%;
+		width: 75%;
 
 		label {
 			position: absolute;
@@ -70,6 +70,7 @@
 		}
 
 		button[type='submit'] {
+			cursor: pointer;
 			grid-column: 1 / -1;
 			grid-row: 4 / 5;
 			width: 16rem;

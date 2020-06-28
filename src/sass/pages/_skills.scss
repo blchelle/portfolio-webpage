@@ -40,6 +40,7 @@
 	}
 
 	&__category {
+		cursor: pointer;
 		color: $color-grey-light-1;
 		font-size: 1.6rem;
 		font-weight: bold;
@@ -84,7 +85,7 @@
 
 		&:before {
 			content: '';
-			width: 0.5rem;
+			width: 1rem;
 			height: 0;
 			position: absolute;
 			top: 0;
