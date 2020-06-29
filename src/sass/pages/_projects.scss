@@ -1,5 +1,5 @@
 .projects {
 	@include section-blueprint;
 
-	background-color: $color-grey-dark-3;
+	background-color: var(--color-bg-1);
 }

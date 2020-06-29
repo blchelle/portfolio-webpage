@@ -107,6 +107,13 @@ navbarSkillsBtn.click(() => scrollPageTo(skills));
 navbarProjectsBtn.click(() => scrollPageTo(projects));
 navbarContactBtn.click(() => scrollPageTo(contact));
 
+// Query for the navbar theme switcher
+const themeSwitcher = $('.navbar__theme-switcher');
+themeSwitcher.click(() => {
+	$('body').toggleClass('light');
+	$('body').toggleClass('dark');
+});
+
 function toggleNavigation() {
 	navbar.toggleClass('hidden');
 }

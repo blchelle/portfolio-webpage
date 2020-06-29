@@ -1,5 +1,5 @@
 .skills {
-	background-color: $color-grey-dark-2;
+	background-color: var(--color-bg-3);
 	@include section-blueprint;
 
 	&__categories {
@@ -35,7 +35,7 @@
 			left: 0;
 			bottom: -4px;
 
-			background-color: $color-primary;
+			background-color: var(--color-primary);
 
 			transition: left 0.3s ease;
 		}
@@ -53,7 +53,7 @@
 
 		&.selected,
 		&:hover {
-			color: $color-primary;
+			color: var(--color-primary);
 		}
 	}
 
@@ -63,7 +63,8 @@
 
 		display: flex;
 
-		background-color: $color-grey-dark-4;
+		background-color: var(--color-bg-1);
+		transition: background 500ms ease-in-out;
 	}
 
 	&__page {
@@ -85,7 +86,8 @@
 		display: flex;
 		align-items: center;
 
-		background-color: $color-grey-dark-3;
+		background-color: var(--color-bg-2);
+		transition: background 500ms ease-in-out;
 
 		&:before {
 			content: '';
@@ -96,7 +98,7 @@
 			left: 0;
 			top: 0;
 
-			background-color: $color-primary;
+			background-color: var(--color-primary);
 
 			transition: height 0.2s ease;
 		}

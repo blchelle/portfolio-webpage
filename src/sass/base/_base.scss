@@ -1,5 +1,3 @@
-$color-primary: #26c485;
-$color-primary-dark: #1d9a68;
 $color-secondary: #3a606e;
 
 $color-error: #d06262;
@@ -14,6 +12,37 @@ $color-grey-dark-4: #26292c;
 
 $font-primary: 'Lato', sans-serif;
 
+:root {
+	--color-primary: #26c485;
+	--color-primary-dark: #1d9a68;
+	--color-error: #d06262;
+	--color-grey-light-1: #f8f8f8;
+	--color-grey-light-2: #ebebeb;
+	--color-grey-light-3: #d6d6d6;
+
+	--color-grey-dark-1: #72767f;
+	--color-grey-dark-2: #393e41;
+	--color-grey-dark-3: #2f3437;
+	--color-grey-dark-4: #26292c;
+}
+
+.light {
+	--color-bg-1: var(--color-grey-light-1);
+	--color-bg-2: var(--color-grey-light-2);
+	--color-bg-3: var(--color-grey-light-3);
+	--color-header: #72767faa;
+
+	--color-text: var(--color-grey-dark-4);
+}
+
+.dark {
+	--color-bg-1: var(--color-grey-dark-4);
+	--color-bg-2: var(--color-grey-dark-3);
+	--color-bg-3: var(--color-grey-dark-2);
+	--color-header: #26292caa;
+	--color-text: var(--color-grey-light-1);
+}
+
 *,
 *::before,
 *::after {
@@ -25,15 +54,16 @@ $font-primary: 'Lato', sans-serif;
 body {
 	position: relative;
 
+	color: var(--color-text);
 	font-family: $font-primary;
 	font-weight: 400;
 	line-height: 1.6;
+
+	transition: color 1000ms ease-in-out;
 }
 
 html {
 	box-sizing: border-box;
-
-	color: $color-grey-light-1;
 	font-size: 62.5%; // 1rem = 10px
 }
 

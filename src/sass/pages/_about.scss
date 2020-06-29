@@ -1,7 +1,7 @@
 .about {
 	@include section-blueprint;
 
-	background-color: $color-grey-dark-4;
+	background-color: var(--color-bg-1);
 
 	&__content {
 		display: flex;

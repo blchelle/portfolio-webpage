@@ -1,7 +1,7 @@
 .contact {
 	@include section-blueprint;
 
-	background-color: $color-grey-dark-2;
+	background-color: var(--color-bg-3);
 
 	&__form {
 		width: 80%;
@@ -16,7 +16,7 @@
 			top: 0rem;
 			left: 1rem;
 
-			color: $color-grey-light-2;
+			color: var(--color-text);
 			font-size: 2rem;
 
 			transition: all 0.2s ease;
@@ -24,7 +24,7 @@
 			&.raised {
 				top: -2.5rem;
 
-				color: $color-primary;
+				color: var(--color-primary);
 				font-size: 1.6rem;
 
 				&.error {
@@ -38,17 +38,17 @@
 			width: 100%;
 			height: 4rem;
 			padding: 0 1rem;
-			border-bottom: 3px solid $color-grey-light-2;
+			border-bottom: 3px solid var(--color-text);
 
-			color: $color-grey-light-2;
+			color: var()-color-text;
 			font-size: 2rem;
 
 			&:focus {
-				border-color: $color-primary;
+				border-color: var(--color-primary);
 			}
 
 			&:invalid.visited {
-				border-color: $color-error;
+				border-color: var(--color-error);
 			}
 		}
 
@@ -56,12 +56,12 @@
 			width: 100%;
 			border: 3px solid;
 
-			color: $color-grey-dark-3;
+			color: var(--color-grey-light-1);
 
 			background-color: $color-grey-light-1;
 
 			&:focus {
-				border-color: $color-primary;
+				border-color: var(--color-primary);
 			}
 
 			&:invalid.visited {
@@ -73,10 +73,10 @@
 			color: $color-grey-dark-3;
 
 			&.raised {
-				color: $color-primary;
+				color: var(--color-primary);
 
 				&.error {
-					color: $color-error;
+					color: var(--color-error);
 				}
 			}
 		}
@@ -89,7 +89,7 @@
 
 			font-size: 2rem;
 
-			background-color: $color-primary;
+			background-color: var(--color-primary);
 
 			transition: background-color 0.2s;
 
@@ -98,7 +98,7 @@
 			}
 
 			&:hover {
-				background-color: $color-primary-dark;
+				background-color: var(--color-primary-dark);
 			}
 		}
 	}

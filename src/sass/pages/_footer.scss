@@ -7,7 +7,7 @@
 	grid-template-rows: repeat(2, 1fr);
 	align-items: center;
 
-	background-color: $color-grey-dark-4;
+	background-color: var(--color-grey-dark-3);
 
 	&__navbar {
 		display: flex;
@@ -21,7 +21,7 @@
 			transition: color 0.3s;
 
 			&:hover {
-				color: $color-primary;
+				color: var(--color-primary);
 			}
 
 			&:not(:last-child) {
@@ -48,7 +48,7 @@
 		transition: color 0.2s ease;
 
 		&:hover {
-			color: $color-primary;
+			color: var(--color-primary);
 		}
 
 		&:not(:last-child) {

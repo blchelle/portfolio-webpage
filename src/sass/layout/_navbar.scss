@@ -4,7 +4,7 @@
 	left: 0;
 	top: 0;
 	width: 100%;
-	z-index: 2; // Place above the rest of the content
+	z-index: 3; // Place above the rest of the content
 	background-color: rgba($color: $color-grey-dark-3, $alpha: 0.9);
 }
 
@@ -13,7 +13,17 @@
 
 	display: flex;
 	align-items: center;
-	justify-content: flex-end;
+	justify-content: space-between;
+
+	.navbar__theme-switcher {
+		height: 50px;
+		width: 50px;
+		margin-left: 3rem;
+		border-radius: 50%;
+		border: 3px solid var(--color-primary);
+
+		background-color: var(--color-bg-1);
+	}
 
 	.navbar__icon {
 		display: none;
@@ -33,6 +43,7 @@
 		padding: 15px 10px;
 		position: relative;
 
+		color: var(--color-grey-light-1);
 		font-size: 1.6rem;
 		font-weight: bold;
 		text-transform: uppercase;
@@ -53,14 +64,14 @@
 			left: 50%;
 			bottom: 0;
 
-			background-color: $color-primary;
+			background-color: var(--color-primary);
 
 			transition: width 0.3s ease 0s, left 0.3s ease 0s;
 		}
 
 		&.selected,
 		&:hover {
-			color: $color-primary;
+			color: var(--color-primary);
 
 			&:after {
 				width: 100%;

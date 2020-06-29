@@ -1,6 +1,6 @@
 // =============== Scrollbar Styling for Firefox =============== //
 html {
-	scrollbar-color: $color-primary $color-grey-dark-2;
+	scrollbar-color: var(--color-primary) $color-grey-dark-2;
 	scrollbar-width: auto;
 }
 
@@ -14,9 +14,9 @@ html {
 }
 
 ::-webkit-scrollbar-thumb {
-	background: $color-primary;
+	background: var(--color-primary);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-	background: $color-primary-dark;
+	background: var(--color-primary--dark);
 }
