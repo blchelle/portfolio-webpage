@@ -1,5 +1,5 @@
 $color-primary: #26c485;
-$color-primary-dark: #21ab74;
+$color-primary-dark: #1d9a68;
 $color-secondary: #3a606e;
 
 $color-error: #d06262;
@@ -22,8 +22,18 @@ $font-primary: 'Lato', sans-serif;
 	box-sizing: inherit;
 }
 
+body {
+	position: relative;
+
+	font-family: $font-primary;
+	font-weight: 400;
+	line-height: 1.6;
+}
+
 html {
 	box-sizing: border-box;
+
+	color: $color-grey-light-1;
 	font-size: 62.5%; // 1rem = 10px
 }
 
@@ -46,13 +56,6 @@ html {
 	html {
 		font-size: 40%;
 	}
-}
-
-body {
-	font-family: $font-primary;
-	font-weight: 300;
-	line-height: 1.6;
-	position: relative;
 }
 
 // This is used to eliminate the FOUC

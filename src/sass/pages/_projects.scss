@@ -1,12 +1,5 @@
 .projects {
-	background-color: $color-grey-dark-3;
-	border-top: 1rem solid $color-primary;
-
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-
-	grid-row: 4 / 5;
-	grid-column: 1 / -1;
 	@include section-blueprint;
+
+	background-color: $color-grey-dark-3;
 }

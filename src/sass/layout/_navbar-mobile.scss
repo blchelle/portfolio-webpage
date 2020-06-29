@@ -1,22 +1,13 @@
 .navbar--mobile {
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	z-index: 2;
-
 	display: flex;
 	flex-direction: column;
-	justify-content: space-between;
 	align-items: stretch;
-
-	background-color: rgba($color: $color-grey-dark-3, $alpha: 0.9);
+	justify-content: space-between;
 
 	.navbar__icon {
 		margin: 1rem 3rem 1rem 0;
 		align-self: flex-end;
 		font-size: 4rem;
-		color: $color-grey-light-1;
 		transition: color 0.2s ease, transform 0.3s ease;
 
 		&:hover {
@@ -25,18 +16,17 @@
 	}
 
 	.navbar__item {
-		transition: height 0.3s, opacity 0.1s;
+		position: relative;
 		overflow: hidden;
 
 		display: flex;
-		justify-content: center;
 		align-items: center;
+		justify-content: center;
 
-		position: relative;
-
-		color: $color-grey-light-1;
 		font-size: 1.6rem;
 		font-weight: bold;
+
+		transition: height 0.3s, opacity 0.1s;
 	}
 
 	&.hidden {
@@ -59,26 +49,32 @@
 
 		.navbar__item {
 			height: 4rem;
-
-			background-color: rgba($color: $color-grey-dark-3, $alpha: 0.9);
 			border-bottom: 1px solid $color-grey-dark-2;
 
+			background-color: rgba($color: $color-grey-dark-3, $alpha: 0.9);
+
+			// This styling is to ensure that the text in the navbar item isn't
+			// covered by the ::after pseudo element on hover
 			span {
-				display: block;
 				position: relative;
 				z-index: 3;
+
+				display: block;
 			}
 
 			&:after {
 				content: '';
-				height: 100%;
-				width: 0;
+
 				position: absolute;
-				top: 0;
+				width: 0;
+				height: 100%;
 				left: 0;
-				background-color: $color-primary;
-				transition: width 0.5s ease;
+				top: 0;
 				z-index: 0;
+
+				background-color: $color-primary;
+
+				transition: width 0.5s ease;
 			}
 
 			&:hover {

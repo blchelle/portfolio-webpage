@@ -1,4 +1,5 @@
 .about {
-	background-color: $color-grey-dark-4;
 	@include section-blueprint;
+
+	background-color: $color-grey-dark-4;
 }

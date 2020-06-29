@@ -1,5 +1,4 @@
 .header {
-	position: relative;
 	height: 100vh;
 
 	display: flex;
@@ -7,8 +6,8 @@
 	justify-content: center;
 
 	// Url must be relative to the entry file
-	background: linear-gradient(#00000088, #00000088), url('../assets/header.jpg');
-	background-position: center;
+	background: linear-gradient(#000000aa, #000000aa), url('../assets/header.jpg');
+	background-position: bottom;
 	background-size: cover;
 
 	&__content {
@@ -30,6 +29,7 @@
 	&__btn {
 		margin-top: 2rem;
 		padding: 0 0.5rem;
+		border-radius: 2.5rem;
 
 		display: flex;
 		align-items: center;
@@ -37,9 +37,8 @@
 		align-self: center;
 
 		font-size: 2rem;
-		color: $color-grey-light-1;
+
 		background-color: $color-primary;
-		border-radius: 2.5rem;
 
 		transition: background-color 0.3s;
 
@@ -50,6 +49,7 @@
 		&__icon {
 			height: 4rem;
 			width: 4rem;
+
 			transition: transform 0.3s;
 		}
 	}
@@ -57,7 +57,7 @@
 	&__btn:hover {
 		background-color: $color-primary-dark;
 
-		ion-icon {
+		.header__btn__icon {
 			transform: rotate(90deg);
 		}
 	}

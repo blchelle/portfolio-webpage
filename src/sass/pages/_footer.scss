@@ -1,21 +1,21 @@
 .footer {
-	background-color: $color-grey-dark-4;
+	height: 15rem;
+	padding: 2rem 10%;
 
 	display: grid;
 	grid-template-columns: min-content 1fr;
 	grid-template-rows: repeat(2, 1fr);
 	align-items: center;
 
-	padding: 2rem 10%;
-	height: 15rem;
+	background-color: $color-grey-dark-4;
 
 	&__navbar {
 		display: flex;
 
 		&__item {
+			color: $color-grey-dark-1;
 			text-transform: uppercase;
 			letter-spacing: 0.15rem;
-			color: $color-grey-dark-1;
 			font-size: 1.6rem;
 
 			transition: color 0.3s;
@@ -41,9 +41,9 @@
 		align-items: center;
 		justify-content: center;
 
+		color: $color-grey-dark-1;
 		font-size: 3rem;
 		text-decoration: none;
-		color: $color-grey-dark-1;
 
 		transition: color 0.2s ease;
 
@@ -57,7 +57,7 @@
 	}
 
 	&__copyright {
-		font-size: 1.4rem;
 		color: $color-grey-dark-1;
+		font-size: 1.4rem;
 	}
 }
