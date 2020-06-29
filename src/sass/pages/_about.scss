@@ -2,4 +2,49 @@
 	@include section-blueprint;
 
 	background-color: $color-grey-dark-4;
+
+	&__content {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		&--first {
+			flex: 1;
+			margin-right: 8rem;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+	}
+
+	&__image {
+		width: 100%;
+		height: auto;
+
+		transition: transform 0.3s;
+
+		&:hover {
+			transform: scale(1.02);
+		}
+	}
+
+	&__text {
+		flex: 1;
+	}
+}
+
+@media screen and (max-width: 1200px) {
+	.about__content {
+		flex-direction: column;
+	}
+
+	.about__content--first {
+		width: 50%;
+		margin-right: 0;
+		margin-bottom: 3rem;
+	}
+
+	.about__text {
+		text-align: center;
+	}
 }

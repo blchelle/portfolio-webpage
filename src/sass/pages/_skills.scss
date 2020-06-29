@@ -80,7 +80,7 @@
 	&__item {
 		position: relative;
 		height: 100%;
-		padding: 4rem;
+		padding: 4rem 2rem;
 
 		display: flex;
 		align-items: center;
@@ -111,12 +111,28 @@
 	&__image {
 		width: auto;
 		height: 6rem;
-		margin-right: 3rem;
+		padding: 0 2rem;
 	}
 }
 
 @media only screen and (max-width: 700px) {
 	.skills__categories {
 		width: 100%;
+	}
+}
+
+@media only screen and (max-width: 400px) {
+	.skills__page {
+		grid-template-columns: 1fr;
+	}
+
+	.skills__item {
+		width: 100%;
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	.skill__image {
+		margin-bottom: 2rem;
 	}
 }
