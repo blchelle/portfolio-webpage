@@ -43,14 +43,14 @@
 
 	&__category {
 		cursor: pointer;
+		width: 25%;
 
+		color: var(--color-text);
 		font-size: 1.6rem;
 		font-weight: bold;
-		width: 25%;
 		text-align: center;
 
-		transition: color 0.2s ease;
-
+		transition: color 300ms ease-in-out;
 		&.selected,
 		&:hover {
 			color: var(--color-primary);
