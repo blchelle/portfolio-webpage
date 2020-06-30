@@ -18,7 +18,7 @@ function scrollPageTo(element) {
 		{
 			scrollTop: element.offset().top - offset,
 		},
-		800
+		800,
 	);
 }
 
@@ -75,6 +75,15 @@ function resizeHandler() {
 	}
 }
 
+function getTheme() {
+	const currentTheme = window.localStorage.getItem('theme');
+
+	if (currentTheme) {
+		$('body').removeClass();
+		$('body').addClass(currentTheme);
+	}
+}
+
 // Query for the navbar and each of the sections
 const navbar = $('.navbar');
 const header = $('.header');
@@ -110,6 +119,8 @@ navbarContactBtn.click(() => scrollPageTo(contact));
 // Query for the navbar theme switcher
 const themeSwitcher = $('.navbar__theme-switcher');
 themeSwitcher.click(() => {
+	const currentTheme = window.localStorage.getItem('theme');
+	window.localStorage.setItem('theme', currentTheme === 'dark' ? 'light' : 'dark');
 	$('body').toggleClass('light');
 	$('body').toggleClass('dark');
 });
@@ -127,5 +138,6 @@ window.onscroll = scrollHandler;
 $(document).ready(() => {
 	scrollHandler();
 	resizeHandler();
+	getTheme();
 });
 $(window).resize(resizeHandler);

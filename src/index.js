@@ -1,7 +1,5 @@
-import './index.html';
-
 import './sass/main.scss';
 
-import './js/navigation';
+import './js/navbar';
 import './js/skills';
 import './js/contact';

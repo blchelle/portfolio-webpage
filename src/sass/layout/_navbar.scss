@@ -5,7 +5,8 @@
 	top: 0;
 	width: 100%;
 	z-index: 3; // Place above the rest of the content
-	background-color: rgba($color: $color-grey-dark-3, $alpha: 0.9);
+	background-color: var(--color-navbar);
+	transition: background 500ms ease-in-out;
 }
 
 .navbar--large {

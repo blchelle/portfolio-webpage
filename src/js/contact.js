@@ -19,6 +19,11 @@ function checkInput(inputElement) {
 	}
 }
 
+function addVisitedTag(inputElement) {
+	inputElement.addClass('visited');
+	inputElement.siblings('label').addClass('visited');
+}
+
 // Query for each of the input boxes
 const nameInput = $('input#name');
 const emailInput = $('input#email');
@@ -28,9 +33,9 @@ nameInput.on('input', () => checkInput(nameInput));
 emailInput.on('input', () => checkInput(emailInput));
 messageInput.on('input', () => checkInput(messageInput));
 
-nameInput.focusout(() => nameInput.addClass('visited'));
-emailInput.focusout(() => emailInput.addClass('visited'));
-messageInput.focusout(() => messageInput.addClass('visited'));
+nameInput.focusout(() => addVisitedTag(nameInput));
+emailInput.focusout(() => addVisitedTag(emailInput));
+messageInput.focusout(() => addVisitedTag(messageInput));
 
 $(document).ready(() => {
 	checkInput(nameInput);
