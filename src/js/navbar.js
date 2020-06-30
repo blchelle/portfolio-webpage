@@ -10,7 +10,7 @@ function scrollPageTo(element) {
 	if (navbar.hasClass('navbar--mobile')) {
 		offset = navbar.height() - $('.navbar__list').height();
 	} else {
-		offset = navbar.height();
+		offset = navbar.outerHeight();
 	}
 
 	navbar.addClass('hidden');
@@ -65,6 +65,11 @@ function scrollHandler() {
 	}
 }
 
+/**
+ * Listen for changes to the screen size
+ * If the width is under 700px, then use the mobile navbar
+ * Otherwise, use the full size navbar
+ */
 function resizeHandler() {
 	if ($(window).width() < 700) {
 		navbar.addClass('navbar--mobile');

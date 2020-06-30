@@ -29,7 +29,7 @@
 				font-size: 1.6rem;
 
 				&.error.visited {
-					color: $color-error;
+					color: var(--color-error);
 				}
 			}
 		}
@@ -61,20 +61,20 @@
 
 			color: var(--color-grey-dark-4);
 
-			background-color: $color-grey-light-1;
+			background-color: var(--color-grey-light-1);
 
 			&:focus {
 				border-color: var(--color-primary);
 			}
 
 			&:invalid.visited {
-				border-color: $color-error;
+				border-color: var(--color-error);
 			}
 		}
 
 		label[for='message'] {
 			top: 1.5rem;
-			color: $color-grey-dark-3;
+			color: var(--color-grey-dark-3);
 
 			&.raised {
 				top: -1.5rem;
