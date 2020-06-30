@@ -4,37 +4,35 @@
 	left: 0;
 	top: 0;
 	width: 100%;
+
 	z-index: 3; // Place above the rest of the content
 	background-color: var(--color-navbar);
 	transition: background 500ms ease-in-out;
+
+	&__theme-switcher {
+		width: 5rem;
+		height: 5rem;
+		border: 3px solid var(--color-primary);
+		border-radius: 50%;
+
+		background-color: var(--color-bg-1);
+	}
 }
 
 .navbar--large {
 	height: 80px; // Keep this at 80px, its used as an offset in jquery for scrolling
+	padding: 1rem 3rem;
 
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-
-	.navbar__theme-switcher {
-		height: 50px;
-		width: 50px;
-		margin-left: 3rem;
-		border-radius: 50%;
-		border: 3px solid var(--color-primary);
-
-		background-color: var(--color-bg-1);
-	}
 
 	.navbar__icon {
 		display: none;
 	}
 
 	.navbar__list {
-		margin-right: 3rem;
-
 		display: flex;
-
 		transition: opacity 0.3s;
 	}
 

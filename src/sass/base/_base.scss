@@ -30,8 +30,10 @@ $font-primary: 'Lato', sans-serif;
 	--color-bg-1: var(--color-grey-light-1);
 	--color-bg-2: var(--color-grey-light-2);
 	--color-bg-3: var(--color-grey-light-3);
+
 	--color-header: #72767faa;
 	--color-navbar: #72767fdd;
+	--color-navbar-border: #666;
 
 	--color-text: var(--color-grey-dark-4);
 }
@@ -42,6 +44,8 @@ $font-primary: 'Lato', sans-serif;
 	--color-bg-3: var(--color-grey-dark-2);
 	--color-header: #26292caa;
 	--color-navbar: #2f3437dd;
+	--color-navbar-border: var(--color-grey-dark-2);
+
 	--color-text: var(--color-grey-light-1);
 }
 
