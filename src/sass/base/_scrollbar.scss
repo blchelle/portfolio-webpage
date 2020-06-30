@@ -1,0 +1,22 @@
+// =============== Scrollbar Styling for Firefox =============== //
+html {
+	scrollbar-color: var(--color-primary) var(--color-grey-dark-2);
+	scrollbar-width: auto;
+}
+
+// ===== Scrollbar Styling for Chrome, Edge, Opera, Safari ===== //
+::-webkit-scrollbar {
+	width: 15px;
+}
+
+::-webkit-scrollbar-track {
+	background: var(--color-grey-dark-2);
+}
+
+::-webkit-scrollbar-thumb {
+	background: var(--color-primary);
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: var(--color-primary--dark);
+}

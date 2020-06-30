@@ -1,32 +1,41 @@
 @mixin section-blueprint {
+	padding: 4rem 15%;
+	border-top: 0.5rem solid var(--color-primary);
+
 	display: flex;
 	flex-direction: column;
-	justify-content: space-between;
 	align-items: center;
+	justify-content: space-between;
 
-	padding: 4rem 15%;
-
-	border-top: 0.5rem solid $color-primary;
+	transition: background 500ms ease-in-out;
 
 	&__title {
 		position: relative;
+		margin-bottom: 7rem;
 
 		text-transform: uppercase;
-		color: $color-grey-light-1;
-		margin-bottom: 5rem;
-
 		letter-spacing: 0.3rem;
+		text-align: center;
 
-		&::before {
+		&::after {
 			content: '';
+
 			position: absolute;
-			bottom: -2rem;
 			left: 50%;
+			bottom: -3rem;
 			width: 8rem;
 			height: 0.7rem;
 			transform: translateX(-50%);
 
-			background-color: $color-primary;
+			background-color: var(--color-primary);
 		}
+	}
+
+	&__description {
+		width: 95%;
+		margin-bottom: 2rem;
+
+		text-align: center;
+		line-height: 1.6;
 	}
 }

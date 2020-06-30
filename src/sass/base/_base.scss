@@ -1,18 +1,42 @@
-$color-primary: #26c485;
-$color-primary-dark: #21ab74;
-$color-secondary: #3a606e;
-
-$color-error: #d06262;
-
-$color-grey-light-1: #fdfffc;
-$color-grey-light-2: #c2c2c1;
-
-$color-grey-dark-1: #72767f;
-$color-grey-dark-2: #393e41;
-$color-grey-dark-3: #2f3437;
-$color-grey-dark-4: #26292c;
-
 $font-primary: 'Lato', sans-serif;
+
+:root {
+	--color-primary: #26c485;
+	--color-primary-dark: #1d9a68;
+	--color-secondary: #3a606e;
+	--color-error: #d06262;
+	--color-grey-light-1: #f8f8f8;
+	--color-grey-light-2: #ebebeb;
+	--color-grey-light-3: #d6d6d6;
+
+	--color-grey-dark-1: #72767f;
+	--color-grey-dark-2: #393e41;
+	--color-grey-dark-3: #2f3437;
+	--color-grey-dark-4: #26292c;
+}
+
+.light {
+	--color-bg-1: var(--color-grey-light-1);
+	--color-bg-2: var(--color-grey-light-2);
+	--color-bg-3: var(--color-grey-light-3);
+
+	--color-header: #72767faa;
+	--color-navbar: #72767fdd;
+	--color-navbar-border: #666;
+
+	--color-text: var(--color-grey-dark-4);
+}
+
+.dark {
+	--color-bg-1: var(--color-grey-dark-4);
+	--color-bg-2: var(--color-grey-dark-3);
+	--color-bg-3: var(--color-grey-dark-2);
+	--color-header: #26292caa;
+	--color-navbar: #2f3437dd;
+	--color-navbar-border: var(--color-grey-dark-2);
+
+	--color-text: var(--color-grey-light-1);
+}
 
 *,
 *::before,
@@ -22,42 +46,51 @@ $font-primary: 'Lato', sans-serif;
 	box-sizing: inherit;
 }
 
+body {
+	position: relative;
+
+	color: var(--color-text);
+	font-family: $font-primary;
+	font-weight: 400;
+	line-height: 1.6;
+
+	transition: color 1000ms ease-in-out;
+}
+
 html {
 	box-sizing: border-box;
 	font-size: 62.5%; // 1rem = 10px
-	scrollbar-color: $color-primary $color-grey-dark-2;
-	scrollbar-width: auto;
 }
 
-body {
-	font-family: $font-primary;
-	font-weight: 300;
-	line-height: 1.6;
-	position: relative;
-}
-
-@media only screen and (max-width: 1000px) {
+// Start of Large Tablet
+@media screen and (max-width: 991px) {
 	html {
-		font-size: 43.75%;
+		font-size: 55%;
 	}
 }
 
-/* width */
-::-webkit-scrollbar {
-	width: 15px;
+// Start of Medium  Tablet
+@media screen and (max-width: 767px) {
+	html {
+		font-size: 50%;
+	}
 }
 
-/* Track */
-::-webkit-scrollbar-track {
-	background: $color-grey-dark-2;
+// Start of Phone sizes
+@media screen and (max-width: 520px) {
+	html {
+		font-size: 40%;
+	}
 }
 
-/* Handle */
-::-webkit-scrollbar-thumb {
-	background: $color-primary;
+@media screen and (max-width: 420px) {
+	html {
+		font-size: 35%;
+	}
 }
 
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-	background: $color-primary-dark;
+// This is used to eliminate the FOUC
+html {
+	visibility: visible;
+	opacity: 1;
 }

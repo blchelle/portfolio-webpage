@@ -10,7 +10,7 @@ function scrollPageTo(element) {
 	if (navbar.hasClass('navbar--mobile')) {
 		offset = navbar.height() - $('.navbar__list').height();
 	} else {
-		offset = navbar.height();
+		offset = navbar.outerHeight();
 	}
 
 	navbar.addClass('hidden');
@@ -18,7 +18,7 @@ function scrollPageTo(element) {
 		{
 			scrollTop: element.offset().top - offset,
 		},
-		800
+		800,
 	);
 }
 
@@ -65,6 +65,11 @@ function scrollHandler() {
 	}
 }
 
+/**
+ * Listen for changes to the screen size
+ * If the width is under 700px, then use the mobile navbar
+ * Otherwise, use the full size navbar
+ */
 function resizeHandler() {
 	if ($(window).width() < 700) {
 		navbar.addClass('navbar--mobile');
@@ -72,6 +77,15 @@ function resizeHandler() {
 	} else {
 		navbar.removeClass('navbar--mobile');
 		navbar.addClass('navbar--large');
+	}
+}
+
+function getTheme() {
+	const currentTheme = window.localStorage.getItem('theme');
+
+	if (currentTheme) {
+		$('body').removeClass();
+		$('body').addClass(currentTheme);
 	}
 }
 
@@ -107,6 +121,15 @@ navbarSkillsBtn.click(() => scrollPageTo(skills));
 navbarProjectsBtn.click(() => scrollPageTo(projects));
 navbarContactBtn.click(() => scrollPageTo(contact));
 
+// Query for the navbar theme switcher
+const themeSwitcher = $('.navbar__theme-switcher');
+themeSwitcher.click(() => {
+	const currentTheme = window.localStorage.getItem('theme');
+	window.localStorage.setItem('theme', currentTheme === 'dark' ? 'light' : 'dark');
+	$('body').toggleClass('light');
+	$('body').toggleClass('dark');
+});
+
 function toggleNavigation() {
 	navbar.toggleClass('hidden');
 }
@@ -120,5 +143,6 @@ window.onscroll = scrollHandler;
 $(document).ready(() => {
 	scrollHandler();
 	resizeHandler();
+	getTheme();
 });
 $(window).resize(resizeHandler);

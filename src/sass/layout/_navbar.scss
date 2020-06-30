@@ -1,36 +1,52 @@
-.navbar--large {
+// These styles are common between both the full size and mobile navbar
+.navbar {
 	position: fixed;
-	top: 0;
 	left: 0;
+	top: 0;
 	width: 100%;
+
+	z-index: 3; // Place above the rest of the content
+	background-color: var(--color-navbar);
+	transition: background 500ms ease-in-out;
+
+	&__theme-switcher {
+		width: 5rem;
+		height: 5rem;
+		border: 3px solid var(--color-primary);
+		border-radius: 50%;
+
+		background-color: var(--color-bg-1);
+	}
+}
+
+.navbar--large {
 	height: 80px; // Keep this at 80px, its used as an offset in jquery for scrolling
-	z-index: 2;
+	padding: 1rem 3rem;
 
 	display: flex;
-	justify-content: flex-end;
 	align-items: center;
-
-	background-color: rgba($color: $color-grey-dark-3, $alpha: 0.9);
+	justify-content: space-between;
 
 	.navbar__icon {
 		display: none;
 	}
 
 	.navbar__list {
-		margin-right: 3rem;
 		display: flex;
 		transition: opacity 0.3s;
 	}
 
 	.navbar__item {
-		font-size: 1.6rem;
-		font-weight: bold;
-		text-transform: uppercase;
-		color: $color-grey-light-1;
-		letter-spacing: 0.2rem;
+		cursor: pointer;
 
 		padding: 15px 10px;
 		position: relative;
+
+		color: var(--color-grey-light-1);
+		font-size: 1.6rem;
+		font-weight: bold;
+		text-transform: uppercase;
+		letter-spacing: 0.2rem;
 
 		transition: color 0.3s ease-out;
 
@@ -40,20 +56,21 @@
 
 		&:after {
 			content: '';
+
 			position: absolute;
-
-			bottom: 0;
-			left: 50%;
-			height: 5px;
 			width: 0;
+			height: 5px;
+			left: 50%;
+			bottom: 0;
 
-			background-color: $color-primary;
+			background-color: var(--color-primary);
+
 			transition: width 0.3s ease 0s, left 0.3s ease 0s;
 		}
 
 		&.selected,
 		&:hover {
-			color: $color-primary;
+			color: var(--color-primary);
 
 			&:after {
 				width: 100%;

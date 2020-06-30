@@ -1,52 +1,57 @@
 .header {
-	background: linear-gradient(#00000088, #00000088), url('../assets/header.jpg'); // Url must be relative to the entry file
-	background-size: cover;
-	background-position: center;
+	height: 100vh;
 
 	display: flex;
 	align-items: center;
 	justify-content: center;
 
-	position: relative;
-	height: 100vh;
+	// Url must be relative to the entry file
+	background: url(../assets/header.jpg);
+	background-position: bottom;
+	background-size: cover;
+
+	&__overlay {
+		background: var(--color-header);
+		width: 100%;
+		height: 100vh;
+		position: absolute;
+		top: 0;
+		left: 0;
+
+		transition: background 500ms ease-in-out;
+	}
 
 	&__content {
+		z-index: 2;
+
 		display: flex;
 		flex-direction: column;
-		justify-content: space-between;
 		align-items: flex-start;
-	}
+		justify-content: space-between;
 
-	&__title {
-		color: $color-grey-light-1;
-	}
-
-	&__name {
-		color: $color-primary;
-
-		&:hover {
-			animation: color-rotate 2s;
-			animation-iteration-count: infinite;
-			animation-timing-function: ease-in-out;
+		// Add bottom margin to all but the last child
+		& > *:not(:last-child) {
+			margin-bottom: 2rem;
 		}
 	}
 
+	&__name:hover {
+		animation: color-rotate 2s ease-in-out infinite;
+	}
+
 	&__btn {
-		height: 5rem;
-		width: 20rem;
-		padding: 0 0.5rem;
 		margin-top: 2rem;
+		padding: 0 0.5rem;
+		border-radius: 2.5rem;
 
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-
 		align-self: center;
 
 		font-size: 2rem;
-		color: $color-grey-light-1;
-		background-color: $color-primary;
-		border-radius: 2.5rem;
+
+		background-color: var(--color-primary);
 
 		transition: background-color 0.3s;
 
@@ -57,14 +62,15 @@
 		&__icon {
 			height: 4rem;
 			width: 4rem;
+
 			transition: transform 0.3s;
 		}
 	}
 
 	&__btn:hover {
-		background-color: $color-primary-dark;
+		background-color: var(--color-primary);
 
-		ion-icon {
+		.header__btn__icon {
 			transform: rotate(90deg);
 		}
 	}

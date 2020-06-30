@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
+		<style>
+			html {
+				visibility: hidden;
+				opacity: 0;
+			}
+		</style>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link
@@ -17,9 +23,12 @@
 		></script>
 		<title>Brock Chelle</title>
 	</head>
-	<body>
+	<body class="dark">
 		<nav class="navbar navbar--large hidden">
-			<ion-icon class="navbar__icon" name="menu"></ion-icon>
+			<div class="navbar__buttons">
+				<button class="navbar__theme-switcher"></button>
+				<ion-icon class="navbar__icon" name="menu"></ion-icon>
+			</div>
 			<ul class="navbar__list">
 				<li class="navbar__item navbar__item--home"><span>Home</span></li>
 				<li class="navbar__item navbar__item--about"><span>About</span></li>
@@ -30,14 +39,15 @@
 		</nav>
 		<main class="container">
 			<header class="header">
+				<div class="header__overlay"></div>
 				<div class="header__content">
 					<h1 class="header__title">
 						Hello, I'm
-						<span class="header__name">Brock Chelle</span>
+						<span class="header__name text--primary">Brock Chelle</span>
 					</h1>
-					<h2 class="header__title">
+					<h3 class="header__title">
 						I'm a Software Engineering Student.
-					</h2>
+					</h3>
 					<button class="header__btn">
 						<span class="header__btn__text">Learn More</span>
 						<ion-icon class="header__btn__icon" name="arrow-forward-circle"></ion-icon>
@@ -47,14 +57,44 @@
 
 			<section class="about">
 				<h2 class="about__title">About me</h2>
+				<div class="about__content">
+					<div class="about__content--first">
+							<img class="about__image" src="./assets/me.png" alt="Picture of me"></img>
+					</div>
+					<p class="about__text">
+						Aenean elit tellus, ornare eget augue non, viverra facilisis nisl. Sed
+						semper laoreet leo, eget feugiat enim egestas sed. Duis et varius dolor,
+						quis lobortis lorem. In tincidunt, libero nec facilisis placerat, mauris
+						arcu tristique ligula, sit amet ultrices turpis ante id turpis. Phasellus ut
+						maximus leo. Maecenas sed consequat lorem. Cras et tellus suscipit libero
+						lafcinia blandit accumsan vel urna.
+						<br />
+						<br />
+						Nam ac ante dolor. Fusce ullamcorper magna arcu, nec finibus diam
+						ullamcorper tempus. Pellentesque in convallis mauris, id cursus mi. Donec
+						dictum, massa a consectetur aliquam, neque ante elementum nulla, finibus
+						mollis enim lacus ut nibh. Lorem ipsum dolor sit amet, consectetur
+						adipiscing elit.
+					</p>
+				</div>
 			</section>
 
 			<section class="skills">
-				<h2 class="skills__title">Skills</h2>
+				<h2 class="skills__title">My Skills</h2>
+				<p class="skills__description">
+					Since starting my software development journey, I've learned and developed with
+					a variety technologies and I'm actively learning even more. Lately I've been
+					focusing on building fullstack web applications with React, NodeJS, Express and
+					MongoDB.
+				</p>
 				<ul class="skills__categories">
 					<li class="skills__category skills__category--web">Web</li>
-					<li class="skills__category skills__category--languages">Languages</li>
-					<li class="skills__category skills__category--databases">Databases</li>
+					<li class="skills__category skills__category--languages">
+						Languages
+					</li>
+					<li class="skills__category skills__category--databases">
+						Databases
+					</li>
 					<li class="skills__category skills__category--other">Other</li>
 				</ul>
 				<div class="skills__container">
@@ -62,7 +102,7 @@
 						<div class="skills__item">
 							<img
 								class="skill__image"
-								src="./assets/node-logo.png"
+								src="./assets/node-logo.svg"
 								alt="NodeJS Logo"
 							/>
 							<h3 class="skill__name">NodeJS</h3>
@@ -70,7 +110,7 @@
 						<div class="skills__item">
 							<img
 								class="skill__image"
-								src="./assets/express-logo.png"
+								src="./assets/express-logo.svg"
 								alt="Express Logo"
 							/>
 							<h3 class="skill__name">Express</h3>
@@ -78,31 +118,51 @@
 						<div class="skills__item">
 							<img
 								class="skill__image"
-								src="./assets/front-end-logo.png"
-								alt="Express Logo"
+								src="./assets/mongoose-logo.svg"
+								alt="Mongoose Logo"
+							/>
+							<h3 class="skill__name">Mongoose</h3>
+						</div>
+						<div class="skills__item">
+							<img class="skill__image" src="./assets/pug-logo.svg" alt="Pug Logo" />
+							<h3 class="skill__name">Pug</h3>
+						</div>
+						<div class="skills__item">
+							<img
+								class="skill__image"
+								src="./assets/html-css-logo.svg"
+								alt="HTML & CSS Logo"
 							/>
 							<h3 class="skill__name">HTML & CSS</h3>
 						</div>
 						<div class="skills__item">
 							<img
 								class="skill__image"
-								src="./assets/jquery-logo.png"
+								src="./assets/sass-logo.svg"
+								alt="SASS Logo"
+							/>
+							<h3 class="skill__name">SASS</h3>
+						</div>
+						<div class="skills__item">
+							<img
+								class="skill__image"
+								src="./assets/jquery-logo.svg"
 								alt="JQuery Logo"
 							/>
-							<h3 class="skill__name">JQuery</h3>
+							<h3 class="skill__name">jQuery</h3>
 						</div>
 						<div class="skills__item">
 							<img
 								class="skill__image"
-								src="./assets/react-logo.png"
+								src="./assets/react-logo.svg"
 								alt="React Logo"
 							/>
-							<h3 class="skill__name">ReactJS</h3>
+							<h3 class="skill__name">React</h3>
 						</div>
 						<div class="skills__item">
 							<img
 								class="skill__image"
-								src="./assets/redux-logo.png"
+								src="./assets/redux-logo.svg"
 								alt="Redux Logo"
 							/>
 							<h3 class="skill__name">Redux</h3>
@@ -112,19 +172,27 @@
 						<div class="skills__item">
 							<img
 								class="skill__image"
-								src="./assets/jsts-logo.png"
-								alt="JS&TS Logo"
+								src="./assets/javascript-logo.svg"
+								alt="Javascript Logo"
 							/>
-							<h3 class="skill__name">JS & TS</h3>
+							<h3 class="skill__name">Javascript</h3>
 						</div>
 						<div class="skills__item">
-							<img class="skill__image" src="./assets/cpp-logo.png" alt="C++ Logo" />
+							<img
+								class="skill__image"
+								src="./assets/typescript-logo.svg"
+								alt="Typescript Logo"
+							/>
+							<h3 class="skill__name">Typescript</h3>
+						</div>
+						<div class="skills__item">
+							<img class="skill__image" src="./assets/cpp-logo.svg" alt="C++ Logo" />
 							<h3 class="skill__name">C++</h3>
 						</div>
 						<div class="skills__item">
 							<img
 								class="skill__image"
-								src="./assets/python-logo.png"
+								src="./assets/python-logo.svg"
 								alt="Python Logo"
 							/>
 							<h3 class="skill__name">Python</h3>
@@ -132,15 +200,7 @@
 						<div class="skills__item">
 							<img
 								class="skill__image"
-								src="./assets/java-logo.png"
-								alt="Java Logo"
-							/>
-							<h3 class="skill__name">Java</h3>
-						</div>
-						<div class="skills__item">
-							<img
-								class="skill__image"
-								src="./assets/swift-logo.png"
+								src="./assets/swift-logo.svg"
 								alt="Swift Logo"
 							/>
 							<h3 class="skill__name">Swift</h3>
@@ -148,8 +208,8 @@
 						<div class="skills__item">
 							<img
 								class="skill__image"
-								src="./assets/bash-logo.png"
-								alt="Bach Logo"
+								src="./assets/bash-logo.svg"
+								alt="Bash Logo"
 							/>
 							<h3 class="skill__name">Bash</h3>
 						</div>
@@ -158,7 +218,7 @@
 						<div class="skills__item">
 							<img
 								class="skill__image"
-								src="./assets/mongodb-logo.png"
+								src="./assets/mongodb-logo.svg"
 								alt="MongoDB Logo"
 							/>
 							<h3 class="skill__name">MongoDB</h3>
@@ -166,7 +226,7 @@
 						<div class="skills__item">
 							<img
 								class="skill__image"
-								src="./assets/firebase-logo.png"
+								src="./assets/firebase-logo.svg"
 								alt="Firebase Logo"
 							/>
 							<h3 class="skill__name">Firebase</h3>
@@ -174,7 +234,7 @@
 						<div class="skills__item">
 							<img
 								class="skill__image"
-								src="./assets/mysql-logo.png"
+								src="./assets/mysql-logo.svg"
 								alt="MySQL Logo"
 							/>
 							<h3 class="skill__name">MySQL</h3>
@@ -182,13 +242,21 @@
 					</div>
 					<div class="skills__page skills__page--other">
 						<div class="skills__item">
-							<img class="skill__image" src="./assets/git-logo.png" alt="Git Logo" />
+							<img class="skill__image" src="./assets/git-logo.svg" alt="Git Logo" />
 							<h3 class="skill__name">Git</h3>
 						</div>
 						<div class="skills__item">
 							<img
 								class="skill__image"
-								src="./assets/postman-logo.png"
+								src="./assets/webpack-logo.svg"
+								alt="Webpack Logo"
+							/>
+							<h3 class="skill__name">Webpack</h3>
+						</div>
+						<div class="skills__item">
+							<img
+								class="skill__image"
+								src="./assets/postman-logo.svg"
 								alt="Postman Logo"
 							/>
 							<h3 class="skill__name">Postman</h3>
@@ -196,15 +264,7 @@
 						<div class="skills__item">
 							<img
 								class="skill__image"
-								src="./assets/eslint-logo.png"
-								alt="ESLint Logo"
-							/>
-							<h3 class="skill__name">ESLint</h3>
-						</div>
-						<div class="skills__item">
-							<img
-								class="skill__image"
-								src="./assets/atlassian-logo.png"
+								src="./assets/atlassian-logo.svg"
 								alt="Atlassian Logo"
 							/>
 							<h3 class="skill__name">Atlassian</h3>
@@ -212,7 +272,7 @@
 						<div class="skills__item">
 							<img
 								class="skill__image"
-								src="./assets/netlify-logo.png"
+								src="./assets/netlify-logo.svg"
 								alt="Netlify Logo"
 							/>
 							<h3 class="skill__name">Netlify</h3>
@@ -220,22 +280,46 @@
 						<div class="skills__item">
 							<img
 								class="skill__image"
-								src="./assets/figma-logo.png"
+								src="./assets/figma-logo.svg"
 								alt="Figma Logo"
 							/>
 							<h3 class="skill__name">Figma</h3>
+						</div>
+						<div class="skills__item">
+							<img
+								class="skill__image"
+								src="./assets/eslint-logo.svg"
+								alt="ESLint Logo"
+							/>
+							<h3 class="skill__name">ESLint</h3>
+						</div>
+						<div class="skills__item">
+							<img
+								class="skill__image"
+								src="./assets/arduino-logo.svg"
+								alt="Arduino Logo"
+							/>
+							<h3 class="skill__name">Arduino</h3>
+						</div>
+						<div class="skills__item">
+							<img class="skill__image" src="./assets/svn-logo.svg" alt="SVN Logo" />
+							<h3 class="skill__name">Subversion</h3>
 						</div>
 					</div>
 				</div>
 			</section>
 
 			<section class="projects">
-				<h2 class="projects__title">Projects</h2>
+				<h2 class="projects__title">Portflio Projects</h2>
 			</section>
 
 			<section class="contact">
-				<h2 class="contact__title">Contact</h2>
-				<form action="POST" name="contact" class="contact__form" data-netlify="true">
+				<h2 class="contact__title">Get in touch</h2>
+				<p class="contact__description">
+					Please do not hesitate to send me a message if you have any questions or are
+					interested in working with me
+				</p>
+				<form action="POST" name="contact" class="contact__form" netlify>
 					<div class="contact__container contact__container--name">
 						<label class="name__label" for="name">Name</label>
 						<input type="text" name="name" id="name" required />
@@ -244,17 +328,13 @@
 						<label for="email">Email Address</label>
 						<input type="email" name="email" id="email" required />
 					</div>
-					<div class="contact__container contact__container--subject">
-						<label for="subject">Subject</label>
-						<input type="text" name="subject" id="subject" required />
-					</div>
 					<div class="contact__container contact__container--message">
 						<label for="message">Your Message</label>
 						<textarea
 							name="message"
 							id="message"
 							cols="30"
-							rows="10"
+							rows="12"
 							required
 						></textarea>
 					</div>
@@ -273,7 +353,7 @@
 					<li class="footer__navbar__item navbar__item--projects">
 						<span>Projects</span>
 					</li>
-					<li class="footer__navbar__item navbar__item--contact"><span>Contact</span></li>
+					<li class="footer__navbar__item navbar__item--skills"><span>Contact</span></li>
 				</ul>
 				<div class="footer__social-media">
 					<a href="https://www.linkedin.com/in/blchelle/" class="footer__icon">
