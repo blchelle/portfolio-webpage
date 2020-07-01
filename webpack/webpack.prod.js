@@ -12,12 +12,23 @@ module.exports = merge(common, {
 	module: {
 		rules: [
 			{
-				test: /\.(png|svg|jpg|gif)$/,
+				test: /\.(png|svg|jpg)$/,
 				use: {
 					loader: 'file-loader',
 					options: {
 						name: '[name].[hash].[ext]',
 						outputPath: 'img',
+					},
+				},
+			},
+			{
+				test: /\.m?js$/,
+				exclude: /(node_modules|bower_components)/,
+				use: {
+					loader: 'babel-loader',
+					options: {
+						presets: ['@babel/preset-env'],
+						plugins: ['@babel/plugin-proposal-object-rest-spread'],
 					},
 				},
 			},
