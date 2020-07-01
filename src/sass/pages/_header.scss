@@ -7,7 +7,7 @@
 
 	// Url must be relative to the entry file
 	background: url(../assets/header.jpg);
-	background-position: bottom;
+	background-position: center;
 	background-size: cover;
 
 	&__overlay {
@@ -23,6 +23,10 @@
 
 	h3.header__title {
 		font-weight: lighter;
+	}
+
+	&__name {
+		color: var(--color-primary);
 	}
 
 	&__content {
@@ -72,7 +76,7 @@
 	}
 
 	&__btn:hover {
-		background-color: var(--color-primary);
+		background-color: var(--color-primary-dark);
 
 		.header__btn__icon {
 			transform: rotate(90deg);
