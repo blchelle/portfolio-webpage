@@ -21,6 +21,10 @@
 		transition: background 500ms ease-in-out;
 	}
 
+	h3.header__title {
+		font-weight: lighter;
+	}
+
 	&__content {
 		z-index: 2;
 
