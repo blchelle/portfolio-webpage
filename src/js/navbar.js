@@ -18,7 +18,7 @@ function scrollPageTo(element) {
 		{
 			scrollTop: element.offset().top - offset,
 		},
-		800,
+		800
 	);
 }
 
@@ -42,7 +42,7 @@ function selectNavBarItem(element) {
  */
 function scrollHandler() {
 	const scrollDistance = window.pageYOffset;
-	const navbarHeight = navbar.height();
+	const navbarHeight = navbar.outerHeight();
 	if (scrollDistance >= 0 && scrollDistance < about.offset().top - (navbarHeight + 5)) {
 		selectNavBarItem(navbarHomeBtn);
 	} else if (
