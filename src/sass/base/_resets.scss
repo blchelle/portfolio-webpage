@@ -29,12 +29,13 @@ textarea {
 }
 
 button {
-	width: 20rem;
-	height: 5rem;
-
 	cursor: pointer;
 	border: none;
 	outline: none;
+
+	width: 20rem;
+	height: 5rem;
+	border-radius: 1rem;
 
 	color: var(--color-grey-light-1);
 }

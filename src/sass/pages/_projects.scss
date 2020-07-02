@@ -2,4 +2,39 @@
 	@include section-blueprint;
 
 	background-color: var(--color-bg-1);
+
+	&__content {
+		width: 100%;
+
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+		gap: 5rem;
+	}
+}
+
+.project {
+	height: 40rem;
+	padding: 3rem;
+	border-radius: 1rem;
+
+	display: flex;
+	flex-direction: column;
+
+	background-color: var(--color-bg-3);
+
+	&__name {
+		margin-bottom: 2rem;
+	}
+
+	&__tech {
+		// This filter turns the image to the primary color, credit to https://codepen.io/sosuke/pen/Pjoqqp
+		// filter: brightness(0) saturate(100%) invert(62%) sepia(15%) saturate(2134%)
+		// 	hue-rotate(104deg) brightness(102%) contrast(79%);
+		height: 3rem;
+		width: auto;
+
+		&:not(:last-child) {
+			margin-right: 1rem;
+		}
+	}
 }
