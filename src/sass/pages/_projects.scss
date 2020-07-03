@@ -13,7 +13,7 @@
 }
 
 .project {
-	height: 40rem;
+	height: 45rem;
 	padding: 3rem;
 	border-radius: 1rem;
 
@@ -32,9 +32,55 @@
 			hue-rotate(104deg) brightness(102%) contrast(79%);
 		height: 3rem;
 		width: auto;
+		margin-bottom: 3rem;
 
 		&:not(:last-child) {
 			margin-right: 1rem;
+		}
+	}
+
+	&__description {
+		font-size: 1.6rem;
+		margin-bottom: auto;
+	}
+
+	&__buttons {
+		width: 100%;
+
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__link {
+		flex: 1;
+		height: 4rem;
+		padding: 0 1.5rem;
+		border-radius: 5px;
+
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		color: var(--color-grey-light-1);
+		font-size: 1.4rem;
+		font-weight: bold;
+		text-decoration: none;
+
+		&:not(:last-child) {
+			margin-right: 2rem;
+		}
+
+		&--demo {
+			background-color: var(--color-primary);
+		}
+
+		&--code {
+			background-color: #24292e;
+		}
+
+		ion-icon {
+			font-size: 1.8rem;
+			margin-left: 1rem;
 		}
 	}
 }

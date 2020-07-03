@@ -4,26 +4,12 @@
 	background-color: var(--color-bg-1);
 
 	&__content {
-		display: flex;
-		justify-content: space-between;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 5rem;
+
 		align-items: center;
-
-		&--first {
-			flex: 1;
-			margin-right: 8rem;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-		}
-
-		&--second {
-			flex: 1;
-
-			display: flex;
-			flex-direction: column;
-			justify-content: space-between;
-			align-items: center;
-		}
+		justify-items: center;
 	}
 
 	&__image {
@@ -44,13 +30,12 @@
 
 @media screen and (max-width: 1200px) {
 	.about__content {
-		flex-direction: column;
+		grid-template-columns: 100%;
 	}
 
-	.about__content--first {
+	.about__image {
 		width: 50%;
 		margin-right: 0;
-		margin-bottom: 3rem;
 	}
 
 	.about__text {
@@ -69,6 +54,7 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	grid-column: 1 / -1;
 
 	color: var(--color-grey-light-1);
 	font-weight: bold;
