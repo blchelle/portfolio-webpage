@@ -2,4 +2,121 @@
 	@include section-blueprint;
 
 	background-color: var(--color-bg-1);
+
+	&__content {
+		width: 100%;
+
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+		gap: 5rem;
+	}
+}
+
+.project {
+	position: relative;
+	height: 45rem;
+	padding: 3rem;
+	border-radius: 1rem;
+
+	transform: margin 0.2s;
+	display: flex;
+	flex-direction: column;
+
+	background-color: var(--color-bg-3);
+
+	&::before {
+		content: '';
+
+		position: absolute;
+		top: 2.5rem;
+		left: 0;
+		width: 0;
+		height: 4rem;
+
+		background-color: var(--color-primary);
+
+		transition: width 0.3s;
+	}
+
+	&:hover::before {
+		width: 100%;
+	}
+
+	&__name {
+		margin-bottom: 2rem;
+		position: relative;
+		z-index: 2;
+		display: block;
+	}
+
+	&__tech {
+		// This filter turns the image to the primary color, credit to https://codepen.io/sosuke/pen/Pjoqqp
+		filter: brightness(0) saturate(100%) invert(62%) sepia(15%) saturate(2134%)
+			hue-rotate(104deg) brightness(102%) contrast(79%);
+		height: 3rem;
+		width: auto;
+		margin-bottom: 3rem;
+
+		&:hover {
+			filter: none;
+		}
+
+		&:not(:last-child) {
+			margin-right: 1rem;
+		}
+	}
+
+	&__description {
+		font-size: 1.8rem;
+		margin-bottom: auto;
+	}
+
+	&__buttons {
+		width: 100%;
+
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__link {
+		flex: 1;
+		height: 4rem;
+		padding: 0 1.5rem;
+		border-radius: 5px;
+
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		color: var(--color-grey-light-1);
+		font-size: 1.4rem;
+		font-weight: bold;
+		text-decoration: none;
+		transition: background-color 0.2s ease-in-out;
+
+		&:not(:last-child) {
+			margin-right: 2rem;
+		}
+
+		&--demo {
+			background-color: var(--color-primary);
+
+			&:hover {
+				background-color: var(--color-primary-dark);
+			}
+		}
+
+		&--code {
+			background-color: #24292e;
+
+			&:hover {
+				background-color: #111111;
+			}
+		}
+
+		& > * {
+			font-size: 2rem;
+			margin-left: 1rem;
+		}
+	}
 }
