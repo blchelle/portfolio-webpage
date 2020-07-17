@@ -6,8 +6,8 @@
 	"scripts": {
 		"start": "webpack-dev-server --config webpack/webpack.dev.js --open firefox",
 		"clean": "rm -r dist/*",
-		"compile": "webpack --config webpack/webpack.prod.js",
-		"build": "npm-run-all clean compile"
+		"cleanbuild": "npm-run-all clean build",
+		"build": "webpack --config webpack/webpack.prod.js"
 	},
 	"author": "Brock",
 	"license": "ISC",
