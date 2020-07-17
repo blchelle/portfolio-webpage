@@ -15,6 +15,12 @@
 							Full Stack Web Developer, and Mobile Developer currently
 							searching for work opportunities with some amazing companies."
 		> -->
+		<link rel="preload" href="fonts/lato-bold-webfont.woff" as="font" type="font/woff" crossorigin>
+		<link rel="preload" href="fonts/lato-bold-webfont.woff2" as="font" type="font/woff2" crossorigin>
+		<link rel="preload" href="fonts/lato-light-webfont.woff" as="font" type="font/woff" crossorigin>
+		<link rel="preload" href="fonts/lato-light-webfont.woff2" as="font" type="font/woff2" crossorigin>
+		<link rel="preload" href="fonts/lato-regular-webfont.woff" as="font" type="font/woff" crossorigin>
+		<link rel="preload" href="fonts/lato-regular-webfont.woff2" as="font" type="font/woff2" crossorigin>
 		<script
 			type="module"
 			src="https://unpkg.com/ionicons@5.1.0/dist/ionicons/ionicons.esm.js"
@@ -29,7 +35,7 @@
 	<body class="dark">
 		<nav class="navbar navbar--large hidden">
 			<div class="navbar__buttons">
-				<button class="navbar__theme-switcher"></button>
+				<button class="navbar__theme-switcher" aria-label="Theme Switcher"></button>
 				<ion-icon class="navbar__icon" name="menu"></ion-icon>
 			</div>
 			<ul class="navbar__list">
@@ -48,7 +54,7 @@
 						Hello, I'm
 						<span class="header__name">Brock Chelle</span>
 					</h1>
-					<h3 class="header__title">
+					<h2 class="header__title">
 						I'm a&nbsp;
 						<span 
 							id="typewriter-animation"
@@ -57,7 +63,7 @@
 						>
 							Software Engineering Student.
 						</span>
-					</h3>
+					</h2>
 					<button class="header__btn">
 						<span class="header__btn__text">Learn More</span>
 						<ion-icon class="header__btn__icon" name="arrow-forward-circle"></ion-icon>
