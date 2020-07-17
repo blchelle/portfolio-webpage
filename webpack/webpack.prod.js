@@ -1,6 +1,7 @@
 const path = require('path');
 const merge = require('webpack-merge');
 const common = require('./webpack.common');
+const { multiple } = require('webpack-merge');
 
 module.exports = merge(common, {
 	mode: 'production',
@@ -12,7 +13,7 @@ module.exports = merge(common, {
 	module: {
 		rules: [
 			{
-				test: /\.(png|svg|jpg)$/,
+				test: /\.svg$/,
 				use: {
 					loader: 'file-loader',
 					options: {
@@ -20,6 +21,10 @@ module.exports = merge(common, {
 						outputPath: 'img',
 					},
 				},
+			},
+			{
+				test: /\.(png|jpe?g)$/i,
+				loader: 'file-loader?name=img/[name].[hash].webp!webp-loader?{quality: 80}',
 			},
 			{
 				test: /\.m?js$/,

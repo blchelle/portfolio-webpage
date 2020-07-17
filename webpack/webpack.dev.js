@@ -16,7 +16,7 @@ module.exports = merge(common, {
 	module: {
 		rules: [
 			{
-				test: /\.(png|svg|jpg)$/,
+				test: /\.svg$/,
 				use: {
 					loader: 'file-loader',
 					options: {
@@ -24,6 +24,10 @@ module.exports = merge(common, {
 						outputPath: 'img',
 					},
 				},
+			},
+			{
+				test: /\.(png|jpe?g)$/i,
+				loader: 'file-loader?name=img/[name].webp!webp-loader?{quality: 80}',
 			},
 		],
 	},
