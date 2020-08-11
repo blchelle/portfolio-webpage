@@ -31,21 +31,39 @@
 		top: 2.5rem;
 		left: 0;
 		width: 0;
-		height: 4rem;
+		height: 6.9rem;
 
 		background-color: var(--color-primary);
 
 		transition: width 0.3s;
 	}
 
-	&:hover::before {
-		width: 100%;
+	&:hover {
+		&::before {
+			width: 100%;
+		}
+
+		.project__logo {
+			filter: brightness(0) invert(1);
+		}
+	}
+
+	&__head {
+		display: flex;
+		align-items: center;
+		z-index: 2;
+		margin-bottom: 3rem;
+	}
+
+	&__logo {
+		height: 6rem;
+		margin-right: 1rem;
+
+		transition: filter 0.2s ease-in-out;
 	}
 
 	&__name {
-		margin-bottom: 2rem;
 		position: relative;
-		z-index: 2;
 		display: block;
 	}
 
