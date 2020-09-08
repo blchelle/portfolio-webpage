@@ -14,8 +14,9 @@
 	}
 
 	.navbar__icon {
-		color: var(--color-grey-light-1);
-		font-size: 5rem;
+		fill: var(--color-grey-light-1);
+		height: 5rem;
+		width: 5rem;
 		transition: color 0.2s ease, transform 0.3s ease;
 
 		&:hover {
