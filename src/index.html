@@ -9,26 +9,18 @@
 		</style>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<!-- <meta 
+		<meta
 			name="description"
-			content="Hi I'm Brock Chelle. I'm a Software Engineering Student,
-							Full Stack Web Developer, and Mobile Developer currently
-							searching for work opportunities with some amazing companies."
-		> -->
+			content="I'm a Software Engineering Student,
+					Full Stack Web Developer, and Mobile Developer currently
+					searching for work opportunities with some amazing companies."
+		>
 		<link rel="preload" href="fonts/lato-bold-webfont.woff" as="font" type="font/woff" crossorigin>
 		<link rel="preload" href="fonts/lato-bold-webfont.woff2" as="font" type="font/woff2" crossorigin>
 		<link rel="preload" href="fonts/lato-light-webfont.woff" as="font" type="font/woff" crossorigin>
 		<link rel="preload" href="fonts/lato-light-webfont.woff2" as="font" type="font/woff2" crossorigin>
 		<link rel="preload" href="fonts/lato-regular-webfont.woff" as="font" type="font/woff" crossorigin>
 		<link rel="preload" href="fonts/lato-regular-webfont.woff2" as="font" type="font/woff2" crossorigin>
-		<script
-			type="module"
-			src="https://unpkg.com/ionicons@5.1.0/dist/ionicons/ionicons.esm.js"
-		></script>
-		<script
-			nomodule=""
-			src="https://unpkg.com/ionicons@5.1.0/dist/ionicons/ionicons.js"
-		></script>
 		<title>Brock Chelle</title>
 		<link rel="icon" type="image/x-icon" href="favicon.ico" />
 	</head>
@@ -36,7 +28,9 @@
 		<nav class="navbar navbar--large hidden">
 			<div class="navbar__buttons">
 				<button class="navbar__theme-switcher" aria-label="Theme Switcher"></button>
-				<ion-icon class="navbar__icon" name="menu"></ion-icon>
+				<svg class="navbar__icon">
+					<use xlink:href="./assets/sprite.svg#menu"></use>
+				</svg>
 			</div>
 			<ul class="navbar__list">
 				<li class="navbar__item navbar__item--home"><span>Home</span></li>
@@ -56,7 +50,7 @@
 					</h1>
 					<h2 class="header__title">
 						I'm a&nbsp;
-						<span 
+						<span
 							id="typewriter-animation"
 							data-period="500"
 							data-rotate='["Software Engineering Student.", "Full Stack Web Developer.", "Mobile Developer."]'
@@ -66,7 +60,9 @@
 					</h2>
 					<button class="header__btn">
 						<span class="header__btn__text">Learn More</span>
-						<ion-icon class="header__btn__icon" name="arrow-forward-circle"></ion-icon>
+						<svg class="header__btn__icon">
+							<use xlink:href="./assets/sprite.svg#arrow-forward"></use>
+						</svg>
 					</button>
 				</div>
 			</header>
@@ -90,7 +86,7 @@
 							mollis enim lacus ut nibh. Lorem ipsum dolor sit amet, consectetur
 							adipiscing elit.
 						</p>
-					<a class="resume-btn" href="./resume.pdf">View My Resume</a>
+					<a class="resume-btn" target="_blank" href="./resume.pdf">View My Resume</a>
 				</div>
 			</section>
 
@@ -139,10 +135,6 @@
 							<h3 class="skill__name">Mongoose</h3>
 						</div>
 						<div class="skills__item">
-							<img class="skill__image" src="./assets/logos/pug-logo.svg" alt="Pug Logo" />
-							<h3 class="skill__name">Pug</h3>
-						</div>
-						<div class="skills__item">
 							<img
 								class="skill__image"
 								src="./assets/logos/html-css-logo.svg"
@@ -164,7 +156,7 @@
 								src="./assets/logos/jquery-logo.svg"
 								alt="JQuery Logo"
 							/>
-							<h3 class="skill__name">jQuery</h3>
+							<h3 class="skill__name">JQuery</h3>
 						</div>
 						<div class="skills__item">
 							<img
@@ -223,10 +215,10 @@
 						<div class="skills__item">
 							<img
 								class="skill__image"
-								src="./assets/logos/bash-logo.svg"
-								alt="Bash Logo"
+								src="./assets/logos/java-logo.svg"
+								alt="Java Logo"
 							/>
-							<h3 class="skill__name">Bash</h3>
+							<h3 class="skill__name">Java</h3>
 						</div>
 					</div>
 					<div class="skills__page skills__page--databases">
@@ -249,10 +241,10 @@
 						<div class="skills__item">
 							<img
 								class="skill__image"
-								src="./assets/logos/mysql-logo.svg"
+								src="./assets/logos/sqlite-logo.svg"
 								alt="MySQL Logo"
 							/>
-							<h3 class="skill__name">MySQL</h3>
+							<h3 class="skill__name">SQLite</h3>
 						</div>
 					</div>
 					<div class="skills__page skills__page--other">
@@ -283,14 +275,6 @@
 								alt="Atlassian Logo"
 							/>
 							<h3 class="skill__name">Atlassian</h3>
-						</div>
-						<div class="skills__item">
-							<img
-								class="skill__image"
-								src="./assets/logos/netlify-logo.svg"
-								alt="Netlify Logo"
-							/>
-							<h3 class="skill__name">Netlify</h3>
 						</div>
 						<div class="skills__item">
 							<img
@@ -342,11 +326,15 @@
 						<div class="project__buttons">
 							<a href="#" class="project__link project__link--demo">
 								Demo
-								<ion-icon name="play"></ion-icon>
+								<svg class="project__link__icon">
+									<use xlink:href="./assets/sprite.svg#play"></use>
+								</svg>
 							</a>
 							<a href="#" class="project__link project__link--code">
 								Repository
-								<ion-icon name="logo-github"></ion-icon>
+								<svg class="project__link__icon">
+									<use xlink:href="./assets/sprite.svg#logo-github"></use>
+								</svg>
 							</a>
 						</div>
 					</div>
@@ -366,22 +354,27 @@
 							can be timed or triggered upon crossing the border of a personalized GeoFence
 						</p>
 						<div class="project__buttons">
-							<a href="https://apps.apple.com/ca/app/keepit-item-tracker/id1474698806" class="project__link project__link--demo">
+							<a href="#" class="project__link project__link--demo">
 								Demo
-								<ion-icon name="play"></ion-icon>
+								<svg class="project__link__icon">
+									<use xlink:href="./assets/sprite.svg#play"></use>
+								</svg>
 							</a>
-							<a href="https://github.com/blchelle/keepit" class="project__link project__link--code">
+							<a href="#" class="project__link project__link--code">
 								Repository
-								<ion-icon name="logo-github"></ion-icon>
+								<svg class="project__link__icon">
+									<use xlink:href="./assets/sprite.svg#logo-github"></use>
+								</svg>
 							</a>
 						</div>
 					</div>
 					<div class="project project--maze-solver">
-						<h3 class="project__name">?????</h3>
+						<div class="project__head">
+							<img class="project__logo project__logo--keepit" src="./assets/logos/random-maze-logo.svg">
+							<h2 class="project__name">Maze Solver</h2>
+						</div>
 						<div class="project__stack">
-							<img class="project__tech" title="jQuery" src="./assets/logos/jquery-logo.svg" alt="jQuery">
-							<img class="project__tech" title="SASS" src="./assets/logos/sass-logo.svg" alt="Sass">
-							<img class="project__tech" title="MySQL" src="./assets/logos/mysql-logo.svg" alt="MySQL">
+							<img class="project__tech" title="Python" src="./assets/logos/python-logo.svg" alt="python">
 						</div>
 						<p class="project__description">
 							Ratione voluptas dolor itaque cupiditate commodi temporibus. Repudiandae nulla
@@ -391,11 +384,15 @@
 						<div class="project__buttons">
 							<a href="#" class="project__link project__link--demo">
 								Demo
-								<ion-icon name="play"></ion-icon>
+								<svg class="project__link__icon">
+									<use xlink:href="./assets/sprite.svg#play"></use>
+								</svg>
 							</a>
 							<a href="#" class="project__link project__link--code">
 								Repository
-								<ion-icon name="logo-github"></ion-icon>
+								<svg class="project__link__icon">
+									<use xlink:href="./assets/sprite.svg#logo-github"></use>
+								</svg>
 							</a>
 						</div>
 					</div>
@@ -429,7 +426,9 @@
 					</div>
 					<button type="submit">
 						Send
-						<ion-icon name="send"></ion-icon>
+						<svg>
+							<use xlink:href="./assets/sprite.svg#send"></use>
+						</svg>
 					</button>
 				</form>
 			</section>
@@ -446,10 +445,14 @@
 				</ul>
 				<div class="footer__social-media">
 					<a href="https://www.linkedin.com/in/blchelle/" class="footer__icon">
-						<ion-icon name="logo-linkedin"></ion-icon>
+						<svg>
+							<use xlink:href='./assets/sprite.svg#logo-linkedin'></use>
+						</svg>
 					</a>
 					<a href="https://github.com/blchelle" class="footer__icon">
-						<ion-icon name="logo-github"></ion-icon>
+						<svg>
+							<use xlink:href='./assets/sprite.svg#logo-github'></use>
+						</svg>
 					</a>
 				</div>
 				<p class="footer__copyright">Brock Chelle, 2020</p>
