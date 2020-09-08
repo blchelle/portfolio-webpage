@@ -116,6 +116,13 @@
 			margin-right: 2rem;
 		}
 
+		&__icon {
+			height: 2.3rem;
+			width: 2.3rem;
+			margin-left: 1rem;
+			fill: var(--color-grey-light-1);
+		}
+
 		&--demo {
 			background-color: var(--color-primary);
 
@@ -130,11 +137,6 @@
 			&:hover {
 				background-color: #111111;
 			}
-		}
-
-		& > * {
-			font-size: 2rem;
-			margin-left: 1rem;
 		}
 	}
 }
