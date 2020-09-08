@@ -1,8 +1,8 @@
-# Personal Portfolio
-My personal portfolio summarizing my skills and projects that I've built
+# Brock Chelle's Portfolio 👦
+My Personal Portfolio Webpage is a site created with the goal of showcasing my skills, projects, and a little bit about myself.
 
-## 🚧🚧🚧 Currently Under Construction 🚧🚧🚧
-The site is mostly finished, but I'm in the process of working on some more projects to add to my portfolio before I release it
+## Note 📝
+This site will continue to be updated as I build more projects and gain new skills along the way
 
 ## Technology Stack 💻
 * Javascript
