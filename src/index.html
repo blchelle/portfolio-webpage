@@ -26,7 +26,6 @@
 		<link rel="apple-touch-icon" sizes="180x180" href="./assets/favicons/apple-touch-icon.png">
 		<link rel="icon" type="image/png" sizes="32x32" href="./assets/favicons/favicon-32x32.png">
 		<link rel="icon" type="image/png" sizes="16x16" href="./assets/favicons/favicon-16x16.png">
-		<link rel="manifest" href="./assets/favicons/site.webmanifest">
 		<link rel="mask-icon" href="./assets/favicons/safari-pinned-tab.svg" color="#5bbad5">
 		<meta name="msapplication-TileColor" content="#224679">
 		<meta name="theme-color" content="#ffffff">
@@ -314,37 +313,6 @@
 			<section class="projects">
 				<h2 class="projects__title">Portflio Projects</h2>
 				<div class="projects__content">
-					<div class="project project--bug-tracker">
-						<div class="project__head">
-							<img class="project__logo" src="./assets/logos/collabogreat-logo.svg" alt="CollaboGreat Logo">
-							<h2 class="project__name">CollaboGreat</h2>
-						</div>
-						<div class="project__stack">
-							<img class="project__tech" title="React" src="./assets/logos/react-logo.svg" alt="React">
-							<img class="project__tech" title="NodeJS" src="./assets/logos/node-logo.svg" alt="NodeJS">
-							<img class="project__tech" title="Express" src="./assets/logos/express-logo.svg" alt="Express">
-							<img class="project__tech" title="MongoDB" src="./assets/logos/mongodb-logo.svg" alt="MongoDB">
-						</div>
-						<p class="project__description">
-							Aut possimus eum aut illo saepe. Maxime ut labore sapiente delectus ut. Dicta dolor
-							vel pariatur numquam sed. Similique id in necessitatibus non cumque. Earum voluptates
-							nihil earum voluptatum voluptate sit.
-						</p>
-						<div class="project__buttons">
-							<a href="#" class="project__link project__link--demo">
-								Demo
-								<svg class="project__link__icon">
-									<use xlink:href="./assets/sprite.svg#play"></use>
-								</svg>
-							</a>
-							<a href="#" class="project__link project__link--code">
-								Repository
-								<svg class="project__link__icon">
-									<use xlink:href="./assets/sprite.svg#logo-github"></use>
-								</svg>
-							</a>
-						</div>
-					</div>
 					<div class="project project--keepit">
 						<div class="project__head">
 							<img class="project__logo project__logo--keepit" src="./assets/logos/keepit-logo.svg" alt="KeepIt Logo">
@@ -358,16 +326,22 @@
 						<p class="project__description">
 							KeepIt is an iOS App built to help users keep track of all their personal belongings
 							without the use of gps hardware. It does this through customizable notifications that
-							can be timed or triggered upon crossing the border of a personalized GeoFence
+							can be timed or triggered upon crossing the border of a personalized GeoFence. Whenever
+							you lose an item, you can use KeepIt to remember where you had it last.
 						</p>
 						<div class="project__buttons">
-							<a href="#" class="project__link project__link--demo">
+							<a	href="https://apps.apple.com/ca/app/keepit/id1474698806?fbclid=IwAR27afyk6DLwZdRIlkfFBul3xn9DWc03huik0xoSySqVXBinBakrWKfzPr0)"
+								rel="noopener"
+								target="_blank"
+								class="project__link
+								project__link--demo"
+							>
 								Demo
 								<svg class="project__link__icon">
 									<use xlink:href="./assets/sprite.svg#play"></use>
 								</svg>
 							</a>
-							<a href="#" class="project__link project__link--code">
+							<a href="https://github.com/blchelle/keepit" rel="noopener" target="_blank" class="project__link project__link--code">
 								Repository
 								<svg class="project__link__icon">
 									<use xlink:href="./assets/sprite.svg#logo-github"></use>
@@ -384,18 +358,55 @@
 							<img class="project__tech" title="Python" src="./assets/logos/python-logo.svg" alt="python">
 						</div>
 						<p class="project__description">
-							Ratione voluptas dolor itaque cupiditate commodi temporibus. Repudiandae nulla
-							repellat. Aliquam et tempore. Facere doloribus cum. Non ea ipsa optio voluptatem
-							minus ut laudantium velit. Nulla dolores voluptatibus minima et sapiente nam quaerat.
+							Maze Solver is a very cool python project which seeks to test the efficiency of many known
+							maze solving algrithms. It starts by generating a completely random maze and then attempts
+							to solve it using the left-hand-rule, dead end elimination, and depth first search algorithms.
+							The solving times for each of these algorithms are then compared.
 						</p>
 						<div class="project__buttons">
-							<a href="#" class="project__link project__link--demo">
+							<a href="https://www.youtube.com/watch?v=ifyov6MqhRY" rel="noopener" target="_blank" class="project__link project__link--demo">
 								Demo
 								<svg class="project__link__icon">
 									<use xlink:href="./assets/sprite.svg#play"></use>
 								</svg>
 							</a>
-							<a href="#" class="project__link project__link--code">
+							<a href="https://github.com/blchelle/random-mazes" rel="noopener" target="_blank" class="project__link project__link--code">
+								Repository
+								<svg class="project__link__icon">
+									<use xlink:href="./assets/sprite.svg#logo-github"></use>
+								</svg>
+							</a>
+						</div>
+					</div>
+					<div class="project project--bug-tracker">
+						<div class="project__head">
+							<img class="project__logo" src="./assets/logos/collabogreat-logo.svg" alt="CollaboGreat Logo">
+							<h2 class="project__name">CollaboGreat</h2>
+						</div>
+						<div class="project__stack">
+							<img class="project__tech" title="React" src="./assets/logos/react-logo.svg" alt="React">
+							<img class="project__tech" title="NodeJS" src="./assets/logos/node-logo.svg" alt="NodeJS">
+							<img class="project__tech" title="Express" src="./assets/logos/express-logo.svg" alt="Express">
+							<img class="project__tech" title="MongoDB" src="./assets/logos/mongodb-logo.svg" alt="MongoDB">
+						</div>
+						<p class="project__description">
+							CollaboGreat is a in-progress full-stack web application that encourages strong collaboration among teams.
+							CollaboGreat was designed with extensive customization as its top priority so that it can be
+							used effectively by any size of team.
+							</br>
+							</br>
+							<strong>
+								Completion Date: November 2020
+							</strong>
+						</p>
+						<div class="project__buttons">
+							<p class="project__link project__link--demo project__link--demo--disabled">
+								Demo
+								<svg class="project__link__icon">
+									<use xlink:href="./assets/sprite.svg#play"></use>
+								</svg>
+							</p>
+							<a href="https://github.com/blchelle/collabogreat" rel="noopener" target="_blank" class="project__link project__link--code">
 								Repository
 								<svg class="project__link__icon">
 									<use xlink:href="./assets/sprite.svg#logo-github"></use>

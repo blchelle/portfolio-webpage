@@ -7,20 +7,22 @@
 		width: 100%;
 
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+		grid-template-columns: repeat(auto-fit, minmax(38rem, 1fr));
 		gap: 5rem;
 	}
 }
 
 .project {
 	position: relative;
-	height: 45rem;
+	height: 55rem;
+	max-width: 42rem;
 	padding: 3rem;
 	border-radius: 1rem;
 
 	transform: margin 0.2s;
 	display: flex;
 	flex-direction: column;
+	justify-self: center;
 
 	background-color: var(--color-bg-3);
 
@@ -128,6 +130,15 @@
 
 			&:hover {
 				background-color: var(--color-primary-dark);
+			}
+
+			&--disabled {
+				cursor: not-allowed;
+				filter: brightness(0.5);
+
+				&:hover {
+					background-color: var(--color-primary);
+				}
 			}
 		}
 
