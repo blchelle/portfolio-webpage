@@ -1,5 +1,10 @@
 @mixin section-blueprint {
 	padding: 4rem 15%;
+
+	@media screen and (max-width: $bp-s) {
+		padding: 4rem 2rem;
+	}
+
 	border-top: 0.5rem solid var(--color-primary);
 
 	display: flex;

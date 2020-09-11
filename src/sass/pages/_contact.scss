@@ -11,6 +11,10 @@
 		flex-direction: column;
 		justify-content: space-between;
 
+		@media screen and (max-width: $bp-s) {
+			width: 100%;
+		}
+
 		label {
 			position: absolute;
 			top: 50%;

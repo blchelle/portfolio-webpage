@@ -27,6 +27,12 @@
 
 $font-primary: 'Lato', sans-serif;
 
+// Breakpoints
+$bp-xl: 991px;
+$bp-l: 767px;
+$bp-m: 520px;
+$bp-s: 420px;
+
 :root {
 	--color-primary: #26c485;
 	--color-primary-dark: #1d9a68;
@@ -41,7 +47,7 @@ $font-primary: 'Lato', sans-serif;
 	--color-grey-dark-3: #2f3437;
 	--color-grey-dark-4: #26292c;
 
-	--color-navbar: #26292caa;
+	--color-navbar: #26292cee;
 }
 
 .light {
@@ -87,29 +93,16 @@ html {
 }
 
 // Start of Large Tablet
-@media screen and (max-width: 991px) {
+@media screen and (max-width: $bp-xl) {
 	html {
 		font-size: 55%;
 	}
 }
 
 // Start of Medium  Tablet
-@media screen and (max-width: 767px) {
+@media screen and (max-width: $bp-l) {
 	html {
 		font-size: 50%;
-	}
-}
-
-// Start of Phone sizes
-@media screen and (max-width: 520px) {
-	html {
-		font-size: 40%;
-	}
-}
-
-@media screen and (max-width: 420px) {
-	html {
-		font-size: 35%;
 	}
 }
 

@@ -6,7 +6,7 @@
 
 	.navbar__buttons {
 		width: 100%;
-		padding: 2rem 3rem;
+		padding: 1rem 2rem;
 
 		display: flex;
 		justify-content: space-between;
@@ -15,8 +15,8 @@
 
 	.navbar__icon {
 		fill: var(--color-grey-light-1);
-		height: 5rem;
-		width: 5rem;
+		height: 3.5rem;
+		width: 3.5rem;
 		transition: color 0.2s ease, transform 0.3s ease;
 
 		&:hover {
