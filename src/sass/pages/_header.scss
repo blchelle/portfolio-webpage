@@ -2,6 +2,7 @@
 	height: 100vh;
 
 	display: flex;
+	flex-direction: column;
 	align-items: center;
 	justify-content: center;
 
@@ -19,6 +20,10 @@
 		left: 0;
 
 		transition: background 500ms ease-in-out;
+	}
+
+	&__title {
+		padding: 0 3rem;
 	}
 
 	h2.header__title {
@@ -57,7 +62,7 @@
 		justify-content: space-between;
 		align-self: center;
 
-		font-size: 2rem;
+		font-size: 2.1em;
 
 		background-color: var(--color-primary);
 
