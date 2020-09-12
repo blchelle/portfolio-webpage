@@ -55,6 +55,12 @@
 		&:hover {
 			color: var(--color-primary);
 		}
+
+		button {
+			background-color: transparent;
+			width: 95%;
+			border-radius: 0;
+		}
 	}
 
 	&__container {
