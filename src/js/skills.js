@@ -55,6 +55,9 @@ function categorySelection(pageNumber, categorySelector) {
 	scrollContainerTo(pageNumber);
 }
 
+// Query for the screen width, this will be used in a resize handler
+let width = $(window).width()
+
 // Query for the categoryList and skillsContainer
 const categoryList = $('.skills__categories');
 const skillsContainer = $('.skills__container');
@@ -73,3 +76,8 @@ databasesSelector.click(() => categorySelection(2, databasesSelector));
 otherSelector.click(() => categorySelection(3, otherSelector));
 
 let currentPage;
+$(window).on('resize', () => {
+	width = $(window).width();
+	categorySelection(0, webSelector);
+});
+$(document).on('ready', () => categorySelection(0, webSelector));

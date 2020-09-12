@@ -4,7 +4,7 @@
 	"description": "Brock Chelle's Portfolio Webpage",
 	"private": true,
 	"scripts": {
-		"start": "webpack-dev-server --config webpack/webpack.dev.js --open firefox",
+		"start": "webpack-dev-server --config webpack/webpack.dev.js --open",
 		"clean": "rm -r dist/*",
 		"cleanbuild": "npm-run-all clean build",
 		"build": "webpack --config webpack/webpack.prod.js"

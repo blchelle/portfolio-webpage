@@ -23,10 +23,6 @@ module.exports = merge(common, {
 				},
 			},
 			{
-				test: /\.(png|jpe?g)$/i,
-				loader: 'file-loader?name=img/[name].[hash].[ext]-loader?{quality: 90}',
-			},
-			{
 				test: /\.m?js$/,
 				exclude: /(node_modules|bower_components)/,
 				use: {
