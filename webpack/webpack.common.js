@@ -6,7 +6,7 @@ module.exports = {
 	plugins: [
 		new HtmlWebpackPlugin({
 			template: path.resolve(__dirname, '../src/index.html'),
-			favicon: path.resolve(__dirname, '../src/assets/favicons/favicon.ico'),
+			favicon: path.resolve(__dirname, '../src/favicon.ico'),
 		}),
 	],
 	module: {
@@ -33,6 +33,10 @@ module.exports = {
 						outputPath: 'fonts',
 					},
 				},
+			},
+			{
+				test: /\.(png|jpe?g)$/i,
+				loader: 'file-loader?name=img/[name].[hash].[ext]?{quality: 90}',
 			},
 			{
 				test: /\.pdf/,
