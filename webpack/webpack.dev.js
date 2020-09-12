@@ -25,10 +25,6 @@ module.exports = merge(common, {
 					},
 				},
 			},
-			{
-				test: /\.(png|jpe?g)$/i,
-				loader: 'file-loader?name=img/[name].webp!webp-loader?{quality: 80}',
-			},
 		],
 	},
 });
