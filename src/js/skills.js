@@ -77,6 +77,7 @@ otherSelector.click(() => categorySelection(3, otherSelector));
 
 let currentPage;
 $(window).on('resize', () => {
+	if (width === window.width()) return;
 	width = $(window).width();
 	categorySelection(0, webSelector);
 });
