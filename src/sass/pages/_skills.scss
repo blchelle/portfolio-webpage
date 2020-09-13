@@ -42,12 +42,12 @@
 	}
 
 	&__category {
-		cursor: pointer;
 		width: 25%;
 
-		color: var(--color-text);
-		font-weight: bold;
-		text-align: center;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
 
 		transition: color 300ms ease-in-out;
 		&.selected,
@@ -56,10 +56,14 @@
 		}
 
 		button {
-			font-size: 1.6rem;
-			background-color: transparent;
 			width: 95%;
 			border-radius: 0;
+
+			color: var(--color-text);
+			font-size: 1.6rem;
+			font-weight: bold;
+
+			background-color: transparent;
 		}
 	}
 
