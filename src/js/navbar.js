@@ -5,7 +5,6 @@ import $ from 'jquery';
  * @param {JQuery} element An element that exists in the DOM
  */
 function scrollPageTo(element) {
-	console.log(element);
 	// Determine the scrollbar offset based off of the current mode of the navbar
 	let offset;
 	if (navbar.hasClass('navbar--mobile')) {
