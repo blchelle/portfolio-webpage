@@ -9,6 +9,7 @@
 	// Url must be relative to the entry file
 	background: url(../assets/header.jpg);
 	background-position: center;
+	background-attachment: fixed;
 	background-size: cover;
 
 	&__overlay {
