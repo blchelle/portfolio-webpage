@@ -43,6 +43,10 @@
 			width: 100%;
 		}
 
+		.project__name {
+			color: var(--color-grey-light-1);
+		}
+
 		.project__logo {
 			filter: brightness(0) invert(1);
 		}
