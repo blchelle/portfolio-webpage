@@ -69,8 +69,7 @@
 
 	&__tech {
 		// This filter turns the image to the primary color, credit to https://codepen.io/sosuke/pen/Pjoqqp
-		filter: brightness(0) saturate(100%) invert(62%) sepia(15%) saturate(2134%)
-			hue-rotate(104deg) brightness(102%) contrast(79%);
+		filter: brightness(0) saturate(100%) invert(43%) sepia(28%) saturate(5861%) hue-rotate(239deg) brightness(95%) contrast(96%);;
 		height: 3rem;
 		width: auto;
 		margin-bottom: 3rem;
