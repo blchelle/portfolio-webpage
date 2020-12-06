@@ -13,6 +13,9 @@ module.exports = merge(common, {
 		compress: true,
 		port: 8000,
 	},
+	watchOptions: {
+		poll: 1000
+	},
 	module: {
 		rules: [
 			{
