@@ -51,6 +51,8 @@ $bp-s: 420px;
 }
 
 .light {
+	--color-secondary: #87bcc0;
+
 	--color-bg-1: var(--color-grey-light-1);
 	--color-bg-2: var(--color-grey-light-2);
 	--color-bg-3: var(--color-grey-light-3);
@@ -59,6 +61,8 @@ $bp-s: 420px;
 }
 
 .dark {
+	--color-secondary: #1c3435;
+
 	--color-bg-1: var(--color-grey-dark-4);
 	--color-bg-2: var(--color-grey-dark-3);
 	--color-bg-3: var(--color-grey-dark-2);
