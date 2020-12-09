@@ -15,20 +15,8 @@
 		left: 15%;
 		width: 70%;
 		bottom: 5%;
-
-		&__hover-box {
-			z-index: 1;
-			left: 0;
-			height: 100%;
-			width: 100%;
-
-			&:hover + .header__initial--top {
-				transform: translateY(-25%);
-			}
-		}
-
 		&--top {
-			transform: translateY(-10%);
+			transform: translateY(-15%);
 			backface-visibility: hidden;
 			transition: transform 0.5s ease-in-out;
 		}
