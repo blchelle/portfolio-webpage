@@ -81,17 +81,8 @@ $(window).ready(function () {
 const initialTop = $('.header__initial--top')
 const header = $('.header')
 
-let left = initialTop.css('left').split('')
-let bottom = initialTop.css('bottom').split('')
-left.pop()
-left.pop()
-left = left.join('')
-left = +left
-
-bottom.pop()
-bottom.pop()
-bottom = bottom.join('')
-bottom = +bottom
+let left, bottom
+getPositionOfTopInitial()
 
 header.mousemove(function (event) {
 	const horizontalTranslate = (event.pageX - header.width() / 2) / 10
@@ -100,3 +91,25 @@ header.mousemove(function (event) {
 	initialTop.css('left', `${left + horizontalTranslate}px`)
 	initialTop.css('bottom', `${bottom - verticalTranslate}px`)
 })
+
+$(window).resize(function () {
+	initialTop.css('left', `15%`)
+	initialTop.css('bottom', ``)
+
+	getPositionOfTopInitial()
+})
+
+function getPositionOfTopInitial() {
+	left = initialTop.css('left').split('')
+	bottom = initialTop.css('bottom').split('')
+
+	left.pop()
+	left.pop()
+	left = left.join('')
+	left = +left
+
+	bottom.pop()
+	bottom.pop()
+	bottom = bottom.join('')
+	bottom = +bottom
+}

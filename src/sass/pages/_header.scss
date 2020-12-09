@@ -98,6 +98,12 @@
 	}
 }
 
+@media screen and (max-width: 650px) {
+	.header__content {
+		background-color: transparent;
+	}
+}
+
 @keyframes color-rotate {
 	from {
 		filter: hue-rotate(0deg);
