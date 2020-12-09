@@ -1,34 +1,36 @@
 .header {
 	height: 100vh;
+	position: relative;
 
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
 
-	// Url must be relative to the entry file
-	background: url(../assets/header.jpg);
-	background-position: center;
-	background-size: cover;
+	background-color: var(--color-secondary);
+	transition: background-color 0.3s ease-in-out;
 
-	&__overlay {
-		background: var(--color-header);
-		width: 100%;
-		height: 100vh;
+	&__initial {
 		position: absolute;
-		top: 0;
-		left: 0;
-
-		transition: background 500ms ease-in-out;
+		left: 15%;
+		width: 70%;
+		bottom: 5%;
+		&--top {
+			transform: translateY(-15%);
+			backface-visibility: hidden;
+			transition: transform 0.5s ease-in-out;
+		}
 	}
 
 	&__title {
 		padding: 0 3rem;
+		color: var(--color-grey-light-1);
 	}
 
 	h2.header__title {
 		font-weight: lighter;
 		font-size: 3rem;
+		height: 4rem;
 	}
 
 	&__name {
@@ -37,6 +39,10 @@
 
 	&__content {
 		z-index: 2;
+
+		background-color: var(--color-header);
+		padding: 2rem;
+		border-radius: 2rem;
 
 		display: flex;
 		flex-direction: column;
@@ -89,6 +95,12 @@
 		.header__btn__icon {
 			transform: rotate(90deg);
 		}
+	}
+}
+
+@media screen and (max-width: 650px) {
+	.header__content {
+		background-color: transparent;
 	}
 }
 

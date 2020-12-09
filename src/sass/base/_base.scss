@@ -34,8 +34,8 @@ $bp-m: 520px;
 $bp-s: 420px;
 
 :root {
-	--color-primary: #955AED;
-	--color-primary-dark: #7123E7;
+	--color-primary: #26c485;
+	--color-primary-dark: #21ab74;
 	--color-error: #d06262;
 	--color-grey-light-1: #f8f8f8;
 	--color-grey-light-2: #ebebeb;
@@ -46,24 +46,27 @@ $bp-s: 420px;
 	--color-grey-dark-3: #2f3437;
 	--color-grey-dark-4: #26292c;
 
+	--color-header: #26292caa;
 	--color-navbar: #26292cee;
 }
 
 .light {
+	--color-secondary: #a7dcbf;
+
 	--color-bg-1: var(--color-grey-light-1);
 	--color-bg-2: var(--color-grey-light-2);
 	--color-bg-3: var(--color-grey-light-3);
 
-	--color-header: #999999aa;
 	--color-text: var(--color-grey-dark-4);
 }
 
 .dark {
+	--color-secondary: #1c3435;
+
 	--color-bg-1: var(--color-grey-dark-4);
 	--color-bg-2: var(--color-grey-dark-3);
 	--color-bg-3: var(--color-grey-dark-2);
 
-	--color-header: #26292caa;
 	--color-text: var(--color-grey-light-1);
 }
 
@@ -87,6 +90,7 @@ body {
 }
 
 html {
+	max-width: 100vw;
 	box-sizing: border-box;
 	font-size: 62.5%; // 1rem = 10px
 }
