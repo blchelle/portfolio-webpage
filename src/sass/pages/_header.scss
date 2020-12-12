@@ -15,10 +15,11 @@
 		left: 15%;
 		width: 70%;
 		bottom: 5%;
+
 		&--top {
-			transform: translateY(-15%);
+			transform: translateY(-5%);
 			backface-visibility: hidden;
-			transition: transform 0.5s ease-in-out;
+			transition: transform 1s ease-in-out;
 		}
 	}
 
@@ -39,10 +40,14 @@
 
 	&__content {
 		z-index: 2;
-
-		background-color: var(--color-header);
 		padding: 2rem;
+		background-color: var(--color-header);
+
+		border: solid 2px transparent;
+		backdrop-filter: blur(5px);
+		background-clip: padding-box;
 		border-radius: 2rem;
+		box-shadow: 10px 10px 10px rgba(46, 54, 68, 0.03);
 
 		display: flex;
 		flex-direction: column;
