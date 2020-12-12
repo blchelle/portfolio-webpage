@@ -423,12 +423,60 @@
 					Please do not hesitate to send me a message if you have any questions or are
 					interested in working with me
 				</p>
-				<form action="POST" name="contact" class="contact__form" netlify>
-					<div class="contact__container contact__container--name">
-						<label class="name__label" for="name">Name</label>
-						<input type="text" name="name" id="name" required />
+				<div class="contact__flex">
+					<div class="contact__info__container">
+						<div class="contact__info">
+							<div class="contact__info__icon__container">
+								<svg class="contact__info__icon">
+									<use xlink:href="./assets/sprite.svg#compass"></use>
+								</svg>
+							</div>
+							<div class="contact__info__content">
+								<h4 class="contact__info__content--title">Location</h4>
+								<a class="contact__info__content--subtitle">Edmonton, Canada</a>
+							</div>
+						</div>
+						<div class="contact__info">
+							<div class="contact__info__icon__container">
+								<svg class="contact__info__icon">
+									<use xlink:href="./assets/sprite.svg#mail"></use>
+								</svg>
+							</div>
+							<div class="contact__info__content">
+								<h4 class="contact__info__content--title">Email Address</h4>
+								<a class="contact__info__content--subtitle">brocklchelle@gmail.com</a>
+							</div>
+						</div>
+						<div class="contact__info">
+							<div class="contact__info__icon__container">
+								<svg class="contact__info__icon">
+									<use xlink:href="./assets/sprite.svg#logo-linkedin"></use>
+								</svg>
+							</div>
+							<div class="contact__info__content">
+								<h4 class="contact__info__content--title">LinkedIn</h4>
+								<a class="contact__info__content--subtitle contact__info__content--subtitle--link" href="https://linkedin.com/in/blchelle" aria-label="LinkedIn" rel="noopener" target="_blank">Click here to be redirected!</a>
+							</div>
+						</div>
+						<div class="contact__info">
+							<div class="contact__info__icon__container">
+								<svg class="contact__info__icon">
+									<use xlink:href="./assets/sprite.svg#logo-github"></use>
+								</svg>
+							</div>
+							<div class="contact__info__content">
+								<h4 class="contact__info__content--title">GitHub</h4>
+								<a class="contact__info__content--subtitle contact__info__content--subtitle--link" href="https://github.com/blchelle" aria-label="GitHub" rel="noopener" target="_blank">Click here to be redirected!</a>
+							</div>
+						</div>
 					</div>
-					<div class="contact__container contact__container--email">
+
+					<form action="POST" name="contact" class="contact__form" netlify>
+						<div class="contact__container contact__container--name">
+							<label class="name__label" for="name">Name</label>
+							<input type="text" name="name" id="name" required />
+						</div>
+						<div class="contact__container contact__container--email">
 						<label for="email">Email Address</label>
 						<input type="email" name="email" id="email" required />
 					</div>
@@ -438,19 +486,20 @@
 							name="message"
 							id="message"
 							cols="30"
-							rows="12"
-							required
-						></textarea>
-					</div>
-					<button type="submit">
-						Send
-						<svg>
-							<use xlink:href="./assets/sprite.svg#send"></use>
-						</svg>
-					</button>
-				</form>
+							rows="8"
+							required>
+						</textarea>
+						</div>
+						<button type="submit">
+							Send
+							<svg>
+								<use xlink:href="./assets/sprite.svg#send"></use>
+							</svg>
+						</button>
+					</form>
+				</div>
 			</section>
-
+			
 			<footer class="footer">
 				<ul class="footer__navbar">
 					<li class="footer__navbar__item navbar__item--home"><span>Home</span></li>
