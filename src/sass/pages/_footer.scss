@@ -6,7 +6,8 @@
 	grid-template-rows: repeat(2, 1fr);
 	align-items: center;
 
-	background-color: var(--color-grey-dark-3);
+	background-color: var(--color-bg-1);
+	transition: background-color 0.5s ease-in-out;
 
 	&__navbar {
 		display: flex;
