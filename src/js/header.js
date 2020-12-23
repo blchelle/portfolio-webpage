@@ -85,8 +85,8 @@ let left, bottom
 getPositionOfTopInitial()
 
 header.mousemove(function (event) {
-	const horizontalTranslate = (event.pageX - header.width() / 2) / 10
-	const verticalTranslate = (event.pageY - header.height() / 2) / 10
+	const horizontalTranslate = (-1 * (event.pageX - header.width() / 2)) / 40
+	const verticalTranslate = (-1 * (event.pageY - header.height() / 2)) / 40
 
 	initialTop.css('left', `${left + horizontalTranslate}px`)
 	initialTop.css('bottom', `${bottom - verticalTranslate}px`)
