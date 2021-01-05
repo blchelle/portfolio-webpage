@@ -151,6 +151,6 @@ window.onscroll = scrollHandler;
 $(document).ready(() => {
 	scrollHandler();
 	resizeHandler();
-	getTheme();
+	// getTheme();
 });
 $(window).resize(resizeHandler);
