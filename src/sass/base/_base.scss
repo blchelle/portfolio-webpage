@@ -1,31 +1,31 @@
 @font-face {
-	font-family: 'Lato';
-	src: url('../fonts/lato-regular-webfont.woff2') format('woff2'),
-		url('../fonts/lato-regular-webfont.woff') format('woff');
+	font-family: "Lato";
+	src: url("../fonts/lato-regular-webfont.woff2") format("woff2"),
+		url("../fonts/lato-regular-webfont.woff") format("woff");
 	font-weight: normal;
 	font-style: normal;
 	font-display: swap;
 }
 
 @font-face {
-	font-family: 'Lato';
-	src: url('../fonts/lato-bold-webfont.woff2') format('woff2'),
-		url('../fonts/lato-bold-webfont.woff') format('woff');
+	font-family: "Lato";
+	src: url("../fonts/lato-bold-webfont.woff2") format("woff2"),
+		url("../fonts/lato-bold-webfont.woff") format("woff");
 	font-weight: bold;
 	font-style: normal;
 	font-display: swap;
 }
 
 @font-face {
-	font-family: 'Lato';
-	src: url('../fonts/lato-light-webfont.woff2') format('woff2'),
-		url('../fonts/lato-light-webfont.woff') format('woff');
+	font-family: "Lato";
+	src: url("../fonts/lato-light-webfont.woff2") format("woff2"),
+		url("../fonts/lato-light-webfont.woff") format("woff");
 	font-weight: lighter;
 	font-style: normal;
 	font-display: swap;
 }
 
-$font-primary: 'Lato', sans-serif;
+$font-primary: "Lato", sans-serif;
 
 // Breakpoints
 $bp-xl: 991px;
@@ -47,20 +47,6 @@ $bp-s: 420px;
 	--color-grey-dark-3: #2f3437;
 	--color-grey-dark-4: #26292c;
 
-	--color-navbar: #26292cee;
-}
-
-.light {
-	--color-secondary: #a7dcbf;
-
-	--color-bg-1: var(--color-grey-light-1);
-	--color-bg-2: var(--color-grey-light-2);
-	--color-bg-3: var(--color-grey-light-3);
-
-	--color-text: var(--color-grey-dark-4);
-}
-
-.dark {
 	--color-secondary: #1c3435;
 
 	--color-bg-1: var(--color-grey-dark-4);
@@ -68,7 +54,29 @@ $bp-s: 420px;
 	--color-bg-3: var(--color-grey-dark-2);
 
 	--color-text: var(--color-grey-light-1);
+	--color-navbar: #26292cee;
 }
+
+// Commented out for now, leave for later
+// .light {
+// 	--color-secondary: #a7dcbf;
+
+// 	--color-bg-1: var(--color-grey-light-1);
+// 	--color-bg-2: var(--color-grey-light-2);
+// 	--color-bg-3: var(--color-grey-light-3);
+
+// 	--color-text: var(--color-grey-dark-4);
+// }
+
+// .dark {
+// 	--color-secondary: #1c3435;
+
+// 	--color-bg-1: var(--color-grey-dark-4);
+// 	--color-bg-2: var(--color-grey-dark-3);
+// 	--color-bg-3: var(--color-grey-dark-2);
+
+// 	--color-text: var(--color-grey-light-1);
+// }
 
 *,
 *::before,
@@ -85,8 +93,6 @@ body {
 	font-family: $font-primary;
 	font-weight: 400;
 	line-height: 1.6;
-
-	transition: color 1000ms ease-in-out;
 }
 
 html {

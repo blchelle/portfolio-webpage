@@ -12,8 +12,6 @@
 	align-items: center;
 	justify-content: space-between;
 
-	transition: background 500ms ease-in-out;
-
 	&__title {
 		position: relative;
 		margin-bottom: 7rem;
@@ -23,7 +21,7 @@
 		text-align: center;
 
 		&::after {
-			content: '';
+			content: "";
 
 			position: absolute;
 			left: 50%;
