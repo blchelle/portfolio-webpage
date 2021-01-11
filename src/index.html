@@ -63,11 +63,7 @@
 	<body>
 		<nav class="navbar navbar--large hidden">
 			<div class="navbar__buttons">
-				<img
-					class="navbar__logo"
-					src="./assets/logos/me-logo.svg"
-					alt="My Logo"
-				/>
+				<img class="navbar__logo" src="./assets/logos/me-logo.svg" alt="My Logo" />
 				<svg class="navbar__icon">
 					<use xlink:href="./assets/sprite.svg#menu"></use>
 				</svg>
@@ -120,9 +116,7 @@
 					<button class="header__btn">
 						<span class="header__btn__text">Learn More</span>
 						<svg class="header__btn__icon">
-							<use
-								xlink:href="./assets/sprite.svg#arrow-forward"
-							></use>
+							<use xlink:href="./assets/sprite.svg#arrow-forward"></use>
 						</svg>
 					</button>
 				</div>
@@ -133,49 +127,37 @@
 				<div class="about__content">
 					<div class="about__image__container">
 						<div class="about__image__frame">
-							<img
-								class="about__image"
-								src="./assets/me.jpg"
-								alt="Picture of me"
-							/>
+							<img class="about__image" src="./assets/me.jpg" alt="Picture of me" />
 						</div>
 					</div>
 					<p class="about__text">
-						I am a 4th year Software Engineering Student at the
-						University of Alberta. I have experience in creating
-						mobile apps for iOS using Swift (iOS) and Java
-						(Android), but I'm also very interested in creating
-						cross-platform apps.
+						I am a 4th year Software Engineering Student at the University of Alberta. I
+						have experience in creating mobile apps for iOS using Swift (iOS) and Java
+						(Android), but I'm also very interested in creating cross-platform apps.
 						<br />
 						<br />
-						Most recently I've been learning how to develop
-						full-stack web applications using the popular MERN
-						Stack. Now I'm using these skills to build a team
-						collaboration software similar to Trello or Jira which I
-						expect to complete by January 2021.
+						Most recently I've been learning how to develop full-stack web applications
+						using the popular MERN Stack. Now I'm using these skills to build a team
+						collaboration software similar to Trello or Jira which I expect to complete
+						by January 2021.
 						<br />
 						<br />
-						Professionally, I have experience working as a software
-						developer at Willowglen Systems, a leader in the
-						industrial automation industry. Here, I had the
-						opportunity to work on life saving products and gained
-						valuable experience that will help me immensely
-						throughout the length of my career.
+						Professionally, I have experience working as a software developer at
+						Willowglen Systems, a leader in the industrial automation industry. Here, I
+						had the opportunity to work on life saving products and gained valuable
+						experience that will help me immensely throughout the length of my career.
 					</p>
-					<a class="resume-btn" target="_blank" href="./resume.pdf"
-						>View My Resume</a
-					>
+					<a class="resume-btn" target="_blank" href="./resume.pdf">View My Resume</a>
 				</div>
 			</section>
 
 			<section class="skills">
 				<h2 class="skills__title">My Skills</h2>
 				<p class="skills__description">
-					Since starting my software development journey, I've gained
-					experience with a variety technologies and I'm actively
-					learning even more. During my most recent internship, I
-					learned how to develop front-end applications with
-					Javascript and back-end applications with C++.
+					Since starting my software development journey, I've gained experience with a
+					variety technologies and I'm actively learning even more. During my most recent
+					internship, I learned how to develop front-end applications with Javascript and
+					back-end applications with C++.
 				</p>
 				<ul class="skills__categories">
 					<li class="skills__category skills__category--web">
@@ -418,12 +400,87 @@
 							<div class="projects__project__head">
 								<img
 									class="projects__project__logo"
+									src="./assets/logos/collabogreat-logo.svg"
+									alt="CollaboGreat Logo"
+								/>
+								<h3 class="projects__project__name">CollaboGreat</h3>
+							</div>
+							<div class="projects__project__stack">
+								<img
+									class="projects__project__tech"
+									title="React"
+									src="./assets/logos/react-logo.svg"
+									alt="React"
+								/>
+								<img
+									class="projects__project__tech"
+									title="Node"
+									src="./assets/logos/node-logo.svg"
+									alt="Node"
+								/>
+								<img
+									class="projects__project__tech"
+									title="Express"
+									src="./assets/logos/express-logo.svg"
+									alt="Express"
+								/>
+								<img
+									class="projects__project__tech"
+									title="MongoDB"
+									src="./assets/logos/mongodb-logo.svg"
+									alt="MongoDB"
+								/>
+							</div>
+							<p class="projects__project__description">
+								CollaboGreat is a full-stack web application that encourages strong
+								collaboration among teams. I built to CollaboGreat to have all the
+								features you would expect from a team collaboration software such as
+								Trello or Jira. It features user authentication using the OAuth
+								protocol, interactive Kanban Boards with drag and drop
+								functionality, project statistics, and many more exciting features.
+							</p>
+							<div class="projects__project__buttons">
+								<a
+									href="https://crwn.brockchelle.com"
+									rel="noopener"
+									target="_blank"
+									class="projects__project__link projects__project__link--demo"
+								>
+									Demo
+									<svg class="projects__project__link__icon">
+										<use xlink:href="./assets/sprite.svg#play"></use>
+									</svg>
+								</a>
+								<a
+									href="https://github.com/blchelle/crwn-ecommerce"
+									rel="noopener"
+									target="_blank"
+									class="projects__project__link projects__project__link--code"
+								>
+									Repository
+									<svg class="projects__project__link__icon">
+										<use xlink:href="./assets/sprite.svg#logo-github"></use>
+									</svg>
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="projects__project">
+						<div class="projects__project__mockup__container">
+							<img
+								src="./assets/mockups/crwn-mockup.png"
+								alt="CRWN Mockup"
+								class="projects__project__mockup"
+							/>
+						</div>
+						<div class="projects__project__content">
+							<div class="projects__project__head">
+								<img
+									class="projects__project__logo"
 									src="./assets/logos/crwn-logo.svg"
 									alt="CRWN Logo"
 								/>
-								<h3 class="projects__project__name">
-									CRWN E-Commerce
-								</h3>
+								<h3 class="projects__project__name">CRWN E-Commerce</h3>
 							</div>
 							<div class="projects__project__stack">
 								<img
@@ -446,15 +503,13 @@
 								/>
 							</div>
 							<p class="projects__project__description">
-								CRWN is an E-Commerce store for a fictional
-								clothing company. It provides all the core
-								functionality that a user would expect from an
-								E-Commerce store. Here, users can choose from
-								various clothing articles, add them to a cart
-								and finalize their order by checking out with a
-								credit/debit card. Users can also authenticate
-								with their Google account or email address if
-								they wish to keep their cart for later.
+								CRWN is an E-Commerce store for a fictional clothing company. It
+								provides all the core functionality that a user would expect from an
+								E-Commerce store. Here, users can choose from various clothing
+								articles, add them to a cart and finalize their order by checking
+								out with a credit/debit card. Users can also authenticate with their
+								Google account or email address if they wish to keep their cart for
+								later.
 							</p>
 							<div class="projects__project__buttons">
 								<a
@@ -465,9 +520,7 @@
 								>
 									Demo
 									<svg class="projects__project__link__icon">
-										<use
-											xlink:href="./assets/sprite.svg#play"
-										></use>
+										<use xlink:href="./assets/sprite.svg#play"></use>
 									</svg>
 								</a>
 								<a
@@ -478,9 +531,7 @@
 								>
 									Repository
 									<svg class="projects__project__link__icon">
-										<use
-											xlink:href="./assets/sprite.svg#logo-github"
-										></use>
+										<use xlink:href="./assets/sprite.svg#logo-github"></use>
 									</svg>
 								</a>
 							</div>
@@ -501,9 +552,7 @@
 									src="./assets/logos/keepit-logo.svg"
 									alt="KeepIt Logo"
 								/>
-								<h3 class="projects__project__name">
-									KeepIt - Item Tracker
-								</h3>
+								<h3 class="projects__project__name">KeepIt - Item Tracker</h3>
 							</div>
 							<div class="projects__project__stack">
 								<img
@@ -526,13 +575,11 @@
 								/>
 							</div>
 							<p class="projects__project__description">
-								KeepIt is an iOS App built to help users keep
-								track of all their personal belongings without
-								GPS hardware. It does this through customizable
-								notifications that can be timed or triggered
-								upon crossing the border of a personalized
-								GeoFence. Whenever you lose an item, you can use
-								KeepIt to remember where you had it last.
+								KeepIt is an iOS App built to help users keep track of all their
+								personal belongings without GPS hardware. It does this through
+								customizable notifications that can be timed or triggered upon
+								crossing the border of a personalized GeoFence. Whenever you lose an
+								item, you can use KeepIt to remember where you had it last.
 							</p>
 							<div class="projects__project__buttons">
 								<a
@@ -543,9 +590,7 @@
 								>
 									App Store
 									<svg class="projects__project__link__icon">
-										<use
-											xlink:href="./assets/sprite.svg#play"
-										></use>
+										<use xlink:href="./assets/sprite.svg#play"></use>
 									</svg>
 								</a>
 								<a
@@ -556,9 +601,7 @@
 								>
 									Repository
 									<svg class="projects__project__link__icon">
-										<use
-											xlink:href="./assets/sprite.svg#logo-github"
-										></use>
+										<use xlink:href="./assets/sprite.svg#logo-github"></use>
 									</svg>
 								</a>
 							</div>
@@ -566,71 +609,8 @@
 					</div>
 				</div>
 				<!-- <div class="projects__content">
-					<div class="project project--keepit">
-						<div class="project__head">
-							<img class="project__logo project__logo--keepit" src="./assets/logos/keepit-logo.svg" alt="KeepIt Logo">
-							<h2 class="project__name">KeepIt</h2>
-						</div>
-						<div class="project__stack">
-							<img class="project__tech" title="iOS" src="./assets/logos/apple-logo-simple.svg" alt="Apple">
-							<img class="project__tech" title="Swift"src="./assets/logos/swift-logo-simple.svg" alt="Swift">
-							<img class="project__tech" title="Firebase" src="./assets/logos/firebase-logo.svg" alt="Firebase">
-						</div>
-						<p class="project__description">
-							KeepIt is an iOS App built to help users keep track of all their personal belongings
-							without the use of gps hardware. It does this through customizable notifications that
-							can be timed or triggered upon crossing the border of a personalized GeoFence. Whenever
-							you lose an item, you can use KeepIt to remember where you had it last.
-						</p>
-						<div class="project__buttons">
-							<a	href="https://apps.apple.com/ca/app/keepit/id1474698806?fbclid=IwAR27afyk6DLwZdRIlkfFBul3xn9DWc03huik0xoSySqVXBinBakrWKfzPr0)"
-								rel="noopener"
-								target="_blank"
-								class="project__link
-								project__link--demo"
-							>
-								Demo
-								<svg class="project__link__icon">
-									<use xlink:href="./assets/sprite.svg#play"></use>
-								</svg>
-							</a>
-							<a href="https://github.com/blchelle/keepit" rel="noopener" target="_blank" class="project__link project__link--code">
-								Repository
-								<svg class="project__link__icon">
-									<use xlink:href="./assets/sprite.svg#logo-github"></use>
-								</svg>
-							</a>
-						</div>
-					</div>
-					<div class="project project--maze-solver">
-						<div class="project__head">
-							<img class="project__logo" src="./assets/logos/random-maze-logo.svg" alt="Maze Solver Logo">
-							<h2 class="project__name">Maze Solver</h2>
-						</div>
-						<div class="project__stack">
-							<img class="project__tech" title="Python" src="./assets/logos/python-logo.svg" alt="python">
-						</div>
-						<p class="project__description">
-							Maze Solver is a python project which seeks to test the efficiency of many known
-							maze solving algrithms. It starts by generating a completely random maze and then attempts
-							to solve it using the left-hand-rule, dead end elimination, and depth first search algorithms.
-							The solving times for each of these algorithms are then compared.
-						</p>
-						<div class="project__buttons">
-							<a href="https://www.youtube.com/watch?v=ifyov6MqhRY" rel="noopener" target="_blank" class="project__link project__link--demo">
-								Demo
-								<svg class="project__link__icon">
-									<use xlink:href="./assets/sprite.svg#play"></use>
-								</svg>
-							</a>
-							<a href="https://github.com/blchelle/random-mazes" rel="noopener" target="_blank" class="project__link project__link--code">
-								Repository
-								<svg class="project__link__icon">
-									<use xlink:href="./assets/sprite.svg#logo-github"></use>
-								</svg>
-							</a>
-						</div>
-					</div>
+				
+					
 					<div class="project project--bug-tracker">
 						<div class="project__head">
 							<img class="project__logo" src="./assets/logos/collabogreat-logo.svg" alt="CollaboGreat Logo">
@@ -673,41 +653,30 @@
 			<section class="contact">
 				<h2 class="contact__title">Get in touch</h2>
 				<p class="contact__description">
-					I'm currently looking for 3-8 month internship opportunities
-					based out of Edmonton, Canada or Remotely. I look forward to
-					hearing from you!
+					I'm currently looking for 3-8 month internship opportunities based out of
+					Edmonton, Canada or Remotely. I look forward to hearing from you!
 				</p>
 				<div class="contact__flex">
 					<div class="contact__info__container">
 						<div class="contact__info">
 							<div class="contact__info__icon__container">
 								<svg class="contact__info__icon">
-									<use
-										xlink:href="./assets/sprite.svg#compass"
-									></use>
+									<use xlink:href="./assets/sprite.svg#compass"></use>
 								</svg>
 							</div>
 							<div class="contact__info__content">
-								<h4 class="contact__info__content--title">
-									Location
-								</h4>
-								<p class="contact__info__content--subtitle">
-									Edmonton, Canada
-								</p>
+								<h4 class="contact__info__content--title">Location</h4>
+								<p class="contact__info__content--subtitle">Edmonton, Canada</p>
 							</div>
 						</div>
 						<div class="contact__info">
 							<div class="contact__info__icon__container">
 								<svg class="contact__info__icon">
-									<use
-										xlink:href="./assets/sprite.svg#mail"
-									></use>
+									<use xlink:href="./assets/sprite.svg#mail"></use>
 								</svg>
 							</div>
 							<div class="contact__info__content">
-								<h4 class="contact__info__content--title">
-									Email Address
-								</h4>
+								<h4 class="contact__info__content--title">Email Address</h4>
 								<p class="contact__info__content--subtitle">
 									brocklchelle@gmail.com
 								</p>
@@ -716,15 +685,11 @@
 						<div class="contact__info">
 							<div class="contact__info__icon__container">
 								<svg class="contact__info__icon">
-									<use
-										xlink:href="./assets/sprite.svg#logo-linkedin"
-									></use>
+									<use xlink:href="./assets/sprite.svg#logo-linkedin"></use>
 								</svg>
 							</div>
 							<div class="contact__info__content">
-								<h4 class="contact__info__content--title">
-									LinkedIn
-								</h4>
+								<h4 class="contact__info__content--title">LinkedIn</h4>
 								<a
 									class="contact__info__content--subtitle contact__info__content--subtitle--link"
 									href="https://linkedin.com/in/blchelle"
@@ -738,15 +703,11 @@
 						<div class="contact__info">
 							<div class="contact__info__icon__container">
 								<svg class="contact__info__icon">
-									<use
-										xlink:href="./assets/sprite.svg#logo-github"
-									></use>
+									<use xlink:href="./assets/sprite.svg#logo-github"></use>
 								</svg>
 							</div>
 							<div class="contact__info__content">
-								<h4 class="contact__info__content--title">
-									GitHub
-								</h4>
+								<h4 class="contact__info__content--title">GitHub</h4>
 								<a
 									class="contact__info__content--subtitle contact__info__content--subtitle--link"
 									href="https://github.com/blchelle"
@@ -759,32 +720,16 @@
 						</div>
 					</div>
 
-					<form
-						action="POST"
-						name="contact"
-						class="contact__form"
-						netlify
-					>
-						<div
-							class="contact__container contact__container--name"
-						>
+					<form action="POST" name="contact" class="contact__form" netlify>
+						<div class="contact__container contact__container--name">
 							<label class="name__label" for="name">Name</label>
 							<input type="text" name="name" id="name" required />
 						</div>
-						<div
-							class="contact__container contact__container--email"
-						>
+						<div class="contact__container contact__container--email">
 							<label for="email">Email Address</label>
-							<input
-								type="email"
-								name="email"
-								id="email"
-								required
-							/>
+							<input type="email" name="email" id="email" required />
 						</div>
-						<div
-							class="contact__container contact__container--message"
-						>
+						<div class="contact__container contact__container--message">
 							<label for="message">Your Message</label>
 							<textarea
 								name="message"
@@ -797,9 +742,7 @@
 						<button type="submit">
 							Send
 							<svg>
-								<use
-									xlink:href="./assets/sprite.svg#send"
-								></use>
+								<use xlink:href="./assets/sprite.svg#send"></use>
 							</svg>
 						</button>
 					</form>
@@ -833,9 +776,7 @@
 						class="footer__icon"
 					>
 						<svg>
-							<use
-								xlink:href="./assets/sprite.svg#logo-linkedin"
-							></use>
+							<use xlink:href="./assets/sprite.svg#logo-linkedin"></use>
 						</svg>
 					</a>
 					<a
@@ -846,9 +787,7 @@
 						class="footer__icon"
 					>
 						<svg>
-							<use
-								xlink:href="./assets/sprite.svg#logo-github"
-							></use>
+							<use xlink:href="./assets/sprite.svg#logo-github"></use>
 						</svg>
 					</a>
 				</div>
