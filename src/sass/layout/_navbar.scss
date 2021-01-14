@@ -7,15 +7,10 @@
 
 	z-index: 3; // Place above the rest of the content
 	background-color: var(--color-navbar);
-	transition: background 500ms ease-in-out;
 
-	&__theme-switcher {
+	&__logo {
 		width: 3.5rem;
 		height: 3.5rem;
-		border: 2px solid var(--color-primary);
-		border-radius: 50%;
-
-		background-color: var(--color-bg-1);
 	}
 }
 
@@ -55,7 +50,7 @@
 		}
 
 		&:after {
-			content: '';
+			content: "";
 
 			position: absolute;
 			width: 0;
