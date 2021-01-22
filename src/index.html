@@ -61,30 +61,37 @@
 		<link rel="icon" type="image/x-icon" href="favicon.ico" />
 	</head>
 	<body>
-		<nav class="navbar navbar--large hidden">
-			<div class="navbar__buttons">
-				<img class="navbar__logo" src="./assets/logos/me-logo.svg" alt="My Logo" />
+		<nav class="navbar">
+			<div class="navbar__item navbar__item--home selected">
 				<svg class="navbar__icon">
-					<use xlink:href="./assets/sprite.svg#menu"></use>
+					<use xlink:href="./assets/sprite.svg#home"></use>
 				</svg>
+				<h4 class="navbar__name">Home</h4>
 			</div>
-			<ul class="navbar__list">
-				<li class="navbar__item navbar__item--home">
-					<span>Home</span>
-				</li>
-				<li class="navbar__item navbar__item--about">
-					<span>About</span>
-				</li>
-				<li class="navbar__item navbar__item--skills">
-					<span>Skills</span>
-				</li>
-				<li class="navbar__item navbar__item--projects">
-					<span>Projects</span>
-				</li>
-				<li class="navbar__item navbar__item--contact">
-					<span>Contact</span>
-				</li>
-			</ul>
+			<div class="navbar__item navbar__item--about">
+				<svg class="navbar__icon">
+					<use xlink:href="./assets/sprite.svg#person"></use>
+				</svg>
+				<h4 class="navbar__name">About</h4>
+			</div>
+			<div class="navbar__item navbar__item--skills">
+				<svg class="navbar__icon">
+					<use xlink:href="./assets/sprite.svg#code"></use>
+				</svg>
+				<h4 class="navbar__name">Skills</h4>
+			</div>
+			<div class="navbar__item navbar__item--projects">
+				<svg class="navbar__icon">
+					<use xlink:href="./assets/sprite.svg#hammer"></use>
+				</svg>
+				<h4 class="navbar__name">Projects</h4>
+			</div>
+			<div class="navbar__item navbar__item--contact">
+				<svg class="navbar__icon">
+					<use xlink:href="./assets/sprite.svg#mail-outline"></use>
+				</svg>
+				<h4 class="navbar__name">Contact</h4>
+			</div>
 		</nav>
 		<main class="container">
 			<header class="header">
