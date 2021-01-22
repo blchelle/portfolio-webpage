@@ -1,76 +1,100 @@
 // These styles are common between both the full size and mobile navbar
 .navbar {
 	position: fixed;
-	left: 0;
-	top: 0;
-	width: 100%;
+	left: 3rem;
+	top: 50%;
+	transform: translateY(-50%);
 
 	z-index: 3; // Place above the rest of the content
-	background-color: var(--color-navbar);
-
-	&__logo {
-		width: 3.5rem;
-		height: 3.5rem;
-	}
-}
-
-.navbar--large {
-	height: 80px; // Keep this at 80px, its used as an offset in jquery for scrolling
-	padding: 1rem 3rem;
 
 	display: flex;
-	align-items: center;
-	justify-content: space-between;
+	flex-direction: column;
 
-	.navbar__icon {
-		display: none;
-	}
+	&__item {
+		margin-bottom: 1rem;
 
-	.navbar__list {
+		width: 6rem;
+		height: 6rem;
+
 		display: flex;
-		transition: opacity 0.3s;
+		justify-content: start;
+		align-items: center;
+
+		border: 1px solid var(--color-grey-dark-1);
+		border-radius: 5px;
+		background-color: var(--color-grey-dark-4);
+
+		transition: all 0.3s ease;
+
+		&:hover:not(.selected) {
+			background-color: var(--color-primary);
+			width: 15rem;
+			border: 1px solid var(--color-grey-light-1);
+		}
+
+		&:hover:not(.selected) .navbar__name {
+			width: 10rem;
+			opacity: 1;
+		}
+
+		&.selected {
+			border: 1px solid var(--color-grey-light-1);
+		}
+
+		&.selected .navbar__icon,
+		&:hover .navbar__icon {
+			stroke: var(--color-grey-light-1);
+		}
 	}
 
-	.navbar__item {
-		cursor: pointer;
+	&__icon {
+		padding: 1.5rem;
+		width: 6rem;
+		height: 6rem;
+		z-index: 5;
 
-		padding: 15px 10px;
-		position: relative;
+		stroke: var(--color-grey-dark-1);
+	}
 
-		color: var(--color-grey-light-1);
-		font-size: 1.6rem;
-		font-weight: bold;
-		text-transform: uppercase;
-		letter-spacing: 0.2rem;
+	&__name {
+		opacity: 0;
+		width: 0;
+		font-size: 1.8rem;
+	}
 
-		transition: color 0.3s ease-out;
+	&::after {
+		content: '';
 
-		&:not(:last-child) {
-			margin-right: 3rem;
-		}
+		position: absolute;
+		top: 0;
 
-		&:after {
-			content: "";
+		width: calc(6rem + 2px);
+		height: calc(6rem + 2px);
 
-			position: absolute;
-			width: 0;
-			height: 5px;
-			left: 50%;
-			bottom: 0;
+		background-color: var(--color-primary);
+		transition: top 0.2s ease;
 
-			background-color: var(--color-primary);
+		border: 1px solid var(--color-grey-light-1);
+		border-radius: 5px;
+	}
 
-			transition: width 0.3s ease 0s, left 0.3s ease 0s;
-		}
+	&.home-selected::after {
+		top: 0;
+	}
 
-		&.selected,
-		&:hover {
-			color: var(--color-primary);
+	&.about-selected::after {
+		top: 20%;
+	}
 
-			&:after {
-				width: 100%;
-				left: 0;
-			}
-		}
+	&.skills-selected::after {
+		top: 40%;
+	}
+
+	&.projects-selected::after {
+		top: 60%;
+	}
+
+	&.contact-selected::after {
+		top: 80%;
 	}
 }

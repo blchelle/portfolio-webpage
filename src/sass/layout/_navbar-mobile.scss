@@ -1,93 +1,98 @@
+// These styles are common between both the full size and mobile navbar
 .navbar--mobile {
+	position: fixed;
+	left: 0;
+	bottom: 0;
+
+	width: 100%;
+	height: 7rem;
+
+	z-index: 3; // Place above the rest of the content
+	border-top: 1px solid var(--color-grey-dark-1);
+
 	display: flex;
-	flex-direction: column;
-	align-items: stretch;
 	justify-content: space-between;
 
-	.navbar__buttons {
-		width: 100%;
-		padding: 1rem 2rem;
+	&::after {
+		content: '';
 
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
+		position: absolute;
+		left: 0;
+
+		width: 20%;
+		height: calc(7rem + 2px);
+
+		background-color: var(--color-primary);
+		transition: left 0.2s ease;
 	}
 
-	.navbar__icon {
-		fill: var(--color-grey-light-1);
-		height: 3.5rem;
-		width: 3.5rem;
-		transition: transform 0.3s ease;
-
-		&:hover {
-			color: var(--color-primary);
-		}
+	&.home-selected::after {
+		left: 0;
 	}
 
-	.navbar__item {
-		position: relative;
-		overflow: hidden;
-
-		display: flex;
-		align-items: center;
-		justify-content: center;
-
-		color: var(--color-grey-light-1);
-		font-size: 2rem;
-		font-weight: bold;
-
-		transition: height 0.3s, opacity 0.1s;
+	&.about-selected::after {
+		left: 20%;
 	}
 
-	&.hidden {
-		.navbar__item {
-			height: 0;
-			opacity: 0;
-		}
+	&.skills-selected::after {
+		left: 40%;
 	}
 
-	&:not(.hidden) {
-		.navbar__icon {
-			transform: rotate(-90deg);
-		}
-
-		.navbar__list {
-			display: flex;
-			flex-direction: column;
-			align-items: stretch;
-		}
-
-		.navbar__item {
-			height: 5rem;
-			border-bottom: 1px solid var(--color-navbar-border);
-
-			span {
-				position: relative;
-				z-index: 4;
-
-				display: block;
-			}
-
-			&:after {
-				content: "";
-
-				position: absolute;
-				width: 0;
-				height: 100%;
-				left: 0;
-				top: 0;
-				z-index: 3;
-
-				background-color: var(--color-primary);
-
-				transition: width 0.5s ease;
-			}
-
-			&:hover {
-				&:after {
-					width: 100%;
-				}
-			}
-		}
+	&.projects-selected::after {
+		left: 60%;
 	}
+
+	&.contact-selected::after {
+		left: 80%;
+	}
+}
+
+.navbar--mobile .navbar__item {
+	flex: 1;
+	height: 7rem;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	border: 1px solid transparent;
+	border-radius: 0;
+	background-color: var(--color-grey-dark-4);
+
+	transition: all 0.3s ease;
+
+	&:hover .navbar__name {
+		width: 0;
+		opacity: 0;
+	}
+
+	&:hover:not(.selected) {
+		background-color: var(--color-primary);
+		width: 15rem;
+		border: 1px solid transparent;
+	}
+
+	&.selected {
+		border: 1px solid transparent;
+	}
+
+	&.selected .navbar__icon,
+	&:hover .navbar__icon {
+		stroke: var(--color-grey-light-1);
+	}
+}
+
+.navbar--mobile .navbar__icon {
+	padding: 1.5rem;
+	width: 7rem;
+	height: 7rem;
+	z-index: 5;
+
+	stroke: var(--color-grey-dark-1);
+}
+
+.navbar--mobile .navbar__name {
+	opacity: 0;
+	width: 0;
+	font-size: 1.8rem;
 }
