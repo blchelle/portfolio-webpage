@@ -71,6 +71,12 @@
 }
 
 @media screen and (max-width: 700px) {
+	.footer {
+		padding: 2rem 2rem;
+		height: 22rem;
+		align-items: flex-start;
+	}
+
 	.footer__navbar {
 		flex-direction: column;
 		grid-row: 1 / -1;
