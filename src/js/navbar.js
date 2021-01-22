@@ -33,29 +33,26 @@ function selectNavBarItem(element) {
  */
 function scrollHandler() {
 	const scrollDistance = window.pageYOffset
-	const navbarHeight = navbar.outerHeight()
-	if (scrollDistance >= 0 && scrollDistance < about.offset().top - (navbarHeight + 5)) {
+	if (scrollDistance >= 0 && scrollDistance < about.offset().top) {
 		selectNavBarItem(navbarHomeBtn)
 		highlightItem('home')
-	} else if (
-		scrollDistance >= about.offset().top - (navbarHeight + 5) &&
-		scrollDistance < skills.offset().top - (navbarHeight + 5)
-	) {
+	} else if (scrollDistance >= about.offset().top && scrollDistance < projects.offset().top) {
 		selectNavBarItem(navbarAboutBtn)
 		highlightItem('about')
+	} else if (scrollDistance >= projects.offset().top && scrollDistance < skills.offset().top) {
+		selectNavBarItem(navbarProjectsBtn)
+		highlightItem('projects')
 	} else if (
-		scrollDistance >= skills.offset().top - (navbarHeight + 5) &&
-		scrollDistance < projects.offset().top - (navbarHeight + 5)
+		scrollDistance >= skills.offset().top &&
+		scrollDistance < contact.offset().top &&
+		$(window).scrollTop() + $(window).height() < $(document).height()
 	) {
 		selectNavBarItem(navbarSkillsBtn)
 		highlightItem('skills')
 	} else if (
-		scrollDistance >= projects.offset().top - (navbarHeight + 5) &&
-		scrollDistance < contact.offset().top - (navbarHeight + 5)
+		scrollDistance >= contact.offset().top ||
+		$(window).scrollTop() + $(window).height() == $(document).height()
 	) {
-		selectNavBarItem(navbarProjectsBtn)
-		highlightItem('projects')
-	} else if (scrollDistance >= contact.offset().top - (navbarHeight + 5)) {
 		selectNavBarItem(navbarContactBtn)
 		highlightItem('contact')
 	}
@@ -128,11 +125,11 @@ navbarHomeBtn.click(() => {
 navbarAboutBtn.click(() => {
 	scrollPageTo(about)
 })
-navbarSkillsBtn.click(() => {
-	scrollPageTo(skills)
-})
 navbarProjectsBtn.click(() => {
 	scrollPageTo(projects)
+})
+navbarSkillsBtn.click(() => {
+	scrollPageTo(skills)
 })
 navbarContactBtn.click(() => {
 	scrollPageTo(contact)

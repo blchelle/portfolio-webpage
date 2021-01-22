@@ -1,5 +1,5 @@
 .skills {
-	background-color: var(--color-bg-3);
+	background-color: var(--color-bg-1);
 	@include section-blueprint;
 
 	&__categories {
@@ -27,7 +27,7 @@
 		}
 
 		&::after {
-			content: "";
+			content: '';
 
 			position: absolute;
 			width: 25%;
@@ -71,7 +71,7 @@
 
 		display: flex;
 
-		background-color: var(--color-bg-1);
+		background-color: var(--color-bg-2);
 	}
 
 	&__page {
@@ -93,10 +93,10 @@
 		display: flex;
 		align-items: center;
 
-		background-color: var(--color-bg-2);
+		background-color: var(--color-bg-1);
 
 		&:before {
-			content: "";
+			content: '';
 
 			position: absolute;
 			width: 1rem;
