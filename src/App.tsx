@@ -75,7 +75,7 @@ const App: React.FC = () => {
 		const scrollDestinationY = NAVIGATION[index].linkToRef.current?.offsetTop;
 		if (scrollDestinationY === undefined) return;
 
-		window.scrollTo({ top: scrollDestinationY + 5, behavior: 'smooth' });
+		window.scrollTo({ top: scrollDestinationY + 20, behavior: 'smooth' });
 	};
 
 	useEffect(() => {
