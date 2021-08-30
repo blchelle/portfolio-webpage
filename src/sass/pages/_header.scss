@@ -16,7 +16,7 @@
 		bottom: 5%;
 
 		&--top {
-			transform: translateY(-5%);
+			bottom: 8%;
 			backface-visibility: hidden;
 			transition: transform 1s ease-in-out;
 		}
@@ -35,6 +35,7 @@
 
 	&__name {
 		color: var(--color-primary);
+		margin-left: 1rem;
 	}
 
 	&__content {

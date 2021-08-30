@@ -2,72 +2,10 @@
 	background-color: var(--color-bg-1);
 	@include section-blueprint;
 
-	&__categories {
-		position: relative;
-		padding: 1rem 0;
-		width: 50rem;
-
-		display: flex;
-		align-self: flex-start;
-
-		&.category-1::after {
-			left: 0;
-		}
-
-		&.category-2::after {
-			left: 25%;
-		}
-
-		&.category-3::after {
-			left: 50%;
-		}
-
-		&.category-4::after {
-			left: 75%;
-		}
-
-		&::after {
-			content: '';
-
-			position: absolute;
-			width: 25%;
-			height: 5px;
-			left: 0;
-			bottom: -4px;
-
-			background-color: var(--color-primary);
-
-			transition: left 0.3s ease;
-		}
-	}
-
-	&__category {
-		width: 25%;
-
-		display: flex;
-		justify-content: center;
-		align-items: center;
-
-		&.selected,
-		&:hover {
-			color: var(--color-primary);
-		}
-
-		button {
-			width: 95%;
-			border-radius: 0;
-
-			color: var(--color-text);
-			font-size: 1.6rem;
-			font-weight: bold;
-
-			background-color: transparent;
-		}
-	}
-
 	&__container {
 		width: 100%;
 		overflow-x: hidden;
+		left: 25%;
 
 		display: flex;
 
@@ -112,6 +50,48 @@
 		&:hover:before {
 			height: 100%;
 		}
+	}
+}
+
+.categories {
+	position: relative;
+	padding: 1rem 0;
+
+	display: flex;
+	align-self: flex-start;
+
+	&__slider {
+		position: absolute;
+		height: 5px;
+		left: 0;
+		bottom: -4px;
+
+		background-color: var(--color-primary);
+
+		transition: left 0.3s ease;
+	}
+}
+
+.category {
+	width: 12rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	&.selected,
+	&:hover {
+		color: var(--color-primary);
+	}
+
+	button {
+		width: 95%;
+		border-radius: 0;
+
+		color: var(--color-text);
+		font-size: 1.6rem;
+		font-weight: bold;
+
+		background-color: transparent;
 	}
 }
 

@@ -47,22 +47,7 @@
 		}
 	}
 
-	&__icon {
-		padding: 1.5rem;
-		width: 6rem;
-		height: 6rem;
-		z-index: 5;
-
-		stroke: var(--color-grey-dark-1);
-	}
-
-	&__name {
-		opacity: 0;
-		width: 0;
-		font-size: 1.8rem;
-	}
-
-	&::after {
+	&__slider {
 		content: '';
 
 		position: absolute;
@@ -76,6 +61,21 @@
 
 		border: 1px solid var(--color-grey-light-1);
 		border-radius: 5px;
+	}
+
+	&__icon {
+		padding: 1.5rem;
+		width: 6rem;
+		height: 6rem;
+		z-index: 5;
+
+		stroke: var(--color-grey-dark-1);
+	}
+
+	&__name {
+		opacity: 0;
+		width: 0;
+		font-size: 1.8rem;
 	}
 
 	&.home-selected::after {
