@@ -72,13 +72,10 @@ const App: React.FC = () => {
 	};
 
 	const handleNavChange = (index: number) => {
-		window.removeEventListener('scroll', handleScroll);
+		const scrollDestinationY = NAVIGATION[index].linkToRef.current?.offsetTop;
+		if (scrollDestinationY === undefined) return;
 
-		const scrollTarget = NAVIGATION[index].linkToRef.current?.offsetTop;
-		if (scrollTarget === undefined) return;
-
-		window.scrollTo({ top: scrollTarget + 5, behavior: 'smooth' });
-		setSection(index);
+		window.scrollTo({ top: scrollDestinationY + 5, behavior: 'smooth' });
 	};
 
 	useEffect(() => {
