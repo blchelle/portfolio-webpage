@@ -12,39 +12,6 @@
 
 	display: flex;
 	justify-content: space-between;
-
-	&::after {
-		content: '';
-
-		position: absolute;
-		left: 0;
-
-		width: 20%;
-		height: calc(7rem + 2px);
-
-		background-color: var(--color-primary);
-		transition: left 0.2s ease;
-	}
-
-	&.home-selected::after {
-		left: 0;
-	}
-
-	&.about-selected::after {
-		left: 20%;
-	}
-
-	&.projects-selected::after {
-		left: 40%;
-	}
-
-	&.skills-selected::after {
-		left: 60%;
-	}
-
-	&.contact-selected::after {
-		left: 80%;
-	}
 }
 
 .navbar--mobile .navbar__item {
@@ -84,6 +51,17 @@
 	&:hover .navbar__icon {
 		stroke: var(--color-grey-light-1);
 	}
+}
+
+.navbar--mobile .navbar__slider {
+	position: absolute;
+	left: 0;
+
+	width: 20%;
+	height: calc(7rem + 2px);
+
+	background-color: var(--color-primary);
+	transition: left 0.2s ease;
 }
 
 .navbar--mobile .navbar__icon {
