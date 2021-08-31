@@ -77,24 +77,4 @@
 		width: 0;
 		font-size: 1.8rem;
 	}
-
-	&.home-selected::after {
-		top: 0;
-	}
-
-	&.about-selected::after {
-		top: 20%;
-	}
-
-	&.projects-selected::after {
-		top: 40%;
-	}
-
-	&.skills-selected::after {
-		top: 60%;
-	}
-
-	&.contact-selected::after {
-		top: 80%;
-	}
 }
