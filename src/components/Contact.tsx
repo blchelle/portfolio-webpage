@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { ChangeEvent, useState } from 'react';
 
 import { ReactComponent as CompassIcon } from '@assets/icons/compass.svg';
 import { ReactComponent as MailIcon } from '@assets/icons/mail.svg';
@@ -6,7 +6,31 @@ import { ReactComponent as LinkedInIcon } from '@assets/logos/linkedin-logo.svg'
 import { ReactComponent as GithubIcon } from '@assets/logos/github-logo.svg';
 import { ReactComponent as SendIcon } from '@assets/icons/send.svg';
 
+interface InputState {
+	error: boolean;
+	isEmpty: boolean;
+}
+interface ContactInputState {
+	name: InputState;
+	email: InputState
+	message: InputState
+}
+
 const Contact = React.forwardRef<HTMLElement>((_, ref) => {
+	const [inputs, setInputs] = useState<ContactInputState>({
+		name: { error: false, isEmpty: true },
+		email: { error: false, isEmpty: true },
+		message: { error: false , isEmpty: true },
+	});
+
+
+	const checkInput = (event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+		const { name, validity: { valid }, value } = event.target
+		if (name !== 'name' && name !== 'email' && name !== 'message') return;
+
+		setInputs({...inputs, [name]: { error: !valid, isEmpty: value.length === 0 }})
+	}
+
 	return (
 		<section className='contact' ref={ref}>
 			<h2 className='contact__title' data-aos='fade-up'>
@@ -80,18 +104,31 @@ const Contact = React.forwardRef<HTMLElement>((_, ref) => {
 					data-netlify='true'
 				>
 					<div className='contact__container contact__container--name'>
-						<label className='name__label' htmlFor='name'>
+						<label
+							className={`name__label ${inputs.name.error ? 'error' : ''} ${inputs.name.isEmpty ? '' : 'raised'}`}
+							htmlFor='name'
+						>
 							Name
 						</label>
-						<input type='text' name='name' id='name' required />
+						<input type='text' name='name' id='name' required onChange={checkInput}/>
 					</div>
 					<div className='contact__container contact__container--email'>
-						<label htmlFor='email'>Email Address</label>
-						<input type='email' name='email' id='email' required />
+						<label
+							htmlFor='email'
+							className={`${inputs.email.error ? 'error' : ''} ${inputs.email.isEmpty ? '' : 'raised'}`}
+						>
+							Email Address
+						</label>
+						<input type='email' name='email' id='email' required onChange={checkInput} />
 					</div>
 					<div className='contact__container contact__container--message'>
-						<label htmlFor='message'>Your Message</label>
-						<textarea name='message' id='message' cols={30} rows={8} required></textarea>
+						<label
+							htmlFor='message'
+							className={`${inputs.message.error ? 'error' : ''} ${inputs.message.isEmpty ? '' : 'raised'}`}
+						>
+							Your Message
+						</label>
+						<textarea name='message' id='message' cols={30} rows={8} required onChange={checkInput}></textarea>
 					</div>
 					<button type='submit'>
 						Send <SendIcon className='contact__send__icon' />
