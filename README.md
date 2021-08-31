@@ -12,11 +12,10 @@ This site will continue to be updated as I build more projects and gain new skil
 
 ## Technology Stack 💻
 
-- Javascript
-- HTML
-- JQuery https://jquery.com/
-- Webpack https://webpack.js.org/
-- SASS https://sass-lang.com/
+- [Typescript](https://www.typescriptlang.org/)
+- [React](https://reactjs.org/)
+- [Vite](https://vitejs.dev/)
+- [SASS](https://sass-lang.com/)
 
 ### Build Status
 
