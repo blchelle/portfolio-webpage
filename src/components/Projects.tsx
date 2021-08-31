@@ -40,7 +40,7 @@ const PROJECTS: IProject[] = [
 			{ name: 'MongoDB', Logo: mongoDbLogo },
 		],
 		liveUrl: 'https://collabogreat.brockchelle.com',
-		githubUrl: 'https://github.com/blhelle/collabogreat',
+		githubUrl: 'https://github.com/blchelle/collabogreat',
 	},
 	{
 		name: 'CRWN Ecommmerce',
