@@ -12,24 +12,27 @@ interface InputState {
 }
 interface ContactInputState {
 	name: InputState;
-	email: InputState
-	message: InputState
+	email: InputState;
+	message: InputState;
 }
 
 const Contact = React.forwardRef<HTMLElement>((_, ref) => {
 	const [inputs, setInputs] = useState<ContactInputState>({
 		name: { error: false, isEmpty: true },
 		email: { error: false, isEmpty: true },
-		message: { error: false , isEmpty: true },
+		message: { error: false, isEmpty: true },
 	});
 
-
 	const checkInput = (event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-		const { name, validity: { valid }, value } = event.target
+		const {
+			name,
+			validity: { valid },
+			value,
+		} = event.target;
 		if (name !== 'name' && name !== 'email' && name !== 'message') return;
 
-		setInputs({...inputs, [name]: { error: !valid, isEmpty: value.length === 0 }})
-	}
+		setInputs({ ...inputs, [name]: { error: !valid, isEmpty: value.length === 0 } });
+	};
 
 	return (
 		<section className='contact' ref={ref}>
@@ -37,8 +40,8 @@ const Contact = React.forwardRef<HTMLElement>((_, ref) => {
 				Get in touch
 			</h2>
 			<p className='contact__description' data-aos='fade-up'>
-				I'm currently looking for 3-8 month internship opportunities starting based out of Edmonton,
-				Canada or Remotely. I look forward to hearing from you!
+				I'm currently looking for 3-8 month internship opportunities starting based out of
+				Edmonton, Canada or Remotely. I look forward to hearing from you!
 			</p>
 			<div className='contact__flex'>
 				<div className='contact__info__container' data-aos='fade-right'>
@@ -97,25 +100,29 @@ const Contact = React.forwardRef<HTMLElement>((_, ref) => {
 				</div>
 
 				<form
-					action='POST'
+					method='POST'
 					name='contact'
 					className='contact__form'
 					data-aos='fade-left'
-					data-netlify='true'
 				>
+					<input type="hidden" name="form-name" value="contact" />
 					<div className='contact__container contact__container--name'>
 						<label
-							className={`name__label ${inputs.name.error ? 'error' : ''} ${inputs.name.isEmpty ? '' : 'raised'}`}
+							className={`name__label ${inputs.name.error ? 'error' : ''} ${
+								inputs.name.isEmpty ? '' : 'raised'
+							}`}
 							htmlFor='name'
 						>
 							Name
 						</label>
-						<input type='text' name='name' id='name' required onChange={checkInput}/>
+						<input type='text' name='name' id='name' required onChange={checkInput} />
 					</div>
 					<div className='contact__container contact__container--email'>
 						<label
 							htmlFor='email'
-							className={`${inputs.email.error ? 'error' : ''} ${inputs.email.isEmpty ? '' : 'raised'}`}
+							className={`${inputs.email.error ? 'error' : ''} ${
+								inputs.email.isEmpty ? '' : 'raised'
+							}`}
 						>
 							Email Address
 						</label>
@@ -124,11 +131,20 @@ const Contact = React.forwardRef<HTMLElement>((_, ref) => {
 					<div className='contact__container contact__container--message'>
 						<label
 							htmlFor='message'
-							className={`${inputs.message.error ? 'error' : ''} ${inputs.message.isEmpty ? '' : 'raised'}`}
+							className={`${inputs.message.error ? 'error' : ''} ${
+								inputs.message.isEmpty ? '' : 'raised'
+							}`}
 						>
 							Your Message
 						</label>
-						<textarea name='message' id='message' cols={30} rows={8} required onChange={checkInput}></textarea>
+						<textarea
+							name='message'
+							id='message'
+							cols={30}
+							rows={8}
+							required
+							onChange={checkInput}
+						/>
 					</div>
 					<button type='submit'>
 						Send <SendIcon className='contact__send__icon' />
