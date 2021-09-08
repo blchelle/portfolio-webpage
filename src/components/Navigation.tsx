@@ -8,19 +8,19 @@ interface NavigationProps {
 }
 
 const Navigation: React.FC<NavigationProps> = ({ section, onSectionChange, sections }) => {
-	const [isMobile, setIsMobile] = useState(window.innerWidth < 700)
+	const [isMobile, setIsMobile] = useState(window.innerWidth < 700);
 
 	const handleResize = () => {
-		setIsMobile(window.innerWidth < 700)
-	}
+		setIsMobile(window.innerWidth < 700);
+	};
 
 	useEffect(() => {
 		window.addEventListener('resize', handleResize);
-	}, [])
+	}, []);
 
-	const sliderStyle = isMobile ?
-		{ left: `${(section * 100) / sections.length}%` } :
-		{ top: `${(section * 100) / sections.length}%` }
+	const sliderStyle = isMobile
+		? { left: `${(section * 100) / sections.length}%` }
+		: { top: `${(section * 100) / sections.length}%` };
 
 	return (
 		<nav className={`navbar${isMobile ? '--mobile' : ''}`}>
