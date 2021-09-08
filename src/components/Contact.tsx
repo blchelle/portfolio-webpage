@@ -1,4 +1,4 @@
-import React, { ChangeEvent, useRef, useState } from 'react';
+import React, { ChangeEvent, useState } from 'react';
 
 import { ReactComponent as CompassIcon } from '@assets/icons/compass.svg';
 import { ReactComponent as MailIcon } from '@assets/icons/mail.svg';
