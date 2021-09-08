@@ -23,8 +23,8 @@ const Project: React.FC<ProjectProps> = ({
 	project: { name, description, Logo, mockup, tools, liveUrl, githubUrl },
 }) => {
 	return (
-		<div className='projects__project' data-aos='fade-up'>
-			<div className='projects__project__mockup__container'>
+		<div className='projects__project'>
+			<div className='projects__project__mockup__container' data-aos='fade-right'>
 				<img src={mockup} alt={`${name} Mockup`} className='projects__project__mockup' />
 			</div>
 			<div className='projects__project__content'>
@@ -33,13 +33,10 @@ const Project: React.FC<ProjectProps> = ({
 					<h3 className='projects__project__name'>{name}</h3>
 				</div>
 				<div className='projects__project__stack'>
-					{tools.map(({ name, Logo: ToolLogo }) => (
-						<ToolLogo
-							key={name}
-							className='projects__project__tech'
-							title={name}
-							data-aos='fade-right'
-						/>
+					{tools.map(({ name, Logo: ToolLogo }, i) => (
+						<div className="projects__project__tech__container" data-aos='fade-right' data-aos-delay={i * 50}>
+							<ToolLogo key={name} className='projects__project__tech' title={name} />
+						</div>
 					))}
 				</div>
 				<p className='projects__project__description'>{description}</p>

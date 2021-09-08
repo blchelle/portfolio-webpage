@@ -69,6 +69,11 @@
 			width: auto;
 			margin-bottom: 3rem;
 
+			&__container {
+				display: inline-block;
+				margin-right: 1.2rem;
+			}
+
 			&:hover {
 				filter: none;
 			}
