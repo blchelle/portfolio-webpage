@@ -40,8 +40,8 @@ const Contact = React.forwardRef<HTMLElement>((_, ref) => {
 				Get in touch
 			</h2>
 			<p className='contact__description' data-aos='fade-up'>
-				I'm currently looking for 3-8 month internship opportunities starting based out of
-				Edmonton, Canada or Remotely. I look forward to hearing from you!
+				I'm currently looking for 3-8 month internship opportunities starting based out of Edmonton,
+				Canada or Remotely. I look forward to hearing from you!
 			</p>
 			<div className='contact__flex'>
 				<div className='contact__info__container' data-aos='fade-right'>
@@ -99,13 +99,8 @@ const Contact = React.forwardRef<HTMLElement>((_, ref) => {
 					</div>
 				</div>
 
-				<form
-					method='POST'
-					name='contact'
-					className='contact__form'
-					data-aos='fade-left'
-				>
-					<input type="hidden" name="form-name" value="contact" />
+				<form method='POST' name='contact' className='contact__form' data-aos='fade-left'>
+					<input type='hidden' name='form-name' value='contact' />
 					<div className='contact__container contact__container--name'>
 						<label
 							className={`name__label ${inputs.name.error ? 'error' : ''} ${

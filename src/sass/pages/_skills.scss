@@ -22,35 +22,6 @@
 
 		flex: 0 0 100%;
 	}
-
-	&__item {
-		position: relative;
-		height: 100%;
-		padding: 4rem 2rem;
-
-		display: flex;
-		align-items: center;
-
-		background-color: var(--color-bg-1);
-
-		&:before {
-			content: '';
-
-			position: absolute;
-			width: 1rem;
-			height: 0;
-			left: 0;
-			top: 0;
-
-			background-color: var(--color-primary);
-
-			transition: height 0.2s ease;
-		}
-
-		&:hover:before {
-			height: 100%;
-		}
-	}
 }
 
 .categories {
@@ -95,14 +66,6 @@
 	}
 }
 
-.skill {
-	&__image {
-		width: auto;
-		height: 6rem;
-		padding: 0 2rem;
-	}
-}
-
 @media only screen and (max-width: 700px) {
 	.categories {
 		width: 100%;
@@ -116,15 +79,5 @@
 @media only screen and (max-width: 400px) {
 	.skills__page {
 		grid-template-columns: 1fr;
-	}
-
-	.skills__item {
-		width: 100%;
-		flex-direction: column;
-		justify-content: center;
-	}
-
-	.skill__image {
-		margin-bottom: 2rem;
 	}
 }
