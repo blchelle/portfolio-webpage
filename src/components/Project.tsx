@@ -34,7 +34,11 @@ const Project: React.FC<ProjectProps> = ({
 				</div>
 				<div className='projects__project__stack'>
 					{tools.map(({ name, Logo: ToolLogo }, i) => (
-						<div className="projects__project__tech__container" data-aos='fade-right' data-aos-delay={i * 50}>
+						<div
+							className='projects__project__tech__container'
+							data-aos='fade-right'
+							data-aos-delay={i * 50}
+						>
 							<ToolLogo key={name} className='projects__project__tech' title={name} />
 						</div>
 					))}

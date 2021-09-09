@@ -85,7 +85,7 @@ const App: React.FC = () => {
 	return (
 		<>
 			<Navigation section={section} sections={NAVIGATION} onSectionChange={handleNavChange} />
-			<main className='container'>
+			<main>
 				<Header ref={headerRef} />
 				<AboutMe ref={aboutMeRef} />
 				<Projects ref={projectsRef} />
