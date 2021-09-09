@@ -77,7 +77,7 @@ const CATEGORIES: ISkillCategory[] = [
 	},
 ];
 
-const Skills = React.forwardRef<HTMLElement>((_, ref) => {
+const Skills: React.FC = () => {
 	const [category, setCategory] = useState(0);
 
 	const containerRef = useRef<HTMLDivElement>(null);
@@ -88,32 +88,27 @@ const Skills = React.forwardRef<HTMLElement>((_, ref) => {
 	}, [category]);
 
 	return (
-		<section className='skills' ref={ref}>
-			<h2 className='skills__title' data-aos='fade-up'>
-				My Skills
-			</h2>
-			<p className='skills__description' data-aos='fade-up'>
-				Since starting my software development journey, I've gained experience with a variety
-				technologies and I'm actively learning even more. During my most recent internship, I
-				learned how to develop front-end applications with Javascript and back-end applications with
-				C++.
-			</p>
+		<>
 			<CategorySelector
 				categories={CATEGORIES.map(({ title }) => title)}
 				category={category}
 				onChange={setCategory}
 			/>
-			<div className='skills__container' ref={containerRef}>
+			<div className='w-full flex overflow-x-hidden bg-gray-6' ref={containerRef}>
 				{CATEGORIES.map(({ title, skills }) => (
-					<div className={`skills__page skills__page--${title}`} key={title}>
+					<div
+						className='p-20 grid gap-20 grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3'
+						style={{flex: '0 0 100%'}}
+						key={title}
+					>
 						{skills.map((skill) => (
 							<Skill key={skill.name} skill={skill} />
 						))}
 					</div>
 				))}
 			</div>
-		</section>
+		</>
 	);
-});
+};
 
 export default Skills;

@@ -85,19 +85,14 @@ const PROJECTS: IProject[] = [
 	},
 ];
 
-const Projects = React.forwardRef<HTMLElement>((_, ref) => {
+const Projects: React.FC = () => {
 	return (
-		<section className='projects' ref={ref}>
-			<h2 className='projects__title' data-aos='fade-up'>
-				Portfolio Projects
-			</h2>
-			<div className='projects__content'>
-				{PROJECTS.map((project, index) => (
-					<Project project={project} key={index} />
-				))}
-			</div>
-		</section>
+		<div className='projects__content'>
+			{PROJECTS.map((project, index) => (
+				<Project project={project} key={index} />
+			))}
+		</div>
 	);
-});
+};
 
 export default Projects;

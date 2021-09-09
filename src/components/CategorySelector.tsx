@@ -7,20 +7,14 @@ interface CategorySelectorProps {
 }
 
 const CategorySelector: React.FC<CategorySelectorProps> = ({ categories, category, onChange }) => {
-	const categoryWidth = 100 / categories.length;
+	const sliderLeftClass = `left-${category === 0 ? 0 : `${category}/4`}`
 
 	return (
-		<ul className='categories'>
-			<div
-				className='categories__slider'
-				style={{
-					left: `${category * categoryWidth}%`,
-					width: `${categoryWidth}%`,
-				}}
-			/>
+		<ul className='relative flex self-start py-4 sm:w-max w-full'>
+			<div className={`absolute h-2 w-1/4 ${sliderLeftClass} bottom-0 bg-primary transition-all duration-300`}/>
 			{categories.map((title, i) => (
-				<li className='category' key={title}>
-					<button onClick={() => onChange(i)}>{title}</button>
+				<li className='w-1/4 flex-center sm:w-48' key={title}>
+					<button className='w-11/12 text-2xl font-bold' onClick={() => onChange(i)}>{title}</button>
 				</li>
 			))}
 		</ul>
