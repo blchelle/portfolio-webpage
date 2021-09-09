@@ -1,4 +1,5 @@
-import React, { EventHandler, useEffect, useLayoutEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
+import Section from '@components/Section';
 import AboutMe from '@components/AboutMe';
 import Contact from '@components/Contact';
 import Header from '@components/Header';
@@ -12,6 +13,7 @@ import { ReactComponent as PersonIcon } from '@assets/icons/person.svg';
 import { ReactComponent as HammerIcon } from '@assets/icons/hammer.svg';
 import { ReactComponent as CodeIcon } from '@assets/icons/code.svg';
 import { ReactComponent as MailOutlineIcon } from '@assets/icons/mail-outline.svg';
+import text from './text';
 
 const App: React.FC = () => {
 	const [section, setSection] = useState(0);
@@ -87,10 +89,18 @@ const App: React.FC = () => {
 			<Navigation section={section} sections={NAVIGATION} onSectionChange={handleNavChange} />
 			<main>
 				<Header ref={headerRef} />
-				<AboutMe ref={aboutMeRef} />
-				<Projects ref={projectsRef} />
-				<Skills ref={skillsRef} />
-				<Contact ref={contactRef} />
+				<Section title="About Me" ref={aboutMeRef}>
+					<AboutMe/>
+				</Section>
+				<Section title="Portfolio Projects" ref={projectsRef} backgroundColor="bg-gray-5">
+					<Projects />
+				</Section>
+				<Section title="My Skills" description={text.about.description} ref={skillsRef}>
+					<Skills/>
+				</Section>
+				<Section title="Get In Touch" description={text.contact.description} ref={contactRef} backgroundColor="bg-gray-5">
+					<Contact/>
+				</Section>
 			</main>
 		</>
 	);
