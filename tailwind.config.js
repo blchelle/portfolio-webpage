@@ -18,6 +18,7 @@ module.exports = {
 				primary: {
 					DEFAULT: '#26c485',
 					dark: '#21ab74',
+					transparent: '#87e8c144',
 				},
 			},
 		},
@@ -25,6 +26,7 @@ module.exports = {
 	variants: {
 		extend: {
 			height: ['group-hover'],
+			margin: ['last'],
 		},
 	},
 	plugins: [],

@@ -89,17 +89,22 @@ const App: React.FC = () => {
 			<Navigation section={section} sections={NAVIGATION} onSectionChange={handleNavChange} />
 			<main>
 				<Header ref={headerRef} />
-				<Section title="About Me" ref={aboutMeRef}>
-					<AboutMe/>
+				<Section title='About Me' ref={aboutMeRef}>
+					<AboutMe />
 				</Section>
-				<Section title="Portfolio Projects" ref={projectsRef} backgroundColor="bg-gray-5">
+				<Section title='Portfolio Projects' ref={projectsRef} backgroundColor='bg-gray-5'>
 					<Projects />
 				</Section>
-				<Section title="My Skills" description={text.about.description} ref={skillsRef}>
-					<Skills/>
+				<Section title='My Skills' description={text.about.description} ref={skillsRef}>
+					<Skills />
 				</Section>
-				<Section title="Get In Touch" description={text.contact.description} ref={contactRef} backgroundColor="bg-gray-5">
-					<Contact/>
+				<Section
+					title='Get In Touch'
+					description={text.contact.description}
+					ref={contactRef}
+					backgroundColor='bg-gray-5'
+				>
+					<Contact />
 				</Section>
 			</main>
 		</>

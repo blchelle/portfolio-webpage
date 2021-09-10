@@ -98,7 +98,7 @@ const Skills: React.FC = () => {
 				{CATEGORIES.map(({ title, skills }) => (
 					<div
 						className='p-20 grid gap-20 grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3'
-						style={{flex: '0 0 100%'}}
+						style={{ flex: '0 0 100%' }}
 						key={title}
 					>
 						{skills.map((skill) => (

@@ -1,4 +1,5 @@
 import React, { ChangeEvent, useState } from 'react';
+import ContactHightlight from './ContactHightlight';
 
 import { ReactComponent as CompassIcon } from '@assets/icons/compass.svg';
 import { ReactComponent as MailIcon } from '@assets/icons/mail.svg';
@@ -16,7 +17,7 @@ interface ContactInputState {
 	message: InputState;
 }
 
-const Contact = React.forwardRef<HTMLElement>((_, ref) => {
+const Contact: React.FC = () => {
 	const [inputs, setInputs] = useState<ContactInputState>({
 		name: { error: false, isEmpty: true },
 		email: { error: false, isEmpty: true },
@@ -37,58 +38,26 @@ const Contact = React.forwardRef<HTMLElement>((_, ref) => {
 	return (
 		<div className='contact__flex'>
 			<div className='contact__info__container' data-aos='fade-right'>
-				<div className='contact__info'>
-					<div className='contact__info__icon__container'>
-						<CompassIcon className='contact__info__icon' />
-					</div>
-					<div className='contact__info__content'>
-						<h4 className='contact__info__content--title'>Location</h4>
-						<p className='contact__info__content--subtitle'>Edmonton, Canada</p>
-					</div>
-				</div>
-				<div className='contact__info'>
-					<div className='contact__info__icon__container'>
-						<MailIcon className='contact__info__icon' />
-					</div>
-					<div className='contact__info__content'>
-						<h4 className='contact__info__content--title'>Email Address</h4>
-						<p className='contact__info__content--subtitle'>brocklchelle@gmail.com</p>
-					</div>
-				</div>
-				<div className='contact__info'>
-					<div className='contact__info__icon__container'>
-						<LinkedInIcon className='contact__info__icon' />
-					</div>
-					<div className='contact__info__content'>
-						<h4 className='contact__info__content--title'>LinkedIn</h4>
-						<a
-							className='contact__info__content--subtitle contact__info__content--subtitle--link'
-							href='https://linkedin.com/in/blchelle'
-							aria-label='LinkedIn'
-							rel='noopener'
-							target='_blank'
-						>
-							Click here to be redirected!
-						</a>
-					</div>
-				</div>
-				<div className='contact__info'>
-					<div className='contact__info__icon__container'>
-						<GithubIcon className='contact__info__icon' />
-					</div>
-					<div className='contact__info__content'>
-						<h4 className='contact__info__content--title'>GitHub</h4>
-						<a
-							className='contact__info__content--subtitle contact__info__content--subtitle--link'
-							href='https://github.com/blchelle'
-							aria-label='GitHub'
-							rel='noopener'
-							target='_blank'
-						>
-							Click here to be redirected!
-						</a>
-					</div>
-				</div>
+				<ContactHightlight
+					Icon={CompassIcon}
+					title='Location'
+					subtitle={{ text: 'Edmonton, Canada' }}
+				/>
+				<ContactHightlight
+					Icon={MailIcon}
+					title='Email'
+					subtitle={{ text: 'brocklchelle@gmail.com' }}
+				/>
+				<ContactHightlight
+					Icon={LinkedInIcon}
+					title='LinkedIn'
+					subtitle={{ text: 'Click to be redirected!', url: 'https://linkedin.com/in/blchelle' }}
+				/>
+				<ContactHightlight
+					Icon={GithubIcon}
+					title='Github'
+					subtitle={{ text: 'Click to be redirected!', url: 'https://github.com/blchelle' }}
+				/>
 			</div>
 
 			<form method='POST' name='contact' className='contact__form' data-aos='fade-left'>
@@ -124,14 +93,7 @@ const Contact = React.forwardRef<HTMLElement>((_, ref) => {
 					>
 						Your Message
 					</label>
-					<textarea
-						name='message'
-						id='message'
-						cols={30}
-						rows={8}
-						required
-						onChange={checkInput}
-					/>
+					<textarea name='message' id='message' cols={30} rows={8} required onChange={checkInput} />
 				</div>
 				<button type='submit'>
 					Send <SendIcon className='contact__send__icon' />
@@ -139,6 +101,6 @@ const Contact = React.forwardRef<HTMLElement>((_, ref) => {
 			</form>
 		</div>
 	);
-});
+};
 
 export default Contact;
