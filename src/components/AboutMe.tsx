@@ -11,14 +11,13 @@ const AboutMe: React.FC = () => {
 				</div>
 			</div>
 			<p className='about__text' data-aos='fade-left'>
-				I am a 4th year Software Engineering Student at the University of Alberta. I have
-				experience developing full-stack wep applications with React & Node as well as mobile apps
-				for iOS using Swift (iOS) and Java (Android).
+				I am a 4th year Software Engineering Student at the University of Alberta. I have experience
+				developing full-stack wep applications with React & Node as well as mobile apps for iOS
+				using Swift (iOS) and Java (Android).
 				<br />
 				<br />
-				Most recently I've been developing full-stack web applications using the popular MERN
-				Stack. I used these skills to build a team collaboration software similar to Trello or
-				Jira.
+				Most recently I've been developing full-stack web applications using the popular MERN Stack.
+				I used these skills to build a team collaboration software similar to Trello or Jira.
 				<br />
 				<br />
 				Professionally, I have experience working as a software developer at Willowglen Systems, a

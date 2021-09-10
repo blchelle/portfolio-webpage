@@ -15,7 +15,9 @@ const CategorySelector: React.FC<CategorySelectorProps> = ({ categories, categor
 			/>
 			{categories.map((title, i) => (
 				<li className='w-1/4 flex-center sm:w-48' key={title}>
-					<button className='w-11/12 text-2xl font-bold' onClick={() => onChange(i)}>{title}</button>
+					<button className='w-11/12 text-2xl font-bold' onClick={() => onChange(i)}>
+						{title}
+					</button>
 				</li>
 			))}
 		</ul>

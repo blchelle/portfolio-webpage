@@ -8,5 +8,5 @@ export default {
 	contact: {
 		description: `I'm currently looking for 3-8 month internship opportunities starting based out of Edmonton,
 									Canada or Remotely. I look forward to hearing from you!`,
-	}
-}
+	},
+};
