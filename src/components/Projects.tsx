@@ -10,7 +10,7 @@ import { ReactComponent as keepItLogo } from '@assets/logos/keepit-logo.svg';
 
 import { ReactComponent as appleLogo } from '@assets/logos/apple-logo.svg';
 import { ReactComponent as expressLogo } from '@assets/logos/express-logo.svg';
-import { ReactComponent as firebaseLogo } from '@assets/logos/firebase-logo.svg';
+import { ReactComponent as firebaseLogo } from '@assets/logos/firebase-logo-2.svg';
 import { ReactComponent as jsLogo } from '@assets/logos/javascript-2.svg';
 import { ReactComponent as mongoDbLogo } from '@assets/logos/mongodb-logo.svg';
 import { ReactComponent as nodeLogo } from '@assets/logos/node-logo.svg';
@@ -65,7 +65,7 @@ const PROJECTS: IProject[] = [
 		githubUrl: 'https://github.com/blchelle/crwn-ecommerce',
 	},
 	{
-		name: 'KeepIt',
+		name: 'KeepIt - Item Tracker',
 		description: `KeepIt is an iOS App built to help users keep track of all
 									their personal belongings without GPS hardware. It does this
 									through customizable notifications that can be time based or
@@ -86,10 +86,15 @@ const PROJECTS: IProject[] = [
 ];
 
 const Projects: React.FC = () => {
+	const divider = <div className='w-3/4 h-px bg-gray-6 mb-16' />;
+
 	return (
-		<div className='projects__content'>
+		<div className='flex flex-col items-center'>
 			{PROJECTS.map((project, index) => (
-				<Project project={project} key={index} />
+				<>
+					<Project project={project} key={index} />
+					{index < PROJECTS.length - 1 && divider}
+				</>
 			))}
 		</div>
 	);

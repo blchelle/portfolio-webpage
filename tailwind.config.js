@@ -20,6 +20,10 @@ module.exports = {
 					dark: '#21ab74',
 					transparent: '#87e8c144',
 				},
+				github: {
+					DEFAULT: '#111111',
+					dark: '#000000',
+				},
 			},
 		},
 	},
