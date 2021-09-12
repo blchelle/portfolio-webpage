@@ -1,31 +1,29 @@
 import React from 'react';
 
 import pictureOfMe from '@assets/me.jpg';
+import text from 'src/text';
 
 const AboutMe: React.FC = () => {
 	return (
-		<div className='about__content'>
-			<div className='about__image__container' data-aos='fade-right'>
-				<div className='about__image__frame'>
-					<img className='about__image' src={pictureOfMe} alt='Picture of me' />
+		<div className='grid grid-cols-1 xl:grid-cols-2 gap-20 items-center justify-items-center'>
+			<div className='w-120 h-120 xl:h-200 xl:w-200 flex-center' data-aos='fade-right'>
+				<div className='flex-center h-95p w-95p bg-primary clip-hexagon hover:w-full hover:h-full transition-all'>
+					<img className='w-11/12 h-auto clip-hexagon' src={pictureOfMe} alt='Picture of me' />
 				</div>
 			</div>
-			<p className='about__text' data-aos='fade-left'>
-				I am a 4th year Software Engineering Student at the University of Alberta. I have experience
-				developing full-stack wep applications with React & Node as well as mobile apps for iOS
-				using Swift (iOS) and Java (Android).
-				<br />
-				<br />
-				Most recently I've been developing full-stack web applications using the popular MERN Stack.
-				I used these skills to build a team collaboration software similar to Trello or Jira.
-				<br />
-				<br />
-				Professionally, I have experience working as a software developer at Willowglen Systems, a
-				leader in the industrial automation industry. Here, I had the opportunity to work on life
-				saving products and gained valuable experience that will help me immensely throughout the
-				length of my career.
-			</p>
-			<a className='resume-btn' target='_blank' href='./resume.pdf' data-aos='zoom-in'>
+			<div className='flex-center flex-col'>
+			{ Object.values(text.aboutMe).map((text) => (
+				<p className='mb-8' data-aos='fade-left'>
+					{text}
+				</p>
+			))}
+			</div>
+			<a
+				className='btn-primary col-span-full'
+				target='_blank'
+				href='./resume.pdf'
+				data-aos='zoom-in'
+			>
 				View My Resume
 			</a>
 		</div>

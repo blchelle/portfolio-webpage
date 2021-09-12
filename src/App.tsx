@@ -95,7 +95,7 @@ const App: React.FC = () => {
 				<Section title='Portfolio Projects' ref={projectsRef} backgroundColor='bg-gray-5'>
 					<Projects />
 				</Section>
-				<Section title='My Skills' description={text.about.description} ref={skillsRef}>
+				<Section title='My Skills' description={text.skills.description} ref={skillsRef}>
 					<Skills />
 				</Section>
 				<Section

@@ -29,7 +29,8 @@ module.exports = {
 	},
 	variants: {
 		extend: {
-			height: ['group-hover'],
+			height: ['group-hover', 'hover'],
+			width: ['hover'],
 			margin: ['last'],
 		},
 	},
