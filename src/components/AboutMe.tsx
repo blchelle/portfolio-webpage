@@ -12,11 +12,11 @@ const AboutMe: React.FC = () => {
 				</div>
 			</div>
 			<div className='flex-center flex-col'>
-			{ Object.values(text.aboutMe).map((text) => (
-				<p className='mb-8' data-aos='fade-left'>
-					{text}
-				</p>
-			))}
+				{Object.values(text.aboutMe).map((text) => (
+					<p key={text} className='mb-8' data-aos='fade-left'>
+						{text}
+					</p>
+				))}
 			</div>
 			<a
 				className='btn-primary col-span-full'

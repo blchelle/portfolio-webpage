@@ -91,10 +91,10 @@ const Projects: React.FC = () => {
 	return (
 		<div className='flex flex-col items-center'>
 			{PROJECTS.map((project, index) => (
-				<>
-					<Project project={project} key={index} />
+				<React.Fragment key={project.name}>
+					<Project project={project} />
 					{index < PROJECTS.length - 1 && divider}
-				</>
+				</React.Fragment>
 			))}
 		</div>
 	);

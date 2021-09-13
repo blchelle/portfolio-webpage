@@ -14,6 +14,7 @@ import { ReactComponent as HammerIcon } from '@assets/icons/hammer.svg';
 import { ReactComponent as CodeIcon } from '@assets/icons/code.svg';
 import { ReactComponent as MailOutlineIcon } from '@assets/icons/mail-outline.svg';
 import text from './text';
+import Footer from '@components/Footer';
 
 const App: React.FC = () => {
 	const [section, setSection] = useState(0);
@@ -74,10 +75,7 @@ const App: React.FC = () => {
 	};
 
 	const handleNavChange = (index: number) => {
-		const scrollDestinationY = NAVIGATION[index].linkToRef.current?.offsetTop;
-		if (scrollDestinationY === undefined) return;
-
-		window.scrollTo({ top: scrollDestinationY + 20, behavior: 'smooth' });
+		NAVIGATION[index].linkToRef.current?.scrollIntoView({ behavior: 'smooth' });
 	};
 
 	useEffect(() => {
@@ -106,6 +104,7 @@ const App: React.FC = () => {
 				>
 					<Contact />
 				</Section>
+				<Footer sections={NAVIGATION} />
 			</main>
 		</>
 	);
