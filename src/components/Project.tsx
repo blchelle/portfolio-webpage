@@ -80,13 +80,14 @@ const Project: React.FC<ProjectProps> = ({
 				<div className='flex justify-start w-full mt-16'>
 					{PROJECT_BUTTONS.map(({ text, url, Icon: ButtonIcon, bgColor, hoverBgColor }) => (
 						<a
+							key={text}
 							href={url}
 							target='_blank'
 							rel='noopener noreferrer'
 							className={`flex-center w-72 h-16 mr-4 text-2xl font-bold rounded-lg transition-colors ${bgColor} ${hoverBgColor}`}
 						>
 							{text}
-							<ButtonIcon className='h-10 w-10 ml-4' title={text} />
+							<ButtonIcon className='h-10 w-10 ml-4 text-gray-1 fill-current' title={text} />
 						</a>
 					))}
 				</div>
