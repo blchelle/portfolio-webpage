@@ -24,26 +24,32 @@ const SOCIAL_LINKS = [
 
 const Footer: React.FC<FooterProps> = ({ sections }) => {
 	return (
-		<footer className='footer'>
-			<ul className='footer__navbar'>
+		<footer className='pb-36 sm:pb-8 pt-8 px-section grid grid-cols-2 gap-8 items-center bg-gray-7'>
+			<ul className='flex flex-col sm:flex-row'>
 				{sections.map(({ title, linkToRef }) => (
 					<li
 						key={title}
-						className='footer__navbar__item navbar__item--home'
+						className='mr-10 text-gray-3 hover:text-primary text-2xl uppercase transition-colors'
 						onClick={() => linkToRef.current?.scrollIntoView({ behavior: 'smooth' })}
 					>
 						<span>{title}</span>
 					</li>
 				))}
 			</ul>
-			<div className='footer__social-media'>
+			<div className='flex items-center justify-end'>
 				{SOCIAL_LINKS.map(({ name, url, Icon }) => (
-					<a href={url} aria-label={name} rel='noopener' target='_blank' className='footer__icon'>
-						<Icon />
+					<a
+						href={url}
+						aria-label={name}
+						rel='noopener'
+						target='_blank'
+						className='flex-center text-gray-4 hover:text-primary fill-current transition-colors mr-4'
+					>
+						<Icon className='w-12 h-12' />
 					</a>
 				))}
 			</div>
-			<p className='footer__copyright'>Brock Chelle, 2020</p>
+			<small className='text-gray-4 text-2xl'>Brock Chelle, 2020</small>
 		</footer>
 	);
 };

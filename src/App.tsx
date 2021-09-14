@@ -85,7 +85,7 @@ const App: React.FC = () => {
 	return (
 		<>
 			<Navigation section={section} sections={NAVIGATION} />
-			<main>
+			<main className='overflow-x-hidden'>
 				<Header ref={headerRef} />
 				<Section title='About Me' ref={aboutMeRef}>
 					<AboutMe />

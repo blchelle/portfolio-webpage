@@ -11,7 +11,7 @@ const Section = React.forwardRef<HTMLElement, SectionProps>((props, ref) => {
 
 	return (
 		<section
-			className={`flex-center flex-col ${backgroundColor} py-16 px-16 sm:px-40 md:px-60 xl:px-80 border-t-8 border-primary`}
+			className={`flex-center flex-col ${backgroundColor} py-16 px-section border-t-8 border-primary`}
 			ref={ref}
 		>
 			<h2 className='text-center mb-12 uppercase tracking-widest' data-aos='fade-up'>
