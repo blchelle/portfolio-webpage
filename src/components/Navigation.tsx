@@ -22,8 +22,11 @@ const Navigation: React.FC<NavigationProps> = ({ section, sections }) => {
 		: { top: `${(section * 100) / sections.length}%` };
 
 	return (
-		<nav className={`navbar${isMobile ? '--mobile' : ''}`}>
-			<div className='navbar__slider' style={sliderStyle} />
+		<nav className='flex sm:flex-col sm:transform sm:translate-y-1/2 w-full sm:w-24 h-24 sm:h-auto fixed left-0 sm:left-12 bottom-0 sm:bottom-1/2 z-10'>
+			<div
+				className='absolute w-1/5 sm:w-24 h-full sm:h-24 border sm:rounded-md border-gray-1 bg-primary transition-all'
+				style={sliderStyle}
+			/>
 			{sections.map((item, index) => (
 				<NavigationItem key={item.title} item={item} isSelected={index === section} />
 			))}
