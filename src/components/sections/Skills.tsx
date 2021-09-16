@@ -1,6 +1,6 @@
 import React, { useRef, useState, useLayoutEffect } from 'react';
-import Skill, { ITool } from './Skill';
-import CategorySelector from './CategorySelector';
+import Skill, { ITool } from '@components/Skill';
+import CategorySelector from '@components/CategorySelector';
 
 import { ReactComponent as bashLogo } from '@assets/logos/bash-logo.svg';
 import { ReactComponent as cppLogo } from '@assets/logos/cpp-logo.svg';

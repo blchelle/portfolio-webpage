@@ -1,5 +1,5 @@
 import React, { ChangeEvent, useState } from 'react';
-import ContactHightlight from './ContactHightlight';
+import ContactHightlight from '@components/ContactHightlight';
 
 import { ReactComponent as CompassIcon } from '@assets/icons/compass.svg';
 import { ReactComponent as MailIcon } from '@assets/icons/mail.svg';

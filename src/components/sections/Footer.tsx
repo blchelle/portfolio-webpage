@@ -1,6 +1,5 @@
 import React from 'react';
-
-import { INavigationItem } from './NavigationItem';
+import { INavigationItem } from '@components/NavigationItem';
 
 import { ReactComponent as GitHubLogo } from '@assets/logos/github-logo.svg';
 import { ReactComponent as LinkedInLogo } from '@assets/logos/linkedin-logo.svg';
