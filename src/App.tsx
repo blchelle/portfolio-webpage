@@ -1,10 +1,11 @@
 import React, { useEffect, useRef, useState } from 'react';
 import Section from '@components/Section';
-import AboutMe from '@components/AboutMe';
-import Contact from '@components/Contact';
-import Header from '@components/Header';
-import Projects from '@components/Projects';
-import Skills from '@components/Skills';
+import AboutMe from '@components/sections/AboutMe';
+import Contact from '@components/sections/Contact';
+import Header from '@components/sections/Header';
+import Projects from '@components/sections/Projects';
+import Skills from '@components/sections/Skills';
+import Footer from '@components/sections/Footer';
 import Navigation from '@components/Navigation';
 import { INavigationItem } from '@components/NavigationItem';
 
@@ -14,7 +15,6 @@ import { ReactComponent as HammerIcon } from '@assets/icons/hammer.svg';
 import { ReactComponent as CodeIcon } from '@assets/icons/code.svg';
 import { ReactComponent as MailOutlineIcon } from '@assets/icons/mail-outline.svg';
 import text from './text';
-import Footer from '@components/Footer';
 
 const App: React.FC = () => {
 	const [section, setSection] = useState(0);
