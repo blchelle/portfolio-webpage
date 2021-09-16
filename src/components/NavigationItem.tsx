@@ -15,13 +15,17 @@ const NavigationItem: React.FC<NavigationItemProps> = ({
 	item: { title, Icon, linkToRef },
 	isSelected,
 }) => {
+	const containerHoverClass = isSelected ? '' : 'sm:hover:w-60';
+	const iconStroke = isSelected ? 'text-gray-1' : 'text-gray-4';
+	const nameHoverClasses = isSelected ? '' : 'sm:group-hover:opacity-100';
+
 	return (
 		<div
-			className={`navbar__item navbar__item--about ${isSelected ? 'selected' : ''}`}
+			className={`group w-1/5 sm:w-24 h-full sm:h-24 flex items-center justify-center sm:justify-start hover:border-gray-1 border-gray-4 border bg-gray-7 hover:bg-primary mb-4 sm:rounded-md transition-all ${containerHoverClass}`}
 			onClick={() => linkToRef.current?.scrollIntoView({ behavior: 'smooth' })}
 		>
-			<Icon className='navbar__icon' />
-			<h4 className='navbar__name'>{title}</h4>
+			<Icon className={`w-24 h-24 p-6 z-10 stroke-current ${iconStroke} group-hover:text-gray-1`} />
+			<h4 className={`w-0 opacity-0 ${nameHoverClasses} text-3xl`}>{title}</h4>
 		</div>
 	);
 };
