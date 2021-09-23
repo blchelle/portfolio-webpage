@@ -6,11 +6,13 @@ interface TextInputProps {
 	numLines?: number;
 	required: boolean;
 	type?: string;
+	isValid: (value: string) => boolean;
 }
 
 interface InputState {
 	error: boolean;
 	isEmpty: boolean;
+	visited: boolean;
 }
 
 const TextInput: React.FC<TextInputProps> = ({
@@ -19,36 +21,46 @@ const TextInput: React.FC<TextInputProps> = ({
 	required,
 	numLines = 1,
 	type = 'text',
+	isValid,
 }) => {
-	const [input, setInput] = useState<InputState>({ error: false, isEmpty: true });
-	const { error, isEmpty } = input;
+	const [input, setInput] = useState<InputState>({ error: false, isEmpty: true, visited: false });
+	const { error, isEmpty, visited } = input;
 
-	const handleInputChange = (event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-		const {
-			validity: { valid },
-			value,
-		} = event.target;
-		setInput({ error: !valid, isEmpty: value.length === 0 });
+	const handleChange = ({
+		target: { value },
+	}: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+		const error = !isValid(value);
+		setInput({ error, isEmpty: value.length === 0, visited });
+	};
+
+	const handleBlur = () => {
+		setInput({ ...input, visited: true });
+	};
+
+	const commonProps = {
+		className: `${error ? 'error' : ''} ${visited ? 'visited' : ''}`,
+		type: type,
+		name: name,
+		id: name,
+		required: required,
+		onChange: handleChange,
+		onBlur: handleBlur,
 	};
 
 	return (
 		<div className='contact__container'>
 			<label
-				className={`name__label ${error ? 'error' : ''} ${isEmpty ? '' : 'raised'}`}
+				className={`name__label ${error ? 'error' : ''} ${visited ? 'visited' : ''} ${
+					isEmpty ? '' : 'raised'
+				}`}
 				htmlFor={name}
 			>
 				{label}
 			</label>
 			{numLines === 1 ? (
-				<input type={type} name={name} id={name} required={required} onChange={handleInputChange} />
+				<input {...commonProps} type={type} />
 			) : (
-				<textarea
-					name={name}
-					id={name}
-					required={required}
-					onChange={handleInputChange}
-					rows={numLines}
-				/>
+				<textarea {...commonProps} rows={numLines} />
 			)}
 		</div>
 	);
