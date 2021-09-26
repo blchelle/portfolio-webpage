@@ -37,11 +37,11 @@ const TextInput: React.FC<TextInputProps> = ({
 		setInput({ ...input, visited: true });
 	};
 
-	const labelColor = (error && visited) ? 'text-error' : isEmpty ? 'text-gray-4' : 'text-primary';
+	const labelColor = error && visited ? 'text-error' : isEmpty ? 'text-gray-4' : 'text-primary';
 	const labelFontSize = isEmpty ? 'text-3xl' : 'text-2xl';
 	const labelTop = numLines === 1 ? '1.4rem' : '0.3rem';
-	const inputBorderColor = (error && visited) ? 'border-error' : 'border-gray-5';
-	const inputHeight = numLines === 1 ? 'h-20' : 'h-auto'
+	const inputBorderColor = error && visited ? 'border-error' : 'border-gray-5';
+	const inputHeight = numLines === 1 ? 'h-20' : 'h-auto';
 
 	const commonProps = {
 		className: `w-full ${inputHeight} px-4 bg-gray-1 ${inputBorderColor} border-2 border-solid rounded-md text-gray-4 text-3xl`,

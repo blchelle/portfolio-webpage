@@ -26,7 +26,7 @@ module.exports = {
 				},
 				error: {
 					DEFAULT: '#d06262',
-				}
+				},
 			},
 		},
 	},
