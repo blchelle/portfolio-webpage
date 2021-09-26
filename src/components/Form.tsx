@@ -1,4 +1,4 @@
-import React, { ChangeEvent, useState } from 'react';
+import React from 'react';
 import { ReactComponent as SendIcon } from '@assets/icons/send.svg';
 import TextInput from '@components/TextInput';
 
@@ -22,13 +22,18 @@ const validateEmail = (email: string) => {
 
 const Form = () => {
 	return (
-		<form method='POST' name='contact' className='contact__form' data-aos='fade-left'>
+		<form
+			method='POST'
+			name='contact'
+			className='col-span-1 lg:col-span-4 flex flex-col justify-between flex-1 w-full sm:w-auto p-12 pt-20 rounded-lg bg-gray-6'
+			data-aos='fade-left'
+		>
 			<input type='hidden' name='form-name' value='contact' />
 			<TextInput label='Name' name='name' required isValid={validateEmpty} />
 			<TextInput label='Email' name='email' required type='email' isValid={validateEmail} />
 			<TextInput label='Message' name='message' required numLines={6} isValid={validateEmpty} />
-			<button type='submit'>
-				Send <SendIcon className='contact__send__icon' />
+			<button type='submit' className='btn-primary'>
+				Send <SendIcon className='h-10 w-10 text-gray-1 fill-current ml-4' />
 			</button>
 		</form>
 	);

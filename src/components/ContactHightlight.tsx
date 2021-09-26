@@ -11,7 +11,7 @@ interface ContactHightlightProps {
 
 const ContactHightlight: React.FC<ContactHightlightProps> = ({ title, subtitle, Icon }) => {
 	return (
-		<div className='group w-full h-24 flex items-center mb-8 last:mb-0'>
+		<div className='group w-full h-24 flex items-center'>
 			<div className='flex-center w-24 h-full rounded-full mr-8 bg-primary-transparent transition-colors group-hover:bg-primary fill-current'>
 				<Icon className='w-10 text-primary transition-colors group-hover:text-gray-1 fill-current' />
 			</div>
