@@ -37,8 +37,14 @@ const TextInput: React.FC<TextInputProps> = ({
 		setInput({ ...input, visited: true });
 	};
 
+	const labelColor = (error && visited) ? 'text-error' : isEmpty ? 'text-gray-4' : 'text-primary';
+	const labelFontSize = isEmpty ? 'text-3xl' : 'text-2xl';
+	const labelTop = numLines === 1 ? '1.4rem' : '0.3rem';
+	const inputBorderColor = (error && visited) ? 'border-error' : 'border-gray-5';
+	const inputHeight = numLines === 1 ? 'h-20' : 'h-auto'
+
 	const commonProps = {
-		className: `${error ? 'error' : ''} ${visited ? 'visited' : ''}`,
+		className: `w-full ${inputHeight} px-4 bg-gray-1 ${inputBorderColor} border-2 border-solid rounded-md text-gray-4 text-3xl`,
 		type: type,
 		name: name,
 		id: name,
@@ -48,11 +54,10 @@ const TextInput: React.FC<TextInputProps> = ({
 	};
 
 	return (
-		<div className='contact__container'>
+		<div className='relative w-full mb-12'>
 			<label
-				className={`name__label ${error ? 'error' : ''} ${visited ? 'visited' : ''} ${
-					isEmpty ? '' : 'raised'
-				}`}
+				className={`absolute left-4 transition-all ${labelColor} ${labelFontSize}`}
+				style={{ top: isEmpty ? labelTop : '-2.2rem' }}
 				htmlFor={name}
 			>
 				{label}
