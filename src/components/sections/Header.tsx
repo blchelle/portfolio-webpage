@@ -49,23 +49,22 @@ const Header = React.forwardRef<HTMLElement>((_, ref) => {
 	};
 
 	return (
-		<header ref={ref} className='header' onMouseMove={moveTopInitial}>
-			<img className='header__initial header__initial--bottom' src={initialBottom} alt='B Bottom' />
-			<img
-				className='header__initial header__initial--top'
-				src={initialTop}
-				ref={topInitialRef}
-				alt='B Top'
-			/>
-			<div className='header__content'>
-				<h1 className='header__title'>
+		<header
+			ref={ref}
+			className='relative h-screen flex-center flex-col bg-secondary'
+			onMouseMove={moveTopInitial}
+		>
+			<img className='absolute bottom-initial' src={initialBottom} alt='B Bottom' />
+			<img className='absolute top-initial' src={initialTop} ref={topInitialRef} alt='B Top' />
+			<div className='flex flex-col w-5/6 sm:w-3/4 z-10 p-8 bg-gray-transparent rounded-xl'>
+				<h1 className='px-12 mb-8'>
 					Hello, I'm
-					<span className='header__name'>Brock Chelle</span>
+					<span className='text-primary ml-4'>Brock Chelle</span>
 				</h1>
-				<h2 className='header__title'>I'm a Full Stack Engineer & Software Engineering Student</h2>
-				<button className='header__btn' onClick={scrollToStart}>
-					<span className='header__btn__text'>Learn More</span>
-					<ArrowIcon className='header__btn__icon' />
+				<h2 className='font-light px-12 mb-8'>I'm a Full Stack Software Engineer</h2>
+				<button className='group btn-primary self-center' onClick={scrollToStart}>
+					<span className='mr-4'>Learn More</span>
+					<ArrowIcon className='h-16 w-16 text-gray-1 fill-current transition-transform transform group-hover:rotate-90' />
 				</button>
 			</div>
 		</header>
