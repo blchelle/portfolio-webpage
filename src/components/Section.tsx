@@ -14,12 +14,12 @@ const Section = React.forwardRef<HTMLElement, SectionProps>((props, ref) => {
 			className={`flex-center flex-col ${backgroundColor} py-16 px-section border-t-8 border-primary`}
 			ref={ref}
 		>
-			<h2 className='text-center mb-12 uppercase tracking-widest' data-aos='fade-up'>
+			<h2 className='text-6xl text-center mb-12 uppercase tracking-widest' data-aos='fade-up'>
 				{title}
 			</h2>
-			<div className='w-64 h-4 mb-20 bg-primary' data-aos='fade-up' />
+			<div className='w-64 h-2 mb-20 bg-primary' data-aos='fade-up' />
 			{description && (
-				<p className='w-full mb-8 text-center' data-aos='fade-up'>
+				<p className='w-full mb-8 text-3xl leading-relaxed text-center' data-aos='fade-up'>
 					{description}
 				</p>
 			)}

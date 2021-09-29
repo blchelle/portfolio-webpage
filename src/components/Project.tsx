@@ -56,7 +56,7 @@ const Project: React.FC<ProjectProps> = ({
 				<div className='flex flex-col p-8 rounded-lg mb-8 bg-gray-6' data-aos='fade-left'>
 					<div className='flex items-center mb-8'>
 						<Logo className='w-20 mr-8' />
-						<h3>{name}</h3>
+						<h3 className='text-5xl font-bold'>{name}</h3>
 					</div>
 					<div>
 						{tools.map(({ name, Logo: ToolLogo }, i) => (
@@ -70,7 +70,7 @@ const Project: React.FC<ProjectProps> = ({
 						))}
 					</div>
 				</div>
-				<p>{description}</p>
+				<p className='text-3xl leading-relaxed'>{description}</p>
 				<div className='flex justify-start w-full mt-16'>
 					{PROJECT_BUTTONS.map(({ text, url, Icon: ButtonIcon, bgColor, hoverBgColor }) => (
 						<a
