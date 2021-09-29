@@ -16,7 +16,7 @@ const ContactHightlight: React.FC<ContactHightlightProps> = ({ title, subtitle, 
 				<Icon className='w-10 text-primary transition-colors group-hover:text-gray-1 fill-current' />
 			</div>
 			<div className='flex flex-col'>
-				<h4>{title}</h4>
+				<h4 className='text-3xl font-bold'>{title}</h4>
 				{subtitle.url ? (
 					<a
 						className='text-2xl text-primary font-bold transition-colors hover:text-primary-dark'
