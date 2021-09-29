@@ -21,8 +21,8 @@ import { ReactComponent as reactLogo } from '@assets/logos/react-logo.svg';
 import { ReactComponent as railsLogo } from '@assets/logos/rails-logo.svg';
 import { ReactComponent as redisLogo } from '@assets/logos/redis-logo.svg';
 import { ReactComponent as reduxLogo } from '@assets/logos/redux-logo.svg';
-import { ReactComponent as rubyLogo } from '@assets/logos/ruby-logo.svg';
 import { ReactComponent as sassLogo } from '@assets/logos/sass-logo.svg';
+import { ReactComponent as sidekiqLogo } from '@assets/logos/sidekiq-logo.svg';
 import { ReactComponent as sqliteLogo } from '@assets/logos/sqlite-logo.svg';
 import { ReactComponent as tsLogo } from '@assets/logos/typescript-logo.svg';
 
@@ -49,8 +49,8 @@ const CATEGORIES: ISkillCategory[] = [
 			{ name: 'Node', Logo: nodeLogo },
 			{ name: 'Express', Logo: expressLogo },
 			{ name: 'Go', Logo: goLogo },
-			{ name: 'Ruby', Logo: rubyLogo },
-			{ name: 'Rails', Logo: railsLogo },
+			{ name: 'Ruby on Rails', Logo: railsLogo },
+			{ name: 'Sidekiq', Logo: sidekiqLogo },
 			{ name: 'C++', Logo: cppLogo },
 		],
 	},
