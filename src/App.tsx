@@ -53,7 +53,7 @@ const App: React.FC = () => {
 		},
 	];
 
-	const handleScroll = (_: Event): any => {
+	const handleScroll = (): any => {
 		const { scrollY } = window;
 		const headerTop = headerRef.current?.offsetTop ?? 0;
 		const aboutMeTop = aboutMeRef.current?.offsetTop ?? 0;
@@ -74,12 +74,9 @@ const App: React.FC = () => {
 		}
 	};
 
-	const handleNavChange = (index: number) => {
-		NAVIGATION[index].linkToRef.current?.scrollIntoView({ behavior: 'smooth' });
-	};
-
 	useEffect(() => {
 		window.addEventListener('scroll', handleScroll);
+		handleScroll();
 	}, [section]);
 
 	return (
