@@ -11,9 +11,12 @@ const AboutMe: React.FC = () => {
 					<img className='w-95p h-auto clip-hexagon' src={pictureOfMe} alt='Picture of me' />
 				</div>
 			</div>
-			<div className='text-3xl leading-relaxed flex-center flex-col'>
+			<div
+				className='text-3xl leading-relaxed flex-center flex-col p-8 rounded-lg bg-gray-6'
+				data-aos='fade-left'
+			>
 				{Object.values(text.aboutMe).map((text) => (
-					<p key={text} className='mb-8' data-aos='fade-left'>
+					<p key={text} className='mb-8 last:mb-0'>
 						{text}
 					</p>
 				))}
