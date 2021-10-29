@@ -2,7 +2,6 @@ import React, { useRef, useState, useLayoutEffect } from 'react';
 import Skill, { ITool } from '@components/Skill';
 import CategorySelector from '@components/CategorySelector';
 
-import { ReactComponent as bashLogo } from '@assets/logos/bash-logo.svg';
 import { ReactComponent as cppLogo } from '@assets/logos/cpp-logo.svg';
 import { ReactComponent as concourseLogo } from '@assets/logos/concourse-logo.svg';
 import { ReactComponent as dockerLogo } from '@assets/logos/docker-logo.svg';
@@ -10,6 +9,7 @@ import { ReactComponent as expressLogo } from '@assets/logos/express-logo.svg';
 import { ReactComponent as firebaseLogo } from '@assets/logos/firebase-logo.svg';
 import { ReactComponent as goLogo } from '@assets/logos/go-logo.svg';
 import { ReactComponent as gitLogo } from '@assets/logos/git-logo.svg';
+import { ReactComponent as grafanaLogo } from '@assets/logos/grafana-logo.svg';
 import { ReactComponent as htmlCssLogo } from '@assets/logos/html-css-logo.svg';
 import { ReactComponent as jsLogo } from '@assets/logos/javascript-logo.svg';
 import { ReactComponent as kubernetesLogo } from '@assets/logos/kubernetes-logo.svg';
@@ -23,6 +23,7 @@ import { ReactComponent as redisLogo } from '@assets/logos/redis-logo.svg';
 import { ReactComponent as reduxLogo } from '@assets/logos/redux-logo.svg';
 import { ReactComponent as sassLogo } from '@assets/logos/sass-logo.svg';
 import { ReactComponent as sidekiqLogo } from '@assets/logos/sidekiq-logo.svg';
+import { ReactComponent as splunkLogo } from '@assets/logos/splunk-logo.svg';
 import { ReactComponent as sqliteLogo } from '@assets/logos/sqlite-logo.svg';
 import { ReactComponent as tsLogo } from '@assets/logos/typescript-logo.svg';
 
@@ -66,13 +67,14 @@ const CATEGORIES: ISkillCategory[] = [
 		],
 	},
 	{
-		title: 'Devops',
+		title: 'Tools',
 		skills: [
 			{ name: 'Git', Logo: gitLogo },
 			{ name: 'Docker', Logo: dockerLogo },
 			{ name: 'Kubernetes', Logo: kubernetesLogo },
 			{ name: 'Concourse', Logo: concourseLogo },
-			{ name: 'Bash', Logo: bashLogo },
+			{ name: 'Splunk', Logo: splunkLogo },
+			{ name: 'Grafana', Logo: grafanaLogo },
 		],
 	},
 ];
