@@ -3,7 +3,7 @@ import React from 'react';
 import { ITool } from '@components/Skill';
 
 import { ReactComponent as PlayIcon } from '@assets/icons/play.svg';
-import { ReactComponent as GithubIcon } from '@assets/logos/github-logo.svg';
+import { ReactComponent as GithubIcon } from '@assets/logos/github.svg';
 
 export interface IProject {
 	name: string;

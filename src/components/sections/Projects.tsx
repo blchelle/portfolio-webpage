@@ -4,20 +4,20 @@ import Project, { IProject } from '@components/Project';
 import crwnMockup from '@assets/mockups/crwn-mockup.png';
 import collaboGreatMockup from '@assets/mockups/collabogreat-mockup.png';
 import keepItMockup from '@assets/mockups/keepit-mockup.png';
-import { ReactComponent as collaboGreatLogo } from '@assets/logos/collabogreat-logo.svg';
-import { ReactComponent as crwnLogo } from '@assets/logos/crwn-logo.svg';
-import { ReactComponent as keepItLogo } from '@assets/logos/keepit-logo.svg';
+import { ReactComponent as collaboGreatLogo } from '@assets/logos/collabogreat.svg';
+import { ReactComponent as crwnLogo } from '@assets/logos/crwn.svg';
+import { ReactComponent as keepItLogo } from '@assets/logos/keepit.svg';
 
-import { ReactComponent as appleLogo } from '@assets/logos/apple-logo.svg';
-import { ReactComponent as expressLogo } from '@assets/logos/express-logo.svg';
-import { ReactComponent as firebaseLogo } from '@assets/logos/firebase-logo-2.svg';
+import { ReactComponent as appleLogo } from '@assets/logos/apple.svg';
+import { ReactComponent as expressLogo } from '@assets/logos/express.svg';
+import { ReactComponent as firebaseLogo } from '@assets/logos/firebase-2.svg';
 import { ReactComponent as jsLogo } from '@assets/logos/javascript-2.svg';
-import { ReactComponent as mongoDbLogo } from '@assets/logos/mongodb-logo.svg';
-import { ReactComponent as nodeLogo } from '@assets/logos/node-logo.svg';
-import { ReactComponent as reactLogo } from '@assets/logos/react-logo.svg';
-import { ReactComponent as reduxLogo } from '@assets/logos/redux-logo.svg';
-import { ReactComponent as sassLogo } from '@assets/logos/sass-logo.svg';
-import { ReactComponent as swiftLogo } from '@assets/logos/swift-logo.svg';
+import { ReactComponent as mongoDbLogo } from '@assets/logos/mongodb.svg';
+import { ReactComponent as nodeLogo } from '@assets/logos/node.svg';
+import { ReactComponent as reactLogo } from '@assets/logos/react.svg';
+import { ReactComponent as reduxLogo } from '@assets/logos/redux.svg';
+import { ReactComponent as sassLogo } from '@assets/logos/sass.svg';
+import { ReactComponent as swiftLogo } from '@assets/logos/swift.svg';
 import { ReactComponent as tsLogo } from '@assets/logos/typescript-2.svg';
 
 const PROJECTS: IProject[] = [

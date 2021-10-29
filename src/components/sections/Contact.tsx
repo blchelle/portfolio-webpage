@@ -4,8 +4,8 @@ import Form from '@components/Form';
 
 import { ReactComponent as CompassIcon } from '@assets/icons/compass.svg';
 import { ReactComponent as MailIcon } from '@assets/icons/mail.svg';
-import { ReactComponent as LinkedInIcon } from '@assets/logos/linkedin-logo.svg';
-import { ReactComponent as GithubIcon } from '@assets/logos/github-logo.svg';
+import { ReactComponent as LinkedInIcon } from '@assets/logos/linkedin.svg';
+import { ReactComponent as GithubIcon } from '@assets/logos/github.svg';
 
 const Contact: React.FC = () => {
 	return (
