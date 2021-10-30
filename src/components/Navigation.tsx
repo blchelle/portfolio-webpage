@@ -10,7 +10,7 @@ const Navigation: React.FC<NavigationProps> = ({ section, sections }) => {
 	const [isMobile, setIsMobile] = useState(window.innerWidth < 700);
 
 	const handleResize = () => {
-		setIsMobile(window.innerWidth < 700);
+		setIsMobile(window.innerWidth < 640);
 	};
 
 	useEffect(() => {
