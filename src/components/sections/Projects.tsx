@@ -1,9 +1,9 @@
 import React from 'react';
 import Project, { IProject } from '@components/Project';
 
-import crwnMockup from '@assets/mockups/crwn-mockup.png';
-import collaboGreatMockup from '@assets/mockups/collabogreat-mockup.png';
-import keepItMockup from '@assets/mockups/keepit-mockup.png';
+import crwnMockup from '@assets/mockups/crwn.png';
+import collaboGreatMockup from '@assets/mockups/collabogreat.png';
+import keepItMockup from '@assets/mockups/keepit.png';
 import { ReactComponent as collaboGreatLogo } from '@assets/logos/collabogreat.svg';
 import { ReactComponent as crwnLogo } from '@assets/logos/crwn.svg';
 import { ReactComponent as keepItLogo } from '@assets/logos/keepit.svg';
