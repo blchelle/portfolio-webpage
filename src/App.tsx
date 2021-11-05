@@ -54,14 +54,16 @@ const App: React.FC = () => {
 	];
 
 	const handleScroll = (): any => {
-		const { scrollY } = window;
+		const { scrollY, innerHeight } = window;
+		const { body: { offsetHeight } } = document;
+
 		const headerTop = headerRef.current?.offsetTop ?? 0;
 		const aboutMeTop = aboutMeRef.current?.offsetTop ?? 0;
 		const projectsTop = projectsRef.current?.offsetTop ?? 0;
 		const skillsTop = skillsRef.current?.offsetTop ?? 0;
 		const contactTop = contactRef.current?.offsetTop ?? 0;
 
-		if (scrollY >= contactTop) {
+		if (scrollY >= contactTop || scrollY + innerHeight >= offsetHeight - 10) {
 			setSection(4);
 		} else if (scrollY >= skillsTop) {
 			setSection(3);
