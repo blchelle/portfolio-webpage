@@ -28,6 +28,15 @@ module.exports = {
 					DEFAULT: '#111111',
 					dark: '#000000',
 				},
+				ualberta: {
+					DEFAULT: '#05894F',
+				},
+				willowglen: {
+					DEFAULT: '#F18221',
+				},
+				tesla: {
+					DEFAULT: '#CC0000',
+				},
 				error: {
 					DEFAULT: '#d06262',
 				},

@@ -18,8 +18,8 @@ const Navigation: React.FC<NavigationProps> = ({ section, sections }) => {
 	}, []);
 
 	const sliderStyle = isMobile
-		? { left: `${(section * 100) / sections.length}%` }
-		: { top: `${(section * 100) / sections.length}%` };
+		? { left: `${(section * 100) / sections.length}%`, width: `${100 / sections.length}%` }
+		: { top: `${(section * 100) / sections.length}%`, width: '6rem' };
 
 	return (
 		<nav className='flex sm:flex-col sm:transform sm:translate-y-1/2 w-full sm:w-24 h-24 sm:h-auto fixed left-0 sm:left-12 bottom-0 sm:bottom-1/2 z-10'>

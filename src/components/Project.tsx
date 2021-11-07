@@ -49,7 +49,7 @@ const Project: React.FC<ProjectProps> = ({
 
 	return (
 		<div className='grid gap-8 grid-cols-1 xl:grid-cols-2 mb-16'>
-			<div className='flex-center rounded-lg bg-gray-6' data-aos='fade-right'>
+			<div className='hidden xl:flex justify-center items-center rounded-lg bg-gray-6' data-aos='fade-right'>
 				<img src={mockup} alt={`${name} Mockup`} className='w-3/4 p-8 xl:w-full' />
 			</div>
 			<div>
