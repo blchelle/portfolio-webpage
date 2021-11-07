@@ -15,7 +15,7 @@ const NavigationItem: React.FC<NavigationItemProps> = ({
 	item: { title, Icon, linkToRef },
 	isSelected,
 }) => {
-	const containerHoverClass = isSelected ? '' : 'sm:hover:w-60';
+	const containerHoverClass = isSelected ? '' : 'sm:hover:w-72';
 	const iconStroke = isSelected ? 'text-gray-1' : 'text-gray-4';
 	const nameHoverClasses = isSelected ? '' : 'sm:group-hover:opacity-100';
 

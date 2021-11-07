@@ -67,7 +67,7 @@ const CATEGORIES: ISkillCategory[] = [
 		],
 	},
 	{
-		title: 'Tools',
+		title: 'DevOps',
 		skills: [
 			{ name: 'Git', Logo: gitLogo },
 			{ name: 'Docker', Logo: dockerLogo },
