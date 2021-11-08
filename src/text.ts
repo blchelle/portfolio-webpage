@@ -21,11 +21,11 @@ export default {
 	},
 	experience: {
 		tesla: [
-			'Developed hundreds of features and fixes for GRPC microservices written in Go and REST APIs written in Ruby on Rails.',
-			'Automated testing, building Docker images, and deploying to Kubernetes using Concourse.',
-			'Wrote unit, integration, and end-to-end tests with RSpec, and Ginkgo with every commit I made.',
+			'Developed GRPC microservices in Go, REST APIs in Rails, and UIs with React in a production environment used by over 1,000,000 customers every day.',
 			'Took leadership in the administration and development of an internal identity and access management platform used by over 10,000 employees.',
-			'Improved the performance of several endpoints that are used over a million times per day by utilizing Sidekiq workers and Redis',
+			'Wrote unit, integration, and end-to-end tests with RSpec, and Ginkgo with every commit I made.',
+			'Automated testing, building Docker images, and deploying to Kubernetes using Concourse.',
+			'Improved the performance of several high-volume endpoints by utilizing Sidekiq workers and Redis.',
 		],
 		willowglen: [
 			'Developed a backend application with C++ used to save the lives of metro-rail track workers.',
