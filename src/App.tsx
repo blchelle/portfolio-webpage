@@ -17,6 +17,7 @@ import { ReactComponent as HammerIcon } from '@assets/icons/hammer.svg';
 import { ReactComponent as CodeIcon } from '@assets/icons/code.svg';
 import { ReactComponent as MailOutlineIcon } from '@assets/icons/mail-outline.svg';
 import text from './text';
+import ThemeToggler from '@components/ThemeToggler';
 
 const App: React.FC = () => {
 	const [section, setSection] = useState(0);
@@ -63,7 +64,9 @@ const App: React.FC = () => {
 
 	const handleScroll = (): any => {
 		const { scrollY, innerHeight } = window;
-		const { body: { offsetHeight } } = document;
+		const {
+			body: { offsetHeight },
+		} = document;
 
 		const headerTop = headerRef.current?.offsetTop ?? 0;
 		const aboutMeTop = aboutMeRef.current?.offsetTop ?? 0;
@@ -95,25 +98,35 @@ const App: React.FC = () => {
 	return (
 		<>
 			<Navigation section={section} sections={NAVIGATION} />
-			<main className='overflow-x-hidden'>
+			<ThemeToggler />
+			<main className='overflow-x-hidden text-gray-7 dark:text-gray-1'>
 				<Header ref={headerRef} />
-				<Section title='About Me' ref={aboutMeRef} backgroundColor="bg-gray-5">
+				<Section title='About Me' ref={aboutMeRef} backgroundColor='dark:bg-gray-5 bg-gray-1'>
 					<AboutMe />
 				</Section>
-				<Section title='Experience' ref={experienceRef}>
+				<Section title='Experience' ref={experienceRef} backgroundColor='dark:bg-gray-6 bg-gray-2'>
 					<Experiences />
 				</Section>
-				<Section title='Portfolio Projects' ref={projectsRef} backgroundColor='bg-gray-5'>
+				<Section
+					title='Portfolio Projects'
+					ref={projectsRef}
+					backgroundColor='dark:bg-gray-5 bg-gray-1'
+				>
 					<Projects />
 				</Section>
-				<Section title='My Skills' description={text.skills.description} ref={skillsRef}>
+				<Section
+					title='My Skills'
+					description={text.skills.description}
+					ref={skillsRef}
+					backgroundColor='dark:bg-gray-6 bg-gray-2'
+				>
 					<Skills />
 				</Section>
 				<Section
 					title='Get In Touch'
 					description={text.contact.description}
 					ref={contactRef}
-					backgroundColor='bg-gray-5'
+					backgroundColor='dark:bg-gray-5 bg-gray-1'
 				>
 					<Contact />
 				</Section>

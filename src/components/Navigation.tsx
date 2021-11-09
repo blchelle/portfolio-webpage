@@ -22,9 +22,9 @@ const Navigation: React.FC<NavigationProps> = ({ section, sections }) => {
 		: { top: `${(section * 100) / sections.length}%`, width: '6rem' };
 
 	return (
-		<nav className='flex sm:flex-col sm:transform sm:translate-y-1/2 w-full sm:w-24 h-24 sm:h-auto fixed left-0 sm:left-12 bottom-0 sm:bottom-1/2 z-10'>
+		<nav className='flex sm:flex-col sm:transform sm:translate-y-1/2 w-full sm:w-24 h-24 sm:h-auto fixed left-0 sm:left-12 bottom-0 sm:bottom-1/2 z-20'>
 			<div
-				className='absolute w-1/5 sm:w-24 h-full sm:h-24 border sm:rounded-md border-gray-1 bg-primary transition-all'
+				className='absolute w-1/5 sm:w-24 h-full sm:h-24 border sm:rounded-md border-gray-5 dark:border-gray-1 bg-primary transition-all'
 				style={sliderStyle}
 			/>
 			{sections.map((item, index) => (

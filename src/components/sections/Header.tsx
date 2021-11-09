@@ -3,6 +3,7 @@ import React, { useRef, MouseEvent } from 'react';
 import { ReactComponent as ArrowIcon } from '@assets/icons/arrow_forward.svg';
 import initialTop from '@assets/initial_top.png';
 import initialBottom from '@assets/initial_bottom.png';
+import ThemeToggler from '@components/ThemeToggler';
 
 const Header = React.forwardRef<HTMLElement>((_, ref) => {
 	const topInitialRef = useRef<HTMLImageElement>(null);
@@ -51,12 +52,12 @@ const Header = React.forwardRef<HTMLElement>((_, ref) => {
 	return (
 		<header
 			ref={ref}
-			className='relative h-screen flex-center flex-col bg-secondary'
+			className='relative h-screen flex-center flex-col bg-primary-transparent dark:bg-secondary'
 			onMouseMove={moveTopInitial}
 		>
 			<img className='absolute bottom-initial' src={initialBottom} alt='B Bottom' />
 			<img className='absolute top-initial' src={initialTop} ref={topInitialRef} alt='B Top' />
-			<div className='flex flex-col w-5/6 sm:w-3/4 z-10 p-8 bg-gray-transparent rounded-xl'>
+			<div className='flex flex-col w-5/6 sm:w-3/4 z-10 p-8 bg-gray-transparent1 dark:bg-gray-transparent7 rounded-xl'>
 				<h1 className='text-8xl font-bold px-12 mb-8'>
 					Hello, I'm
 					<span className='text-primary ml-4'>Brock Chelle</span>

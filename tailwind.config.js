@@ -2,7 +2,7 @@ const colors = require('tailwindcss/colors');
 
 module.exports = {
 	purge: ['./index.html', './src/**/*.tsx'],
-	darkMode: false,
+	darkMode: 'class',
 	theme: {
 		extend: {
 			colors: {
@@ -14,12 +14,13 @@ module.exports = {
 					5: '#393e41',
 					6: '#2f3437',
 					7: '#26292c',
-					transparent: '#26292cdd',
+					transparent1: '#f8f8f8dd',
+					transparent7: '#26292cdd',
 				},
 				primary: {
 					DEFAULT: '#26c485',
 					dark: '#21ab74',
-					transparent: '#87e8c144',
+					transparent: '#26c48544',
 				},
 				secondary: {
 					DEFAULT: '#1c3435',
