@@ -37,6 +37,6 @@ export default {
 			'Achieved a GPA of 3.7',
 			'Completed courses in Object Oriented Programming, Parallel Computing, Operating Systems, Test Driven Development, Database Management, and More.',
 			'Joined the Google Student Developer Group as a Technical Lead where I gave mentorship to early year students.',
-		]
-	}
+		],
+	},
 };

@@ -96,7 +96,7 @@ const Skills: React.FC = () => {
 				category={category}
 				onChange={setCategory}
 			/>
-			<div className='w-full flex overflow-x-hidden bg-gray-6' ref={containerRef}>
+			<div className='w-full flex overflow-x-hidden dark:bg-gray-5 bg-gray-1' ref={containerRef}>
 				{CATEGORIES.map(({ title, skills }) => (
 					<div
 						className='p-20 grid gap-20 grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3'

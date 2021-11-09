@@ -23,12 +23,12 @@ const SOCIAL_LINKS = [
 
 const Footer: React.FC<FooterProps> = ({ sections }) => {
 	return (
-		<footer className='pb-36 sm:pb-8 pt-8 px-section grid grid-cols-2 gap-8 items-center bg-gray-7'>
+		<footer className='pb-36 sm:pb-8 pt-8 px-section grid grid-cols-2 gap-8 items-center bg-gray-2 dark:bg-gray-7'>
 			<ul className='flex flex-col sm:flex-row'>
 				{sections.map(({ title, linkToRef }) => (
 					<li
 						key={title}
-						className='mr-10 text-gray-3 hover:text-primary text-2xl uppercase transition-colors'
+						className='mr-10 text-gray-4 dark:text-gray-3 hover:text-primary text-2xl uppercase transition-colors'
 						onClick={() => linkToRef.current?.scrollIntoView({ behavior: 'smooth' })}
 					>
 						<span>{title}</span>
