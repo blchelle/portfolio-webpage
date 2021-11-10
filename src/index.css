@@ -14,16 +14,12 @@
 						flex items-center justify-between cursor-pointer rounded-lg;
 	}
 
-	.bottom-initial {
-		left: 15%;
-		width: 70%;
-		bottom: 5%;
-	}
-
-	.top-initial {
-		left: 15%;
-		width: 70%;
-		bottom: 8%;
+	.header-circle {
+		width: 60rem;
+		height: 60rem;
+		border-radius: 50%;
+		background-color: #ffffff88;
+		transition: background-color 2s linear, box-shadow 2s linear
 	}
 
 	.picture-frame {

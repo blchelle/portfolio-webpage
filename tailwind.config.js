@@ -38,6 +38,10 @@ module.exports = {
 				tesla: {
 					DEFAULT: '#CC0000',
 				},
+				header: {
+					close: '#2CA060',
+					far: '#F0C62D'
+				},
 				error: {
 					DEFAULT: '#d06262',
 				},
