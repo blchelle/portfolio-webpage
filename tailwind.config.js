@@ -15,8 +15,6 @@ module.exports = {
 					6: '#2f3437',
 					7: '#26292c',
 					transparent1: '#f8f8f8dd',
-					transparent3: '#d6d6d6dd',
-					transparent6: '#2f3437dd',
 					transparent7: '#26292cdd',
 				},
 				primary: {
@@ -43,7 +41,7 @@ module.exports = {
 				},
 				header: {
 					close: '#2CA060',
-					far: '#F0C62D',
+					far: '#F0C62D'
 				},
 				error: {
 					DEFAULT: '#d06262',
