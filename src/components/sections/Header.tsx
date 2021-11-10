@@ -67,15 +67,11 @@ const Header = React.forwardRef<HTMLElement>((_, ref) => {
 			onMouseMove={moveTopInitial}
 		>
 			<div
-				className={`${
-					solved ? 'solved' : ''
-				} absolute header-circle left-1/2 bottom-1/4 bg-gray-3 dark:bg-gray-6 opacity-75 shadow-2xl transform translate-y-1/2`}
+				className={`${solved ? 'solved' : ''} absolute header-circle left-1/2 bottom-1/4 bg-secondary-light dark:bg-secondary opacity-75 shadow-2xl transform translate-y-1/2`}
 				ref={circleOneRef}
 			/>
 			<div
-				className={`${
-					solved ? 'solved' : ''
-				} absolute header-circle right-1/2 bottom-3/4 bg-gray-3 dark:bg-gray-6 opacity-75 shadow-2xl transform translate-y-1/2`}
+				className={`${solved ? 'solved' : ''} absolute header-circle right-1/2 bottom-3/4 bg-secondary-light dark:bg-secondary opacity-75 shadow-2xl transform translate-y-1/2`}
 				ref={circleTwoRef}
 			/>
 			<div className='flex flex-col items-center w-5/6 sm:w-3/4 z-10 p-8 bg-gray-transparent3 dark:bg-gray-transparent6 shadow-xl rounded-xl'>

@@ -25,6 +25,7 @@ module.exports = {
 					transparent: '#26c48544',
 				},
 				secondary: {
+					light: '#94C5C7',
 					DEFAULT: '#1c3435',
 				},
 				github: {
