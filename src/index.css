@@ -18,8 +18,10 @@
 		width: 60rem;
 		height: 60rem;
 		border-radius: 50%;
-		background-color: #ffffff88;
-		transition: background-color 2s linear, box-shadow 2s linear
+	}
+
+	.header-circle.solved {
+		animation: solved 3s linear 0s 1 normal forwards;
 	}
 
 	.picture-frame {
@@ -61,5 +63,35 @@
 
 	.h-120 {
 		height: 30rem;
+	}
+}
+
+@keyframes solved {
+	0% {
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		@apply shadow-2xl opacity-75;
+
+		width: 60rem;
+		height: 60rem;
+	}
+	15% {
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+
+		@apply shadow-none opacity-100;
+		width: 60rem;
+		height: 60rem;
+	}
+	100% {
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+
+		@apply shadow-none opacity-100;
+		width: 300rem;
+		height: 300rem;
 	}
 }
