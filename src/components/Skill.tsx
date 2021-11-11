@@ -1,9 +1,5 @@
 import React from 'react';
-
-export interface ITool {
-	name: string;
-	Logo: React.FunctionComponent<React.SVGProps<SVGSVGElement> & { title?: string | undefined }>;
-}
+import { ITool } from './Tool';
 
 interface SkillProps {
 	skill: ITool;

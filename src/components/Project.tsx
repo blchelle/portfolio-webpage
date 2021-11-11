@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { ITool } from '@components/Skill';
+import Tool, { ITool } from '@components/Tool';
 
 import { ReactComponent as PlayIcon } from '@assets/icons/play.svg';
 import { ReactComponent as GithubIcon } from '@assets/logos/github.svg';
@@ -65,14 +65,8 @@ const Project: React.FC<ProjectProps> = ({
 						<h3 className='text-5xl font-bold'>{name}</h3>
 					</div>
 					<div>
-						{tools.map(({ name, Logo: ToolLogo }, i) => (
-							<div className='inline-block mr-5'>
-								<ToolLogo
-									key={name}
-									className='h-12 w-auto text-primary fill-current'
-									title={name}
-								/>
-							</div>
+						{tools.map((tool) => (
+							<Tool tool={tool} />
 						))}
 					</div>
 				</div>

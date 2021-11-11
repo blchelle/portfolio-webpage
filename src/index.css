@@ -19,7 +19,7 @@
 		height: 60rem;
 		border-radius: 50%;
 		background-color: #ffffff88;
-		transition: background-color 2s linear, box-shadow 2s linear
+		transition: background-color 2s linear, box-shadow 2s linear;
 	}
 
 	.picture-frame {
