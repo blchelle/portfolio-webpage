@@ -39,6 +39,7 @@ const Footer: React.FC<FooterProps> = ({ sections }) => {
 				{SOCIAL_LINKS.map(({ name, url, Icon }) => (
 					<a
 						href={url}
+						key={name}
 						aria-label={name}
 						rel='noopener'
 						target='_blank'

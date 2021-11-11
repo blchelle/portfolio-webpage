@@ -12,7 +12,7 @@ interface ToolProps {
 
 const Tool: React.FC<ToolProps> = ({ tool: { name, Logo } }) => {
 	return (
-		<div className='inline-block mr-5' key={name}>
+		<div className='inline-block mr-5'>
 			<Tooltip effect='solid' />
 			<Logo className='h-12 w-auto text-primary fill-current' data-tip={name} />
 		</div>
