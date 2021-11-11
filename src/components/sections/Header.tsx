@@ -57,7 +57,7 @@ const Header = React.forwardRef<HTMLElement>((_, ref) => {
 			bestGreen[1] + (worstYellow[1] - bestGreen[1]) * (distanceFromCenter / maxDistance);
 		const blue =
 			bestGreen[2] - (bestGreen[2] - worstYellow[2]) * (distanceFromCenter / maxDistance);
-		ref.current.style.backgroundColor = `rgb(${red}, ${green}, ${blue})`;
+		ref.current.style.backgroundColor = `rgb(${red}, ${green}, ${blue}          )`;
 	};
 
 	return (
@@ -67,13 +67,15 @@ const Header = React.forwardRef<HTMLElement>((_, ref) => {
 			onMouseMove={moveTopInitial}
 		>
 			<div
-				className={`${solved ? 'bg-header-close' : 'shadow-2xl'
-					} absolute header-circle left-1/2 bottom-1/4 transform translate-y-1/2`}
+				className={`${
+					solved ? 'bg-header-close' : 'shadow-2xl'
+				} absolute header-circle left-1/2 bottom-1/4 transform translate-y-1/2`}
 				ref={circleOneRef}
 			/>
 			<div
-				className={`${solved ? 'bg-header-close' : 'shadow-2xl'
-					} absolute header-circle right-1/2 bottom-3/4 transform translate-y-1/2`}
+				className={`${
+					solved ? 'bg-header-close' : 'shadow-2xl'
+				} absolute header-circle right-1/2 bottom-3/4 transform translate-y-1/2`}
 				ref={circleTwoRef}
 			/>
 			<div className='flex flex-col w-5/6 sm:w-3/4 z-10 p-8 bg-gray-transparent1 dark:bg-gray-transparent7 rounded-xl'>
