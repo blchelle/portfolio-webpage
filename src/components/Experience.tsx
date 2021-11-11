@@ -52,7 +52,7 @@ const Experience: React.FC<ExperienceProps> = ({
 				</div>
 				<ul className='list-disc text-3xl leading-relaxed flex flex-col ml-8'>
 					{text.map((point) => (
-						<li>{point}</li>
+						<li key={point}>{point}</li>
 					))}
 				</ul>
 			</div>

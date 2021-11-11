@@ -48,10 +48,10 @@ const Experiences = () => {
 	return (
 		<div className='flex flex-col items-center'>
 			{EXPERIENCE_SECTIONS.map((experience, index) => (
-				<>
+				<React.Fragment key={experience.name}>
 					<Experience experience={experience} />
 					{index < EXPERIENCE_SECTIONS.length - 1 && divider}
-				</>
+				</React.Fragment>
 			))}
 		</div>
 	);

@@ -66,7 +66,7 @@ const Project: React.FC<ProjectProps> = ({
 					</div>
 					<div>
 						{tools.map((tool) => (
-							<Tool tool={tool} />
+							<Tool tool={tool} key={tool.name} />
 						))}
 					</div>
 				</div>
