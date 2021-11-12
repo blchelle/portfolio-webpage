@@ -23,7 +23,7 @@ const SOCIAL_LINKS = [
 
 const Footer: React.FC<FooterProps> = ({ sections }) => {
 	return (
-		<footer className='pb-36 sm:pb-8 pt-8 px-section grid grid-cols-2 gap-8 items-center bg-gray-2 dark:bg-gray-7'>
+		<footer className='pb-36 sm:pb-8 pt-8 px-section grid grid-cols-2 gap-8 items-center bg-gray-1 dark:bg-gray-5'>
 			<ul className='flex flex-col sm:flex-row'>
 				{sections.map(({ title, linkToRef }) => (
 					<li
