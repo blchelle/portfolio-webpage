@@ -16,8 +16,7 @@ export default {
 						applications with Rails and Golang, and using Docker and Kubernetes for Devops.`,
 	},
 	contact: {
-		description: `I'm currently looking for full time positions as a full stack engineer starting in May 2022.
-						I look forward to hearing from you!`,
+		description: `I'm currently looking for full time positions as a full stack engineer. I look forward to hearing from you!`,
 	},
 	experience: {
 		tesla: [
