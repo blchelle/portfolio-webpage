@@ -13,7 +13,6 @@ import { ReactComponent as HomeIcon } from '@assets/icons/home.svg';
 import { ReactComponent as BriefcaseIcon } from '@assets/icons/briefcase.svg';
 import { ReactComponent as PersonIcon } from '@assets/icons/person.svg';
 import { ReactComponent as HammerIcon } from '@assets/icons/hammer.svg';
-import { ReactComponent as CodeIcon } from '@assets/icons/code.svg';
 import { ReactComponent as MailOutlineIcon } from '@assets/icons/mail-outline.svg';
 import text from './text';
 import ThemeToggler from '@components/ThemeToggler';
@@ -25,7 +24,6 @@ const App: React.FC = () => {
 	const aboutMeRef = useRef<HTMLElement>(null);
 	const experienceRef = useRef<HTMLElement>(null);
 	const projectsRef = useRef<HTMLElement>(null);
-	const skillsRef = useRef<HTMLElement>(null);
 	const contactRef = useRef<HTMLElement>(null);
 
 	const NAVIGATION: INavigationItem[] = [
