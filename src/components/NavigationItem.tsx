@@ -25,7 +25,7 @@ const NavigationItem: React.FC<NavigationItemProps> = ({
 			onClick={() => linkToRef.current?.scrollIntoView({ behavior: 'smooth' })}
 		>
 			<Icon className={`w-24 h-24 p-6 z-30 stroke-current ${iconStroke} group-hover:text-gray-1`} />
-			<h4 className={`w-0 opacity-0 ${nameHoverClasses} text-3xl`}>{title}</h4>
+			<h4 className={`w-0 opacity-0 ${nameHoverClasses} text-3xl font-bold`}>{title}</h4>
 		</div>
 	);
 };

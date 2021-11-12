@@ -5,7 +5,6 @@ import Experiences from '@components/sections/Experiences';
 import Contact from '@components/sections/Contact';
 import Header from '@components/sections/Header';
 import Projects from '@components/sections/Projects';
-import Skills from '@components/sections/Skills';
 import Footer from '@components/sections/Footer';
 import Navigation from '@components/Navigation';
 import { INavigationItem } from '@components/NavigationItem';
@@ -51,11 +50,6 @@ const App: React.FC = () => {
 			linkToRef: projectsRef,
 		},
 		{
-			title: 'Skills',
-			Icon: CodeIcon,
-			linkToRef: skillsRef,
-		},
-		{
 			title: 'Contact',
 			Icon: MailOutlineIcon,
 			linkToRef: contactRef,
@@ -72,12 +66,9 @@ const App: React.FC = () => {
 		const aboutMeTop = aboutMeRef.current?.offsetTop ?? 0;
 		const experienceTop = experienceRef.current?.offsetTop ?? 0;
 		const projectsTop = projectsRef.current?.offsetTop ?? 0;
-		const skillsTop = skillsRef.current?.offsetTop ?? 0;
 		const contactTop = contactRef.current?.offsetTop ?? 0;
 
 		if (scrollY >= contactTop || scrollY + innerHeight >= offsetHeight - 10) {
-			setSection(5);
-		} else if (scrollY >= skillsTop) {
 			setSection(4);
 		} else if (scrollY >= projectsTop) {
 			setSection(3);
@@ -115,18 +106,10 @@ const App: React.FC = () => {
 					<Projects />
 				</Section>
 				<Section
-					title='My Skills'
-					description={text.skills.description}
-					ref={skillsRef}
-					backgroundColor='dark:bg-gray-6 bg-gray-2'
-				>
-					<Skills />
-				</Section>
-				<Section
 					title='Get In Touch'
 					description={text.contact.description}
 					ref={contactRef}
-					backgroundColor='dark:bg-gray-5 bg-gray-1'
+					backgroundColor='dark:bg-gray-6 bg-gray-2'
 				>
 					<Contact />
 				</Section>

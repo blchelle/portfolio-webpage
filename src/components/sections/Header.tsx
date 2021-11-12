@@ -38,7 +38,7 @@ const Header = React.forwardRef<HTMLElement>((_, ref) => {
 		const distanceFromCenter = Math.sqrt(Math.pow(distToCenterX, 2) + Math.pow(distToCenterY, 2));
 
 		// Snaps the circles together if close enough
-		if (distanceFromCenter < 10) {
+		if (distanceFromCenter < 5) {
 			circleOne.style.left = `${centerX - circleOne.offsetWidth / 2}px`;
 			circleOne.style.bottom = `${centerY}px`;
 			circleTwo.style.right = `${centerX - circleOne.offsetWidth / 2}px`;
@@ -57,7 +57,7 @@ const Header = React.forwardRef<HTMLElement>((_, ref) => {
 			bestGreen[1] + (worstYellow[1] - bestGreen[1]) * (distanceFromCenter / maxDistance);
 		const blue =
 			bestGreen[2] - (bestGreen[2] - worstYellow[2]) * (distanceFromCenter / maxDistance);
-		ref.current.style.backgroundColor = `rgb(${red}, ${green}, ${blue}          )`;
+		ref.current.style.backgroundColor = `rgb(${red}, ${green}, ${blue})`;
 	};
 
 	return (
@@ -78,7 +78,7 @@ const Header = React.forwardRef<HTMLElement>((_, ref) => {
 				} absolute header-circle right-1/2 bottom-3/4 transform translate-y-1/2`}
 				ref={circleTwoRef}
 			/>
-			<div className='flex flex-col w-5/6 sm:w-3/4 z-10 p-8 bg-gray-transparent1 dark:bg-gray-transparent7 rounded-xl'>
+			<div className='flex flex-col items-center w-5/6 sm:w-3/4 z-10 p-8 bg-gray-transparent1 dark:bg-gray-transparent7 rounded-xl'>
 				<h1 className='text-8xl font-bold px-12 mb-8'>
 					Hello, I'm
 					<span className='text-primary ml-4'>Brock Chelle</span>

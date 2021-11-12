@@ -40,7 +40,7 @@ const TextInput: React.FC<TextInputProps> = ({
 	const labelColor = error && visited ? 'text-error' : isEmpty ? 'text-gray-4' : 'text-primary';
 	const labelFontSize = isEmpty ? 'text-3xl' : 'text-2xl';
 	const inputPaddingTop = numLines === 1 ? 'pt-0' : 'pt-4';
-	const inputBorderColor = error && visited ? 'border-error' : 'dark:border-gray-5 border-gray-3';
+	const inputBorderColor = error && visited ? 'border-error' : 'border-gray-3';
 	const inputHeight = numLines === 1 ? 'h-20' : 'h-auto';
 
 	const commonInputProps = {
