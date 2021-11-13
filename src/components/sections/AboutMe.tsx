@@ -22,7 +22,7 @@ const AboutMe: React.FC = () => {
 					</div>
 				</div>
 				<div
-					className='text-3xl text-gray-7 dark:text-gray-1 leading-relaxed flex-center flex-col p-8 rounded-lg bg-gray-2 dark:bg-gray-6'
+					className='text-3xl text-gray-7 dark:text-gray-1 leading-relaxed flex-center flex-col p-8 rounded-lg bg-gray-2 dark:bg-gray-6 shadow-xl'
 					data-aos='fade-left'
 				>
 					{Object.values(text.aboutMe).map((text) => (
