@@ -25,7 +25,7 @@ const Skills: React.FC = () => {
 				onChange={setCategory}
 			/>
 			<div
-				className='w-full flex overflow-x-hidden dark:bg-gray-6 bg-gray-2 rounded-xl'
+				className='w-full flex overflow-x-hidden dark:bg-gray-6 bg-gray-2 rounded-xl shadow-xl'
 				ref={containerRef}
 			>
 				{SKILLS_CONTENT.map(({ title, skills }) => (

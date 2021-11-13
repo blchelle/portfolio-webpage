@@ -25,7 +25,7 @@ const Form = () => {
 		<form
 			method='POST'
 			name='contact'
-			className='col-span-1 lg:col-span-4 flex flex-col justify-between flex-1 w-full sm:w-auto p-12 pt-20 rounded-lg dark:bg-gray-5 bg-gray-1'
+			className='col-span-1 lg:col-span-4 flex flex-col justify-between flex-1 w-full sm:w-auto p-12 pt-20 rounded-lg dark:bg-gray-5 bg-gray-1 shadow-xl'
 			data-aos='fade-left'
 		>
 			<input type='hidden' name='form-name' value='contact' />

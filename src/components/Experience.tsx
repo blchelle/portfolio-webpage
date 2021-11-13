@@ -32,7 +32,7 @@ const Experience: React.FC<ExperienceProps> = ({
 	return (
 		<div className='grid grid-cols-1 xl:grid-cols-3 gap-20 mb-16'>
 			<div className='flex flex-col col-span-2 self-start p-8' data-aos='fade-right'>
-				<div className='rounded-lg bg-gray-1 dark:bg-gray-5 p-8 mb-8'>
+				<div className='rounded-lg bg-gray-1 dark:bg-gray-5 p-8 mb-8 shadow-xl'>
 					<div className='flex'>
 						{SecondaryLogo !== undefined ? (
 							<Logo className='h-16 w-16 mr-4 visible xl:hidden' />
