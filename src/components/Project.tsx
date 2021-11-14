@@ -4,6 +4,7 @@ import Tool, { ITool } from '@components/Tool';
 
 import { ReactComponent as PlayIcon } from '@assets/icons/play.svg';
 import { ReactComponent as GithubIcon } from '@assets/logos/github.svg';
+import { SectionChildProps } from './Section';
 
 export interface IProject {
 	name: string;
@@ -27,8 +28,9 @@ interface IProjectButtons {
 	hoverBgColor: string;
 }
 
-const Project: React.FC<ProjectProps> = ({
+const Project: React.FC<ProjectProps & SectionChildProps> = ({
 	project: { name, description, Logo, mockup, tools, liveUrl, githubUrl },
+	cardColor,
 }) => {
 	const PROJECT_BUTTONS: IProjectButtons[] = [
 		{
@@ -50,14 +52,14 @@ const Project: React.FC<ProjectProps> = ({
 	return (
 		<div className='grid gap-8 grid-cols-1 xl:grid-cols-2 mb-16'>
 			<div
-				className='hidden xl:flex justify-center items-center rounded-lg bg-gray-2 dark:bg-gray-6 shadow-xl'
+				className={`${cardColor} hidden xl:flex justify-center items-center rounded-lg shadow-xl`}
 				data-aos='fade-right'
 			>
 				<img src={mockup} alt={`${name} Mockup`} className='w-3/4 p-8 xl:w-full' />
 			</div>
 			<div>
 				<div
-					className='flex flex-col p-8 rounded-lg mb-8 bg-gray-2 dark:bg-gray-6 shadow-xl'
+					className={`${cardColor} flex flex-col p-8 rounded-lg mb-8 shadow-xl`}
 					data-aos='fade-left'
 				>
 					<div className='flex items-center mb-8'>

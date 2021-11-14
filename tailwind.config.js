@@ -52,8 +52,7 @@ module.exports = {
 	variants: {
 		extend: {
 			height: ['group-hover', 'hover'],
-			width: ['hover'],
-			margin: ['last'],
+			width: ['group-hover', 'hover'],
 			rotate: ['group-hover'],
 		},
 	},

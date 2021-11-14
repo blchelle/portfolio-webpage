@@ -33,7 +33,7 @@ const ThemeToggler = () => {
 
 	return (
 		<div
-			className='fixed top-8 right-8 w-32 h-16 rounded-full bg-gray-3 dark:bg-gray-7 shadow-xl border border-blue-500 dark:border-yellow-400 z-20'
+			className='fixed top-8 right-8 w-32 h-16 rounded-full bg-gray-3 dark:bg-gray-7 shadow-xl border border-blue-500 dark:border-yellow-400 z-20 cursor-pointer'
 			onClick={toggleTheme}
 		>
 			<div

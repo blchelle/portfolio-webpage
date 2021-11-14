@@ -1,9 +1,10 @@
 import React, { useRef, useState, useLayoutEffect } from 'react';
+import { SectionChildProps } from '@components/Section';
 import Skill from '@components/Skill';
 import CategorySelector from '@components/CategorySelector';
 import SKILLS_CONTENT from '@content/skills';
 
-const Skills: React.FC = () => {
+const Skills: React.FC<SectionChildProps> = ({ cardColor }) => {
 	const [category, setCategory] = useState(0);
 
 	const containerRef = useRef<HTMLDivElement>(null);
@@ -25,7 +26,7 @@ const Skills: React.FC = () => {
 				onChange={setCategory}
 			/>
 			<div
-				className='w-full flex overflow-x-hidden dark:bg-gray-6 bg-gray-2 rounded-xl shadow-xl'
+				className={`${cardColor} w-full flex overflow-x-hidden rounded-xl shadow-xl`}
 				ref={containerRef}
 			>
 				{SKILLS_CONTENT.map(({ title, skills }) => (

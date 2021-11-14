@@ -1,18 +1,11 @@
-import React, { useLayoutEffect, useRef, useState } from 'react';
+import React from 'react';
 
 import Skills from '@components/Skills';
 import pictureOfMe from '@assets/me.jpg';
 import text from 'src/text';
+import { SectionChildProps } from '@components/Section';
 
-const AboutMe: React.FC = () => {
-	const containerRef = useRef<HTMLDivElement>(null);
-	const [category, setCategory] = useState(0);
-
-	useLayoutEffect(() => {
-		const pageWidth = containerRef.current?.clientWidth || 0;
-		containerRef.current?.scroll({ top: 0, left: pageWidth * category, behavior: 'smooth' });
-	}, [category]);
-
+const AboutMe: React.FC<SectionChildProps> = ({ cardColor }) => {
 	return (
 		<>
 			<div className='grid grid-cols-1 xl:grid-cols-2 gap-20 items-center justify-items-center mb-16'>
@@ -22,7 +15,7 @@ const AboutMe: React.FC = () => {
 					</div>
 				</div>
 				<div
-					className='text-3xl text-gray-7 dark:text-gray-1 leading-relaxed flex-center flex-col p-8 rounded-lg bg-gray-2 dark:bg-gray-6 shadow-xl'
+					className={`text-3xl leading-relaxed flex-center flex-col p-8 rounded-lg ${cardColor} shadow-xl`}
 					data-aos='fade-left'
 				>
 					{Object.values(text.aboutMe).map((text) => (
@@ -41,7 +34,7 @@ const AboutMe: React.FC = () => {
 				</div>
 			</div>
 			<div className='w-3/4 h-px bg-gray-6 mb-16 col-span-2' />
-			<Skills />
+			<Skills cardColor={cardColor} />
 		</>
 	);
 };

@@ -1,11 +1,11 @@
 import React from 'react';
-import { INavigationItem } from '@components/NavigationItem';
+import { ISection } from '@content/sections';
 
 import { ReactComponent as GitHubLogo } from '@assets/logos/github.svg';
 import { ReactComponent as LinkedInLogo } from '@assets/logos/linkedin.svg';
 
 interface FooterProps {
-	sections: INavigationItem[];
+	sections: ISection[];
 }
 
 const SOCIAL_LINKS = [
@@ -21,15 +21,18 @@ const SOCIAL_LINKS = [
 	},
 ];
 
-const Footer: React.FC<FooterProps> = ({ sections }) => {
+const Footer = React.forwardRef<HTMLElement, FooterProps>(({ sections }, ref) => {
 	return (
-		<footer className='pb-36 sm:pb-8 pt-8 px-section grid grid-cols-2 gap-8 items-center bg-gray-1 dark:bg-gray-5'>
+		<footer
+			className='pb-36 sm:pb-8 pt-8 px-section grid grid-cols-2 gap-8 items-center bg-gray-1 dark:bg-gray-5'
+			ref={ref}
+		>
 			<ul className='flex flex-col sm:flex-row'>
-				{sections.map(({ title, linkToRef }) => (
+				{sections.map(({ title, ref }) => (
 					<li
 						key={title}
-						className='mr-10 text-gray-4 dark:text-gray-3 hover:text-primary text-2xl uppercase transition-colors'
-						onClick={() => linkToRef.current?.scrollIntoView({ behavior: 'smooth' })}
+						className='mr-10 hover:text-primary text-2xl uppercase transition-colors cursor-pointer'
+						onClick={() => ref.current?.scrollIntoView({ behavior: 'smooth' })}
 					>
 						<span>{title}</span>
 					</li>
@@ -52,6 +55,6 @@ const Footer: React.FC<FooterProps> = ({ sections }) => {
 			<small className='text-gray-4 text-2xl'>Brock Chelle, 2020</small>
 		</footer>
 	);
-};
+});
 
 export default Footer;
