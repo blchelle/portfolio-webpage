@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import NavigationItem, { INavigationItem } from '@components/NavigationItem';
+import NavigationItem from '@components/NavigationItem';
+import { ISection } from '@content/sections';
 
 interface NavigationProps {
 	section: number;
-	sections: INavigationItem[];
+	sections: ISection[];
 }
 
 const Navigation: React.FC<NavigationProps> = ({ section, sections }) => {
@@ -24,7 +25,7 @@ const Navigation: React.FC<NavigationProps> = ({ section, sections }) => {
 	return (
 		<nav className='flex sm:flex-col sm:transform sm:translate-y-1/2 w-full sm:w-24 h-24 sm:h-auto fixed left-0 sm:left-12 bottom-0 sm:bottom-1/2 z-20'>
 			<div
-				className='absolute w-1/5 sm:w-24 h-full sm:h-24 border sm:rounded-md border-gray-5 dark:border-gray-1 bg-primary transition-all'
+				className='z-10 absolute w-1/5 sm:w-24 h-full sm:h-24 sm:rounded-md bg-primary transition-all'
 				style={sliderStyle}
 			/>
 			{sections.map((item, index) => (

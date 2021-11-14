@@ -9,15 +9,6 @@ export default {
 				leaders in industrial automation and the electric vehicle industry. In these positions, I had the opportunity
 				to work on products that have saved lives and accelerated the transition to sustainable energy.`,
 	},
-	skills: {
-		description: `Since starting my software development journey, I've gained experience with a variety
-						technologies and I'm actively learning even more. During my current position with Tesla, I've
-						gained experience developing frontend applications with React and Javascript, backend
-						applications with Rails and Golang, and using Docker and Kubernetes for Devops.`,
-	},
-	contact: {
-		description: `I'm currently looking for full time positions as a full stack engineer. I look forward to hearing from you!`,
-	},
 	experience: {
 		tesla: [
 			'Developed GRPC microservices in Go, REST APIs in Rails, and UIs with React in a production environment used by over 1,000,000 customers every day.',

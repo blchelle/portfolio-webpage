@@ -3,7 +3,7 @@ import Tooltip from 'react-tooltip';
 
 export interface ITool {
 	name: string;
-	Logo: React.FunctionComponent<React.SVGProps<SVGSVGElement> & { title?: string | undefined }>;
+	Logo: React.FC<React.SVGProps<SVGSVGElement> & { title?: string | undefined }>;
 }
 
 interface ToolProps {

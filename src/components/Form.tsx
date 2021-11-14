@@ -1,6 +1,7 @@
 import React from 'react';
 import { ReactComponent as SendIcon } from '@assets/icons/send.svg';
 import TextInput from '@components/TextInput';
+import { SectionChildProps } from './Section';
 
 const isEmpty = (value: string) => {
 	return value.length === 0;
@@ -20,12 +21,12 @@ const validateEmail = (email: string) => {
 	return emailRegex.test(String(email).toLowerCase());
 };
 
-const Form = () => {
+const Form: React.FC<SectionChildProps> = ({ cardColor }) => {
 	return (
 		<form
 			method='POST'
 			name='contact'
-			className='col-span-1 lg:col-span-4 flex flex-col justify-between flex-1 w-full sm:w-auto p-12 pt-20 rounded-lg dark:bg-gray-5 bg-gray-1 shadow-xl'
+			className={`${cardColor} col-span-1 lg:col-span-4 flex flex-col justify-between flex-1 w-full sm:w-auto p-12 pt-20 rounded-lg shadow-xl`}
 			data-aos='fade-left'
 		>
 			<input type='hidden' name='form-name' value='contact' />
