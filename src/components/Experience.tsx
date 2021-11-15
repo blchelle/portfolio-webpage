@@ -1,5 +1,6 @@
 import React from 'react';
-import { SectionChildProps } from './Section';
+import Card from '@components/Card';
+import { SectionChildProps } from '@components/Section';
 
 export interface IExperience {
 	name: string;
@@ -33,8 +34,8 @@ const Experience: React.FC<ExperienceProps & SectionChildProps> = ({
 }) => {
 	return (
 		<div className='grid grid-cols-1 xl:grid-cols-3 gap-20 mb-16'>
-			<div className='flex flex-col col-span-2 self-start p-8' data-aos='fade-right'>
-				<div className={`${cardColor} rounded-lg p-8 mb-8 shadow-xl`}>
+			<div className='flex flex-col col-span-2 self-start p-8'>
+				<Card className='mb-8' animation='fade-right' bgColor={cardColor}>
 					<div className='flex'>
 						{SecondaryLogo !== undefined ? (
 							<Logo className='h-16 w-16 mr-4 visible xl:hidden' />
@@ -51,7 +52,7 @@ const Experience: React.FC<ExperienceProps & SectionChildProps> = ({
 								: startEndYears[0] + '-' + startEndYears[1]}
 						</p>
 					</div>
-				</div>
+				</Card>
 				<ul className='list-disc text-3xl leading-relaxed flex flex-col ml-8'>
 					{text.map((point) => (
 						<li key={point}>{point}</li>

@@ -14,10 +14,7 @@ const AboutMe: React.FC<SectionChildProps> = ({ cardColor }) => {
 						<img className='w-95p h-auto clip-hexagon' src={pictureOfMe} alt='Picture of me' />
 					</div>
 				</div>
-				<div
-					className={`text-3xl leading-relaxed flex-center flex-col p-8 rounded-lg ${cardColor} shadow-xl`}
-					data-aos='fade-left'
-				>
+				<div className='text-3xl leading-relaxed flex-center flex-col' data-aos='fade-left'>
 					{Object.values(text.aboutMe).map((text) => (
 						<p key={text} className='mb-8 last:mb-0'>
 							{text}

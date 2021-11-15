@@ -1,7 +1,8 @@
 import React from 'react';
-import { ReactComponent as SendIcon } from '@assets/icons/send.svg';
 import TextInput from '@components/TextInput';
-import { SectionChildProps } from './Section';
+import Card from '@components/Card';
+import { SectionChildProps } from '@components/Section';
+import { ReactComponent as SendIcon } from '@assets/icons/send.svg';
 
 const isEmpty = (value: string) => {
 	return value.length === 0;
@@ -23,20 +24,18 @@ const validateEmail = (email: string) => {
 
 const Form: React.FC<SectionChildProps> = ({ cardColor }) => {
 	return (
-		<form
-			method='POST'
-			name='contact'
-			className={`${cardColor} col-span-1 lg:col-span-4 flex flex-col justify-between flex-1 w-full sm:w-auto p-12 pt-20 rounded-lg shadow-xl`}
-			data-aos='fade-left'
-		>
-			<input type='hidden' name='form-name' value='contact' />
-			<TextInput label='Name' name='name' required isValid={validateEmpty} />
-			<TextInput label='Email' name='email' required type='email' isValid={validateEmail} />
-			<TextInput label='Message' name='message' required numLines={6} isValid={validateEmpty} />
-			<button type='submit' className='btn-primary'>
-				Send <SendIcon className='h-10 w-10 text-gray-1 fill-current ml-4' />
-			</button>
-		</form>
+		<Card className='col-span-1 lg:col-span-4' bgColor={cardColor} animation='fade-left'>
+			<form method='POST' name='contact' className='flex flex-col justify-between flex-1'>
+				<input type='hidden' name='form-name' value='contact' />
+				<div className='h-8 w-full' />
+				<TextInput label='Name' name='name' required isValid={validateEmpty} />
+				<TextInput label='Email' name='email' required type='email' isValid={validateEmail} />
+				<TextInput label='Message' name='message' required numLines={6} isValid={validateEmpty} />
+				<button type='submit' className='btn-primary'>
+					Send <SendIcon className='h-10 w-10 text-gray-1 fill-current ml-4' />
+				</button>
+			</form>
+		</Card>
 	);
 };
 

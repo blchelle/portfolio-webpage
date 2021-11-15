@@ -1,12 +1,13 @@
 import React from 'react';
 import ContactHighlight from '@components/ContactHighlight';
 import Form from '@components/Form';
+import Card from '@components/Card';
+import { SectionChildProps } from '@components/Section';
 
 import { ReactComponent as CompassIcon } from '@assets/icons/compass.svg';
 import { ReactComponent as MailIcon } from '@assets/icons/mail.svg';
 import { ReactComponent as LinkedInIcon } from '@assets/logos/linkedin.svg';
 import { ReactComponent as GithubIcon } from '@assets/logos/github.svg';
-import { SectionChildProps } from '@components/Section';
 
 const Contact: React.FC<SectionChildProps> = ({ cardColor }) => {
 	return (
@@ -16,9 +17,10 @@ const Contact: React.FC<SectionChildProps> = ({ cardColor }) => {
 				hearing from you!
 			</div>
 			<div className='grid grid-cols-1 lg:grid-cols-7 gap-8 w-full'>
-				<div
-					className={` ${cardColor} grid gap-8 col-span-1 lg:col-span-3 content-start grid-cols-1 md:grid-cols-2 lg:grid-cols-1 p-12 rounded-lg shadow-xl`}
-					data-aos='fade-right'
+				<Card
+					className='grid gap-8 col-span-1 lg:col-span-3 content-start grid-cols-1 md:grid-cols-2 lg:grid-cols-1'
+					bgColor={cardColor}
+					animation='fade-right'
 				>
 					<ContactHighlight
 						Icon={CompassIcon}
@@ -40,7 +42,7 @@ const Contact: React.FC<SectionChildProps> = ({ cardColor }) => {
 						title='Github'
 						subtitle={{ text: 'Click to be redirected!', url: 'https://github.com/blchelle' }}
 					/>
-				</div>
+				</Card>
 				<Form cardColor={cardColor} />
 			</div>
 		</>
