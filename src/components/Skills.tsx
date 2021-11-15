@@ -1,5 +1,6 @@
 import React, { useRef, useState, useLayoutEffect } from 'react';
 import { SectionChildProps } from '@components/Section';
+import Card from '@components/Card';
 import Skill from '@components/Skill';
 import CategorySelector from '@components/CategorySelector';
 import SKILLS_CONTENT from '@content/skills';
@@ -25,9 +26,12 @@ const Skills: React.FC<SectionChildProps> = ({ cardColor }) => {
 				category={category}
 				onChange={setCategory}
 			/>
-			<div
-				className={`${cardColor} w-full flex overflow-x-hidden rounded-xl shadow-xl`}
+			<Card
+				className='flex overflow-x-hidden'
+				bgColor={cardColor}
+				paddingSize={0}
 				ref={containerRef}
+				animation='fade-down'
 			>
 				{SKILLS_CONTENT.map(({ title, skills }) => (
 					<div
@@ -36,11 +40,17 @@ const Skills: React.FC<SectionChildProps> = ({ cardColor }) => {
 						key={title}
 					>
 						{skills.map((skill) => (
-							<Skill key={skill.name} skill={skill} />
+							<Card
+								className='group flex items-center relative'
+								bgColor={cardColor === 1 ? 2 : 1}
+								key={skill.name}
+							>
+								<Skill skill={skill} />
+							</Card>
 						))}
 					</div>
 				))}
-			</div>
+			</Card>
 		</>
 	);
 };
