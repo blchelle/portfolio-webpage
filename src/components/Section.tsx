@@ -1,5 +1,5 @@
 import React from 'react';
-import { BackgroundGrayColor } from 'src/helpers/tailwind';
+import { BackgroundGrayClasses } from 'src/helpers/tailwind';
 
 type SectionProps = React.HTMLProps<HTMLDivElement> & {
 	title: string;
@@ -8,14 +8,14 @@ type SectionProps = React.HTMLProps<HTMLDivElement> & {
 };
 
 export interface SectionChildProps {
-	cardColor: BackgroundGrayColor;
+	cardColor: BackgroundGrayClasses;
 }
 
 const Section = React.forwardRef<HTMLElement, SectionProps>((props, ref) => {
 	const { title, Content, index } = props;
 
-	const backgroundColor = index % 2 === 0 ? 2 : 1;
-	const cardColor = index % 2 === 0 ? 1 : 2;
+	const backgroundColor = index % 2 === 0 ? 'bg-gray-2 dark:bg-gray-6' : 'bg-gray-1 dark:bg-gray-5';
+	const cardColor = index % 2 === 0 ? 'bg-gray-1 dark:bg-gray-5' : 'bg-gray-2 dark:bg-gray-6';
 
 	if (!Content) return null;
 

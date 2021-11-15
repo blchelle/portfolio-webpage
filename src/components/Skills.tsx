@@ -28,8 +28,8 @@ const Skills: React.FC<SectionChildProps> = ({ cardColor }) => {
 			/>
 			<Card
 				className='flex overflow-x-hidden'
-				bgColor={cardColor}
-				paddingSize={0}
+				bgColorClass={cardColor}
+				paddingClass='p-0'
 				ref={containerRef}
 				animation='fade-down'
 			>
@@ -42,7 +42,11 @@ const Skills: React.FC<SectionChildProps> = ({ cardColor }) => {
 						{skills.map((skill) => (
 							<Card
 								className='group flex items-center relative'
-								bgColor={cardColor === 1 ? 2 : 1}
+								bgColorClass={
+									cardColor === 'bg-gray-1 dark:bg-gray-5'
+										? 'bg-gray-2 dark:bg-gray-6'
+										: 'bg-gray-1 dark:bg-gray-5'
+								}
 								key={skill.name}
 							>
 								<Skill skill={skill} />
