@@ -19,7 +19,7 @@ const Contact: React.FC<SectionChildProps> = ({ cardColor }) => {
 			<div className='grid grid-cols-1 lg:grid-cols-7 gap-8 w-full'>
 				<Card
 					className='grid gap-8 col-span-1 lg:col-span-3 content-start grid-cols-1 md:grid-cols-2 lg:grid-cols-1'
-					bgColor={cardColor}
+					bgColorClass={cardColor}
 					animation='fade-right'
 				>
 					<ContactHighlight

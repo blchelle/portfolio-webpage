@@ -54,13 +54,13 @@ const Project: React.FC<ProjectProps & SectionChildProps> = ({
 		<div className='grid gap-8 grid-cols-1 xl:grid-cols-2 mb-16'>
 			<Card
 				className='hidden xl:flex justify-center items-center'
-				bgColor={cardColor}
+				bgColorClass={cardColor}
 				animation='fade-right'
 			>
 				<img src={mockup} alt={`${name} Mockup`} className='w-3/4 p-8 xl:w-full' />
 			</Card>
 			<div>
-				<Card className={`flex flex-col mb-8`} bgColor={cardColor} animation='fade-left'>
+				<Card className={`flex flex-col mb-8`} bgColorClass={cardColor} animation='fade-left'>
 					<div className='flex items-center mb-8'>
 						<Logo className='w-20 mr-8' />
 						<h3 className='text-5xl font-bold'>{name}</h3>
