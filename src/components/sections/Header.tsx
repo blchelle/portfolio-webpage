@@ -60,6 +60,8 @@ const Header = React.forwardRef<HTMLElement>((_, ref) => {
 		ref.current.style.backgroundColor = `rgb(${red}, ${green}, ${blue})`;
 	};
 
+	const circleColor = solved ? 'bg-header-close' : 'bg-gray-1';
+
 	return (
 		<header
 			ref={ref}
@@ -67,15 +69,11 @@ const Header = React.forwardRef<HTMLElement>((_, ref) => {
 			onMouseMove={moveTopInitial}
 		>
 			<div
-				className={`${
-					solved ? 'bg-header-close' : 'shadow-2xl'
-				} absolute header-circle left-1/2 bottom-1/4 transform translate-y-1/2`}
+				className={`${circleColor} absolute header-circle left-1/2 bottom-1/4 transform translate-y-1/2 opacity-70`}
 				ref={circleOneRef}
 			/>
 			<div
-				className={`${
-					solved ? 'bg-header-close' : 'shadow-2xl'
-				} absolute header-circle right-1/2 bottom-3/4 transform translate-y-1/2`}
+				className={`${circleColor} absolute header-circle right-1/2 bottom-3/4 transform translate-y-1/2 opacity-70`}
 				ref={circleTwoRef}
 			/>
 			<div className='flex flex-col items-center w-5/6 sm:w-3/4 z-10 p-8 bg-gray-transparent1 dark:bg-gray-transparent7 rounded-xl'>
@@ -84,9 +82,9 @@ const Header = React.forwardRef<HTMLElement>((_, ref) => {
 					<span className='text-primary ml-4'>Brock Chelle</span>
 				</h1>
 				<h2 className='text-6xl font-light px-12 mb-8'>I'm a Full Stack Software Engineer</h2>
-				<button className='group btn-primary self-center' onClick={scrollToStart}>
+				<button className='group btn bg-primary hover:bg-primary-dark' onClick={scrollToStart}>
 					<span className='mr-4'>Learn More</span>
-					<ArrowIcon className='h-16 w-16 text-gray-1 fill-current transition-transform transform group-hover:rotate-90' />
+					<ArrowIcon className='h-12 w-12 text-gray-1 fill-current transition-transform transform group-hover:rotate-90' />
 				</button>
 			</div>
 		</header>
