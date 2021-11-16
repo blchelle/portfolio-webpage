@@ -7,18 +7,14 @@
 }
 
 @layer components {
-	.btn-primary {
-		@apply bg-primary hover:bg-primary-dark transition-colors
-						h-20 w-max px-12 py-2 
-						text-gray-1 font-bold text-3xl
-						flex items-center justify-between cursor-pointer rounded-lg;
+	.btn {
+		@apply flex items-center justify-between text-3xl text-gray-1 font-bold h-20 w-max px-12 py-2 rounded-lg transition-colors cursor-pointer;
 	}
 
 	.header-circle {
 		width: 60rem;
 		height: 60rem;
 		border-radius: 50%;
-		background-color: #ffffff88;
 		transition: background-color 2s linear, box-shadow 2s linear;
 	}
 

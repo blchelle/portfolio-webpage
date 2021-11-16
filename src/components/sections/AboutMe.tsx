@@ -1,9 +1,11 @@
 import React from 'react';
 
 import Skills from '@components/Skills';
-import pictureOfMe from '@assets/me.jpg';
-import text from 'src/text';
 import { SectionChildProps } from '@components/Section';
+
+import pictureOfMe from '@assets/me.jpg';
+import { ReactComponent as DocumentIcon } from '@assets/icons/document.svg';
+import text from 'src/text';
 
 const AboutMe: React.FC<SectionChildProps> = ({ cardColor }) => {
 	return (
@@ -21,12 +23,13 @@ const AboutMe: React.FC<SectionChildProps> = ({ cardColor }) => {
 						</p>
 					))}
 					<a
-						className='btn-primary col-span-full'
+						className='btn bg-primary hover:bg-primary-dark'
 						target='_blank'
 						href='./resume.pdf'
 						data-aos='zoom-in'
 					>
-						View My Resume
+						<span className='mr-4'>View My Resume</span>
+						<DocumentIcon className='h-12 w-12 text-gray-1 fill-current' />
 					</a>
 				</div>
 			</div>

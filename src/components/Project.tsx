@@ -59,8 +59,8 @@ const Project: React.FC<ProjectProps & SectionChildProps> = ({
 			>
 				<img src={mockup} alt={`${name} Mockup`} className='w-3/4 p-8 xl:w-full' />
 			</Card>
-			<div>
-				<Card className={`flex flex-col mb-8`} bgColorClass={cardColor} animation='fade-left'>
+			<div className='flex flex-col'>
+				<Card className='flex flex-col mb-8' bgColorClass={cardColor} animation='fade-left'>
 					<div className='flex items-center mb-8'>
 						<Logo className='w-20 mr-8' />
 						<h3 className='text-5xl font-bold'>{name}</h3>
@@ -72,14 +72,14 @@ const Project: React.FC<ProjectProps & SectionChildProps> = ({
 					</div>
 				</Card>
 				<p className='text-3xl leading-relaxed'>{description}</p>
-				<div className='flex justify-start w-full mt-16'>
+				<div className='flex justify-start mt-auto'>
 					{PROJECT_BUTTONS.map(({ text, url, Icon: ButtonIcon, bgColor, hoverBgColor }) => (
 						<a
 							key={text}
 							href={url}
 							target='_blank'
 							rel='noopener noreferrer'
-							className={`flex-center w-72 h-16 mr-4 text-2xl font-bold rounded-lg transition-colors text-gray-1 ${bgColor} ${hoverBgColor}`}
+							className={`btn mr-4 ${bgColor} ${hoverBgColor}`}
 						>
 							{text}
 							<ButtonIcon className='h-10 w-10 ml-4 text-gray-1 fill-current' title={text} />
