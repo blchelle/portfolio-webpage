@@ -6,7 +6,8 @@ import teslaBackground from '@assets/experience/tesla.png';
 import willowglenBackground from '@assets/experience/willowglen.png';
 
 import { ReactComponent as UAlbertaLogo } from '@assets/logos/ualberta.svg';
-import { ReactComponent as TeslaLogo } from '@assets/logos/tesla.svg';
+import { ReactComponent as TeslaLogo1 } from '@assets/logos/tesla1.svg';
+import { ReactComponent as TeslaLogo2 } from '@assets/logos/tesla2.svg';
 import { ReactComponent as WillowglenLogo1 } from '@assets/logos/willowglen1.svg';
 import { ReactComponent as WillowglenLogo2 } from '@assets/logos/willowglen2.svg';
 
@@ -17,7 +18,8 @@ const EXPERIENCES: IExperience[] = [
 		startEndYears: [2021, 2021],
 		text: text.experience.tesla,
 		backgroundImage: teslaBackground,
-		Logo: TeslaLogo,
+		Logo: TeslaLogo1,
+		SecondaryLogo: TeslaLogo2,
 		logoBackgroundClass: 'bg-tesla',
 	},
 	{

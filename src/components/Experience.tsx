@@ -38,7 +38,7 @@ const Experience: React.FC<ExperienceProps & SectionChildProps> = ({
 				<Card className='mb-8' animation='fade-right' bgColorClass={cardColor}>
 					<div className='flex'>
 						{SecondaryLogo !== undefined ? (
-							<Logo className='h-16 w-16 mr-4 visible xl:hidden' />
+							<SecondaryLogo className='h-16 w-16 mr-4 visible xl:hidden' />
 						) : (
 							<Logo className='h-16 w-16 mr-4 visible xl:hidden' />
 						)}

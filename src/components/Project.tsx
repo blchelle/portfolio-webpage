@@ -71,7 +71,7 @@ const Project: React.FC<ProjectProps & SectionChildProps> = ({
 						))}
 					</div>
 				</Card>
-				<p className='text-3xl leading-relaxed'>{description}</p>
+				<p className='text-3xl leading-relaxed mb-16'>{description}</p>
 				<div className='flex justify-start mt-auto'>
 					{PROJECT_BUTTONS.map(({ text, url, Icon: ButtonIcon, bgColor, hoverBgColor }) => (
 						<a
