@@ -26,7 +26,7 @@ const NavigationItem: React.FC<NavigationItemProps> = ({
 
 	return (
 		<div
-			className={`group relative w-1/5 sm:w-24 h-full sm:h-24 flex items-center justify-center sm:justify-start ${baseColorClasses} ${hoverColorClasses} mb-4 sm:rounded-md transition-all cursor-pointer`}
+			className={`group relative w-1/5 sm:w-24 h-full sm:h-24 flex items-center justify-center sm:justify-start ${baseColorClasses} ${hoverColorClasses} mb-4 sm:rounded-md transition-all cursor-pointer shadow-lg`}
 			onClick={scrollToSection}
 		>
 			<Icon className={`w-24 h-24 p-6 z-30 stroke-current ${iconStroke} group-hover:text-gray-1`} />
