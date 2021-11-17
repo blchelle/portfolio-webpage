@@ -11,11 +11,6 @@ const NavigationItem: React.FC<NavigationItemProps> = ({
 	isSelected,
 }) => {
 	const iconStroke = isSelected ? 'text-gray-1' : 'text-gray-5 dark:text-gray-4';
-	const textClasses = isSelected ? '' : 'sm:group-hover:w-48';
-
-	const baseColorClasses = 'bg-gray-3 dark:bg-gray-7';
-	const hoverColorClasses = 'hover:bg-primary dark:hover:bg-primary';
-	const groupHoverColorClasses = 'group-hover:bg-primary';
 
 	const scrollToSection = () => {
 		const { current } = ref;
@@ -24,17 +19,40 @@ const NavigationItem: React.FC<NavigationItemProps> = ({
 		window.scrollTo({ top: current.offsetTop + 20, behavior: 'smooth' });
 	};
 
+	const containerClasses = Object.values({
+		display: `group flex justify-center sm:rounded-lg overflow-hidden ${
+			isSelected ? '' : 'hover:border'
+		}`,
+		position: 'mb-4',
+		size: 'w-1/5 sm:w-24 sm:hover:w-max h-24',
+		misc: 'cursor-pointer',
+	}).reduce((acc, curr) => acc + ' ' + curr, '');
+
+	const itemClasses = Object.values({
+		display: 'flex items-center justify-center',
+		size: 'w-full sm:w-24 h-full',
+		color: 'bg-gray-3 dark:bg-gray-7 group-hover:bg-primary dark:group-hover:bg-primary',
+		animation: 'transition-colors',
+	}).reduce((acc, curr) => acc + ' ' + curr, '');
+
+	const textClasses = Object.values({
+		display: `box-content flex items-center overflow-hidden ${
+			isSelected ? '' : 'sm:group-hover:w-48'
+		}`,
+		size: 'w-0 h-full',
+		text: 'text-3xl font-bold',
+		color: 'bg-gray-3 dark:bg-gray-7 group-hover:bg-primary dark:group-hover:bg-primary',
+		animation: 'transition-all',
+	}).reduce((acc, curr) => acc + ' ' + curr, '');
+
 	return (
-		<div
-			className={`group relative w-1/5 sm:w-24 h-full sm:h-24 flex items-center justify-center sm:justify-start ${baseColorClasses} ${hoverColorClasses} mb-4 sm:rounded-md transition-all cursor-pointer shadow-lg`}
-			onClick={scrollToSection}
-		>
-			<Icon className={`w-24 h-24 p-6 z-30 stroke-current ${iconStroke} group-hover:text-gray-1`} />
-			<div
-				className={`${textClasses} ${baseColorClasses} ${groupHoverColorClasses} box-content text-3xl font-bold flex items-center absolute left-full rounded-r-lg w-0 overflow-hidden h-full -m-1 transition-all z-30`}
-			>
-				{title}
+		<div className={containerClasses}>
+			<div className={itemClasses} onClick={scrollToSection}>
+				<Icon
+					className={`w-24 h-24 p-6 z-30 stroke-current ${iconStroke} group-hover:text-gray-1`}
+				/>
 			</div>
+			<div className={textClasses}>{title}</div>
 		</div>
 	);
 };
