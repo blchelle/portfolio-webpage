@@ -53,6 +53,8 @@ module.exports = {
 		extend: {
 			height: ['group-hover', 'hover'],
 			width: ['group-hover', 'hover'],
+			borderRadius: ['group-hover'],
+			borderWidth: ['hover'],
 			rotate: ['group-hover'],
 		},
 	},

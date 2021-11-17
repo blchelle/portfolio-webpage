@@ -64,9 +64,9 @@ const Experience: React.FC<ExperienceProps & SectionChildProps> = ({
 					<img src={backgroundImage} />
 				</div>
 				<div
-					className={`absolute flex-center bottom-0 left-0 overflow-hidden rounded-full border-solid border-gray-6 border-4 ${logoBackgroundClass}`}
+					className={`absolute flex-center bottom-0 left-0 overflow-hidden rounded-full border-solid border-gray-6 border-4 ${logoBackgroundClass} p-8`}
 				>
-					<Logo className='w-2/3 h-44' />
+					<Logo className='w-32 h-32' />
 				</div>
 			</div>
 		</div>
