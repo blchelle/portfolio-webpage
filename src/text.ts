@@ -11,11 +11,12 @@ export default {
 	},
 	experience: {
 		tesla: [
-			'Developed GRPC microservices in Go, REST APIs in Rails, and UIs with React in a production environment used by over 1,000,000 customers every day.',
-			'Took leadership in the administration and development of an internal identity and access management platform used by over 10,000 employees.',
-			'Wrote unit, integration, and end-to-end tests with RSpec, and Ginkgo with every commit I made.',
+			'Developed GRPC microservices in Go and Protobuf, REST APIs in Rails, and UIs with React and Javascript in a production environment used by over 1,000,000 customers every day.',
+			'Improved the performance of several high-volume endpoints by utilizing background job processing tools like Sidekiq and Kafka, and caching with Redis.',
+			'Wrote unit, integration, and end-to-end tests with RSpec, Ginkgo, and Enzyme with every commit I made.',
 			'Automated testing, building Docker images, and deploying to Kubernetes using Concourse.',
-			'Improved the performance of several high-volume endpoints by utilizing Sidekiq workers and Redis.',
+			'Added logging and monitoring dashboards with Splunk and Grafana which allowed our team to measure performance and quickly identify issues for critical endpoints.',
+			'Took leadership in the development of key security features for an identity and access management platform used by over 10,000 employees.'
 		],
 		willowglen: [
 			'Developed a backend application with C++ used to save the lives of metro-rail track workers.',

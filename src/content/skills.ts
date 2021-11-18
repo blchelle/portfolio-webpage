@@ -19,6 +19,7 @@ import { ReactComponent as netlifyLogo } from '@assets/logos/netlify.svg';
 import { ReactComponent as mysqlLogo } from '@assets/logos/mysql.svg';
 import { ReactComponent as nodeLogo } from '@assets/logos/node.svg';
 import { ReactComponent as postgresqlLogo } from '@assets/logos/postgresql.svg';
+import { ReactComponent as protobufLogo } from '@assets/logos/protobuf.svg';
 import { ReactComponent as reactLogo } from '@assets/logos/react.svg';
 import { ReactComponent as railsLogo } from '@assets/logos/rails.svg';
 import { ReactComponent as redisLogo } from '@assets/logos/redis.svg';
@@ -58,6 +59,7 @@ const SKILLS: ISkillCategory[] = [
 			{ name: 'Ruby', Logo: rubyLogo },
 			{ name: 'Ruby on Rails', Logo: railsLogo },
 			{ name: 'Go', Logo: goLogo },
+			{ name: 'Protobuf', Logo: protobufLogo },
 			{ name: 'Node', Logo: nodeLogo },
 			{ name: 'Express', Logo: expressLogo },
 			{ name: 'C++', Logo: cppLogo },
