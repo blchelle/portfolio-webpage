@@ -1,5 +1,6 @@
 import React from 'react';
 import Tooltip from 'react-tooltip';
+import { classnames } from 'tailwindcss-classnames';
 
 export interface ITool {
 	name: string;
@@ -11,10 +12,13 @@ interface ToolProps {
 }
 
 const Tool: React.FC<ToolProps> = ({ tool: { name, Logo } }) => {
+	const containerClasses = classnames('inline-block', 'mr-5');
+	const logoClasses = classnames('h-12', 'w-auto', 'text-primary', 'fill-current');
+
 	return (
-		<div className='inline-block mr-5'>
+		<div className={containerClasses}>
 			<Tooltip effect='solid' />
-			<Logo className='h-12 w-auto text-primary fill-current' data-tip={name} />
+			<Logo className={logoClasses} data-tip={name} />
 		</div>
 	);
 };
