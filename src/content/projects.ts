@@ -9,14 +9,14 @@ import { ReactComponent as keepItLogo } from '@assets/logos/keepit.svg';
 import { ReactComponent as appleLogo } from '@assets/logos/apple.svg';
 import { ReactComponent as expressLogo } from '@assets/logos/express.svg';
 import { ReactComponent as firebaseLogo } from '@assets/logos/firebase-2.svg';
-import { ReactComponent as jsLogo } from '@assets/logos/javascript-2.svg';
+import { ReactComponent as jsLogo } from '@assets/logos/javascript2.svg';
 import { ReactComponent as mongoDbLogo } from '@assets/logos/mongodb.svg';
 import { ReactComponent as nodeLogo } from '@assets/logos/node.svg';
 import { ReactComponent as reactLogo } from '@assets/logos/react.svg';
 import { ReactComponent as reduxLogo } from '@assets/logos/redux.svg';
 import { ReactComponent as sassLogo } from '@assets/logos/sass.svg';
 import { ReactComponent as swiftLogo } from '@assets/logos/swift.svg';
-import { ReactComponent as tsLogo } from '@assets/logos/typescript-2.svg';
+import { ReactComponent as tsLogo } from '@assets/logos/typescript2.svg';
 import { IProject } from '@components/Project';
 
 const PROJECTS: IProject[] = [
