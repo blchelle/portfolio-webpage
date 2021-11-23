@@ -38,8 +38,10 @@ const App: React.FC = () => {
 			<ThemeToggler />
 			<main className='overflow-x-hidden text-gray-7 dark:text-gray-1'>
 				<Header ref={CONTENT_SECTIONS[0].ref} />
-				{CONTENT_SECTIONS.map(({ title, ref, Content }, i) => (
-					<Section title={title} Content={Content} ref={ref} index={i} key={title} />
+				{CONTENT_SECTIONS.map(({ title, ref, children }, i) => (
+					<Section title={title} ref={ref} index={i} key={title}>
+						{children}
+					</Section>
 				))}
 				<Footer sections={CONTENT_SECTIONS} ref={footerRef} />
 			</main>

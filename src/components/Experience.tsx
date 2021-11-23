@@ -1,6 +1,5 @@
 import React from 'react';
 import Card from '@components/Card';
-import { SectionChildProps } from '@components/Section';
 
 export interface IExperience {
 	name: string;
@@ -19,7 +18,7 @@ interface ExperienceProps {
 	experience: IExperience;
 }
 
-const Experience: React.FC<ExperienceProps & SectionChildProps> = ({
+const Experience: React.FC<ExperienceProps> = ({
 	experience: {
 		name,
 		position,
@@ -30,12 +29,11 @@ const Experience: React.FC<ExperienceProps & SectionChildProps> = ({
 		SecondaryLogo,
 		logoBackgroundClass,
 	},
-	cardColor,
 }) => {
 	return (
 		<div className='grid grid-cols-1 xl:grid-cols-3 gap-20 mb-16'>
 			<div className='flex flex-col col-span-2 self-start p-8'>
-				<Card className='mb-8' animation='fade-right' bgColorClass={cardColor}>
+				<Card className='mb-8' animation='fade-right'>
 					<div className='flex'>
 						{SecondaryLogo !== undefined ? (
 							<SecondaryLogo className='h-16 w-16 mr-4 visible xl:hidden' />

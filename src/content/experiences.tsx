@@ -1,5 +1,4 @@
 import { IExperience } from '@components/Experience';
-import text from 'src/text';
 
 import ualbertaBackground from '@assets/experience/ualberta.png';
 import teslaBackground from '@assets/experience/tesla.png';

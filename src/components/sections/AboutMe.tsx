@@ -1,13 +1,12 @@
 import React from 'react';
 
 import Skills from '@components/Skills';
-import { SectionChildProps } from '@components/Section';
 
 import pictureOfMe from '@assets/me.jpg';
 import { ReactComponent as DocumentIcon } from '@assets/icons/document.svg';
 import text from 'src/text';
 
-const AboutMe: React.FC<SectionChildProps> = ({ cardColor }) => {
+const AboutMe: React.FC = () => {
 	return (
 		<>
 			<div className='grid grid-cols-1 xl:grid-cols-2 gap-20 items-center justify-items-center mb-16'>
@@ -34,7 +33,7 @@ const AboutMe: React.FC<SectionChildProps> = ({ cardColor }) => {
 				</div>
 			</div>
 			<div className='w-3/4 h-px bg-gray-6 mb-16 col-span-2' />
-			<Skills cardColor={cardColor} />
+			<Skills />
 		</>
 	);
 };
