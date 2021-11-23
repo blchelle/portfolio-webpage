@@ -2,7 +2,6 @@ import React from 'react';
 
 import Tool, { ITool } from '@components/Tool';
 import Card from '@components/Card';
-import { SectionChildProps } from '@components/Section';
 
 import { ReactComponent as PlayIcon } from '@assets/icons/play.svg';
 import { ReactComponent as GithubIcon } from '@assets/logos/github.svg';
@@ -29,9 +28,8 @@ interface IProjectButtons {
 	hoverBgColor: string;
 }
 
-const Project: React.FC<ProjectProps & SectionChildProps> = ({
+const Project: React.FC<ProjectProps> = ({
 	project: { name, description, Logo, mockup, tools, liveUrl, githubUrl },
-	cardColor,
 }) => {
 	const PROJECT_BUTTONS: IProjectButtons[] = [
 		{
@@ -52,15 +50,11 @@ const Project: React.FC<ProjectProps & SectionChildProps> = ({
 
 	return (
 		<div className='grid gap-8 grid-cols-1 xl:grid-cols-2 mb-16'>
-			<Card
-				className='hidden xl:flex justify-center items-center'
-				bgColorClass={cardColor}
-				animation='fade-right'
-			>
+			<Card className='hidden xl:flex justify-center items-center' animation='fade-right'>
 				<img src={mockup} alt={`${name} Mockup`} className='w-3/4 p-8 xl:w-full' />
 			</Card>
 			<div className='flex flex-col'>
-				<Card className='flex flex-col mb-8' bgColorClass={cardColor} animation='fade-left'>
+				<Card className='flex flex-col mb-8' animation='fade-left'>
 					<div className='flex items-center mb-8'>
 						<Logo className='w-20 mr-8' />
 						<h3 className='text-5xl font-bold'>{name}</h3>

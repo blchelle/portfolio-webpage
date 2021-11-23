@@ -1,11 +1,10 @@
 import React, { useRef, useState, useLayoutEffect } from 'react';
-import { SectionChildProps } from '@components/Section';
 import Card from '@components/Card';
 import Skill from '@components/Skill';
 import CategorySelector from '@components/CategorySelector';
 import SKILLS_CONTENT from '@content/skills';
 
-const Skills: React.FC<SectionChildProps> = ({ cardColor }) => {
+const Skills: React.FC = () => {
 	const [category, setCategory] = useState(0);
 
 	const containerRef = useRef<HTMLDivElement>(null);
@@ -28,7 +27,6 @@ const Skills: React.FC<SectionChildProps> = ({ cardColor }) => {
 			/>
 			<Card
 				className='flex overflow-x-hidden'
-				bgColorClass={cardColor}
 				paddingClass='p-0'
 				ref={containerRef}
 				animation='fade-down'
@@ -40,15 +38,7 @@ const Skills: React.FC<SectionChildProps> = ({ cardColor }) => {
 						key={title}
 					>
 						{skills.map((skill) => (
-							<Card
-								className='group flex items-center relative'
-								bgColorClass={
-									cardColor === 'bg-gray-1 dark:bg-gray-5'
-										? 'bg-gray-2 dark:bg-gray-6'
-										: 'bg-gray-1 dark:bg-gray-5'
-								}
-								key={skill.name}
-							>
+							<Card className='group flex items-center relative' key={skill.name}>
 								<Skill skill={skill} />
 							</Card>
 						))}

@@ -1,5 +1,4 @@
-import React from 'react';
-import { SectionChildProps } from '@components/Section';
+import React, { ReactNode } from 'react';
 import AboutMe from '@components/sections/AboutMe';
 import Experiences from '@components/sections/Experiences';
 import Projects from '@components/sections/Projects';
@@ -13,7 +12,7 @@ import { ReactComponent as MailOutlineIcon } from '@assets/icons/mail-outline.sv
 
 export interface ISection {
 	title: string;
-	Content?: React.FC<SectionChildProps>;
+	children?: React.ReactNode;
 	Icon: React.FC<React.SVGProps<SVGSVGElement> & { title?: string | undefined }>;
 	ref: React.RefObject<HTMLElement>;
 }
@@ -26,25 +25,25 @@ const CONTENT_SECTIONS: ISection[] = [
 	},
 	{
 		title: 'About',
-		Content: AboutMe,
+		children: <AboutMe />,
 		Icon: PersonIcon,
 		ref: React.createRef(),
 	},
 	{
 		title: 'Experience',
-		Content: Experiences,
+		children: <Experiences />,
 		Icon: BriefcaseIcon,
 		ref: React.createRef(),
 	},
 	{
 		title: 'Projects',
-		Content: Projects,
+		children: <Projects />,
 		Icon: HammerIcon,
 		ref: React.createRef(),
 	},
 	{
 		title: 'Contact',
-		Content: Contact,
+		children: <Contact />,
 		Icon: MailOutlineIcon,
 		ref: React.createRef(),
 	},
