@@ -46,7 +46,7 @@ const bulletPoints: { [key: string]: React.ReactElement<HTMLLIElement>[] } = {
 	],
 	willowglen: [
 		<li>
-			Developed a backend application with <Highlight text='C++' /> and <Highlight text='MariaDB' />
+			Developed a backend application with <Highlight text='C++' />, <Highlight text='MariaDB' />
 			, and <Highlight text='Redis' /> that is used to save the lives of metro-rail track workers.
 		</li>,
 		<li>

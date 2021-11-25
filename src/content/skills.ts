@@ -1,6 +1,7 @@
 import { ITool } from '@components/Tool';
 
 import { ReactComponent as bashLogo } from '@assets/logos/bash.svg';
+import { ReactComponent as circleciLogo } from '@assets/logos/circleci.svg';
 import { ReactComponent as cppLogo } from '@assets/logos/cpp.svg';
 import { ReactComponent as concourseLogo } from '@assets/logos/concourse.svg';
 import { ReactComponent as cssLogo } from '@assets/logos/css.svg';
@@ -79,12 +80,13 @@ const SKILLS: ISkillCategory[] = [
 		],
 	},
 	{
-		title: 'DevOps',
+		title: 'DevOps / SRE',
 		skills: [
 			{ name: 'Git', Logo: gitLogo },
 			{ name: 'Docker', Logo: dockerLogo },
 			{ name: 'Kubernetes', Logo: kubernetesLogo },
 			{ name: 'Concourse', Logo: concourseLogo },
+			{ name: 'CircleCI', Logo: circleciLogo },
 			{ name: 'Splunk', Logo: splunkLogo },
 			{ name: 'Grafana', Logo: grafanaLogo },
 			{ name: 'Bash', Logo: bashLogo },
