@@ -13,72 +13,87 @@ import React from 'react';
 import Highlight from '@components/Highlight';
 import { classnames } from 'tailwindcss-classnames';
 
-const bulletPoints: { [key: string]: React.ReactElement<HTMLLIElement>[] } = {
-	tesla: [
-		<li>
-			Developed GRPC microservices in <Highlight text='Go' /> and <Highlight text='Protobuf' />,
-			REST APIs in <Highlight text='Rails' />, and UIs with <Highlight text='React' /> and{' '}
-			<Highlight text='Javascript' /> in a production environment used by over 1,000,000 customers
-			every day.
-		</li>,
-		<li>
-			Improved the performance of several high-volume endpoints by utilizing background job
-			processing tools like <Highlight text='Sidekiq' /> and <Highlight text='Kafka' />, and caching
-			with <Highlight text='Redis' />.
-		</li>,
-		<li>
-			Wrote unit, integration, and end-to-end tests with <Highlight text='RSpec' />,{' '}
-			<Highlight text='Ginkgo' />, and <Highlight text='Enzyme' /> with every commit I made.
-		</li>,
-		<li>
-			Automated testing, building <Highlight text='Docker' /> images, and deploying to{' '}
-			<Highlight text='Kubernetes' /> using <Highlight text='Concourse' />.
-		</li>,
-		<li>
-			Added logging and monitoring dashboards with <Highlight text='Splunk' /> and{' '}
-			<Highlight text='Grafana' /> which allowed our team to measure performance and quickly
-			identify issues for critical endpoints.
-		</li>,
-		<li>
-			Took leadership in the development of key security features for an identity and access
-			management platform used by over 10,000 employees.
-		</li>,
-	],
-	willowglen: [
-		<li>
-			Developed a backend application with <Highlight text='C++' />, <Highlight text='MariaDB' />
-			, and <Highlight text='Redis' /> that is used to save the lives of metro-rail track workers.
-		</li>,
-		<li>
-			Created a front-end application with <Highlight text='JQuery' />, <Highlight text='HTML' />,
-			and <Highlight text='CSS' />, which compiles reports for safety and system accuracy.
-		</li>,
-		<li>
-			Designed and Implemented several front-end components with <Highlight text='ExtJS' /> for a
-			client upgrade project; these new components were approved and applauded by the client.
-		</li>,
-		<li>
-			Led multiple company update meetings with 30+ attendees, resulting in company-wide clarity
-			regarding each active project’s status.
-		</li>,
-	],
-	ualberta: [
-		<li>Achieved a GPA of 3.7</li>,
-		<li>
-			Completed courses in Object Oriented Programming, Parallel Computing, Operating Systems, Test
-			Driven Development, Database Management, and More.
-		</li>,
-		<li>
-			Developed an <Highlight text='Android' /> app with <Highlight text='Java' />, a Full Stack web
-			app with <Highlight text='Rust' />, <Highlight text='WebAssembly' />, and{' '}
-			<Highlight text='MongoDB' />, a Stack Overflow CLI with <Highlight text='Python' /> and{' '}
-			<Highlight text='SQLite' />, a Unix Kernel with <Highlight text='C' />, and many more.
-		</li>,
-		<li>
-			Joined the Google Student Developer Group as a Technical Lead where I gave mentorship to early
-			year students.
-		</li>,
-	],
+const bulletPointClasses = classnames(
+	'list-disc',
+	'text-3xl',
+	'leading-relaxed',
+	'flex',
+	'flex-col',
+	'ml-8'
+);
+
+const bulletPoints: { [key: string]: React.ReactElement<HTMLUListElement> } = {
+	tesla: (
+		<ul className={bulletPointClasses}>
+			<li>
+				Developed GRPC microservices in <Highlight text='Go' /> and <Highlight text='Protobuf' />,
+				REST APIs in <Highlight text='Rails' />, and UIs with <Highlight text='React' /> and{' '}
+				<Highlight text='Javascript' /> in a production environment used by over 1,000,000 customers
+				every day.
+			</li>
+			<li>
+				Improved the performance of several high-volume endpoints by utilizing background job
+				processing tools like <Highlight text='Sidekiq' /> and <Highlight text='Kafka' />, and
+				caching with <Highlight text='Redis' />.
+			</li>
+			<li>
+				Wrote unit, integration, and end-to-end tests with <Highlight text='RSpec' />,{' '}
+				<Highlight text='Ginkgo' />, and <Highlight text='Enzyme' /> with every commit I made.
+			</li>
+			<li>
+				Automated testing, building <Highlight text='Docker' /> images, and deploying to{' '}
+				<Highlight text='Kubernetes' /> using <Highlight text='Concourse' />.
+			</li>
+			<li>
+				Added logging and monitoring dashboards with <Highlight text='Splunk' /> and{' '}
+				<Highlight text='Grafana' /> which allowed our team to measure performance and quickly
+				identify issues for critical endpoints.
+			</li>
+			<li>
+				Took leadership in the development of key security features for an identity and access
+				management platform used by over 10,000 employees.
+			</li>
+		</ul>
+	),
+	willowglen: (
+		<ul className={bulletPointClasses}>
+			<li>
+				Developed a backend application with <Highlight text='C++' />, <Highlight text='MariaDB' />
+				, and <Highlight text='Redis' /> that is used to save the lives of metro-rail track workers.
+			</li>
+			<li>
+				Created a front-end application with <Highlight text='JQuery' />, <Highlight text='HTML' />,
+				and <Highlight text='CSS' />, which compiles reports for safety and system accuracy.
+			</li>
+			<li>
+				Designed and Implemented several front-end components with <Highlight text='ExtJS' /> for a
+				client upgrade project; these new components were approved and applauded by the client.
+			</li>
+			<li>
+				Led multiple company update meetings with 30+ attendees, resulting in company-wide clarity
+				regarding each active project’s status.
+			</li>
+		</ul>
+	),
+	ualberta: (
+		<ul className={bulletPointClasses}>
+			<li>Achieved a GPA of 3.7</li>
+			<li>
+				Completed courses in Object Oriented Programming, Parallel Computing, Operating Systems,
+				Test Driven Development, Database Management, and More.
+			</li>
+			<li>
+				Developed an <Highlight text='Android' /> app with <Highlight text='Java' />, a Full Stack
+				web app with <Highlight text='Rust' />, <Highlight text='WebAssembly' />, and{' '}
+				<Highlight text='MongoDB' />, a Stack Overflow CLI with <Highlight text='Python' /> and{' '}
+				<Highlight text='SQLite' />, a Unix Kernel with <Highlight text='C' />, and many more.
+			</li>
+			<li>
+				Joined the Google Student Developer Group as a Technical Lead where I gave mentorship to
+				early year students.
+			</li>
+		</ul>
+	),
 };
 
 const EXPERIENCES: IExperience[] = [
