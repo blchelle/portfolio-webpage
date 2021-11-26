@@ -1,6 +1,6 @@
 # Brock Chelle's Portfolio 👦
 
-My Personal Portfolio Webpage is a site created with the goal of showcasing my skills, projects, and a little bit about myself.
+My Personal Portfolio Webpage is a site created with the goal of showcasing my experience, skills, projects, and a little bit about myself.
 
 ## Live Site 🌎
 
@@ -15,8 +15,9 @@ This site will continue to be updated as I build more projects and gain new skil
 - [Typescript](https://www.typescriptlang.org/)
 - [React](https://reactjs.org/)
 - [Vite](https://vitejs.dev/)
-- [SASS](https://sass-lang.com/)
+- [TailwindCSS](https://tailwindcss.com/)
 
 ### Build Status
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/541a9f53-dd58-4e45-812d-8ab55a21f658/deploy-status)](https://app.netlify.com/sites/brockchelle/deploys)
+[![blchelle](https://circleci.com/gh/blchelle/portfolio-webpage.svg?style=svg)](https://app.circleci.com/pipelines/github/blchelle/portfolio-webpage)
