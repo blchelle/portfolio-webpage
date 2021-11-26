@@ -7,6 +7,7 @@ interface TextInputProps {
 	required: boolean;
 	type?: string;
 	isValid: (value: string) => boolean;
+	onChange: (event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
 }
 
 interface InputState {
@@ -22,15 +23,19 @@ const TextInput: React.FC<TextInputProps> = ({
 	numLines = 1,
 	type = 'text',
 	isValid,
+	onChange,
 }) => {
 	const [input, setInput] = useState<InputState>({ error: false, isEmpty: true, visited: false });
 	const { error, isEmpty, visited } = input;
 
-	const handleChange = ({
-		target: { value },
-	}: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+	const handleChange = (event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+		const {
+			target: { value },
+		} = event;
+
 		const error = !isValid(value);
 		setInput({ error, isEmpty: value.length === 0, visited });
+		onChange(event);
 	};
 
 	const handleBlur = () => {
