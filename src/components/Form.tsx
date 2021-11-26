@@ -68,6 +68,7 @@ const Form: React.FC = () => {
 		'p-8',
 		'flex',
 		'items-center',
+		'justify-center',
 		'text-center',
 		'text-4xl',
 		'font-bold',
