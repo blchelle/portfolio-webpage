@@ -5,7 +5,7 @@ export interface IExperience {
 	name: string;
 	position: string;
 	startEndYears: [number, number];
-	bulletPoints: React.ReactElement[];
+	bulletPoints: React.ReactElement;
 	Logo: React.FunctionComponent<React.SVGProps<SVGSVGElement> & { title?: string | undefined }>;
 	SecondaryLogo?: React.FunctionComponent<
 		React.SVGProps<SVGSVGElement> & { title?: string | undefined }
@@ -51,11 +51,7 @@ const Experience: React.FC<ExperienceProps> = ({
 						</p>
 					</div>
 				</Card>
-				<ul className='list-disc text-3xl leading-relaxed flex flex-col ml-8'>
-					{bulletPoints.map((point) => (
-						<li key={point.key}>{point}</li>
-					))}
-				</ul>
+				{bulletPoints}
 			</div>
 			<div className='relative hidden xl:flex justify-center items-end' data-aos='fade-left'>
 				<div className='overflow-hidden rounded-full border-solid border-primary border-4'>
