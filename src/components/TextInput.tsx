@@ -1,4 +1,5 @@
 import React, { ChangeEvent, useState } from 'react';
+import classes from '@tailwind/TextInput';
 
 interface TextInputProps {
 	label: string;
@@ -42,14 +43,8 @@ const TextInput: React.FC<TextInputProps> = ({
 		setInput({ ...input, visited: true });
 	};
 
-	const labelColor = error && visited ? 'text-error' : isEmpty ? 'text-gray-4' : 'text-primary';
-	const labelFontSize = isEmpty ? 'text-3xl' : 'text-2xl';
-	const inputPaddingTop = numLines === 1 ? 'pt-0' : 'pt-4';
-	const inputBorderColor = error && visited ? 'border-error' : 'border-gray-3';
-	const inputHeight = numLines === 1 ? 'h-20' : 'h-auto';
-
 	const commonInputProps = {
-		className: `w-full ${inputHeight} ${inputPaddingTop} px-4 bg-gray-1 ${inputBorderColor} border-2 border-solid rounded-md text-gray-4 text-3xl`,
+		className: classes.input(error, visited, numLines),
 		type: type,
 		name: name,
 		id: name,
@@ -59,9 +54,9 @@ const TextInput: React.FC<TextInputProps> = ({
 	};
 
 	return (
-		<div className='relative w-full mb-12'>
+		<div className={classes.container}>
 			<label
-				className={`absolute left-4 transition-all ${labelColor} ${labelFontSize}`}
+				className={classes.label(visited, isEmpty, error)}
 				style={{ top: isEmpty ? '1.4rem' : '-2.2rem' }}
 				htmlFor={name}
 			>
