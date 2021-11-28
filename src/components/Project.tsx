@@ -1,5 +1,6 @@
 import React from 'react';
 
+import classes from '@tailwind/Project';
 import Tool, { ITool } from '@components/Tool';
 import Card from '@components/Card';
 
@@ -31,33 +32,16 @@ interface IProjectButtons {
 const Project: React.FC<ProjectProps> = ({
 	project: { name, description, Logo, mockup, tools, liveUrl, githubUrl },
 }) => {
-	const PROJECT_BUTTONS: IProjectButtons[] = [
-		{
-			text: 'Live Demo',
-			url: liveUrl,
-			Icon: PlayIcon,
-			bgColor: 'bg-primary',
-			hoverBgColor: 'hover:bg-primary-dark',
-		},
-		{
-			text: 'Repository',
-			url: githubUrl,
-			Icon: GithubIcon,
-			bgColor: 'bg-github',
-			hoverBgColor: 'hover:bg-github-dark',
-		},
-	];
-
 	return (
-		<div className='grid gap-8 grid-cols-1 xl:grid-cols-2 mb-16'>
-			<Card className='hidden xl:flex justify-center items-center' animation='fade-right'>
-				<img src={mockup} alt={`${name} Mockup`} className='w-3/4 p-8 xl:w-full' />
+		<div className={classes.container}>
+			<Card className={classes.mockupContainer} animation='fade-right'>
+				<img src={mockup} alt={`${name} Mockup`} className={classes.mockup} />
 			</Card>
-			<div className='flex flex-col'>
-				<Card className='flex flex-col mb-8' animation='fade-left'>
-					<div className='flex items-center mb-8'>
-						<Logo className='w-20 mr-8' />
-						<h3 className='text-5xl font-bold'>{name}</h3>
+			<div className={classes.contentContainer}>
+				<Card className={classes.contentHeaderCard} animation='fade-left'>
+					<div className={classes.contentHeaderCardTopRow}>
+						<Logo className={classes.logo} />
+						<h3 className={classes.title}>{name}</h3>
 					</div>
 					<div>
 						{tools.map((tool) => (
@@ -65,20 +49,26 @@ const Project: React.FC<ProjectProps> = ({
 						))}
 					</div>
 				</Card>
-				<p className='text-3xl leading-relaxed mb-16'>{description}</p>
-				<div className='flex justify-start mt-auto'>
-					{PROJECT_BUTTONS.map(({ text, url, Icon: ButtonIcon, bgColor, hoverBgColor }) => (
-						<a
-							key={text}
-							href={url}
-							target='_blank'
-							rel='noopener noreferrer'
-							className={`btn mr-4 ${bgColor} ${hoverBgColor}`}
-						>
-							{text}
-							<ButtonIcon className='h-10 w-10 ml-4 text-gray-1 fill-current' title={text} />
-						</a>
-					))}
+				<p className={classes.description}>{description}</p>
+				<div className={classes.buttonsContainer}>
+					<a
+						href={liveUrl}
+						target='_blank'
+						rel='noopener noreferrer'
+						className={`btn ${classes.demoButton}`}
+					>
+						Live Demo
+						<PlayIcon className={classes.buttonIcon} />
+					</a>
+					<a
+						href={liveUrl}
+						target='_blank'
+						rel='noopener noreferrer'
+						className={`btn ${classes.githubButton}`}
+					>
+						Repository
+						<GithubIcon className={classes.buttonIcon} />
+					</a>
 				</div>
 			</div>
 		</div>
