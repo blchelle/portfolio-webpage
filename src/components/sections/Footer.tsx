@@ -24,7 +24,7 @@ const SOCIAL_LINKS = [
 const Footer = React.forwardRef<HTMLElement, FooterProps>(({ sections }, ref) => {
 	return (
 		<footer
-			className='pb-36 sm:pb-8 pt-8 px-section grid grid-cols-2 gap-8 items-center bg-gray-1 dark:bg-gray-5'
+			className='pb-36 sm:pb-8 pt-8 px-16 sm:px-40 md:px-60 xl:px-80 grid grid-cols-2 gap-8 items-center bg-gray-1 dark:bg-gray-5'
 			ref={ref}
 		>
 			<ul className='flex flex-col sm:flex-row'>
