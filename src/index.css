@@ -36,10 +36,6 @@
 	.h-95p {
 		height: 95%;
 	}
-
-	.px-section {
-		@apply px-16 sm:px-40 md:px-60 xl:px-80;
-	}
 }
 
 @responsive {
