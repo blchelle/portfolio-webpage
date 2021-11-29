@@ -1,6 +1,7 @@
 import React, { useRef, MouseEvent, useState } from 'react';
 
-import { ReactComponent as ArrowIcon } from '@assets/icons/arrow_forward.svg';
+import Button from '@components/Button';
+import { ReactComponent as ArrowIcon } from '@assets/icons/arrow_down.svg';
 
 const Header = React.forwardRef<HTMLElement>((_, ref) => {
 	const circleOneRef = useRef<HTMLDivElement>(null);
@@ -82,10 +83,7 @@ const Header = React.forwardRef<HTMLElement>((_, ref) => {
 					<span className='text-primary ml-4'>Brock Chelle</span>
 				</h1>
 				<h2 className='text-6xl font-light px-12 mb-8'>I'm a Full Stack Software Engineer</h2>
-				<button className='group btn bg-primary hover:bg-primary-dark' onClick={scrollToStart}>
-					<span className='mr-4'>Learn More</span>
-					<ArrowIcon className='h-12 w-12 text-gray-1 fill-current transition-transform transform group-hover:rotate-90' />
-				</button>
+				<Button text='Learn More' onClick={scrollToStart} Icon={ArrowIcon} />
 			</div>
 		</header>
 	);
