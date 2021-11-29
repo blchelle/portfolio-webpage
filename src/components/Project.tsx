@@ -1,8 +1,9 @@
 import React from 'react';
 
 import classes from '@tailwind/Project';
-import Tool, { ITool } from '@components/Tool';
+import Button from '@components/Button';
 import Card from '@components/Card';
+import Tool, { ITool } from '@components/Tool';
 
 import { ReactComponent as PlayIcon } from '@assets/icons/play.svg';
 import { ReactComponent as GithubIcon } from '@assets/logos/github.svg';
@@ -51,24 +52,18 @@ const Project: React.FC<ProjectProps> = ({
 				</Card>
 				<p className={classes.description}>{description}</p>
 				<div className={classes.buttonsContainer}>
-					<a
-						href={liveUrl}
-						target='_blank'
-						rel='noopener noreferrer'
-						className={`btn ${classes.demoButton}`}
-					>
-						Live Demo
-						<PlayIcon className={classes.buttonIcon} />
-					</a>
-					<a
-						href={liveUrl}
-						target='_blank'
-						rel='noopener noreferrer'
-						className={`btn ${classes.githubButton}`}
-					>
-						Repository
-						<GithubIcon className={classes.buttonIcon} />
-					</a>
+					<Button
+						text='Live Demo'
+						onClick={() => window.open(liveUrl, '_blank')}
+						Icon={PlayIcon}
+						style={{ marginRight: '1rem' }}
+					/>
+					<Button
+						onClick={() => window.open(githubUrl, '_blank')}
+						text='Repository'
+						Icon={GithubIcon}
+						color='github'
+					/>
 				</div>
 			</div>
 		</div>

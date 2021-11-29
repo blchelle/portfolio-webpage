@@ -2,6 +2,7 @@ import React from 'react';
 
 import Skills from '@components/Skills';
 
+import Button from '@components/Button';
 import pictureOfMe from '@assets/me.jpg';
 import { ReactComponent as DocumentIcon } from '@assets/icons/document.svg';
 import text from 'src/text';
@@ -21,15 +22,11 @@ const AboutMe: React.FC = () => {
 							{text}
 						</p>
 					))}
-					<a
-						className='btn bg-primary hover:bg-primary-dark'
-						target='_blank'
-						href='./resume.pdf'
-						data-aos='zoom-in'
-					>
-						<span className='mr-4'>View My Resume</span>
-						<DocumentIcon className='h-12 w-12 text-gray-1 fill-current' />
-					</a>
+					<Button
+						text='View My Resume'
+						Icon={DocumentIcon}
+						onClick={() => window.open('./resume.pdf', '_blank')}
+					/>
 				</div>
 			</div>
 			<div className='w-3/4 h-px bg-gray-6 mb-16 col-span-2' />

@@ -7,10 +7,6 @@
 }
 
 @layer components {
-	.btn {
-		@apply flex items-center justify-between text-3xl text-gray-1 font-bold h-20 w-max px-12 py-2 rounded-lg cursor-pointer transition;
-	}
-
 	.header-circle {
 		width: 60rem;
 		height: 60rem;

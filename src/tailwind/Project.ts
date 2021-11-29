@@ -11,7 +11,4 @@ export default {
 	title: classnames('text-5xl', 'font-bold'),
 	description: classnames('text-3xl', 'leading-relaxed', 'mb-16'),
 	buttonsContainer: classnames('flex', 'justify-start', 'mt-auto'),
-	demoButton: classnames('bg-primary', 'hover:bg-primary-dark', 'mr-8'),
-	githubButton: classnames('bg-github', 'hover:bg-github-dark'),
-	buttonIcon: classnames('h-10', 'w-10', 'ml-4', 'text-gray-1', 'fill-current'),
 };

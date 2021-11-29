@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
-
-import TextInput from '@components/TextInput';
-import Card from '@components/Card';
-import { ReactComponent as SendIcon } from '@assets/icons/send.svg';
 import { classnames } from 'tailwindcss-classnames';
+
+import Button from '@components/Button';
+import Card from '@components/Card';
+import TextInput from '@components/TextInput';
+import { ReactComponent as SendIcon } from '@assets/icons/send.svg';
 
 const isEmpty = (value: string) => {
 	return value.length === 0;
@@ -36,7 +37,7 @@ const Form: React.FC = () => {
 	const [message, setMessage] = useState('');
 	const [formSent, setFormSent] = useState(false);
 
-	const handleSubmitClicked = (event: React.FormEvent<HTMLFormElement>) => {
+	const handleSubmitClicked = () => {
 		fetch('/', {
 			method: 'POST',
 			headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
@@ -44,8 +45,6 @@ const Form: React.FC = () => {
 		}).then(() => {
 			setFormSent(true);
 		});
-
-		event.preventDefault();
 	};
 
 	const handleInputChange =
@@ -84,12 +83,7 @@ const Form: React.FC = () => {
 			<div className={successCardClasses} style={{ left: formSent ? '0' : '100%' }}>
 				I've received your message!
 			</div>
-			<form
-				method='POST'
-				name='contact'
-				className='flex flex-col justify-between flex-1'
-				onSubmit={handleSubmitClicked}
-			>
+			<div className='flex flex-col justify-between flex-1'>
 				<div className='h-8 w-full' />
 				<TextInput
 					label='Name'
@@ -114,10 +108,8 @@ const Form: React.FC = () => {
 					onChange={handleInputChange(setMessage)}
 					isValid={validateEmpty}
 				/>
-				<button disabled={formSent} type='submit' className={`btn ${buttonClasses}`}>
-					Send <SendIcon className='h-10 w-10 text-gray-1 fill-current ml-4' />
-				</button>
-			</form>
+				<Button text='Send Message' onClick={handleSubmitClicked} Icon={SendIcon} />
+			</div>
 		</Card>
 	);
 };
