@@ -1,4 +1,6 @@
 import React from 'react';
+
+import classes from '@tailwind/Experience';
 import Card from '@components/Card';
 
 export interface IExperience {
@@ -10,7 +12,7 @@ export interface IExperience {
 	SecondaryLogo?: React.FunctionComponent<
 		React.SVGProps<SVGSVGElement> & { title?: string | undefined }
 	>;
-	logoBackgroundClass: string;
+	logoBackgroundClass: 'TAILWIND_STRING';
 	backgroundImage: string;
 }
 
@@ -31,18 +33,18 @@ const Experience: React.FC<ExperienceProps> = ({
 	},
 }) => {
 	return (
-		<div className='grid grid-cols-1 xl:grid-cols-3 gap-20 mb-16'>
-			<div className='flex flex-col col-span-2 self-start p-8'>
-				<Card className='mb-8' animation='fade-right'>
+		<div className={classes.container}>
+			<div className={classes.contentContainer}>
+				<Card className={classes.contentCard} animation='fade-right'>
 					<div className='flex'>
 						{SecondaryLogo !== undefined ? (
-							<SecondaryLogo className='h-16 w-16 mr-4 visible xl:hidden' />
+							<SecondaryLogo className={classes.headerLogo} />
 						) : (
-							<Logo className='h-16 w-16 mr-4 visible xl:hidden' />
+							<Logo className={classes.headerLogo} />
 						)}
-						<h3 className='text-6xl font-bold mb-4'>{name}</h3>
+						<h3 className={classes.title}>{name}</h3>
 					</div>
-					<div className='flex justify-between text-3xl font-light'>
+					<div className={classes.subtitle}>
 						<p>{position}</p>
 						<p>
 							{startEndYears[0] === startEndYears[1]
@@ -53,14 +55,12 @@ const Experience: React.FC<ExperienceProps> = ({
 				</Card>
 				{bulletPoints}
 			</div>
-			<div className='relative hidden xl:flex justify-center items-end' data-aos='fade-left'>
-				<div className='overflow-hidden rounded-full border-solid border-primary border-4'>
+			<div className={classes.imagesContainer} data-aos='fade-left'>
+				<div className={classes.image}>
 					<img src={backgroundImage} />
 				</div>
-				<div
-					className={`absolute flex-center bottom-0 left-0 overflow-hidden rounded-full border-solid border-gray-6 border-4 ${logoBackgroundClass} p-8`}
-				>
-					<Logo className='w-32 h-32' />
+				<div className={classes.logoContainer(logoBackgroundClass)}>
+					<Logo className={classes.logo} />
 				</div>
 			</div>
 		</div>
