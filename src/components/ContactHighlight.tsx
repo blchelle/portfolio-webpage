@@ -1,38 +1,28 @@
 import React from 'react';
+import classes from '@tailwind/ContactHighlight';
 
-interface ContactHightlightProps {
+interface ContactHighlightProps {
 	title: string;
-	subtitle: {
-		text: string;
-		url?: string;
-	};
-	Icon: React.FunctionComponent<React.SVGProps<SVGSVGElement> & { title?: string | undefined }>;
+	subtitle: string;
+	Icon: React.FC<React.SVGProps<SVGSVGElement>>;
+	url?: string;
 }
 
-const ContactHightlight: React.FC<ContactHightlightProps> = ({ title, subtitle, Icon }) => {
+const ContactHighlight: React.FC<ContactHighlightProps> = ({ title, subtitle, Icon, url }) => {
+	let linkProps = {};
+	if (url) linkProps = { href: url, target: '_blank' };
+
 	return (
-		<div className='group w-full h-24 flex items-center'>
-			<div className='flex-center w-24 h-full rounded-full mr-8 bg-primary-transparent transition-colors group-hover:bg-primary fill-current'>
-				<Icon className='w-10 text-primary transition-colors group-hover:text-gray-1 fill-current' />
+		<a className={classes.container(url !== undefined)} {...linkProps}>
+			<div className={classes.iconContainer}>
+				<Icon className={classes.icon} />
 			</div>
-			<div className='flex flex-col'>
-				<h4 className='text-3xl font-bold'>{title}</h4>
-				{subtitle.url ? (
-					<a
-						className='text-2xl text-primary font-bold transition-colors hover:text-primary-dark'
-						href={subtitle.url}
-						aria-label={title}
-						rel='noopener'
-						target='_blank'
-					>
-						{subtitle.text}
-					</a>
-				) : (
-					<p className='text-2xl'>{subtitle.text}</p>
-				)}
+			<div className={classes.contentContainer}>
+				<h4 className={classes.title}>{title}</h4>
+				<p className={classes.subtitle}>{subtitle}</p>
 			</div>
-		</div>
+		</a>
 	);
 };
 
-export default ContactHightlight;
+export default ContactHighlight;
