@@ -20,25 +20,19 @@ const Contact: React.FC = () => {
 					className='grid gap-8 col-span-1 lg:col-span-3 content-start grid-cols-1 md:grid-cols-2 lg:grid-cols-1'
 					animation='fade-right'
 				>
-					<ContactHighlight
-						Icon={CompassIcon}
-						title='Location'
-						subtitle={{ text: 'Edmonton, Canada' }}
-					/>
-					<ContactHighlight
-						Icon={MailIcon}
-						title='Email'
-						subtitle={{ text: 'brocklchelle@gmail.com' }}
-					/>
+					<ContactHighlight Icon={CompassIcon} title='Location' subtitle='Edmonton, Canada' />
+					<ContactHighlight Icon={MailIcon} title='Email' subtitle='brocklchelle@gmail.com' />
 					<ContactHighlight
 						Icon={LinkedInIcon}
 						title='LinkedIn'
-						subtitle={{ text: 'Click to be redirected!', url: 'https://linkedin.com/in/blchelle' }}
+						subtitle='blchelle'
+						url='https://linkedin.com/in/blchelle'
 					/>
 					<ContactHighlight
 						Icon={GithubIcon}
 						title='Github'
-						subtitle={{ text: 'Click to be redirected!', url: 'https://github.com/blchelle' }}
+						subtitle='blchelle'
+						url='https://github.com/blchelle'
 					/>
 				</Card>
 				<Form />
