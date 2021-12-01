@@ -8,6 +8,9 @@ interface NavigationItemProps {
 	isSelected: boolean;
 }
 
+// Scroll slightly past the top of the section to make the slider animation smoother
+const SCROLL_OFFSET = 20;
+
 const NavigationItem: React.FC<NavigationItemProps> = ({
 	item: { title, Icon, ref },
 	isSelected,
@@ -18,7 +21,7 @@ const NavigationItem: React.FC<NavigationItemProps> = ({
 		const { current } = ref;
 		if (!current) return;
 
-		window.scrollTo({ top: current.offsetTop + 20, behavior: 'smooth' });
+		window.scrollTo({ top: current.offsetTop + SCROLL_OFFSET, behavior: 'smooth' });
 	};
 
 	return (
