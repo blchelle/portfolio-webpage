@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { classnames } from 'tailwindcss-classnames';
+import classes from '@tailwind/Form';
 
 import Button from '@components/Button';
 import Card from '@components/Card';
@@ -53,38 +53,12 @@ const Form: React.FC = () => {
 			setter(event.target.value);
 		};
 
-	const buttonClasses = classnames('bg-primary', {
-		'opacity-50': formSent,
-		'cursor-default': formSent,
-		'hover:bg-primary-dark': !formSent,
-	});
-
-	const successCardClasses = classnames(
-		'absolute',
-		'top-0',
-		'h-full',
-		'w-full',
-		'p-8',
-		'flex',
-		'items-center',
-		'justify-center',
-		'text-center',
-		'text-4xl',
-		'font-bold',
-		'bg-primary',
-		'rounded-lg',
-		'z-10',
-		'transition-all',
-		'duration-500'
-	);
-
 	return (
-		<Card className='relative col-span-1 lg:col-span-4 overflow-hidden' animation='fade-left'>
-			<div className={successCardClasses} style={{ left: formSent ? '0' : '100%' }}>
+		<Card className={classes.container} animation='fade-left'>
+			<div className={classes.sentCard} style={{ left: formSent ? '0' : '100%' }}>
 				I've received your message!
 			</div>
-			<div className='flex flex-col justify-between flex-1'>
-				<div className='h-8 w-full' />
+			<div className={classes.form}>
 				<TextInput
 					label='Name'
 					name='name'
