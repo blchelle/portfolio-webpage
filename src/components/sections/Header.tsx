@@ -82,7 +82,7 @@ const Header = React.forwardRef<HTMLElement>((_, ref) => {
 					Hello, I'm
 					<span className='text-primary ml-4'>Brock Chelle</span>
 				</h1>
-				<h2 className='text-6xl font-light px-12 mb-8'>I'm a Full Stack Software Engineer</h2>
+				<h2 className='text-6xl font-light px-12 mb-8'>I am a Software Engineer</h2>
 				<Button text='Learn More' onClick={scrollToStart} Icon={ArrowIcon} />
 			</div>
 		</header>
