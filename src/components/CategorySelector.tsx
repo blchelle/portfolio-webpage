@@ -1,4 +1,5 @@
 import React from 'react';
+import classes from '@tailwind/CategorySelector';
 
 interface CategorySelectorProps {
 	categories: string[];
@@ -8,14 +9,11 @@ interface CategorySelectorProps {
 
 const CategorySelector: React.FC<CategorySelectorProps> = ({ categories, category, onChange }) => {
 	return (
-		<ul className='relative flex self-start py-4 sm:w-max w-full'>
-			<div
-				className={`absolute h-2 w-1/4 bottom-0 bg-primary transition-all duration-300`}
-				style={{ left: `${category * 25}%` }}
-			/>
+		<ul className={classes.list}>
+			<div className={classes.slider} style={{ left: `${category * 25}%` }} />
 			{categories.map((title, i) => (
-				<li className='w-1/4 flex-center sm:w-48' key={title}>
-					<button className='w-11/12 text-2xl font-bold' onClick={() => onChange(i)}>
+				<li className={classes.item} key={title}>
+					<button className={classes.itemButton} onClick={() => onChange(i)}>
 						{title}
 					</button>
 				</li>
