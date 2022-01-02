@@ -1,16 +1,15 @@
 import React from 'react';
 import Project from '@components/Project';
 import PROJECTS_CONTENT from '@content/projects';
+import classes from '@tailwind/Projects';
 
 const Projects: React.FC = () => {
-	const divider = <div className='w-3/4 h-px bg-gray-6 mb-16' />;
-
 	return (
-		<div className='flex flex-col items-center'>
+		<div className={classes.container}>
 			{PROJECTS_CONTENT.map((project, index) => (
 				<React.Fragment key={project.name}>
 					<Project project={project} />
-					{index < PROJECTS_CONTENT.length - 1 && divider}
+					{index < PROJECTS_CONTENT.length - 1 && <div className={classes.divider} />}
 				</React.Fragment>
 			))}
 		</div>
