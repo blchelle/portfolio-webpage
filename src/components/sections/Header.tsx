@@ -7,7 +7,7 @@ const Header = React.forwardRef<HTMLElement>((_, ref) => {
 	const circleOneRef = useRef<HTMLDivElement>(null);
 	const circleTwoRef = useRef<HTMLDivElement>(null);
 
-	const worstYellow = [240, 198, 45];
+	const worstGreen = [143, 224, 180];
 	const bestGreen = [44, 160, 96];
 	const maxDistance = 500;
 
@@ -53,11 +53,18 @@ const Header = React.forwardRef<HTMLElement>((_, ref) => {
 			circleTwo.style.bottom = `${ref.current.clientHeight - event.clientY}px`;
 		}
 
-		const red = bestGreen[0] + (worstYellow[0] - bestGreen[0]) * (distanceFromCenter / maxDistance);
-		const green =
-			bestGreen[1] + (worstYellow[1] - bestGreen[1]) * (distanceFromCenter / maxDistance);
-		const blue =
-			bestGreen[2] - (bestGreen[2] - worstYellow[2]) * (distanceFromCenter / maxDistance);
+		const red = Math.min(
+			bestGreen[0] + (worstGreen[0] - bestGreen[0]) * (distanceFromCenter / maxDistance),
+			worstGreen[0]
+		);
+		const green = Math.min(
+			bestGreen[1] + (worstGreen[1] - bestGreen[1]) * (distanceFromCenter / maxDistance),
+			worstGreen[1]
+		);
+		const blue = Math.min(
+			bestGreen[2] - (bestGreen[2] - worstGreen[2]) * (distanceFromCenter / maxDistance),
+			worstGreen[2]
+		);
 		ref.current.style.backgroundColor = `rgb(${red}, ${green}, ${blue})`;
 	};
 

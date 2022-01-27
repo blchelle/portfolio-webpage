@@ -41,7 +41,7 @@ module.exports = {
 				},
 				header: {
 					close: '#2CA060',
-					far: '#F0C62D',
+					far: '#8FE0B4',
 				},
 				error: {
 					DEFAULT: '#d06262',
