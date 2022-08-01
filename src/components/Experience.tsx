@@ -6,7 +6,7 @@ import Card from '@components/Card';
 export interface IExperience {
 	name: string;
 	position: string;
-	startEndYears: [number, number];
+	startEndYears: [number, number | string];
 	bulletPoints: React.ReactElement;
 	Logo: React.FunctionComponent<React.SVGProps<SVGSVGElement> & { title?: string | undefined }>;
 	SecondaryLogo?: React.FunctionComponent<

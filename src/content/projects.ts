@@ -23,9 +23,9 @@ const PROJECTS: IProject[] = [
 	{
 		name: 'CollaboGreat',
 		description: `CollaboGreat is a full-stack web application that encourages strong
-		team collaboration. I built to CollaboGreat to have all the features
-		you would expect from a team collaboration software such as Trello
-		or Jira. It features user authentication using the OAuth protocol,
+		team collaboration. CollaboGreat includes all the features typical of
+		a team collaboration software such as Trello or Jira.
+		It features user authentication using the OAuth protocol,
 		interactive Kanban Boards with drag and drop functionality, project
 		statistics, and many more exciting features.`,
 		mockup: collaboGreatMockup,
@@ -46,7 +46,7 @@ const PROJECTS: IProject[] = [
 		description: `CRWN is an E-Commerce store for a fictional clothing company.
 									It provides all the core functionality that a user would
 									expect from an E-Commerce store. Here, users can choose from
-									various clothing articles, add them to a cart and finalize
+									various clothing articles, add them to a cart, and finalize
 									their order by checking out with a credit/debit card, which
 									is done through Stripe. Users can also authenticate with
 									their Google account or email address if they wish to keep
@@ -69,9 +69,9 @@ const PROJECTS: IProject[] = [
 									their personal belongings without GPS hardware. It does this
 									through customizable notifications that can be time based or
 									triggered upon crossing the border of a personalized
-									GeoFence. Whenever you lose an item, you can use KeepIt to
-									remember where you had it last. With KeepIt, users can
-									authenticate with an email & password or even anonymously.`,
+									GeoFence. Whenever an item is lost, KeepIt can remind users
+									of where they last had their item. With KeepIt, users can
+									authenticate with an email & password or use the app anonymously.`,
 		mockup: keepItMockup,
 		Logo: keepItLogo,
 		tools: [

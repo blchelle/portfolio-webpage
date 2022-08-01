@@ -12,7 +12,7 @@ const Contact: React.FC = () => {
 	return (
 		<>
 			<div className='text-3xl mb-16'>
-				I'm currently looking for full time software engineering positions. I look forward to
+				I'm currently looking for full time Software Engineering positions. I look forward to
 				hearing from you!
 			</div>
 			<div className='grid grid-cols-1 lg:grid-cols-7 gap-8 w-full'>

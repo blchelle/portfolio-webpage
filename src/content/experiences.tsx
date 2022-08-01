@@ -99,8 +99,8 @@ const bulletPoints: { [key: string]: React.ReactElement<HTMLUListElement> } = {
 const EXPERIENCES: IExperience[] = [
 	{
 		name: 'Tesla',
-		position: 'Full Stack Engineer Intern',
-		startEndYears: [2021, 2021],
+		position: 'Full Stack Engineer',
+		startEndYears: [2021, 'Present'],
 		bulletPoints: bulletPoints.tesla,
 		backgroundImage: teslaBackground,
 		Logo: TeslaLogo1,
