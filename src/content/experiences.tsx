@@ -26,31 +26,31 @@ const bulletPoints: { [key: string]: React.ReactElement<HTMLUListElement> } = {
 	tesla: (
 		<ul className={bulletPointClasses}>
 			<li>
-				Developed GRPC microservices in <Highlight text='Go' /> and <Highlight text='Protobuf' />,
+				Developing GRPC microservices in <Highlight text='Go' /> and <Highlight text='Protobuf' />,
 				REST APIs in <Highlight text='Rails' />, and UIs with <Highlight text='React' /> and{' '}
 				<Highlight text='Javascript' /> in a production environment used by over 1,000,000 customers
 				every day.
 			</li>
 			<li>
-				Improved the performance of several high-volume endpoints by utilizing background job
+				Improving the performance of several high-volume endpoints by utilizing background job
 				processing tools like <Highlight text='Sidekiq' /> and <Highlight text='Kafka' />, and
 				caching with <Highlight text='Redis' />.
 			</li>
 			<li>
-				Wrote unit, integration, and end-to-end tests with <Highlight text='RSpec' />,{' '}
+				Writing unit, integration, and end-to-end tests with <Highlight text='RSpec' />,{' '}
 				<Highlight text='Ginkgo' />, and <Highlight text='Enzyme' /> with every commit I made.
 			</li>
 			<li>
-				Automated testing, building <Highlight text='Docker' /> images, and deploying to{' '}
+				Automating testing, building <Highlight text='Docker' /> images, and deploying to{' '}
 				<Highlight text='Kubernetes' /> using <Highlight text='Concourse' />.
 			</li>
 			<li>
-				Added logging and monitoring dashboards with <Highlight text='Splunk' /> and{' '}
+				Adding logging and monitoring dashboards with <Highlight text='Splunk' /> and{' '}
 				<Highlight text='Grafana' /> which allowed our team to measure performance and quickly
 				identify issues for critical endpoints.
 			</li>
 			<li>
-				Took leadership in the development of key security features for an identity and access
+				Taking leadership in the development of key security features for an identity and access
 				management platform used by over 10,000 employees.
 			</li>
 		</ul>

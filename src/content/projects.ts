@@ -22,7 +22,7 @@ import { IProject } from '@components/Project';
 const PROJECTS: IProject[] = [
 	{
 		name: 'CollaboGreat',
-		description: `CollaboGreat is a full-stack web application that encourages strong
+		description: `CollaboGreat is a Full Stack web application that encourages strong
 		team collaboration. CollaboGreat includes all the features typical of
 		a team collaboration software such as Trello or Jira.
 		It features user authentication using the OAuth protocol,
