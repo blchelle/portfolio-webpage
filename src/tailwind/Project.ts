@@ -7,7 +7,7 @@ export default {
 	contentContainer: classnames('flex', 'flex-col'),
 	contentHeaderCard: classnames('flex', 'flex-col', 'mb-8'),
 	contentHeaderCardTopRow: classnames('flex', 'items-center', 'mb-8'),
-	logo: classnames('w-20', 'mr-8'),
+	logo: classnames('w-20', 'h-20', 'mr-8'),
 	title: classnames('text-5xl', 'font-bold'),
 	description: classnames('text-3xl', 'leading-relaxed', 'mb-16'),
 	buttonsContainer: classnames('flex', 'justify-start', 'mt-auto'),

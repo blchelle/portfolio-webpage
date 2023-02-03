@@ -22,14 +22,6 @@ interface ProjectProps {
 	project: IProject;
 }
 
-interface IProjectButtons {
-	text: string;
-	url: string;
-	Icon: React.FunctionComponent<React.SVGProps<SVGSVGElement> & { title?: string | undefined }>;
-	bgColor: string;
-	hoverBgColor: string;
-}
-
 const Project: React.FC<ProjectProps> = ({
 	project: { name, description, Logo, mockup, tools, liveUrl, githubUrl },
 }) => {

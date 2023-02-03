@@ -1,16 +1,19 @@
 import crwnMockup from '@assets/mockups/crwn.png';
 import collaboGreatMockup from '@assets/mockups/collabogreat.png';
 import keepItMockup from '@assets/mockups/keepit.png';
+import typeTrialMockup from '@assets/mockups/typetrial.png';
 
 import { ReactComponent as collaboGreatLogo } from '@assets/logos/collabogreat.svg';
 import { ReactComponent as crwnLogo } from '@assets/logos/crwn.svg';
 import { ReactComponent as keepItLogo } from '@assets/logos/keepit.svg';
+import { ReactComponent as typeTrialLogo } from '@assets/logos/typetrial.svg';
 
 import { ReactComponent as appleLogo } from '@assets/logos/apple.svg';
 import { ReactComponent as expressLogo } from '@assets/logos/express.svg';
 import { ReactComponent as firebaseLogo } from '@assets/logos/firebase-2.svg';
 import { ReactComponent as jsLogo } from '@assets/logos/javascript2.svg';
 import { ReactComponent as mongoDbLogo } from '@assets/logos/mongodb.svg';
+import { ReactComponent as mySqlLogo } from '@assets/logos/mysql.svg';
 import { ReactComponent as nodeLogo } from '@assets/logos/node.svg';
 import { ReactComponent as reactLogo } from '@assets/logos/react.svg';
 import { ReactComponent as reduxLogo } from '@assets/logos/redux.svg';
@@ -42,6 +45,46 @@ const PROJECTS: IProject[] = [
 		githubUrl: 'https://github.com/blchelle/collabogreat',
 	},
 	{
+		name: 'TypeTrial',
+		description: `
+			TypeTrial is a multiplayer typing game that pits friends and strangers against
+			each other in a typing race. TypeTrial is a more playful typing experience than
+			other typing games because of our MarioKartesque powerups. Powerups allow players
+			to slow down their friends while they race to finish line. TypeTrial will also
+			track each users typing data to see how they have improved over time.
+		`,
+		mockup: typeTrialMockup,
+		Logo: typeTrialLogo,
+		tools: [
+			{ name: 'Typescript', Logo: tsLogo },
+			{ name: 'React', Logo: reactLogo },
+			{ name: 'Node', Logo: nodeLogo },
+			{ name: 'Express', Logo: expressLogo },
+			{ name: 'MySQL', Logo: mySqlLogo },
+		],
+		liveUrl: 'https://typetrial.brockchelle.com',
+		githubUrl: 'https://github.com/blchelle/typetrial',
+	},
+	{
+		name: 'KeepIt - Item Tracker',
+		description: `KeepIt is an iOS App built to help users keep track of all
+									their personal belongings without GPS hardware. It does this
+									through customizable notifications that can be time based or
+									triggered upon crossing the border of a personalized
+									GeoFence. Whenever an item is lost, KeepIt can remind users
+									of where they last had their item. With KeepIt, users can
+									authenticate with an email & password or use the app anonymously.`,
+		mockup: keepItMockup,
+		Logo: keepItLogo,
+		tools: [
+			{ name: 'Swift', Logo: swiftLogo },
+			{ name: 'iOS', Logo: appleLogo },
+			{ name: 'Firebase', Logo: firebaseLogo },
+		],
+		liveUrl: 'https://apps.apple.com/ca/app/keepit-item-tracker/id1474698806',
+		githubUrl: 'https://github.com/blchelle/keepit',
+	},
+	{
 		name: 'CRWN Ecommmerce',
 		description: `CRWN is an E-Commerce store for a fictional clothing company.
 									It provides all the core functionality that a user would
@@ -62,25 +105,6 @@ const PROJECTS: IProject[] = [
 		],
 		liveUrl: 'https://crwn.brockchelle.com',
 		githubUrl: 'https://github.com/blchelle/crwn-ecommerce',
-	},
-	{
-		name: 'KeepIt - Item Tracker',
-		description: `KeepIt is an iOS App built to help users keep track of all
-									their personal belongings without GPS hardware. It does this
-									through customizable notifications that can be time based or
-									triggered upon crossing the border of a personalized
-									GeoFence. Whenever an item is lost, KeepIt can remind users
-									of where they last had their item. With KeepIt, users can
-									authenticate with an email & password or use the app anonymously.`,
-		mockup: keepItMockup,
-		Logo: keepItLogo,
-		tools: [
-			{ name: 'Swift', Logo: swiftLogo },
-			{ name: 'iOS', Logo: appleLogo },
-			{ name: 'Firebase', Logo: firebaseLogo },
-		],
-		liveUrl: 'https://apps.apple.com/ca/app/keepit-item-tracker/id1474698806',
-		githubUrl: 'https://github.com/blchelle/keepit',
 	},
 ];
 
