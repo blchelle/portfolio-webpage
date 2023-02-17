@@ -17,7 +17,7 @@ const AboutMe: React.FC = () => {
 					</div>
 				</div>
 				<div className='text-3xl leading-relaxed flex-center flex-col' data-aos='fade-left'>
-					{Object.values(text.aboutMe).map((text) => (
+					{text.aboutMe.map((text) => (
 						<p key={text} className='mb-8 last:mb-0'>
 							{text}
 						</p>

@@ -1,23 +1,19 @@
-import crwnMockup from '@assets/mockups/crwn.png';
 import collaboGreatMockup from '@assets/mockups/collabogreat.png';
 import keepItMockup from '@assets/mockups/keepit.png';
 import typeTrialMockup from '@assets/mockups/typetrial.png';
 
 import { ReactComponent as collaboGreatLogo } from '@assets/logos/collabogreat.svg';
-import { ReactComponent as crwnLogo } from '@assets/logos/crwn.svg';
 import { ReactComponent as keepItLogo } from '@assets/logos/keepit.svg';
 import { ReactComponent as typeTrialLogo } from '@assets/logos/typetrial.svg';
 
 import { ReactComponent as appleLogo } from '@assets/logos/apple.svg';
 import { ReactComponent as expressLogo } from '@assets/logos/express.svg';
 import { ReactComponent as firebaseLogo } from '@assets/logos/firebase-2.svg';
-import { ReactComponent as jsLogo } from '@assets/logos/javascript2.svg';
 import { ReactComponent as mongoDbLogo } from '@assets/logos/mongodb.svg';
 import { ReactComponent as mySqlLogo } from '@assets/logos/mysql.svg';
 import { ReactComponent as nodeLogo } from '@assets/logos/node.svg';
 import { ReactComponent as reactLogo } from '@assets/logos/react.svg';
 import { ReactComponent as reduxLogo } from '@assets/logos/redux.svg';
-import { ReactComponent as sassLogo } from '@assets/logos/sass.svg';
 import { ReactComponent as swiftLogo } from '@assets/logos/swift.svg';
 import { ReactComponent as tsLogo } from '@assets/logos/typescript2.svg';
 import { IProject } from '@components/Project';
@@ -41,7 +37,7 @@ const PROJECTS: IProject[] = [
 			{ name: 'Express', Logo: expressLogo },
 			{ name: 'MongoDB', Logo: mongoDbLogo },
 		],
-		liveUrl: 'https://collabogreat.brockchelle.com',
+		liveUrlTooltip: "Live Demo is currently unavailable because the domain is currently being transferred to another cloud provider",
 		githubUrl: 'https://github.com/blchelle/collabogreat',
 	},
 	{
@@ -62,7 +58,7 @@ const PROJECTS: IProject[] = [
 			{ name: 'Express', Logo: expressLogo },
 			{ name: 'MySQL', Logo: mySqlLogo },
 		],
-		liveUrl: 'https://typetrial.brockchelle.com',
+		liveUrlTooltip: "Live Demo is currently unavailable because the domain is currently being transferred to another cloud provider",
 		githubUrl: 'https://github.com/blchelle/typetrial',
 	},
 	{
@@ -83,28 +79,6 @@ const PROJECTS: IProject[] = [
 		],
 		liveUrl: 'https://apps.apple.com/ca/app/keepit-item-tracker/id1474698806',
 		githubUrl: 'https://github.com/blchelle/keepit',
-	},
-	{
-		name: 'CRWN Ecommmerce',
-		description: `CRWN is an E-Commerce store for a fictional clothing company.
-									It provides all the core functionality that a user would
-									expect from an E-Commerce store. Here, users can choose from
-									various clothing articles, add them to a cart, and finalize
-									their order by checking out with a credit/debit card, which
-									is done through Stripe. Users can also authenticate with
-									their Google account or email address if they wish to keep
-									their cart for later.`,
-		mockup: crwnMockup,
-		Logo: crwnLogo,
-		tools: [
-			{ name: 'Javascript', Logo: jsLogo },
-			{ name: 'React', Logo: reactLogo },
-			{ name: 'Redux', Logo: reduxLogo },
-			{ name: 'Sass', Logo: sassLogo },
-			{ name: 'Firebase', Logo: firebaseLogo },
-		],
-		liveUrl: 'https://crwn.brockchelle.com',
-		githubUrl: 'https://github.com/blchelle/crwn-ecommerce',
 	},
 ];
 

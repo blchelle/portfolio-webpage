@@ -14,8 +14,9 @@ export interface IProject {
 	tools: ITool[];
 	description: string;
 	mockup: string;
-	liveUrl: string;
-	githubUrl: string;
+	liveUrl?: string;
+	liveUrlTooltip?: string;
+	githubUrl?: string;
 }
 
 interface ProjectProps {
@@ -23,7 +24,7 @@ interface ProjectProps {
 }
 
 const Project: React.FC<ProjectProps> = ({
-	project: { name, description, Logo, mockup, tools, liveUrl, githubUrl },
+	project: { name, description, Logo, mockup, tools, liveUrl, githubUrl, liveUrlTooltip },
 }) => {
 	return (
 		<div className={classes.container}>
@@ -49,12 +50,15 @@ const Project: React.FC<ProjectProps> = ({
 						onClick={() => window.open(liveUrl, '_blank')}
 						Icon={PlayIcon}
 						style={{ marginRight: '1rem' }}
+						disabled={liveUrl === undefined}
+						tooltip={liveUrlTooltip}
 					/>
 					<Button
 						onClick={() => window.open(githubUrl, '_blank')}
 						text='Repository'
 						Icon={GithubIcon}
 						color='github'
+						disabled={githubUrl === undefined}
 					/>
 				</div>
 			</div>
