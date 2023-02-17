@@ -29,12 +29,12 @@ const CONTENT_SECTIONS: ISection[] = [
 		Icon: PersonIcon,
 		ref: React.createRef(),
 	},
-	{
-		title: 'Experience',
-		children: <Experiences />,
-		Icon: BriefcaseIcon,
-		ref: React.createRef(),
-	},
+	// {
+	// 	title: 'Experience',
+	// 	children: <Experiences />,
+	// 	Icon: BriefcaseIcon,
+	// 	ref: React.createRef(),
+	// },
 	{
 		title: 'Projects',
 		children: <Projects />,

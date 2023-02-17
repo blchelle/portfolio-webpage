@@ -6,7 +6,7 @@
 		"build": "tsc && vite build",
 		"serve": "vite preview",
 		"format": "prettier --write .",
-		"generate-css-types": "tailwindcss-classnames -o generated/tailwindcss-classnames.ts"
+		"generate-css-types": "tailwindcss-classnames -o tailwindcss-classnames.ts"
 	},
 	"dependencies": {
 		"aos": "^2.3.4",

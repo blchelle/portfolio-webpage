@@ -41,6 +41,19 @@ interface ISkillCategory {
 
 const SKILLS: ISkillCategory[] = [
 	{
+		title: 'Backend',
+		skills: [
+			{ name: 'Ruby', Logo: rubyLogo },
+			{ name: 'Ruby on Rails', Logo: railsLogo },
+			{ name: 'Go', Logo: goLogo },
+			{ name: 'Protobuf', Logo: protobufLogo },
+			{ name: 'Node', Logo: nodeLogo },
+			{ name: 'Express', Logo: expressLogo },
+			{ name: 'C++', Logo: cppLogo },
+			{ name: 'Sidekiq', Logo: sidekiqLogo },
+		],
+	},
+	{
 		title: 'Frontend',
 		skills: [
 			{ name: 'TypeScript', Logo: tsLogo },
@@ -52,19 +65,6 @@ const SKILLS: ISkillCategory[] = [
 			{ name: 'SASS', Logo: sassLogo },
 			{ name: 'Tailwind', Logo: tailwindLogo },
 			{ name: 'Webpack', Logo: webpackLogo },
-		],
-	},
-	{
-		title: 'Backend',
-		skills: [
-			{ name: 'Ruby', Logo: rubyLogo },
-			{ name: 'Ruby on Rails', Logo: railsLogo },
-			{ name: 'Go', Logo: goLogo },
-			{ name: 'Protobuf', Logo: protobufLogo },
-			{ name: 'Node', Logo: nodeLogo },
-			{ name: 'Express', Logo: expressLogo },
-			{ name: 'C++', Logo: cppLogo },
-			{ name: 'Sidekiq', Logo: sidekiqLogo },
 		],
 	},
 	{
