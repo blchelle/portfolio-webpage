@@ -39,6 +39,9 @@ module.exports = {
 				tesla: {
 					DEFAULT: '#CC0000',
 				},
+				digitalocean: {
+					DEFAULT: '#0181ff',
+				},
 				header: {
 					close: '#2CA060',
 					far: '#8FE0B4',

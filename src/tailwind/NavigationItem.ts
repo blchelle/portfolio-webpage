@@ -7,7 +7,7 @@ export default {
 			'group',
 			'flex',
 			'justify-center',
-			'w-1/4',
+			'w-1/5',
 			'sm:w-24',
 			'h-24',
 			'mb-4',
