@@ -37,8 +37,7 @@ const PROJECTS: IProject[] = [
 			{ name: 'Express', Logo: expressLogo },
 			{ name: 'MongoDB', Logo: mongoDbLogo },
 		],
-		liveUrlTooltip:
-			'Live Demo is currently unavailable because the domain is currently being transferred to another cloud provider',
+		liveUrl: 'https://collabogreat.brockchelle.com',
 		githubUrl: 'https://github.com/blchelle/collabogreat',
 	},
 	{
