@@ -37,7 +37,8 @@ const PROJECTS: IProject[] = [
 			{ name: 'Express', Logo: expressLogo },
 			{ name: 'MongoDB', Logo: mongoDbLogo },
 		],
-		liveUrlTooltip: "Live Demo is currently unavailable because the domain is currently being transferred to another cloud provider",
+		liveUrlTooltip:
+			'Live Demo is currently unavailable because the domain is currently being transferred to another cloud provider',
 		githubUrl: 'https://github.com/blchelle/collabogreat',
 	},
 	{
@@ -58,7 +59,7 @@ const PROJECTS: IProject[] = [
 			{ name: 'Express', Logo: expressLogo },
 			{ name: 'MySQL', Logo: mySqlLogo },
 		],
-		liveUrlTooltip: "Live Demo is currently unavailable because the domain is currently being transferred to another cloud provider",
+		liveUrl: 'https://typetrial.brockchelle.com',
 		githubUrl: 'https://github.com/blchelle/typetrial',
 	},
 	{
