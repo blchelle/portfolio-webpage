@@ -16,7 +16,6 @@ import { ReactComponent as htmlLogo } from '@assets/logos/html.svg';
 import { ReactComponent as jsLogo } from '@assets/logos/javascript.svg';
 import { ReactComponent as kubernetesLogo } from '@assets/logos/kubernetes.svg';
 import { ReactComponent as mongoDbLogo } from '@assets/logos/mongodb.svg';
-import { ReactComponent as netlifyLogo } from '@assets/logos/netlify.svg';
 import { ReactComponent as mysqlLogo } from '@assets/logos/mysql.svg';
 import { ReactComponent as nodeLogo } from '@assets/logos/node.svg';
 import { ReactComponent as postgresqlLogo } from '@assets/logos/postgresql.svg';
@@ -90,7 +89,6 @@ const SKILLS: ISkillCategory[] = [
 			{ name: 'Splunk', Logo: splunkLogo },
 			{ name: 'Grafana', Logo: grafanaLogo },
 			{ name: 'Bash', Logo: bashLogo },
-			{ name: 'Netlify', Logo: netlifyLogo },
 		],
 	},
 ];
