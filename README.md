@@ -19,5 +19,4 @@ This site will continue to be updated as I build more projects and gain new skil
 
 ### Build Status
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/541a9f53-dd58-4e45-812d-8ab55a21f658/deploy-status)](https://app.netlify.com/sites/brockchelle/deploys)
 [![blchelle](https://circleci.com/gh/blchelle/portfolio-webpage.svg?style=svg)](https://app.circleci.com/pipelines/github/blchelle/portfolio-webpage)
