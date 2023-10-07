@@ -24,27 +24,20 @@ const validateEmail = (email: string) => {
 	return emailRegex.test(String(email).toLowerCase());
 };
 
-const encode = (data: { [field in FormField | 'form-name']: string }) => {
-	const keys = Object.keys(data) as (FormField | 'form-name')[];
-	return keys.map((key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key])).join('&');
-};
-
-type FormField = 'name' | 'email' | 'message';
-
 const Form: React.FC = () => {
 	const [name, setName] = useState('');
 	const [email, setEmail] = useState('');
 	const [message, setMessage] = useState('');
 	const [formSent, setFormSent] = useState(false);
 
-	const handleSubmitClicked = () => {
-		fetch('/', {
+	const handleSubmitClicked = async () => {
+		await fetch('https://formspree.io/f/xvojvnwe', {
 			method: 'POST',
-			headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-			body: encode({ 'form-name': 'contact', name: name, email: email, message: message }),
-		}).then(() => {
-			setFormSent(true);
+			body: JSON.stringify({ name, email, message }),
+			headers: { Accept: 'application/json' },
 		});
+
+		setFormSent(true);
 	};
 
 	const handleInputChange =
