@@ -37,8 +37,9 @@ const PROJECTS: IProject[] = [
 			{ name: 'Express', Logo: expressLogo },
 			{ name: 'MongoDB', Logo: mongoDbLogo },
 		],
-		liveUrl: 'https://collabogreat.brockchelle.com',
+		// liveUrl: 'https://collabogreat.brockchelle.com',
 		githubUrl: 'https://github.com/blchelle/collabogreat',
+		liveUrlTooltip: "The live site is currently unavailable because it is too expensive to host."
 	},
 	{
 		name: 'TypeTrial',
@@ -58,8 +59,9 @@ const PROJECTS: IProject[] = [
 			{ name: 'Express', Logo: expressLogo },
 			{ name: 'MySQL', Logo: mySqlLogo },
 		],
-		liveUrl: 'https://typetrial.brockchelle.com',
+		// liveUrl: 'https://typetrial.brockchelle.com',
 		githubUrl: 'https://github.com/blchelle/typetrial',
+		liveUrlTooltip: "The live site is currently unavailable because it is too expensive to host."
 	},
 	{
 		name: 'KeepIt - Item Tracker',
@@ -77,8 +79,9 @@ const PROJECTS: IProject[] = [
 			{ name: 'iOS', Logo: appleLogo },
 			{ name: 'Firebase', Logo: firebaseLogo },
 		],
-		liveUrl: 'https://apps.apple.com/ca/app/keepit-item-tracker/id1474698806',
+		// liveUrl: 'https://apps.apple.com/ca/app/keepit-item-tracker/id1474698806',
 		githubUrl: 'https://github.com/blchelle/keepit',
+		liveUrlTooltip: "The app is currently unavailable because it is expensive to join the Apple Developer Program.",
 	},
 ];
 
