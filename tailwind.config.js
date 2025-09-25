@@ -33,8 +33,8 @@ module.exports = {
 				ualberta: {
 					DEFAULT: '#05894F',
 				},
-				willowglen: {
-					DEFAULT: '#F18221',
+				lime: {
+					DEFAULT: '#FFFFFF',
 				},
 				tesla: {
 					DEFAULT: '#CC0000',

@@ -2,6 +2,7 @@ import React from 'react';
 import ContactHighlight from '@components/ContactHighlight';
 import Form from '@components/Form';
 import Card from '@components/Card';
+import Highlight from '@components/Highlight';
 
 import { ReactComponent as CompassIcon } from '@assets/icons/compass.svg';
 import { ReactComponent as MailIcon } from '@assets/icons/mail.svg';
@@ -11,9 +12,11 @@ import { ReactComponent as GithubIcon } from '@assets/logos/github.svg';
 const Contact: React.FC = () => {
 	return (
 		<>
-			<div className='text-3xl mb-16'>
-				I'm not currently looking for any new Software Engineering opportunities, but feel free to
-				contact me if you have any questions about my experiece or projects.
+			<div className='text-3xl mb-16 text-center'>
+				Thank you so much for taking the time to learn about my skills and professional experience.
+				If you would like to learn more about the skill I could bring to your team, please feel free
+				to reach out to me through <Highlight text='LinkedIn' />, the contact form below, or by
+				emailing me at <Highlight text='brocklchelle@gmail.com' />.
 			</div>
 			<div className='grid grid-cols-1 lg:grid-cols-7 gap-8 w-full'>
 				<Card

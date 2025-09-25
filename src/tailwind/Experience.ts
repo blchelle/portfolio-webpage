@@ -26,7 +26,7 @@ export default {
 			'overflow-hidden',
 			'rounded-full',
 			'border-solid',
-			'border-gray-6',
+			'border-primary',
 			'border-4',
 			'p-8',
 			bgColorClass

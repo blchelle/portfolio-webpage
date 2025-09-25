@@ -5,6 +5,7 @@ import { ReactComponent as circleciLogo } from '@assets/logos/circleci.svg';
 import { ReactComponent as cppLogo } from '@assets/logos/cpp.svg';
 import { ReactComponent as concourseLogo } from '@assets/logos/concourse.svg';
 import { ReactComponent as cssLogo } from '@assets/logos/css.svg';
+import { ReactComponent as datadogLogo } from '@assets/logos/datadog.svg';
 import { ReactComponent as dockerLogo } from '@assets/logos/docker.svg';
 import { ReactComponent as expressLogo } from '@assets/logos/express.svg';
 import { ReactComponent as elasticLogo } from '@assets/logos/elastic.svg';
@@ -81,6 +82,7 @@ const SKILLS: ISkillCategory[] = [
 	{
 		title: 'DevOps / SRE',
 		skills: [
+			{ name: 'Datadog', Logo: datadogLogo},
 			{ name: 'Git', Logo: gitLogo },
 			{ name: 'Docker', Logo: dockerLogo },
 			{ name: 'Kubernetes', Logo: kubernetesLogo },

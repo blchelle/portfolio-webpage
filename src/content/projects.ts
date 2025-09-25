@@ -39,7 +39,8 @@ const PROJECTS: IProject[] = [
 		],
 		// liveUrl: 'https://collabogreat.brockchelle.com',
 		githubUrl: 'https://github.com/blchelle/collabogreat',
-		liveUrlTooltip: "The live site is currently unavailable because it is too expensive to host."
+		liveUrlTooltip:
+			'I am not currently hosting this project to save on my cloud costs. If you would like to see a demo, please reach out to me!',
 	},
 	{
 		name: 'TypeTrial',
@@ -61,7 +62,8 @@ const PROJECTS: IProject[] = [
 		],
 		// liveUrl: 'https://typetrial.brockchelle.com',
 		githubUrl: 'https://github.com/blchelle/typetrial',
-		liveUrlTooltip: "The live site is currently unavailable because it is too expensive to host."
+		liveUrlTooltip:
+			'I am not currently hosting this project to save on my cloud costs. If you would like to see a demo, please reach out to me!',
 	},
 	{
 		name: 'KeepIt - Item Tracker',
@@ -81,7 +83,8 @@ const PROJECTS: IProject[] = [
 		],
 		// liveUrl: 'https://apps.apple.com/ca/app/keepit-item-tracker/id1474698806',
 		githubUrl: 'https://github.com/blchelle/keepit',
-		liveUrlTooltip: "The app is currently unavailable because it is expensive to join the Apple Developer Program.",
+		liveUrlTooltip:
+			'This app is not currently available on the App Store. If you would like to see a demo, please reach out to me!',
 	},
 ];
 

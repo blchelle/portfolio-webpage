@@ -86,10 +86,12 @@ const Header = React.forwardRef<HTMLElement>((_, ref) => {
 			/>
 			<div className='flex flex-col items-center w-5/6 sm:w-3/4 z-10 p-8 bg-gray-transparent1 dark:bg-gray-transparent7 rounded-xl'>
 				<h1 className='text-8xl font-bold px-12 mb-8'>
-					Hello, I'm
+					Hey there, I'm
 					<span className='text-primary ml-4'>Brock Chelle</span>
 				</h1>
-				<h2 className='text-6xl font-light px-12 mb-8'>I am a Software Engineer</h2>
+				<h2 className='text-6xl font-light px-12 mb-8'>
+					Senior Full Stack Software Engineer Extraordinaire
+				</h2>
 				<Button text='Learn More' onClick={scrollToStart} Icon={ArrowIcon} />
 			</div>
 		</header>
