@@ -24,7 +24,7 @@ const SOCIAL_LINKS = [
 const Footer = React.forwardRef<HTMLElement, FooterProps>(({ sections }, ref) => {
 	return (
 		<footer
-			className='pb-36 sm:pb-8 pt-8 px-16 sm:px-40 md:px-60 xl:px-80 grid grid-cols-2 gap-8 items-center bg-gray-1 dark:bg-gray-5'
+			className='pb-36 sm:pb-8 pt-8 px-16 sm:px-40 md:px-60 xl:px-80 grid grid-cols-2 gap-8 items-center bg-gray-5'
 			ref={ref}
 		>
 			<ul className='flex flex-col sm:flex-row'>
@@ -52,7 +52,7 @@ const Footer = React.forwardRef<HTMLElement, FooterProps>(({ sections }, ref) =>
 					</a>
 				))}
 			</div>
-			<small className='text-gray-4 text-2xl'>Brock Chelle, 2020</small>
+			<small className='text-gray-4 text-2xl'>Brock Chelle, 2025</small>
 		</footer>
 	);
 });

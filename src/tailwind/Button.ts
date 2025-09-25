@@ -17,9 +17,12 @@ export default {
 			'cursor-pointer',
 			'transition',
 			{
-				[classnames('bg-primary', 'hover:bg-primary-dark')]: color === 'primary',
-				[classnames('bg-github', 'hover:bg-github-dark')]: color === 'github',
-				[classnames('opacity-50', 'cursor-not-allowed')]: disabled,
+				'bg-primary': color === 'primary',
+				'hover:bg-primary-dark': color === 'primary',
+				'bg-github': color === 'github',
+				'hover:bg-github-dark': color === 'github',
+				'opacity-50': disabled,
+				'cursor-not-allowed': disabled,
 			}
 		),
 	icon: classnames('h-10', 'w-10', 'ml-4', 'text-gray-1', 'fill-current'),

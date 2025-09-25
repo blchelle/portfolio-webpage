@@ -15,8 +15,8 @@ export default {
 			'border-primary',
 			'transition-colors',
 			{
-				[classnames('bg-gray-2', 'dark:bg-gray-6')]: index % 2 === 0,
-				[classnames('bg-gray-1', 'dark:bg-gray-5')]: index % 2 === 1,
+				'bg-gray-6': index % 2 === 0,
+				'bg-gray-5': index % 2 === 1,
 			}
 		),
 	title: classnames('text-6xl', 'text-center', 'mb-12', 'uppercase', 'tracking-widest'),

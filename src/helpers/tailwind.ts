@@ -1,6 +1,5 @@
 type BackgroundGrayColor = 1 | 2 | 3 | 4 | 5 | 6 | 7;
-export type BackgroundGrayClasses =
-	`bg-gray-${BackgroundGrayColor} dark:bg-gray-${BackgroundGrayColor}`;
+export type BackgroundGrayClasses = `bg-gray-${BackgroundGrayColor}`;
 
 type RoundedSizes = 'none' | 'sm' | 'md' | 'lg' | 'xl' | '2xl' | '3xl' | 'full';
 export type RoundedClass = `rounded-${RoundedSizes}`;

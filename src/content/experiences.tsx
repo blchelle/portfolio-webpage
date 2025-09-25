@@ -77,7 +77,7 @@ const bulletPoints: { [key: string]: React.ReactElement<HTMLUListElement> } = {
 		<ul className={bulletPointClasses}>
 			<li>
 				Completed courses in Object Oriented Programming, Parallel Computing, Operating Systems,
-				Test Driven Development, Database Management, and More.
+				Test Driven Development, Database Management, and Software Architecture.
 			</li>
 			<li>
 				Developed an <Highlight text='Android' /> app with <Highlight text='Java' />, a Full Stack
@@ -95,7 +95,7 @@ const bulletPoints: { [key: string]: React.ReactElement<HTMLUListElement> } = {
 		<ul className={bulletPointClasses}>
 			<li>
 				Reduced timeout errors by 95% in our <Highlight text='Ruby on Rails' /> service by
-				optimizing high-latency queries and implementing new indexes on high load tables in our
+				optimizing high-latency queries and implementing new indexes on high load tables in our{' '}
 				<Highlight text='MySQL' /> Database.
 			</li>
 			<li>
@@ -108,7 +108,7 @@ const bulletPoints: { [key: string]: React.ReactElement<HTMLUListElement> } = {
 				restrictive access for our 3,000+ operators around the world.
 			</li>
 			<li>
-				Architected a system to automates the process of launching, and pausing regions that Lime
+				Architected a system to automate the process of launching, and pausing regions that Lime
 				operates in to significantly reduce costly incidents caused by error-prone manual processes.
 			</li>
 			<li>

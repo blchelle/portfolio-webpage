@@ -26,10 +26,7 @@ const Card = React.forwardRef<HTMLDivElement, CardProps>((props, ref) => {
 	} = props;
 
 	const sectionBgColorClass = useContext(BackgroundColorContext);
-	const cardBgColorClass =
-		sectionBgColorClass === 'bg-gray-1 dark:bg-gray-5'
-			? 'bg-gray-2 dark:bg-gray-6'
-			: 'bg-gray-1 dark:bg-gray-5';
+	const cardBgColorClass = sectionBgColorClass === 'bg-gray-5' ? 'bg-gray-6' : 'bg-gray-5';
 
 	return (
 		<BackgroundColorContext.Provider value={cardBgColorClass}>

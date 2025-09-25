@@ -1,7 +1,7 @@
 export default {
 	aboutMe: [
 		// Block 1
-		'I am a Software Engineer currently currently working as a Full Stack Engineer on the Product Tooling team at Lime. ' +
+		'I am a Software Engineer currently working as a Senior Full Stack Engineer on the Product Tooling team at Lime. ' +
 			'Professionally, I have experience as a Software Engineer working with Tesla and DigitalOcean, ' +
 			'leaders in the electric vehicle and cloud computing industries. ' +
 			'In these positions, I worked on products to manage a network of over a million vehicles and ' +

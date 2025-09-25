@@ -1,5 +1,6 @@
 # Hides the IDE workspace config
 .vscode
+.playwright-mcp
 
 node_modules
 .DS_Store

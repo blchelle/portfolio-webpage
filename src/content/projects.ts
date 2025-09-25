@@ -47,7 +47,7 @@ const PROJECTS: IProject[] = [
 		description: `
 			TypeTrial is a multiplayer typing game that pits friends and strangers against
 			each other in a typing race. TypeTrial is a more playful typing experience than
-			other typing games because of our MarioKartesque powerups. Powerups allow players
+			other typing games because of our Mario Kart-style powerups. Powerups allow players
 			to slow down their friends while they race to finish line. TypeTrial will also
 			track each users typing data to see how they have improved over time.
 		`,

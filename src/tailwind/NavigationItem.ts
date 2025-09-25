@@ -23,15 +23,14 @@ export default {
 		'w-full',
 		'sm:w-24',
 		'h-full',
-		'bg-gray-3',
-		'dark:bg-gray-7',
+		'bg-gray-7',
 		'group-hover:bg-primary',
 		'transition-colors'
 	),
 	icon: (isSelected: boolean) =>
 		classnames('w-24', 'h-24', 'p-6', 'z-30', 'stroke-current', 'group-hover:text-gray-1', {
 			'text-gray-1': isSelected,
-			[classnames('text-gray-5', 'dark:text-gray-4')]: !isSelected,
+			'text-gray-4': !isSelected,
 		}),
 	textContainer: (isSelected: boolean, isMobile: boolean) =>
 		classnames(
@@ -43,8 +42,7 @@ export default {
 			'h-full',
 			'text-3xl',
 			'font-bold',
-			'bg-gray-3',
-			'dark:bg-gray-7',
+			'bg-gray-7',
 			'group-hover:bg-primary',
 			'transition-all',
 			{

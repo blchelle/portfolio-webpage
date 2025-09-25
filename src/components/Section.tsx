@@ -12,7 +12,7 @@ const Section = React.forwardRef<HTMLElement, SectionProps>((props, ref) => {
 	const { title, index, children } = props;
 	if (!children) return null;
 
-	const backgroundColor = index % 2 === 0 ? 'bg-gray-2 dark:bg-gray-6' : 'bg-gray-1 dark:bg-gray-5';
+	const backgroundColor = index % 2 === 0 ? 'bg-gray-6' : 'bg-gray-5';
 
 	return (
 		<BackgroundColorContext.Provider value={backgroundColor}>

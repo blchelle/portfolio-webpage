@@ -84,14 +84,12 @@ const Header = React.forwardRef<HTMLElement>((_, ref) => {
 				className={`${circleColor} absolute header-circle right-1/2 bottom-3/4 transform translate-y-1/2 opacity-70`}
 				ref={circleTwoRef}
 			/>
-			<div className='flex flex-col items-center w-5/6 sm:w-3/4 z-10 p-8 bg-gray-transparent1 dark:bg-gray-transparent7 rounded-xl'>
+			<div className='flex flex-col items-center w-5/6 sm:w-3/4 z-10 p-8 bg-gray-transparent7 rounded-xl'>
 				<h1 className='text-8xl font-bold px-12 mb-8'>
 					Hey there, I'm
 					<span className='text-primary ml-4'>Brock Chelle</span>
 				</h1>
-				<h2 className='text-6xl font-light px-12 mb-8'>
-					Senior Full Stack Software Engineer Extraordinaire
-				</h2>
+				<h2 className='text-6xl font-light px-12 mb-8'>Senior Full Stack Software Engineer</h2>
 				<Button text='Learn More' onClick={scrollToStart} Icon={ArrowIcon} />
 			</div>
 		</header>

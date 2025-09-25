@@ -14,7 +14,7 @@ const Contact: React.FC = () => {
 		<>
 			<div className='text-3xl mb-16 text-center'>
 				Thank you so much for taking the time to learn about my skills and professional experience.
-				If you would like to learn more about the skill I could bring to your team, please feel free
+				If you would like to learn more about the skills and impact I could bring to your team, please feel free
 				to reach out to me through <Highlight text='LinkedIn' />, the contact form below, or by
 				emailing me at <Highlight text='brocklchelle@gmail.com' />.
 			</div>

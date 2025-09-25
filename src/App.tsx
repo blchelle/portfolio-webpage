@@ -5,7 +5,6 @@ import Header from '@components/sections/Header';
 import Footer from '@components/sections/Footer';
 import Navigation from '@components/Navigation';
 
-import ThemeToggler from '@components/ThemeToggler';
 import CONTENT_SECTIONS from '@content/sections';
 
 const App: React.FC = () => {
@@ -36,8 +35,7 @@ const App: React.FC = () => {
 	return (
 		<>
 			<Navigation section={section} sections={CONTENT_SECTIONS} />
-			<ThemeToggler />
-			<main className='overflow-x-hidden text-gray-7 dark:text-gray-1'>
+			<main className='overflow-x-hidden text-gray-1'>
 				<Header ref={CONTENT_SECTIONS[0].ref} />
 				{CONTENT_SECTIONS.map(({ title, ref, children }, i) => (
 					<Section title={title} ref={ref} index={i} key={title}>

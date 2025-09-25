@@ -25,8 +25,7 @@ export default {
 		'sm:h-24',
 		'bg-primary',
 		'border',
-		'border-gray-5',
-		'dark:border-gray-1',
+		'border-gray-1',
 		'sm:rounded-md',
 		'transition-all',
 		'z-10'

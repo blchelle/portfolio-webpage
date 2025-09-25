@@ -19,8 +19,7 @@ const Skills: React.FC = () => {
 	return (
 		<>
 			<div className={classes.description}>
-				These are some tools that I've become proficient with since starting my career as
-				a Software Engineer
+				These are some tools that I've frequently used in my Software Engineering career.
 			</div>
 			<CategorySelector
 				categories={SKILLS_CONTENT.map(({ title }) => title)}
